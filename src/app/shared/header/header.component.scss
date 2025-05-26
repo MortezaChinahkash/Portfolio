@@ -1,16 +1,17 @@
 header{
-    background-color: #f8f9fa;
+    z-index: 1000;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     img{
-        width: 100px;
-        height: 100px;
+        width: 150x;
+        height: 150px;
     }
     ul{
         display: flex;
-        gap: 200px;
+        gap: 150px;
     }
     .toggle{
         width: 100px;
