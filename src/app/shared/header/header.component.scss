@@ -4,5 +4,19 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    img{
+        width: 100px;
+        height: 100px;
+    }
+    ul{
+        display: flex;
+        gap: 200px;
+    }
+    .toggle{
+        width: 100px;
+        height: 25px;
+    }
+
+    
+    
 }
