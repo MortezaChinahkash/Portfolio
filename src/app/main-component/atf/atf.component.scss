@@ -2,26 +2,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 300px;
   background: url("./../../../../public/assets/png/Design material/01_Background/Design Size Relation@3x/01_Hero.png");
   background-size: cover;
   background-position: center;
   color: white;
   .atf-content {
-    width: 70%;
+    width: 100%;
   }
   .hero-row {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   h1 {
-    font-size: 126px;
+    font-size: 8em;
     margin: 0;
   }
   .atf-btn {
@@ -40,4 +41,8 @@
   .spacer {
     flex: 1;
   }
+}
+.max-content {
+  max-width: 1440px;
+  width: 100%;
 }

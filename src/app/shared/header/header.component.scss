@@ -4,7 +4,7 @@ header{
     height: 100px;
     padding: 0px 50px 0px 50px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     img{
@@ -21,7 +21,7 @@ header{
     ul{
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
 
     }
