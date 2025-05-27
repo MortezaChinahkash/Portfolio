@@ -6,10 +6,31 @@
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     color: white;
     z-index: 1;
+    padding: 20px;
+    padding-top: 200px;
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .atf-btn{
+        border: 2px solid white;
+        padding: 10px 20px;
+        background-color: transparent;
+        border-radius: 25px;
+        cursor: pointer;
+        width: max-content;
+    }
+    h1{
+        font-size: 84px;
+        margin-bottom: 20px;
+    }
+    .grow{
+        display: flex;  
+        flex-grow: 1;
+    }
 }
