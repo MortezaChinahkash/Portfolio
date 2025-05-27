@@ -1,65 +1,44 @@
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    position:absolute;
-    top: 0;
-    left: 0;
-    padding-top: 200px;
-    background: url("./../../../../public/assets/png/Design material/01_Background/Design Size Relation@3x/01_Hero.png");
-    background-size: cover;
-    background-position: center;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 200px;
+  background: url("./../../../../public/assets/png/Design material/01_Background/Design Size Relation@3x/01_Hero.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
-.atf-content{
-    max-width: 1440px;
+.atf-content {
+  width: 70%;
 }
 .hero-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.hero-row--center {
-    justify-content: center;
-    gap: 40px;
+h1 {
+  font-size: 72px;
+  margin: 0;
 }
-
-.hero-titles {
-    text-align: center;
-}
-
-.hero-titles h1 {
-    font-size: 84px;
-    margin: 0;
-}
-
-.hero-photo {
-    transform: rotate(-5deg);
-}
-
-.hero-photo img {
-    width: 200px;
-    border: 5px solid white;
-    border-radius: 10px;
-}
-
 .atf-btn {
-    border: 2px solid white;
-    padding: 10px 20px;
-    background-color: transparent;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.atf-btn:hover {
+  border: 2px solid white;
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  .atf-btn:hover {
     background-color: white;
     color: black;
+  }
 }
 
 .spacer {
-    flex: 1;
+  flex: 1;
 }
