@@ -7,38 +7,37 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 200px;
+  padding-top: 300px;
   background: url("./../../../../public/assets/png/Design material/01_Background/Design Size Relation@3x/01_Hero.png");
   background-size: cover;
   background-position: center;
   color: white;
-}
-.atf-content {
-  width: 70%;
-}
-.hero-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-h1 {
-  font-size: 72px;
-  margin: 0;
-}
-.atf-btn {
-  border: 2px solid white;
-  padding: 10px 20px;
-  background-color: transparent;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  .atf-btn:hover {
-    background-color: white;
-    color: black;
+  .atf-content {
+    width: 70%;
   }
-}
+  .hero-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1 {
+    font-size: 126px;
+    margin: 0;
+  }
+  .atf-btn {
+    border: 2px solid white;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    .atf-btn:hover {
+      background-color: white;
+      color: black;
+    }
+  }
 
-.spacer {
-  flex: 1;
+  .spacer {
+    flex: 1;
+  }
 }
