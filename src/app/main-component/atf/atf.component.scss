@@ -32,7 +32,9 @@
         width: 30px;
         opacity: 0;
         transform: translateX(0) rotate(0deg);
-        transition: opacity 0.3s ease;
+        transition:
+          transform 1s ease,
+          opacity 0.3s ease 1s; // opacity startet nach transform (1s)
       }
 
       .hello-btn {
@@ -59,11 +61,25 @@
         }
       }
 
-      // Achtung: :has wird hier weiterhin verwendet!
+      // Hover → Hand sichtbar, sofort nach vorne rollen
       &:has(.hello-btn:hover) {
         .hand {
           opacity: 1;
-          animation: rotateHand 1s ease forwards;
+          transform: translateX(220px) rotate(360deg);
+          transition:
+            transform 1s ease,
+            opacity 0.3s ease 0s; // sofort sichtbar
+        }
+      }
+
+      // Nicht-hover → zurückrollen, danach ausblenden
+      &:not(:has(.hello-btn:hover)) {
+        .hand {
+          opacity: 0;
+          transform: translateX(0) rotate(0deg);
+          transition:
+            transform 1s ease,
+            opacity 0.3s ease 1s; // erst nach 1s (wenn transform fertig) ausblenden
         }
       }
     }
@@ -91,13 +107,4 @@
 .max-content {
   max-width: 1440px;
   width: 100%;
-}
-
-@keyframes rotateHand {
-  from {
-    transform: translateX(0) rotate(0deg);
-  }
-  to {
-    transform: translateX(220px) rotate(360deg);
-  }
 }
