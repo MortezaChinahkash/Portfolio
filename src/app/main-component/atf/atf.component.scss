@@ -12,49 +12,76 @@
   background-size: cover;
   background-position: bottom;
   color: white;
+
   .atf-content {
     width: 100%;
   }
+
   .hero-row {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .hand-hello{
+
+    .hand-hello {
       display: flex;
       flex-direction: column;
-      img{
+      position: relative;
+
+      .hand {
         width: 30px;
+        opacity: 0;
+        transform: translateX(0) rotate(0deg);
+        transition: opacity 0.3s ease;
+      }
+
+      .hello-btn {
+        border: 2px solid white;
+        padding: 10px 20px;
+        background-color: transparent;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.5s, color 0.5s;
+        color: white;
+        display: inline-block;
+
+        &:hover {
+          background-color: white;
+          color: black;
+
+          span {
+            display: none;
+          }
+
+          &::before {
+            content: "I'M MORTEZA CHINAHKASH!";
+          }
+        }
+      }
+
+      // Achtung: :has wird hier weiterhin verwendet!
+      &:has(.hello-btn:hover) {
+        .hand {
+          opacity: 1;
+          animation: rotateHand 1s ease forwards;
+        }
       }
     }
   }
+
   h1 {
     font-size: 8em;
     margin: 0;
   }
-  .atf-btn {
+}
+
+.atf-btn {
   border: 2px solid white;
   padding: 10px 20px;
   background-color: transparent;
   border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.5s, color 0.5s;
-  color: white;
-  display: inline-block;
-}
-
-.hello-btn:hover {
-  background-color: white;
-  color: black;
-}
-.hello-btn:hover span {
-  display: none;
-}
-
-.hello-btn:hover::before {
-  content: "I'M MORTEZA CHINAHKASH!";
-}
-
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .spacer {
@@ -64,4 +91,13 @@
 .max-content {
   max-width: 1440px;
   width: 100%;
+}
+
+@keyframes rotateHand {
+  from {
+    transform: translateX(0) rotate(0deg);
+  }
+  to {
+    transform: translateX(220px) rotate(360deg);
+  }
 }
