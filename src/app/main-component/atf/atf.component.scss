@@ -20,6 +20,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .hand-hello{
+      display: flex;
+      flex-direction: column;
+      img{
+        width: 30px;
+      }
+    }
   }
   h1 {
     font-size: 8em;
