@@ -10,7 +10,7 @@
   left: 0;
   background: url("./../../../../public/assets/png/Design material/01_Background/Design Size Relation@3x/01_Hero.png");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   color: white;
   .atf-content {
     width: 100%;
@@ -26,22 +26,34 @@
     margin: 0;
   }
   .atf-btn {
-    border: 2px solid white;
-    padding: 10px 20px;
-    background-color: transparent;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    .atf-btn:hover {
-      background-color: white;
-      color: black;
-    }
-  }
-
-  .spacer {
-    flex: 1;
-  }
+  border: 2px solid white;
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+  color: white;
+  display: inline-block;
 }
+
+.hello-btn:hover {
+  background-color: white;
+  color: black;
+}
+.hello-btn:hover span {
+  display: none;
+}
+
+.hello-btn:hover::before {
+  content: "I'm Morteza!";
+}
+
+}
+
+.spacer {
+  flex: 1;
+}
+
 .max-content {
   max-width: 1440px;
   width: 100%;
