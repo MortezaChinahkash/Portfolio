@@ -127,15 +127,21 @@ header{
     position: relative;
     width: 75px;
     height: 75px;
+    overflow: hidden;  // ← verhindert, dass etwas „rausquillt“
+    display: flex;     // ← zentriert Inhalte (optional)
+    align-items: center;
+    justify-content: center;
     cursor: url("/assets/hand-pointer.png"), auto;
+    transition: transform 1s ease-out;
 
     img {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: auto;
-        transition: opacity 0.5s ease-out, transform 1s ease-out;
+        height: 100%;  // ← füllt Container exakt, kein height: auto
+        object-fit: contain; // ← sorgt für korrektes Seitenverhältnis ohne Verzerren
+        transition: opacity 0.5s ease-out;
     }
 
     .logo-hover {
@@ -143,6 +149,8 @@ header{
     }
 
     &:hover {
+        transform: rotate(360deg);
+
         .logo-hover {
             opacity: 1;
         }
@@ -150,8 +158,7 @@ header{
         .logo-normal {
             opacity: 0;
         }
-
-        transform: rotate(360deg);
     }
 }
+
 }
