@@ -50,7 +50,7 @@ header{
     top: -10%;
     left: -10%;
     clip-path: inset(0 0 100% 0);
-    transition: clip-path 0.5s ease-out;
+    transition: clip-path 0.3s ease-out;
     pointer-events: none;
 }
 
@@ -71,7 +71,7 @@ header{
     bottom: -10%;
     left: -20%;
     clip-path: inset(0 100% 0 0);
-    transition: clip-path 0.5s ease-out;
+    transition: clip-path 0.3s ease-out;
     z-index: -1;
     pointer-events: none;
 }
@@ -93,7 +93,7 @@ header{
     bottom: -10%;
     right: -20%;
     clip-path: inset(0 100% 0 0);
-    transition: clip-path 0.5s ease-out;
+    transition: clip-path 0.3s ease-out;
     z-index: -1;
     pointer-events: none;
 }
@@ -115,7 +115,7 @@ header{
     bottom: -40%;
     left: -10%;
     clip-path: inset(0 100% 0 0);
-    transition: clip-path 0.5s ease-out;
+    transition: clip-path 0.3s ease-out;
     z-index: -1;
     pointer-events: none;
 }
