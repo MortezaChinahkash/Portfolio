@@ -124,10 +124,34 @@ header{
     clip-path: inset(0 0 0 0);
 }
 .initials {
-    transition: transform 1s ease-out;
-}
+    position: relative;
+    width: 75px;
+    height: 75px;
+    cursor: url("/assets/hand-pointer.png"), auto;
 
-.initials:hover {
-    transform: rotate(360deg);
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        transition: opacity 0.5s ease-out, transform 1s ease-out;
+    }
+
+    .logo-hover {
+        opacity: 0;
+    }
+
+    &:hover {
+        .logo-hover {
+            opacity: 1;
+        }
+
+        .logo-normal {
+            opacity: 0;
+        }
+
+        transform: rotate(360deg);
+    }
 }
 }
