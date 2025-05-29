@@ -5,16 +5,14 @@
   width: 100vw;
   display: flex;
   align-items: center;
-  margin-top: -140px; /* Add negative margin to pull up behind header */
+  margin-top: -140px;
   padding: 70px 0;
   background: url("./../../../../public/assets/png/Design material/01_Background/Design Size Relation@3x/01_Hero.png");
   background-size: cover;
   background-position: bottom;
   color: white;
   overflow: hidden;
-  
-  /* Add padding-top to account for header height */
-  padding-top: 140px; /* 70px for the negative margin + 70px for content spacing */
+  padding-top: 140px;
 }
 
 .max-content {
@@ -33,7 +31,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin: auto 0; /* Add this */
+  margin: auto 0;
 }
 
 .hero-row {
@@ -49,6 +47,7 @@
 .hero-row--bottom {
   align-items: flex-start;
 }
+
 .hero-row-space {
   margin: 2rem 0 1rem 0;
 }
@@ -74,6 +73,7 @@
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
+
 .hello-btn .normal-text { transition: opacity 0.3s; }
 .hello-btn .hover-text { display: none; white-space: nowrap; }
 .hello-btn:hover {
@@ -82,6 +82,7 @@
 }
 .hello-btn:hover .normal-text { display: none; }
 .hello-btn:hover .hover-text { display: inline; }
+
 .hand {
   width: 30px;
   opacity: 0;
@@ -91,11 +92,13 @@
   top: -40px;
   left: 0;
 }
+
 .hello-btn:hover + .hand {
   opacity: 1;
   transform: translateX(240px) rotate(720deg);
   transition: transform 1s, opacity 0.2s;
 }
+
 .hello-btn:not(:hover) + .hand {
   opacity: 0;
   transform: translateX(0) rotate(0deg);
@@ -107,18 +110,20 @@
 }
 
 .responsive-title {
-  font-size: clamp(2rem, 8vw, 6rem); /* Scales with screen */
+  font-size: clamp(2rem, 8vw, 6rem);
   margin: 0;
   text-wrap: balance;
   letter-spacing: 0.05em;
   font-weight: 800;
 }
+
 .responsive-title span {
   display: inline-block;
   transition: color 0.5s;
   color: #fff;
   cursor: pointer;
 }
+
 .responsive-title span:hover {
   color: #1aa8b5;
 }
@@ -147,6 +152,7 @@
   font-size: 1.2rem;
   margin-top: 1rem;
 }
+
 .atf-btn:hover {
   background: #24dd80;
   color: black;
@@ -159,7 +165,7 @@
   left: 32px;
   bottom: 32px;
   display: flex;
-  flex-direction: column; /* or column if you want them stacked */
+  flex-direction: column;
   gap: 1rem;
   align-items: center;
 }
@@ -175,16 +181,17 @@
   background: rgba(0,0,0,0.15);
   transition: background 0.3s;
 }
+
 .social-circle:hover {
   background: #1aa8b5;
 }
+
 .social-pic {
   width: 26px;
   height: 26px;
   object-fit: contain;
 }
 
-/* ------------- Responsive Styles ------------- */
 @media (max-width: 600px) {
   .hero-socials {
     left: 8px;
@@ -192,6 +199,7 @@
     gap: 0.5rem;
   }
 }
+
 @media (max-width: 900px) {
   .max-content {
     flex-direction: column;
