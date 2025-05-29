@@ -1,76 +1,76 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: BricolageGrotesque, sans-serif;
-    scroll-behavior: smooth;
-    cursor: url("/assets/arrowhead-rounded-outline.svg"), auto;
-    a{
-        text-decoration: none;
-        color: inherit;
-        cursor: url("/assets/hand-pointer.png"), auto;
-    }    
-    li{
-        list-style: none;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: BricolageGrotesque, sans-serif;
+  scroll-behavior: smooth;
+  cursor: url("/assets/arrowhead-rounded-outline.svg"), auto;
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: url("/assets/hand-pointer.png"), auto;
+  }
+  li {
+    list-style: none;
+  }
 }
 .max-content {
-    max-width: 1024px;
-    width: 100%;
-    padding: 0 36px;
+  max-width: 1024px;
+  width: 100%;
+  padding: 0 36px;
 }
 
 @font-face {
-    font-family: 'BricolageGrotesque';
-    src: url('/assets/fonts/BricolageGrotesque-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "BricolageGrotesque";
+  src: url("/assets/fonts/BricolageGrotesque-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Bold */
 @font-face {
-    font-family: 'BricolageGrotesque';
-    src: url('/assets/fonts/BricolageGrotesque-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "BricolageGrotesque";
+  src: url("/assets/fonts/BricolageGrotesque-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* ExtraBold */
 @font-face {
-    font-family: 'BricolageGrotesque';
-    src: url('/assets/fonts/BricolageGrotesque-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
+  font-family: "BricolageGrotesque";
+  src: url("/assets/fonts/BricolageGrotesque-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
 }
 
 /* Medium */
 @font-face {
-    font-family: 'BricolageGrotesque';
-    src: url('/assets/fonts/BricolageGrotesque-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
+  font-family: "BricolageGrotesque";
+  src: url("/assets/fonts/BricolageGrotesque-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
 
 /* SemiBold */
 @font-face {
-    font-family: 'BricolageGrotesque';
-    src: url('/assets/fonts/BricolageGrotesque-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: "BricolageGrotesque";
+  src: url("/assets/fonts/BricolageGrotesque-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 /* Light */
 @font-face {
-    font-family: 'BricolageGrotesque';
-    src: url('/assets/fonts/BricolageGrotesque-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
+  font-family: "BricolageGrotesque";
+  src: url("/assets/fonts/BricolageGrotesque-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }
 
 /* ExtraLight */
 @font-face {
-    font-family: 'BricolageGrotesque';
-    src: url('/assets/fonts/BricolageGrotesque-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
+  font-family: "BricolageGrotesque";
+  src: url("/assets/fonts/BricolageGrotesque-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
 }

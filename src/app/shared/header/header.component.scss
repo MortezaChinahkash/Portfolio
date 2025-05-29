@@ -1,49 +1,48 @@
-header{
-    z-index: 1000;
+header {
+  z-index: 1000;
+  width: 100%;
+  height: 100px;
+  padding: 0px 50px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  img {
+    width: 75px;
+    height: 75px;
+  }
+  nav {
     width: 100%;
-    height: 100px;
-    padding: 0px 50px 0px 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ul {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    img{
-        width: 75px;
-        height: 75px;
-    }
-    nav{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    ul{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  }
+  li {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: BricolageGrotesque, sans-serif;
+  }
 
-    }
-    li{
-        font-size: 20px;
-        font-weight: 500;
-        cursor: pointer;
-        color: #ffffff;
-        font-family: BricolageGrotesque, sans-serif;
-        }
-    
-    .toggle{
-        width: 100px;
-        height: 25px;
-    }
-.about {
+  .toggle {
+    width: 100px;
+    height: 25px;
+  }
+  .about {
     position: relative;
     display: inline-block;
     padding: 10px;
-}
+  }
 
-.about img {
+  .about img {
     width: 120%;
     height: 120%;
     position: absolute;
@@ -52,19 +51,19 @@ header{
     clip-path: inset(0 0 100% 0);
     transition: clip-path 0.3s ease-out;
     pointer-events: none;
-}
+  }
 
-.about:hover img {
+  .about:hover img {
     clip-path: inset(0 0 0 0);
-}
+  }
 
-.skills {
+  .skills {
     position: relative;
     display: inline-block;
     padding: 10px;
-}
+  }
 
-.skills img {
+  .skills img {
     width: 140%;
     height: 120%;
     position: absolute;
@@ -74,19 +73,19 @@ header{
     transition: clip-path 0.3s ease-out;
     z-index: -1;
     pointer-events: none;
-}
+  }
 
-.skills:hover img {
+  .skills:hover img {
     clip-path: inset(0 0 0 0);
-}
+  }
 
-.projects {
+  .projects {
     position: relative;
     display: inline-block;
     padding: 10px;
-}
+  }
 
-.projects img {
+  .projects img {
     width: 140%;
     height: 120%;
     position: absolute;
@@ -96,19 +95,19 @@ header{
     transition: clip-path 0.3s ease-out;
     z-index: -1;
     pointer-events: none;
-}
+  }
 
-.projects:hover img {
+  .projects:hover img {
     clip-path: inset(0 0 0 0);
-}
+  }
 
-.contact {
+  .contact {
     position: relative;
     display: inline-block;
     padding: 10px;
-}
+  }
 
-.contact img {
+  .contact img {
     width: 140%;
     height: 120%;
     position: absolute;
@@ -118,48 +117,47 @@ header{
     transition: clip-path 0.3s ease-out;
     z-index: -1;
     pointer-events: none;
-}
+  }
 
-.contact:hover img {
+  .contact:hover img {
     clip-path: inset(0 0 0 0);
-}
-.initials {
+  }
+  .initials {
     position: relative;
     width: 75px;
     height: 75px;
-    overflow: hidden;  
-    display: flex;     
+    overflow: hidden;
+    display: flex;
     align-items: center;
     justify-content: center;
     cursor: url("/assets/hand-pointer.png"), auto;
     transition: transform 0.7s ease-out;
 
     img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;  
-        object-fit: contain; 
-        transition: opacity 0.7s ease-out;
-        cursor: url("/assets/hand-pointer.png"), auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: opacity 0.7s ease-out;
+      cursor: url("/assets/hand-pointer.png"), auto;
     }
 
     .logo-hover {
-        opacity: 0;
+      opacity: 0;
     }
 
     &:hover {
-        transform: rotate(360deg);
+      transform: rotate(360deg);
 
-        .logo-hover {
-            opacity: 1;
-        }
+      .logo-hover {
+        opacity: 1;
+      }
 
-        .logo-normal {
-            opacity: 0;
-        }
+      .logo-normal {
+        opacity: 0;
+      }
     }
-}
-
+  }
 }

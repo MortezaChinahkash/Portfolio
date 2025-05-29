@@ -12,10 +12,9 @@
   background-size: cover;
   background-position: bottom;
   color: white;
-  
 
   .max-content {
-    max-width: 1024px;
+    max-width: 1044px;
     width: 100%;
 
     .atf-content {
@@ -56,7 +55,7 @@
             }
 
             &:hover {
-              background-color: #1073EA;
+              background-color: #1073ea;
               color: black;
 
               .normal-text {
@@ -99,14 +98,11 @@
         h1 {
           font-size: 8em;
           margin: 0;
-          
-          
-          }
         }
       }
     }
   }
-
+}
 
 .atf-btn {
   border: 2px solid white;
@@ -146,17 +142,16 @@ h1 span {
 }
 
 h1 span:hover {
-  color: #1AA8B5;
+  color: #1aa8b5;
 }
-.hero-socials{
+.hero-socials {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 15px;
   cursor: url("/assets/hand-pointer.png"), auto;
-
 }
-.social-circle{
+.social-circle {
   border: 2px solid white;
   display: flex;
   justify-content: center;
@@ -166,7 +161,7 @@ h1 span:hover {
   height: 40px;
   cursor: url("/assets/hand-pointer.png"), auto;
 }
-.social-pic{
+.social-pic {
   width: 40px;
   padding: 10px;
   cursor: url("/assets/hand-pointer.png"), auto;
