@@ -55,7 +55,7 @@
             }
 
             &:hover {
-              background-color: white;
+              background-color: #24DD80;
               color: black;
 
               .normal-text {
@@ -137,6 +137,7 @@
 
 .atf-btn:hover {
     background-color: #24DD80; 
+    color: black;
     box-shadow: none;
     transform: translateY(2px); /* leicht nach unten drücken */
 }
