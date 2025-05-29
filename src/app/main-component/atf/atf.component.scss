@@ -13,90 +13,110 @@
   background-position: bottom;
   color: white;
 
-  .atf-content {
+  .max-content {
+    max-width: 1440px;
     width: 100%;
-  }
 
-  .hero-row {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .atf-content {
+      width: 100%;
 
-    .hand-hello {
-      display: flex;
-      flex-direction: column;
-      position: relative;
+      .hero-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-      .hand {
-        width: 30px;
-        opacity: 0;
-        transform: translateX(0) rotate(0deg);
-        transition: transform 1s ease, opacity 0.3s ease 1s;
-      }
+        .hand-hello {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          position: relative;
 
-      .hello-btn {
-        border: 2px solid white;
-        padding: 10px 20px;
-        background-color: transparent;
-        border-radius: 25px;
-        cursor: pointer;
-        transition: background-color 0.5s, color 0.5s;
-        color: white;
-        display: inline-block;
+          .hello-btn {
+            border: 2px solid white;
+            padding: 10px 20px;
+            background-color: transparent;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.5s, color 0.5s;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            min-width: fit-content;
 
-        &:hover {
-          background-color: white;
-          color: black;
+            .normal-text {
+              transition: opacity 0.3s;
+            }
 
-          span {
-            display: none;
+            .hover-text {
+              display: none;
+              white-space: nowrap;
+            }
+
+            &:hover {
+              background-color: white;
+              color: black;
+
+              .normal-text {
+                display: none;
+              }
+
+              .hover-text {
+                display: inline;
+              }
+            }
           }
 
-          &::before {
-            content: "I'M MORTEZA CHINAHKASH!";
+          .hand {
+            width: 30px;
+            opacity: 0;
+            transform: translateX(0) rotate(0deg);
+            transition:
+              transform 1s ease,
+              opacity 0.3s ease 1s; 
+            position: absolute;
+            top: -40px; 
+            left: 0;
+          }
+
+          .hello-btn:hover + .hand {
+            opacity: 1;
+            transform: translateX(220px) rotate(720deg);
+            transition:
+              transform 1s ease,
+              opacity 0.3s ease 0s; 
+          }
+
+          .hello-btn:not(:hover) + .hand {
+            opacity: 0;
+            transform: translateX(0) rotate(0deg);
+            transition:
+              transform 1s ease,
+              opacity 0.3s ease 1s; 
           }
         }
-      }
 
-      &:has(.hello-btn:hover) {
-        .hand {
-          opacity: 1;
-          transform: translateX(220px) rotate(1080deg);
-          transition: transform 1s ease, opacity 0.3s ease 0s;
+        .spacer {
+          flex: 1;
         }
-      }
 
-      &:not(:has(.hello-btn:hover)) {
-        .hand {
-          opacity: 0;
-          transform: translateX(0) rotate(0deg);
-          transition: transform 1s ease, opacity 0.3s ease 0.5s;
+        h1 {
+          font-size: 8em;
+          margin: 0;
+        }
         }
       }
     }
   }
 
-  h1 {
-    font-size: 8em;
-    margin: 0;
+  .atf-btn {
+    border: 2px solid white;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
   }
-}
 
-.atf-btn {
-  border: 2px solid white;
-  padding: 10px 20px;
-  background-color: transparent;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.spacer {
-  flex: 1;
-}
-
-.max-content {
-  max-width: 1440px;
-  width: 100%;
-}
