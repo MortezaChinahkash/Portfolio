@@ -32,9 +32,7 @@
         width: 30px;
         opacity: 0;
         transform: translateX(0) rotate(0deg);
-        transition:
-          transform 1s ease,
-          opacity 0.3s ease 1s; 
+        transition: transform 1s ease, opacity 0.3s ease 1s;
       }
 
       .hello-btn {
@@ -61,25 +59,19 @@
         }
       }
 
-      
       &:has(.hello-btn:hover) {
         .hand {
           opacity: 1;
-          transform: translateX(220px) rotate(360deg);
-          transition:
-            transform 1s ease,
-            opacity 0.3s ease 0s; 
+          transform: translateX(220px) rotate(1080deg);
+          transition: transform 1s ease, opacity 0.3s ease 0s;
         }
       }
 
-      
       &:not(:has(.hello-btn:hover)) {
         .hand {
           opacity: 0;
           transform: translateX(0) rotate(0deg);
-          transition:
-            transform 1s ease,
-            opacity 0.3s ease 1s; 
+          transition: transform 1s ease, opacity 0.3s ease 0.5s;
         }
       }
     }
