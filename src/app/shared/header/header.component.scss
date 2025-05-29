@@ -37,6 +37,26 @@ header{
         width: 100px;
         height: 25px;
     }
+.about {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+}
+
+.about img {
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    clip-path: inset(0 0 100% 0); /* komplett versteckt (oben abgeschnitten) */
+    transition: clip-path 0.5s ease-out;
+}
+
+.about:hover img {
+    clip-path: inset(0 0 0 0); /* alles sichtbar */
+}
+
 
 
 }
