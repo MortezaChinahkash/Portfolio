@@ -1,168 +1,232 @@
+/* styles.css or your SCSS file */
 .hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin-top: -140px; /* Add negative margin to pull up behind header */
+  padding: 70px 0;
   background: url("./../../../../public/assets/png/Design material/01_Background/Design Size Relation@3x/01_Hero.png");
   background-size: cover;
   background-position: bottom;
   color: white;
-
-  .max-content {
-    max-width: 1044px;
-    width: 100%;
-
-    .atf-content {
-      width: 100%;
-
-      .hero-row {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .hand-hello {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          position: relative;
-
-          .hello-btn {
-            border: 2px solid white;
-            padding: 10px 20px;
-            background-color: transparent;
-            border-radius: 25px;
-            transition: background-color 0.5s, color 0.5s;
-            color: white;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            min-width: fit-content;
-
-            .normal-text {
-              transition: opacity 0.3s;
-            }
-
-            .hover-text {
-              display: none;
-              white-space: nowrap;
-            }
-
-            &:hover {
-              background-color: #1073ea;
-              color: black;
-
-              .normal-text {
-                display: none;
-              }
-
-              .hover-text {
-                display: inline;
-              }
-            }
-          }
-
-          .hand {
-            width: 30px;
-            opacity: 0;
-            transform: translateX(0) rotate(0deg);
-            transition: transform 1s ease, opacity 0.3s ease 1s;
-            position: absolute;
-            top: -40px;
-            left: 0;
-          }
-
-          .hello-btn:hover + .hand {
-            opacity: 1;
-            transform: translateX(220px) rotate(720deg);
-            transition: transform 1s ease, opacity 0.3s ease 0s;
-          }
-
-          .hello-btn:not(:hover) + .hand {
-            opacity: 0;
-            transform: translateX(0) rotate(0deg);
-            transition: transform 1s ease, opacity 0.3s ease 1s;
-          }
-        }
-
-        .spacer {
-          flex: 1;
-        }
-
-        h1 {
-          font-size: 8em;
-          margin: 0;
-        }
-      }
-    }
-  }
+  overflow: hidden;
+  
+  /* Add padding-top to account for header height */
+  padding-top: 140px; /* 70px for the negative margin + 70px for content spacing */
 }
 
-.atf-btn {
+.max-content {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.atf-content {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: auto 0; /* Add this */
+}
+
+.hero-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.hero-row--top,
+.hero-row--bottom {
+  align-items: flex-start;
+}
+.hero-row-space {
+  margin: 2rem 0 1rem 0;
+}
+
+.hand-hello {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.hello-btn {
   border: 2px solid white;
-  padding: 10px 20px;
-  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  background: transparent;
   border-radius: 25px;
-  transition: background-color 0.3s, color 0.3s;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.5s, color 0.5s;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.hello-btn .normal-text { transition: opacity 0.3s; }
+.hello-btn .hover-text { display: none; white-space: nowrap; }
+.hello-btn:hover {
+  background: #1073ea;
+  color: black;
+}
+.hello-btn:hover .normal-text { display: none; }
+.hello-btn:hover .hover-text { display: inline; }
+.hand {
+  width: 30px;
+  opacity: 0;
+  transform: translateX(0) rotate(0deg);
+  transition: transform 1s, opacity 0.5s;
+  position: absolute;
+  top: -40px;
+  left: 0;
+}
+.hello-btn:hover + .hand {
+  opacity: 1;
+  transform: translateX(240px) rotate(720deg);
+  transition: transform 1s, opacity 0.2s;
+}
+.hello-btn:not(:hover) + .hand {
+  opacity: 0;
+  transform: translateX(0) rotate(0deg);
+  transition: transform 1s, opacity 0.5s;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.responsive-title {
+  font-size: clamp(2rem, 8vw, 6rem); /* Scales with screen */
+  margin: 0;
+  text-wrap: balance;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+}
+.responsive-title span {
+  display: inline-block;
+  transition: color 0.5s;
+  color: #fff;
+  cursor: pointer;
+}
+.responsive-title span:hover {
+  color: #1aa8b5;
+}
+
+.hero-pic {
+  max-width: 160px;
+  width: 25vw;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-left: 2vw;
+  box-shadow: 0 0 12px rgba(0,0,0,.25);
 }
 
 .atf-btn {
   display: inline-block;
-  padding: 12px 24px;
-  background-color: #ffffff00;
+  padding: 0.75rem 2rem;
+  background-color: transparent;
   color: white;
   font-weight: 600;
   border: 2px solid white;
   border-radius: 25px;
   box-shadow: 2px 2px 0px 1px #ffffff;
-  cursor: url("/assets/hand-pointer.png"), auto;
-  transition: all 0.2s ease;
-  position: relative;
-  bottom: 0;
-  right: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
-
 .atf-btn:hover {
-  background-color: #24dd80;
+  background: #24dd80;
   color: black;
   box-shadow: none;
   transform: translateY(2px);
 }
 
-h1 span {
-  display: inline-block;
-  transition: color 0.5s ease;
-  color: rgb(255, 255, 255);
+.hero-socials {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  display: flex;
+  flex-direction: column; /* or column if you want them stacked */
+  gap: 1rem;
+  align-items: center;
 }
 
-h1 span:hover {
-  color: #1aa8b5;
-}
-.hero-socials {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
-  cursor: url("/assets/hand-pointer.png"), auto;
-}
 .social-circle {
   border: 2px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
-  width: 40px;
-  height: 40px;
-  cursor: url("/assets/hand-pointer.png"), auto;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  background: rgba(0,0,0,0.15);
+  transition: background 0.3s;
+}
+.social-circle:hover {
+  background: #1aa8b5;
 }
 .social-pic {
-  width: 40px;
-  padding: 10px;
-  cursor: url("/assets/hand-pointer.png"), auto;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* ------------- Responsive Styles ------------- */
+@media (max-width: 600px) {
+  .hero-socials {
+    left: 8px;
+    bottom: 8px;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 900px) {
+  .max-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hero-socials {
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .responsive-title {
+    font-size: clamp(1.5rem, 7vw, 3rem);
+  }
+  .hero-pic {
+    max-width: 90px;
+    width: 32vw;
+    margin-left: 0.5vw;
+  }
+  .atf-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+  }
+  .hand {
+    top: -30px;
+  }
+  .hero-row {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0.4rem 0;
+  }
 }
