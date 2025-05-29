@@ -10,6 +10,8 @@ header{
     img{
         width: 75px;
         height: 75px;
+        transition: transform 1s ease-out;
+        cursor: url("/assets/hand-pointer.png"), auto;
     }
     nav{
         width: 100%;
@@ -122,5 +124,12 @@ header{
 
 .contact:hover img {
     clip-path: inset(0 0 0 0);
+}
+.initials {
+    
+}
+
+.initials:hover {
+    transform: rotate(360deg);
 }
 }
