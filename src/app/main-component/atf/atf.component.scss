@@ -118,7 +118,7 @@
 .atf-btn {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #ffffff00; /* Primärfarbe (blau), passe nach Geschmack an */
+  background-color: #ffffff00;
   color: white;
   font-weight: 600;
   border: 2px solid white;
@@ -135,13 +135,13 @@
   background-color: #24dd80;
   color: black;
   box-shadow: none;
-  transform: translateY(2px); /* leicht nach unten drücken */
+  transform: translateY(2px);
 }
 
 h1 span {
   display: inline-block;
   transition: color 0.5s ease;
-  color: rgb(255, 255, 255); /* falls schwarz zu wenig Kontrast hat */
+  color: rgb(255, 255, 255);
 }
 
 h1 span:hover {
