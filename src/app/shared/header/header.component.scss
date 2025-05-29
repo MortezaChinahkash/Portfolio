@@ -132,7 +132,7 @@ header{
     align-items: center;
     justify-content: center;
     cursor: url("/assets/hand-pointer.png"), auto;
-    transition: transform 1s ease-out;
+    transition: transform 0.7s ease-out;
 
     img {
         position: absolute;
@@ -141,7 +141,8 @@ header{
         width: 100%;
         height: 100%;  
         object-fit: contain; 
-        transition: opacity 0.5s ease-out;
+        transition: opacity 0.7s ease-out;
+        cursor: url("/assets/hand-pointer.png"), auto;
     }
 
     .logo-hover {
