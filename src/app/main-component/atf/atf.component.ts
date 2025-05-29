@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ATFComponent {
 
-toggleCase(event: MouseEvent): void {
+onLetterHover(event: MouseEvent): void {
   const span = event.target as HTMLSpanElement;
 
   if (span.dataset['active'] === 'true') return; 
@@ -20,7 +20,7 @@ toggleCase(event: MouseEvent): void {
     : char.toUpperCase();
 }
 
-resetCase(event: MouseEvent): void {
+onLetterExit(event: MouseEvent): void {
   const span = event.target as HTMLSpanElement;
 
   if (span.dataset['active'] !== 'true') return;
