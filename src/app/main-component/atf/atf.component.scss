@@ -55,7 +55,7 @@
             }
 
             &:hover {
-              background-color: #24dd80;
+              background-color: #1073EA;
               color: black;
 
               .normal-text {
@@ -99,21 +99,13 @@
           font-size: 8em;
           margin: 0;
           
-          h1 span {
-            display: inline-block;
-            transition: color 0.3s ease;
-            cursor: pointer;
-            color: black;
-          }
-
-          h1 span:hover {
-            color: #ff5733;
+          
           }
         }
       }
     }
   }
-}
+
 
 .atf-btn {
   border: 2px solid white;
@@ -144,4 +136,14 @@
   color: black;
   box-shadow: none;
   transform: translateY(2px); /* leicht nach unten drücken */
+}
+
+h1 span {
+  display: inline-block;
+  transition: color 0.5s ease;
+  color: rgb(255, 255, 255); /* falls schwarz zu wenig Kontrast hat */
+}
+
+h1 span:hover {
+  color: #1AA8B5;
 }

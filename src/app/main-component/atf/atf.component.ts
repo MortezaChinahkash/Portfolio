@@ -9,19 +9,19 @@ import { Component } from '@angular/core';
 export class ATFComponent {
 
 toggleCase(event: MouseEvent): void {
-    const span = event.target as HTMLSpanElement;
-    const char = span.textContent || '';
-    span.textContent = char === char.toUpperCase()
-      ? char.toLowerCase()
-      : char.toUpperCase();
-  }
+  const span = event.target as HTMLSpanElement;
+  const char = span.textContent || '';
+  span.textContent = char === char.toUpperCase()
+    ? char.toLowerCase()
+    : char.toUpperCase();
+}
 
-  resetCase(event: MouseEvent): void {
-    const span = event.target as HTMLSpanElement;
-    const original = span.textContent || '';
-    span.textContent = original === original.toUpperCase()
-      ? original.toLowerCase()
-      : original.toUpperCase();
-  }
+resetCase(event: MouseEvent): void {
+  const span = event.target as HTMLSpanElement;
+  const char = span.textContent || '';
+  span.textContent = char === char.toUpperCase()
+    ? char.toLowerCase()
+    : char.toUpperCase();
+}
   
 }
