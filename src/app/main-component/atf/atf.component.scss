@@ -147,3 +147,24 @@ h1 span {
 h1 span:hover {
   color: #1AA8B5;
 }
+.hero-socials{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 30px;
+  height: 30px;
+  cursor: url("/assets/hand-pointer.png"), auto;
+
+}
+.social-circle{
+  border: 2px solid white;
+  border-radius: 50px;
+  background-color: #0E161F ;
+  cursor: url("/assets/hand-pointer.png"), auto;
+}
+.social-pic{
+  padding: 10px;
+  cursor: url("/assets/hand-pointer.png"), auto;
+}
