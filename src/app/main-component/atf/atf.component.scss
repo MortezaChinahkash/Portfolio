@@ -55,7 +55,7 @@
             }
 
             &:hover {
-              background-color: #24DD80;
+              background-color: #24dd80;
               color: black;
 
               .normal-text {
@@ -72,28 +72,22 @@
             width: 30px;
             opacity: 0;
             transform: translateX(0) rotate(0deg);
-            transition:
-              transform 1s ease,
-              opacity 0.3s ease 1s; 
+            transition: transform 1s ease, opacity 0.3s ease 1s;
             position: absolute;
-            top: -40px; 
+            top: -40px;
             left: 0;
           }
 
           .hello-btn:hover + .hand {
             opacity: 1;
             transform: translateX(220px) rotate(720deg);
-            transition:
-              transform 1s ease,
-              opacity 0.3s ease 0s; 
+            transition: transform 1s ease, opacity 0.3s ease 0s;
           }
 
           .hello-btn:not(:hover) + .hand {
             opacity: 0;
             transform: translateX(0) rotate(0deg);
-            transition:
-              transform 1s ease,
-              opacity 0.3s ease 1s; 
+            transition: transform 1s ease, opacity 0.3s ease 1s;
           }
         }
 
@@ -104,41 +98,50 @@
         h1 {
           font-size: 8em;
           margin: 0;
-        }
+          
+          h1 span {
+            display: inline-block;
+            transition: color 0.3s ease;
+            cursor: pointer;
+            color: black;
+          }
+
+          h1 span:hover {
+            color: #ff5733;
+          }
         }
       }
     }
   }
+}
 
-  .atf-btn {
-    border: 2px solid white;
-    padding: 10px 20px;
-    background-color: transparent;
-    border-radius: 25px;
-    transition: background-color 0.3s, color 0.3s;
+.atf-btn {
+  border: 2px solid white;
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-  }
-
-  .atf-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #ffffff00; /* Primärfarbe (blau), passe nach Geschmack an */
-    color: white;
-    font-weight: 600;
-    border: 2px solid white;
-    border-radius: 25px;
-    box-shadow: 2px 2px 0px 1px #ffffff;
-    cursor: url("/assets/hand-pointer.png"), auto;    
-    transition: all 0.2s ease;
-    position: relative;
-    bottom: 0;
-    right: 0;
+.atf-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ffffff00; /* Primärfarbe (blau), passe nach Geschmack an */
+  color: white;
+  font-weight: 600;
+  border: 2px solid white;
+  border-radius: 25px;
+  box-shadow: 2px 2px 0px 1px #ffffff;
+  cursor: url("/assets/hand-pointer.png"), auto;
+  transition: all 0.2s ease;
+  position: relative;
+  bottom: 0;
+  right: 0;
 }
 
 .atf-btn:hover {
-    background-color: #24DD80; 
-    color: black;
-    box-shadow: none;
-    transform: translateY(2px); /* leicht nach unten drücken */
+  background-color: #24dd80;
+  color: black;
+  box-shadow: none;
+  transform: translateY(2px); /* leicht nach unten drücken */
 }
-
