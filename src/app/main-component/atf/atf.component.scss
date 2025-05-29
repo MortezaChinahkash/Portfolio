@@ -116,5 +116,28 @@
     background-color: transparent;
     border-radius: 25px;
     transition: background-color 0.3s, color 0.3s;
+
   }
+
+  .atf-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ffffff00; /* Primärfarbe (blau), passe nach Geschmack an */
+    color: white;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 25px;
+    box-shadow: 2px 2px 0px 1px #ffffff;
+    cursor: url("/assets/hand-pointer.png"), auto;    
+    transition: all 0.2s ease;
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+
+.atf-btn:hover {
+    background-color: #24DD80; 
+    box-shadow: none;
+    transform: translateY(2px); /* leicht nach unten drücken */
+}
 
