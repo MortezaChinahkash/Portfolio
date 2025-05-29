@@ -127,8 +127,8 @@ header{
     position: relative;
     width: 75px;
     height: 75px;
-    overflow: hidden;  // ← verhindert, dass etwas „rausquillt“
-    display: flex;     // ← zentriert Inhalte (optional)
+    overflow: hidden;  
+    display: flex;     
     align-items: center;
     justify-content: center;
     cursor: url("/assets/hand-pointer.png"), auto;
@@ -139,8 +139,8 @@ header{
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;  // ← füllt Container exakt, kein height: auto
-        object-fit: contain; // ← sorgt für korrektes Seitenverhältnis ohne Verzerren
+        height: 100%;  
+        object-fit: contain; 
         transition: opacity 0.5s ease-out;
     }
 
