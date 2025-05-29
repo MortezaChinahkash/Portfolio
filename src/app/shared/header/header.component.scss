@@ -49,14 +49,78 @@ header{
     position: absolute;
     top: -10%;
     left: -10%;
-    clip-path: inset(0 0 100% 0); /* komplett versteckt (oben abgeschnitten) */
+    clip-path: inset(0 0 100% 0);
     transition: clip-path 0.5s ease-out;
+    pointer-events: none;
 }
 
 .about:hover img {
-    clip-path: inset(0 0 0 0); /* alles sichtbar */
+    clip-path: inset(0 0 0 0);
 }
 
+.skills {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+}
 
+.skills img {
+    width: 140%;
+    height: 120%;
+    position: absolute;
+    bottom: -10%;
+    left: -20%;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.5s ease-out;
+    z-index: -1;
+    pointer-events: none;
+}
 
+.skills:hover img {
+    clip-path: inset(0 0 0 0);
+}
+
+.projects {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+}
+
+.projects img {
+    width: 140%;
+    height: 120%;
+    position: absolute;
+    bottom: -10%;
+    right: -20%;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.5s ease-out;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.projects:hover img {
+    clip-path: inset(0 0 0 0);
+}
+
+.contact {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+}
+
+.contact img {
+    width: 140%;
+    height: 120%;
+    position: absolute;
+    bottom: -40%;
+    left: -10%;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.5s ease-out;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.contact:hover img {
+    clip-path: inset(0 0 0 0);
+}
 }
