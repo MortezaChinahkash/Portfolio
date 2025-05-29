@@ -12,9 +12,10 @@
   background-size: cover;
   background-position: bottom;
   color: white;
+  
 
   .max-content {
-    max-width: 1440px;
+    max-width: 1024px;
     width: 100%;
 
     .atf-content {
@@ -151,20 +152,22 @@ h1 span:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 15px;
-  width: 30px;
-  height: 30px;
   cursor: url("/assets/hand-pointer.png"), auto;
 
 }
 .social-circle{
   border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50px;
-  background-color: #0E161F ;
+  width: 40px;
+  height: 40px;
   cursor: url("/assets/hand-pointer.png"), auto;
 }
 .social-pic{
+  width: 40px;
   padding: 10px;
   cursor: url("/assets/hand-pointer.png"), auto;
 }
