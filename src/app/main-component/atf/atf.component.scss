@@ -40,7 +40,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 0; // Remove vertical margin
+  margin: 0;
 }
 
 .hero-row--top,
@@ -49,7 +49,7 @@
 }
 
 .hero-row-space {
-  margin: 0.5rem 0; // Reduced margin from 2rem to 0.5rem
+  margin: 0.5rem 0;
 }
 
 .hand-hello {
@@ -115,8 +115,8 @@
   text-wrap: balance;
   letter-spacing: 0.05em;
   font-weight: 800;
-  line-height: 0.9; // Add line height to bring text closer
-  margin: -0.5rem 0; // Add negative margin to reduce space between lines
+  line-height: 0.9;
+  margin: -0.5rem 0;
 }
 
 .responsive-title span {
@@ -165,7 +165,7 @@
 .hero-socials {
   position: fixed;
   left: 32px;
-  bottom: 15vh; // Lowered from 35vh to 25vh
+  bottom: 15vh;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -197,14 +197,14 @@
 
 @media (min-width: 1800px) {
   .hero-socials {
-    bottom: 30vh; // Lowered from 40vh to 30vh
+    bottom: 30vh;
     left: 48px;
   }
 }
 
 @media (max-width: 900px) {
   .hero-socials {
-    bottom: 20vh; // Lowered from 32vh to 20vh
+    bottom: 20vh;
     left: 24px;
   }
 }
@@ -212,11 +212,10 @@
 @media (max-width: 600px) {
   .hero-socials {
     left: 16px;
-    bottom: 15vh; // Lowered from 25vh to 15vh
+    bottom: 15vh;
     gap: 0.75rem;
   }
   .responsive-title {
-    // ...existing code...
     line-height: 1;
     margin: -0.25rem 0;
   }
