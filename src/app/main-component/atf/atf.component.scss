@@ -163,13 +163,14 @@
 }
 
 .hero-socials {
-  position: absolute;
+  position: fixed;
   left: 32px;
-  bottom: 32px;
+  bottom: 15vh; // Lowered from 35vh to 25vh
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
+  z-index: 100;
 }
 
 .social-circle {
@@ -194,16 +195,26 @@
   object-fit: contain;
 }
 
+@media (min-width: 1800px) {
+  .hero-socials {
+    bottom: 30vh; // Lowered from 40vh to 30vh
+    left: 48px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-socials {
+    bottom: 20vh; // Lowered from 32vh to 20vh
+    left: 24px;
+  }
+}
+
 @media (max-width: 600px) {
   .hero-socials {
-    left: 8px;
-    bottom: 8px;
-    gap: 0.5rem;
+    left: 16px;
+    bottom: 15vh; // Lowered from 25vh to 15vh
+    gap: 0.75rem;
   }
-  .hero-row-space {
-    margin: 0.25rem 0; // Even smaller margin for mobile
-  }
-  
   .responsive-title {
     // ...existing code...
     line-height: 1;
