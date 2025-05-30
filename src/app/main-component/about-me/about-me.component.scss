@@ -119,10 +119,12 @@ section {
     transition: all 0.2s;
     width: fit-content;
     margin-top: 1rem;
+    box-shadow: 2px 2px 0px 1px #000000;
   }
 
   div:hover {
     background: #24dd80;
+      box-shadow: none;
     transform: translateY(2px);
   }
 }
