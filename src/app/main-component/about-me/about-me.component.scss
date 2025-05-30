@@ -54,7 +54,7 @@ section {
   align-items: center;
   color: white;
   width: 54%;
-  transform: rotate(-1deg);
+  transform: rotate(5deg);
   font-weight: bold;
 }
 
@@ -75,7 +75,7 @@ section {
 }
 .paper3 {
   z-index: -1;
-  transform: rotate(-2deg);
+  transform: rotate(5deg);
 }
 
 .about-me {
@@ -151,4 +151,7 @@ section {
     width: 150px;
     height: 150px;
   }
+}
+.talk-button{
+    align-self: flex-end;
 }
