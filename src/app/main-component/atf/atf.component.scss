@@ -16,14 +16,14 @@
 }
 
 .max-content {
-  max-width: 1100px;
+  max-width: 1024px; // Changed from 1100px to 1024px
   width: 90%;
   margin: 0 auto;
   padding-top: 140px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
   z-index: 2;
 }
@@ -35,7 +35,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 2rem; // Reduced margin
 }
 
 .hero-row {
@@ -169,6 +169,8 @@
   flex-direction: column;
   gap: 1rem;
   z-index: 3;
+  align-self: flex-start; // Align to the left
+  margin-left: 10%; // Adjust this value to align with the "F"
 }
 
 .social-circle {
@@ -195,23 +197,22 @@
 
 @media (min-width: 1800px) {
   .atf-content{
-    margin-bottom: 100px;
+    margin-bottom: 2rem;
   }
 
   .hero{
     background-position: center 95%;
   }
-
-  .hero-socials {
-    bottom: 10vh;
-    left: 48px;
-  }
 }
 
 @media (max-width: 900px) {
   .hero-socials {
-    bottom: 10vh;
-    left: 24px;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 2rem;
+    gap: 1rem;
+    align-self: center;
   }
 }
 
