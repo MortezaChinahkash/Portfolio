@@ -154,15 +154,15 @@ section {
 
 @keyframes lineReveal {
   0%, 50% {
-    clip-path: inset(0 100% 0 0); // Hidden for first 3s (50% of 6s)
+    clip-path: inset(0 100% 0 0);
   }
   66.7% {
-    clip-path: inset(0 0 0 0); // Reveal animation (1s)
+    clip-path: inset(0 0 0 0);
   }
   83.3% {
-    clip-path: inset(0 0 0 0); // Stay visible for 1s
+    clip-path: inset(0 0 0 0);
   }
   100% {
-    clip-path: inset(0 100% 0 0); // Animate back to hidden (1s)
+    clip-path: inset(0 100% 0 0);
   }
 }
