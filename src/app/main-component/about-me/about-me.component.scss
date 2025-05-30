@@ -33,7 +33,31 @@ section {
     transform: rotate(-2deg);
     width: 41%;
     color: white;
+    font-weight: bold;
 }
+
+.paper-input2{
+margin-top: -90px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: white;
+width: 47%;
+transform: rotate(2deg);
+font-weight: bold;
+}
+
+.paper-input3{
+margin-top: -100px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: white;
+width: 54%;
+transform: rotate(-1deg);
+font-weight: bold;
+}
+
 .paper {
   width: 100%;
   max-width: 400px;
@@ -46,9 +70,10 @@ section {
   z-index: 2;
   transform: rotate(-2deg);
 }
-
+.dev-img{
+    width: 50px;
+}
 .paper3 {
-  margin-top: -50px;
   z-index: -1;
   transform: rotate(-2deg);
 }
