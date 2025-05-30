@@ -148,4 +148,21 @@ section {
   width: 200px;
   height: 20px;
   margin-top: -35px;
+  clip-path: inset(0 100% 0 0);
+  animation: lineReveal 6s infinite;
+}
+
+@keyframes lineReveal {
+  0%, 50% {
+    clip-path: inset(0 100% 0 0); // Hidden for first 3s (50% of 6s)
+  }
+  66.7% {
+    clip-path: inset(0 0 0 0); // Reveal animation (1s)
+  }
+  83.3% {
+    clip-path: inset(0 0 0 0); // Stay visible for 1s
+  }
+  100% {
+    clip-path: inset(0 100% 0 0); // Animate back to hidden (1s)
+  }
 }
