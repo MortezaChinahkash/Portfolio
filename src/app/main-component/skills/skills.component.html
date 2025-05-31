@@ -1,1 +1,6 @@
-<p>skills works!</p>
+@for (skill of skills; track skill) {
+  <div class="skill">
+    <img [src]="skill.image" [alt]="skill.name" />
+    <span>{{ skill.name }}</span>
+  </div>
+}
