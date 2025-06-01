@@ -1,29 +1,18 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { DragDropModule } from '@angular/cdk/drag-drop';
+
 import { Component } from '@angular/core';
-import { AppComponent } from '../../app.component';
+import { CommonModule } from '@angular/common';
 
 interface Skill {
   name: string;
   image: string;
 }
 
-@NgModule({
-  declarations: [AppComponent, SkillsComponent],
-  imports: [
-    BrowserModule,
-    DragDropModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-
 @Component({
+  standalone: true,
   selector: 'app-skills',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+  styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
 
@@ -91,16 +80,31 @@ export class SkillsComponent {
     
   ];
 
+  isDragging = false;
+  startY = 0;
   currentState: 'default' | 'transition' | 'final' = 'default';
 
-  onDragMoved() {
-    if (this.currentState !== 'final') {
-      this.currentState = 'transition';
+  onMouseDown(event: MouseEvent) {
+    this.isDragging = true;
+    this.startY = event.clientY;
+    this.currentState = 'transition';
+  }
+
+  onMouseMove(event: MouseEvent) {
+    if (this.isDragging) {
+      const deltaY = event.clientY - this.startY;
+      if (deltaY > 100) { 
+        this.currentState = 'final';
+        this.isDragging = false;
+      }
     }
   }
 
-  onDragReleased() {
-    this.currentState = 'final';
+  onMouseUp(event: MouseEvent) {
+    this.isDragging = false;
+    if (this.currentState !== 'final') {
+      this.currentState = 'default';
+    }
   }
 }
 

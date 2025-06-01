@@ -26,7 +26,11 @@
       </div>
     </div>
     <div class="note-pull">
-        <div cdkDrag (cdkDragMoved)="onDragMoved()" (cdkDragReleased)="onDragReleased()">
+        <div
+  (mousedown)="onMouseDown($event)"
+  (mousemove)="onMouseMove($event)"
+  (mouseup)="onMouseUp($event)"
+>
   @if (currentState === 'default') {
     <img class="note" src="/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/A.png">
   } @else if (currentState === 'transition') {
@@ -38,7 +42,7 @@
 
 @if (currentState === 'final') {
   <div class="revealed-text">
-    <p>Hier kommt der Text, der vorher verborgen war!</p>
+    <p>Hier kommt der Text!</p>
   </div>
 }
     </div>

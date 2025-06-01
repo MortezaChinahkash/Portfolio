@@ -96,6 +96,10 @@ p{
 .note{
   width: 300px;
   rotate: 7deg;
+  cursor: grab;
+}
+.note:hover {
+  cursor: grabbing;
 }
 .skill{
   display: flex;
