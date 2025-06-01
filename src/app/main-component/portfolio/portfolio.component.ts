@@ -45,14 +45,25 @@ export class PortfolioComponent {
       compId: 'join-project',
     },
     {
-      title: 'El Pollo Loco – A Feather-Flinging 2-D Jump-’n’-Run',
-      description: 'Description for project 2',
-      imageUrl: 'https://via.placeholder.com/150',
-      projectUrl: 'https://example.com/project2',
-      gitHubUrl: 'https://github.com/user/project2',
-      technologies: ['React', 'JavaScript'],
+        title: 'El Pollo Loco – A Feather-Flinging 2-D Jump-’n’-Run',
+        description:
+          'Dive into a sun-scorched desert canyon where a fearless farmhand faces off against a riotous flock of mutant chickens. El Pollo Loco blends classic side-scrolling action with slap-stick humor and crisp, hand-drawn art to deliver a fast-paced platformer that feels both nostalgic and fresh.',
+        imageUrl: '',
+        projectUrl: '',
+        gitHubUrl: '',
+      technologies: [
+        {
+          name: 'React',
+          imageUrl: '',
+        },
+        {
+          name: 'JavaScript',
+          imageUrl: '',
+        },
+      ],
       isFeatured: false,
       isInProgress: true,
+      compId: 'el-pollo-loco',
     },
   ];
 }
