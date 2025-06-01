@@ -12,7 +12,7 @@ interface Skill { name: string; image: string; }
 })
 export class SkillsComponent {
 
-  /* ---------- Skill-Icons ------------------------------------------ */
+
   skills: Skill[] = [
     { name:'HTML',       image:'assets/png/icons/Skill Icons/HTML.png' },
     { name:'CSS',        image:'assets/png/icons/Skill Icons/CSS.png' },
@@ -31,17 +31,16 @@ export class SkillsComponent {
     { name:'Scrum',      image:'assets/png/icons/Skill Icons/Scrum.png' }
   ];
 
-  /* ---------- Peel-Logik ------------------------------------------- */
   private boundMove = (e: MouseEvent) => this.onMouseMove(e);
   private boundUp   = (e: MouseEvent) => this.onMouseUp(e);
 
   isDragging   = false;
   startY       = 0;
-  readonly threshold = 100;                         // px bis „abgezogen“
+  readonly threshold = 100;                         
   currentState: 'default' | 'transition' | 'final' = 'default';
 
   onMouseDown(ev: MouseEvent) {
-    if (this.currentState === 'final') return;      // schon fertig
+    if (this.currentState === 'final') return;      
     this.isDragging   = true;
     this.startY       = ev.clientY;
     this.currentState = 'transition';
@@ -51,7 +50,6 @@ export class SkillsComponent {
   }
 
   onMouseMove(_: MouseEvent) {
-    /* nur Tracking – kein visuelles Verschieben mehr */
   }
 
   onMouseUp(ev: MouseEvent) {

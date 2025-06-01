@@ -1,6 +1,4 @@
-/* --------------------------------------------------------------- */
-/* 1) Original-Layout (unverändert)                                */
-/* --------------------------------------------------------------- */
+
 .skills {
   display: flex;
   justify-content: center;
@@ -94,21 +92,18 @@ p {
   .skills-header h1 { font-size: 2rem; }
 }
 
-/* --------------------------------------------------------------- */
-/* 2) Peel-Note (funktional, nur hier angepasst)                    */
-/* --------------------------------------------------------------- */
+
 .note-pull {
   position: relative;
   width: 300px;
-  height: 300px;              /* ← feste Fläche für Maus-Events  */
+  height: 300px;              
   cursor: grab;
   user-select: none;
 
   &.dragging { cursor: grabbing; }
 
-  img { pointer-events: none; }  /* verhindert Browser-Drag */
+  img { pointer-events: none; }  
 
-  /* Drei übereinander liegende Bilder */
   .note {
     position: absolute;
     top: 0;
@@ -121,7 +116,7 @@ p {
   }
   .note.visible { opacity: 1; }
 
-  /* Hinweistext beim Ziehen */
+ 
   .peel-text {
     position: absolute;
     top: 50%;
@@ -136,7 +131,7 @@ p {
   }
 }
 
-/* Offen-Zustand – Text unter der Note */
+
 .revealed-text p {
   color: black;
   font-size: 1rem;
@@ -145,6 +140,6 @@ p {
   text-align: center;
 }
 
-/* Einzelnes statisches Bild, falls separat genutzt */
+
 .note-image-unpeeled { transform: rotate(7deg); }
 .note { width: 300px; rotate: 7deg; user-select: none; }
