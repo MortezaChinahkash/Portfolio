@@ -106,5 +106,9 @@ export class SkillsComponent {
       this.currentState = 'default';
     }
   }
+  onDragStart(event: DragEvent) {
+  event.preventDefault();
+}
+
 }
 

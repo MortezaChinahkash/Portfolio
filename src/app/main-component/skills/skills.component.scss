@@ -64,9 +64,15 @@
 }
 
 .note-pull {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
+  cursor: grab;
+
+  &.dragging {
+    cursor: grabbing;
+  }
+
+  img {
+    pointer-events: none; // blockiert Bild-Drag komplett
+  }
 }
 
 .note-image-unpeeled{
@@ -96,7 +102,7 @@ p{
 .note{
   width: 300px;
   rotate: 7deg;
-  cursor: grab;
+  user-select: none;
 }
 
 .skill{

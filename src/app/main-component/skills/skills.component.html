@@ -27,19 +27,19 @@
     </div>
     <div class="note-pull">
         <div
+  class="note-pull"
+  [class.dragging]="isDragging"
   (mousedown)="onMouseDown($event)"
   (mousemove)="onMouseMove($event)"
   (mouseup)="onMouseUp($event)"
-  [ngStyle]="{ cursor: isDragging ? 'grabbing' : 'grab' }"
-  style="user-select: none;"
-  draggable="false"
+  (dragstart)="onDragStart($event)"
 >
   @if (currentState === 'default') {
-    <img class="note" src="/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/A.png">
+    <img class="note" src="/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/A.png" draggable="false">
   } @else if (currentState === 'transition') {
-    <img class="note" src="/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/B.png">
+    <img class="note" src="/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/B.png" draggable="false">
   } @else if (currentState === 'final') {
-    <img class="note" src="/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/C.png">
+    <img class="note" src="/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/C.png" draggable="false">
   }
 </div>
 
