@@ -56,11 +56,8 @@ export class SkillsComponent {
     },
     {
       name: 'TypeScript',
-      image: 'assets/png/icons/Skill Icons/TypeScript.png'
+      image: 'assets/png/icons/Skill Icons/Ts.png'
     },
-    {
-      name: 'SCSS',
-      image: 'assets/png/icons/Skill Icons/SCSS.png'
-    }
+    
   ];
 }

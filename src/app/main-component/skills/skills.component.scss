@@ -33,10 +33,10 @@
   }
   
   h1 {
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.1;
-    margin: 0;
+    margin-top: 1rem;	
   }
 }
 
@@ -54,7 +54,12 @@
   }
   
   .different-skills {
-    width: 60%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 100px;
   }
 }
 
@@ -70,6 +75,12 @@ p{
   margin-top: -100px;
   width: 90%;
 
+}
+.skill{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 900px) {
   .skills-content {
