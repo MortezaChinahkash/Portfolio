@@ -65,5 +65,29 @@ export class PortfolioComponent {
       isInProgress: true,
       compId: 'el-pollo-loco',
     },
+    {
+      title: 'DABubble',
+      description: 'Project description coming soon',
+      imageUrl: 'null',
+      projectUrl: 'null',
+      gitHubUrl: 'null',
+      technologies: [
+        {
+          name: 'Angular',
+          imageUrl: '',
+        },
+        {
+          name: 'TypeScript',
+          imageUrl: '',
+        },
+        {
+          name: 'SCSS',
+          imageUrl: '',
+        },
+      ],
+      isFeatured: true,
+      isInProgress: true,
+      compId: 'dabubble',
+    }
   ];
 }
