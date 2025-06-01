@@ -33,11 +33,31 @@
     max-width: 1440px;
   }
 }
+@font-face {
+  font-family: "Kalam";
+  src: url("/assets/fonts/Kalam-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
 
 @font-face {
   font-family: "BricolageGrotesque";
   src: url("/assets/fonts/BricolageGrotesque-Regular.ttf") format("truetype");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kalam";
+  src: url("/assets/fonts/Kalam-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kalam";
+  src: url("/assets/fonts/Kalam-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
 }
 
