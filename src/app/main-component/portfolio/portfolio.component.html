@@ -21,6 +21,11 @@
             <img [src]="'/assets/png/icons/Skill Icons/' + tech.name + '.png'" />
         }
       </div>
+      <div>
+        @if (project.isFeatured) {
+          <span class="featured-badge">Featured</span>
+        }
+      </div>
 
 
 
