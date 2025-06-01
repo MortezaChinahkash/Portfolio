@@ -30,6 +30,9 @@
   (mousedown)="onMouseDown($event)"
   (mousemove)="onMouseMove($event)"
   (mouseup)="onMouseUp($event)"
+  [ngStyle]="{ cursor: isDragging ? 'grabbing' : 'grab' }"
+  style="user-select: none;"
+  draggable="false"
 >
   @if (currentState === 'default') {
     <img class="note" src="/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/A.png">
