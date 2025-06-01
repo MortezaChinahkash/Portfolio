@@ -29,14 +29,14 @@ export class PortfolioComponent {
       technologies: [
         {
           name: 'Angular',
-          imageUrl: '',
+          imageUrl: '/assets/png/icons/Skill Icons/Angular.png',
         },
         {
           name: 'TypeScript',
           imageUrl: '',
         },
         {
-          name: 'SCSS',
+          name: 'SASS',
           imageUrl: '',
         },
       ],

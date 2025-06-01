@@ -18,10 +18,14 @@
     <div class="project-card">
       <div class="technologies">
         @for(tech of project.technologies; track tech.name) {
-            <img [src]="tech.imageUrl" alt="{{ tech.name }}" />
-            <span>{{ tech.name }}</span>
+            <img [src]="'/assets/png/icons/Skill Icons/' + tech.name + '.png'" />
         }
       </div>
+
+
+
+
+
       </div>
     }
 
