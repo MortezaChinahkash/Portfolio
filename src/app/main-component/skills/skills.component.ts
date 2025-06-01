@@ -58,6 +58,22 @@ export class SkillsComponent {
       name: 'TypeScript',
       image: 'assets/png/icons/Skill Icons/Ts.png'
     },
+     {
+      name: 'Vue.js',
+      image: 'assets/png/icons/Skill Icons/Vue.Js.png'
+    },
+     {
+      name: 'Firebase',
+      image: 'assets/png/icons/Skill Icons/Firebase.png'
+    },
+     {
+      name: 'Rest API',
+      image: 'assets/png/icons/Skill Icons/Rest-Api.png'
+    },
+     {
+      name: 'Scrum',
+      image: 'assets/png/icons/Skill Icons/Scrum.png'
+    },
     
   ];
 }
