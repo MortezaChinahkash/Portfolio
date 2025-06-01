@@ -71,7 +71,7 @@
   }
 
   img {
-    pointer-events: none; // blockiert Bild-Drag komplett
+    pointer-events: none;
   }
 }
 
@@ -84,7 +84,6 @@
   z-index: 2;
   font-size: 3.4rem;
   text-align: center;
-  margin-top: -180px;
   transform: rotate(7deg);
   font-family: 'Kalam', Courier, monospace;
 
