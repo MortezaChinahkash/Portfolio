@@ -16,51 +16,51 @@ export class SkillsComponent {
   skills: Skill[] = [
     { 
       name: 'HTML', 
-      image: 'assets/images/skills/html.png' 
+      image: 'assets/png/icons/Skill Icons/HTML.png' 
     },
     { 
       name: 'CSS', 
-      image: 'assets/images/skills/css.png' 
+      image: 'assets/png/icons/Skill Icons/CSS.png' 
     },
     { 
       name: 'JavaScript', 
-      image: 'assets/images/skills/javascript.png' 
+      image: 'assets/png/icons/Skill Icons/Js.png' 
     },
     { 
       name: 'Angular', 
-      image: 'assets/images/skills/angular.png' 
+      image: 'assets/png/icons/Skill Icons/Angular.png' 
     },
     { 
       name: 'React', 
-      image: 'assets/images/skills/react.png' 
+      image: 'assets/png/icons/Skill Icons/React.png' 
     },
     {
       name: 'Bootstrap',
-      image: 'assets/images/skills/bootstrap.png'
+      image: 'assets/png/icons/Skill Icons/Bootstrap.png'
     },
     {
       name: 'Material Design',
-      image: 'assets/images/skills/material.png'
+      image: 'assets/png/icons/Skill Icons/Material Design.png'
     },
     {
       name: 'Git',
-      image: 'assets/images/skills/git.png'
+      image: 'assets/png/icons/Skill Icons/Git.png'
     },
     {
       name: 'GitHub',
-      image: 'assets/images/skills/github.png'
+      image: 'assets/png/icons/Skill Icons/GitHub.png'
     },
     {
       name: 'SASS',
-      image: 'assets/images/skills/sass.png'
+      image: 'assets/png/icons/Skill Icons/SASS.png'
     },
     {
       name: 'TypeScript',
-      image: 'assets/images/skills/typescript.png'
+      image: 'assets/png/icons/Skill Icons/TypeScript.png'
     },
     {
       name: 'SCSS',
-      image: 'assets/images/skills/scss.png'
+      image: 'assets/png/icons/Skill Icons/SCSS.png'
     }
   ];
 }
