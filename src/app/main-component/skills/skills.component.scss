@@ -5,7 +5,17 @@
     background-image: url("/assets/png/Design material/01_Background/Design Size Relation@3x/03_Skills.png");
     width: 100%;
     height: auto;
-    min-height: 1500px;
     background-position: bottom;
     color: white;
+    
+}
+.skills-content{
+    display: flex;
+}
+.skills-header{
+    width: 30%;
+}
+.skill-paper{
+    width: 100%;
+    height: 100%;
 }
