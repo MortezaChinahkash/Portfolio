@@ -14,14 +14,16 @@
         mastered along the way.
       </p>
     </div>
-    @for(project of projects; track project.id) {
-      <!-- <app-project-card [project]="project"></app-project-card> -->
+    @for(project of projects; track project.compId) {
+    <div class="project-card">
+      <div class="technologies">
+        @for(tech of project.technologies; track tech.name) {
+            <img [src]="tech.imageUrl" alt="{{ tech.name }}" />
+            <span>{{ tech.name }}</span>
+        }
+      </div>
+      </div>
     }
-
-
-
-
-
 
   </div>
 </section>
