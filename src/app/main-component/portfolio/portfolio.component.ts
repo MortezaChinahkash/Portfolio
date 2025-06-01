@@ -53,11 +53,15 @@ export class PortfolioComponent {
         gitHubUrl: '',
       technologies: [
         {
-          name: 'React',
+          name: 'JavaScript',
           imageUrl: '',
         },
         {
-          name: 'JavaScript',
+          name: 'CSS',
+          imageUrl: '',
+        },
+        {
+          name: 'HTML',
           imageUrl: '',
         },
       ],
