@@ -9,6 +9,7 @@ interface PortfolioItem {
   technologies: { name: string; imageUrl: string }[];
   isFeatured: boolean;
   isInProgress: boolean;
+  compId: string;
 }
 
 @Component({
@@ -41,9 +42,10 @@ export class PortfolioComponent {
       ],
       isFeatured: true,
       isInProgress: true,
+      compId: 'join-project',
     },
     {
-      title: 'El Pollo Loco',
+      title: 'El Pollo Loco – A Feather-Flinging 2-D Jump-’n’-Run',
       description: 'Description for project 2',
       imageUrl: 'https://via.placeholder.com/150',
       projectUrl: 'https://example.com/project2',
