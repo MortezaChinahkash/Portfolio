@@ -6,7 +6,16 @@
     </div>
     <div class="skills-description">
         <img class="skill-paper" src="/assets/png/Design material/02_Ripped Paper/1.Skills description.png" alt="">
-        <div class="different-skills"></div>
+        <p>My skills are a blend of design and development, allowing me to create visually appealing and functional web applications. I am proficient in HTML, CSS, JavaScript, and various frameworks, with a keen eye for design principles.</p>
+        <div class="different-skills">
+            @for (skill of skills; track by skill.name) {
+                <div class="skill">
+                    <img src="{{ skill.image }}" alt="{{ skill.name }}">
+                    <p>{{ skill.name }}</p>
+                </div>
+            }
+
+        </div>
     </div>
     <div class="note-pull"></div>
   </div>
