@@ -1,7 +1,7 @@
 .max-content {
-  max-width: 1024px;
+  max-width: 1440px;
   width: 100%;
-  margin: 0 auto; // Center the content
+  margin: 0 auto;
   padding: 0 36px;
   position: relative;
   top: 0;
@@ -15,7 +15,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px; // Add padding to create space from edges
+  padding: 0 20px;
   
   img {
     width: 75px;
@@ -28,15 +28,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 40px; // Add margin to create space from logo and toggle
+    margin: 0 40px;
   }
   
   ul {
     width: 100%;
     display: flex;
-    justify-content: center; // Center the nav items
+    justify-content: center;
     align-items: center;
-    gap: 100px; // Decrease gap between nav items
+    gap: 100px;
   }
   
   li {
