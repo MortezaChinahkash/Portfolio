@@ -1,9 +1,23 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { Component } from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 interface Skill {
   name: string;
   image: string;
 }
+
+@NgModule({
+  declarations: [AppComponent, SkillsComponent],
+  imports: [
+    BrowserModule,
+    DragDropModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
 
 @Component({
   selector: 'app-skills',
@@ -76,4 +90,17 @@ export class SkillsComponent {
     },
     
   ];
+
+  currentState: 'default' | 'transition' | 'final' = 'default';
+
+  onDragMoved() {
+    if (this.currentState !== 'final') {
+      this.currentState = 'transition';
+    }
+  }
+
+  onDragReleased() {
+    this.currentState = 'final';
+  }
 }
+

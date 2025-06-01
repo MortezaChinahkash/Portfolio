@@ -26,8 +26,21 @@
       </div>
     </div>
     <div class="note-pull">
-        <img class="note-image-unpeeled" src="/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/A.png" alt="">
-        <p class="peel-text-1">Pull to peel</p>
+        <div cdkDrag (cdkDragMoved)="onDragMoved()" (cdkDragReleased)="onDragReleased()">
+  @if (currentState === 'default') {
+    <img class="note" src="/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/A.png">
+  } @else if (currentState === 'transition') {
+    <img class="note" src="/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/B.png">
+  } @else if (currentState === 'final') {
+    <img class="note" src="/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/C.png">
+  }
+</div>
+
+@if (currentState === 'final') {
+  <div class="revealed-text">
+    <p>Hier kommt der Text, der vorher verborgen war!</p>
+  </div>
+}
     </div>
   </div>
 </section>
