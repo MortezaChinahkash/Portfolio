@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5%;
 }
 .projects-content{
     max-width: 1440px;
@@ -12,4 +13,7 @@
 }
 .projects-intro{
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
