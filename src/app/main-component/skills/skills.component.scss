@@ -1,3 +1,6 @@
+/* --------------------------------------------------------------- */
+/* 1) Original-Layout (unverändert)                                */
+/* --------------------------------------------------------------- */
 .skills {
   display: flex;
   justify-content: center;
@@ -24,19 +27,19 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
+
   h3 {
     font-size: 1rem;
     font-weight: lighter;
     margin-bottom: 0.5rem;
     margin: 0;
   }
-  
+
   h1 {
     font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.1;
-    margin-top: 1rem;	
+    margin-top: 1rem;
   }
 }
 
@@ -47,12 +50,12 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  
+
   .skill-paper {
     width: 100%;
     height: auto;
   }
-  
+
   .different-skills {
     width: 100%;
     display: flex;
@@ -63,71 +66,85 @@
   }
 }
 
-.note-pull {
-  cursor: grab;
-
-  &.dragging {
-    cursor: grabbing;
-  }
-
-  img {
-    pointer-events: none;
-  }
-}
-
-.note-image-unpeeled{
-  transform: rotate(7deg);
-}
-
-.peel-text-1 {
-  color: white;
-  z-index: 2;
-  font-size: 3.4rem;
-  text-align: center;
-  transform: rotate(7deg);
-  font-family: 'Kalam', Courier, monospace;
-
-
-
-}
-
-p{
+p {
   color: black;
   font-size: 1rem;
   margin-top: -100px;
   width: 90%;
 }
 
-.note{
-  width: 300px;
-  rotate: 7deg;
-  user-select: none;
-}
-
-.skill{
+.skill {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 @media (max-width: 900px) {
   .skills-content {
     flex-direction: column;
     text-align: center;
     gap: 2rem;
   }
-  
-  .skills-header h1 {
-    font-size: 2.5rem;
-  }
+  .skills-header h1 { font-size: 2.5rem; }
 }
 
 @media (max-width: 600px) {
-  .skills-content {
-    padding: 0 20px;
+  .skills-content { padding: 0 20px; }
+  .skills-header h1 { font-size: 2rem; }
+}
+
+/* --------------------------------------------------------------- */
+/* 2) Peel-Note (funktional, nur hier angepasst)                    */
+/* --------------------------------------------------------------- */
+.note-pull {
+  position: relative;
+  width: 300px;
+  height: 300px;              /* ← feste Fläche für Maus-Events  */
+  cursor: grab;
+  user-select: none;
+
+  &.dragging { cursor: grabbing; }
+
+  img { pointer-events: none; }  /* verhindert Browser-Drag */
+
+  /* Drei übereinander liegende Bilder */
+  .note {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    rotate: 7deg;
+    opacity: 0;
+    transition: opacity .25s ease;
+    pointer-events: none;
   }
-  
-  .skills-header h1 {
-    font-size: 2rem;
+  .note.visible { opacity: 1; }
+
+  /* Hinweistext beim Ziehen */
+  .peel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(7deg);
+    font-size: 3.4rem;
+    font-family: 'Kalam', Courier, monospace;
+    color: white;
+    z-index: 2;
+    pointer-events: none;
+    text-align: center;
   }
 }
+
+/* Offen-Zustand – Text unter der Note */
+.revealed-text p {
+  color: black;
+  font-size: 1rem;
+  width: 90%;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+/* Einzelnes statisches Bild, falls separat genutzt */
+.note-image-unpeeled { transform: rotate(7deg); }
+.note { width: 300px; rotate: 7deg; user-select: none; }
