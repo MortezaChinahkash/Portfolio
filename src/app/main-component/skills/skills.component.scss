@@ -119,10 +119,10 @@ p {
  
   .peel-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(7deg);
-    font-size: 3.4rem;
+    top: 70%;
+    left: 40%;
+    transform: translate(-50%, -50%) rotate(15deg);
+    font-size: 2.4rem;
     font-family: 'Kalam', Courier, monospace;
     color: white;
     z-index: 2;
@@ -131,6 +131,7 @@ p {
   }
 
   .text-final{
+    transform: translate(-50%, -50%) rotate(7deg);
     font-size: 1.6rem;
     font-family: 'Kalam', Courier, monospace;
   }
@@ -143,6 +144,14 @@ p {
   width: 90%;
   margin: 20px auto 0;
   text-align: center;
+}
+.arrow{
+  position: absolute;
+  top: 30%;
+  left: 58%;
+  transform: translate(-50%, -50%) rotate(7deg);
+  width: 100px;
+  height: auto;
 }
 
 

@@ -39,9 +39,12 @@
            draggable="false">
 
       @if (currentState !== 'final') {
-        <span class="peel-text">Pull to peel!</span>
+        <span class="peel-text">Pull to peel</span>
       }
-      @else {
+      @if (currentState === 'default') {
+        <img class="arrow" src="/assets/png/Design material/03_Stickers/Arrow.png" alt="">
+      }
+      @if (currentState === 'final') {
         <span class="peel-text text-final">currently learning these Skills:</span>
       }
     </div>
