@@ -18,26 +18,58 @@
     <div class="project-card">
       <div class="technologies">
         @for(tech of project.technologies; track tech.name) {
-            <img [src]="'/assets/png/icons/Skill Icons/' + tech.name + '.png'" />
+        <img [src]="'/assets/png/icons/Skill Icons/' + tech.name + '.png'" />
         }
       </div>
-      <div>
+      <div class="project-details">
         @if (project.isFeatured) {
-          <img class="featured-icon" src="/assets/png/Design material/03_Stickers/00_Round/Featured.png" alt="Featured Project" />
+        <img
+          class="featured-icon"
+          src="/assets/png/Design material/03_Stickers/00_Round/Featured.png"
+          alt="Featured Project"
+        />
         }
-        <img class="screen" [src]="'/assets/png/Design material/screens/' + project.compId + '.png'" alt="Project Screenshot" />
+        <img
+          class="screen"
+          [src]="
+            '/assets/png/Design material/screens/' + project.compId + '.png'
+          "
+          alt="Project Screenshot"
+        />
         @if (project.isInProgress) {
-          <img class="featured-icon" src="/assets/png/Design material/03_Stickers/00_Round/Progress.png" alt="In Progress Project" />
+        <img
+          class="progress-icon"
+          src="/assets/png/Design material/03_Stickers/00_Round/Progress.png"
+          alt="In Progress Project"
+        />
         }
-        
       </div>
-
-
-
-
-
-      </div>
+      <div class="project-info">
+        <h2 class="project-title">{{ project.title }}</h2>
+        <p class="project-description">{{ project.description }}</p>
+        <div class="project-links">
+          @if (project.demoLink) {
+          <a
+            class="demo-link"
+            [href]="project.demoLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Live Demo
+          </a>
+          }
+          @if (project.codeLink) {
+          <a
+            class="code-link"
+            [href]="project.codeLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Code
+          </a>
+          }
+        </div>
+    </div>
     }
-
   </div>
 </section>

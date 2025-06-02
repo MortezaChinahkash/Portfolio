@@ -27,4 +27,21 @@
 }
 .screen{
     width: 60%;
+    z-index: 5;
+}
+.featured-icon{
+    margin-right: -10%;
+    z-index: 6;
+    width: 20%;
+}
+.project-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.progress-icon{
+    width: 20%;
+    margin-left: -10%;
+    z-index: 6;
 }

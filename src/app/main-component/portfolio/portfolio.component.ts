@@ -65,7 +65,7 @@ export class PortfolioComponent {
           imageUrl: '',
         },
       ],
-      isFeatured: false,
+      isFeatured: true,
       isInProgress: true,
       compId: 'el-pollo-loco',
     },
