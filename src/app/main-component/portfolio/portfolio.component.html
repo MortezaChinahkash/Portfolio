@@ -20,7 +20,7 @@
 
         <div class="technologies">
           @for (tech of project.technologies; track tech.name) {
-            <img [src]="'/assets/png/icons/Skill Icons/' + tech.name + '.png'" />
+            <img class="tech-icon" [src]="'/assets/png/icons/Skill Icons/' + tech.name + '.png'" />
           }
         </div>
 
