@@ -85,7 +85,7 @@ export class PortfolioComponent {
           imageUrl: '',
         },
         {
-          name: 'SCSS',
+          name: 'SASS',
           imageUrl: '',
         },
       ],
