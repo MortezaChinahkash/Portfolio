@@ -6,6 +6,21 @@
   align-items: center;
   margin-top: 5%;
 }
+h3 {
+  color: #000000;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.projects-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 .projects-content {
   max-width: 1440px;
   width: 90%;
@@ -15,12 +30,14 @@
 }
 .projects-intro {
   width: 50%;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .project-card {
   width: 50%;
+  padding: 50px;
 }
 .featured-icon {
   width: 150px;
@@ -50,10 +67,10 @@
   margin-top: 3rem;
   justify-content: center;
 }
-.tech-icon{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.tech-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
