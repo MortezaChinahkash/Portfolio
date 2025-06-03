@@ -8,7 +8,6 @@ interface Comment {
   role: string;
   linkedIn: string;
   backgroundImage: string;
-  hoverImage?: string; // Neues optionales Feld
 }
 
 @Component({
@@ -20,7 +19,7 @@ interface Comment {
 })
 export class CommentsComponent {
 
-  hoverLineImage = 'assets/png/Design%20material/03_Stickers/02_Testimonials/Color%20option%203/Line.png';
+  hoverLineImage: string = 'assets/png/Design%20material/03_Stickers/02_Testimonials/Color%20option%203/Line.png';
 
   comments: Comment[] = [
     {
@@ -33,7 +32,7 @@ export class CommentsComponent {
     },
     {
       name: 'Michael Weber',
-      role: 'Backend Developer', 
+      role: 'Backend Developer',
       text: 'It was a pleasure to work with Sascha. He knows how to motivate and encourage team members to deliver the best work possible, always adding value during each brainstorm. ',
       date: '2023-01-02',
       linkedIn: 'https://www.linkedin.com/in/janesmith',
