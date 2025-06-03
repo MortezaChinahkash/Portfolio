@@ -1,0 +1,192 @@
+.contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(60px, 8vw, 60px) 0;
+  background-image: url("/assets/png/Design material/01_Background/Design Size Relation@3x/06_Contact.png");
+  background-size: cover;
+  background-position: top;
+  min-height: 100vh;
+  color: white;
+}
+
+.max-content {
+  max-width: 1440px;
+  width: 90%;
+  padding: 0 clamp(16px, 3vw, 36px);
+  z-index: 2;
+}
+
+.contact-page {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(2rem, 5vw, 5rem);
+  width: 100%;
+}
+
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  h3 {
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: clamp(8px, 1vw, 12px);
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: clamp(20px, 3vw, 40px);
+    line-height: 1.1;
+  }
+
+  p {
+    font-size: clamp(16px, 1.5vw, 18px);
+    line-height: 1.6;
+    margin-bottom: clamp(16px, 2vw, 24px);
+    max-width: 90%;
+  }
+}
+
+.contact-form {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: clamp(20px, 4vw, 40px);
+  border-radius: clamp(16px, 2vw, 25px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 2vw, 24px);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(6px, 0.8vw, 10px);
+    
+    label {
+      font-size: clamp(14px, 1.2vw, 16px);
+      font-weight: 600;
+    }
+
+    input, textarea {
+      padding: clamp(12px, 1.5vw, 16px);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: clamp(8px, 1vw, 12px);
+      color: white;
+      font-size: clamp(14px, 1.2vw, 16px);
+      
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      
+      &:focus {
+        outline: none;
+        border-color: #24dd80;
+      }
+    }
+    
+    textarea {
+      min-height: clamp(120px, 15vw, 180px);
+      resize: vertical;
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: clamp(10px, 1.5vw, 20px);
+    
+    input {
+      margin-top: 5px;
+    }
+    
+    label {
+      font-size: clamp(12px, 1vw, 14px);
+      line-height: 1.5;
+    }
+    
+    .privacy {
+      color: #24dd80;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: #1aa8b5;
+      }
+    }
+  }
+
+  button {
+    margin-top: clamp(16px, 2vw, 24px);
+    padding: clamp(12px, 1.5vw, 16px) clamp(20px, 2.5vw, 30px);
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: clamp(16px, 1.2vw, 18px);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 2px 2px 0px 1px #ffffff;
+    align-self: flex-end;
+    
+    &:hover {
+      background: #24dd80;
+      color: black;
+      box-shadow: none;
+      transform: translateY(2px);
+    }
+  }
+}
+
+// Media queries for responsive design
+@media (max-width: 900px) {
+  .contact-page {
+    flex-direction: column;
+  }
+  
+  .contact-info {
+    text-align: center;
+    align-items: center;
+    
+    p {
+      max-width: 100%;
+    }
+  }
+  
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: clamp(40px, 6vw, 60px) 0;
+  }
+  
+  .contact-page {
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+  }
+  
+  .contact-info {
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+  }
+  
+  .checkbox label {
+    font-size: 11px;
+  }
+}
