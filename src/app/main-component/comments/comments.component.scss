@@ -182,6 +182,16 @@
     }
   }
 }
+.comment-image{
+  display: flex;
+  align-items: center;
+  p{
+    margin-left: 8px;
+    font-weight: 600;
+    font-size: clamp(14px, 1.6vw, 18px);
+  }
+
+}
 
 // New breakpoint for medium screens (1025px-1200px)
 @media (max-width: 1200px) and (min-width: 1025px) {
