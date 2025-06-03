@@ -18,14 +18,6 @@
     @for (project of projects; track project.compId) {
     <div class="project-card">
       <div class="project-details">
-        @if (project.isFeatured) {
-        <img
-          class="featured-icon"
-          src="/assets/png/Design material/03_Stickers/00_Round/Featured.png"
-          alt="Featured Project"
-        />
-        }
-
         <img
           class="screen"
           [src]="
@@ -33,14 +25,6 @@
           "
           alt="Project Screenshot"
         />
-
-        @if (project.isInProgress) {
-        <img
-          class="progress-icon"
-          src="/assets/png/Design material/03_Stickers/00_Round/Progress.png"
-          alt="In-Progress Project"
-        />
-        }
       </div>
 
       <div class="project-info">
