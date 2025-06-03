@@ -135,9 +135,8 @@
   .comment-footer {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     margin-top: auto;
-    flex-wrap: wrap;
     gap: 10px;
 
     .comment-author {
@@ -235,14 +234,8 @@
       transform: rotate(0deg) !important;
     }
 
-    &:hover {
-      transform: translateY(-8px) !important;
-      left: auto !important;
-      right: auto !important;
-    }
-
     .comment-footer {
-      flex-direction: column;
+      justify-content: space-between;
       align-items: flex-start;
       gap: 15px;
 
