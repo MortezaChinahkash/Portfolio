@@ -17,6 +17,7 @@
     text-align: center;
     margin-bottom: clamp(40px, 6vw, 60px);
     position: relative;
+    justify-self: flex-end ;
 
     .header-text {
       display: inline-block;
@@ -30,6 +31,7 @@
       margin-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
+      justify-self: flex-end;
     }
 
     h1 {
@@ -83,9 +85,9 @@
     z-index: 1;
   }
 
-  // Adjusted positioning to stay within container
+  
   &.card-0 {
-    left: clamp(50px, 8vw, 0px); // Increased minimum and percentage
+    left: clamp(50px, 8vw, 0px); 
     top: clamp(10px, 2vw, 0px);
     z-index: 3;
     transform: rotate(clamp(-12deg, -10deg, -8deg));
@@ -99,7 +101,7 @@
   }
 
   &.card-2 {
-    right: clamp(50px, 8vw, 120px); // Increased minimum and percentage
+    right: clamp(50px, 8vw, 120px); 
     top: clamp(10px, 2vw, 0px);
     z-index: 0;
     transform: rotate(clamp(8deg, 10deg, 12deg));
