@@ -34,7 +34,7 @@ export class CommentsComponent {
     {
       name: 'Michael Weber',
       role: 'Backend Developer', 
-      text: 'It was a pleasure to work with Sascha. He knows how to motivate and encourage team members to deliver the best work possible, always adding value during each brainstorm. Regarding the well-being of team members, he was always present and willing to listen and help others, with a great sense of humor as well.',
+      text: 'It was a pleasure to work with Sascha. He knows how to motivate and encourage team members to deliver the best work possible, always adding value during each brainstorm. ',
       date: '2023-01-02',
       linkedIn: 'https://www.linkedin.com/in/janesmith',
       backgroundImage: 'assets/png/Design%20material/03_Stickers/02_Testimonials/Color%20option%203/b.png'
