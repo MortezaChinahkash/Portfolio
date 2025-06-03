@@ -65,9 +65,9 @@ header {
     
     ul {
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
-      gap: clamp(30px, 8vw, 100px);
+      width: 100%;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -78,6 +78,9 @@ header {
         cursor: pointer;
         color: #ffffff;
         font-family: BricolageGrotesque, sans-serif;
+        flex: 1;
+        display: flex;
+        justify-content: center;
         
         a {
           color: inherit;
@@ -204,8 +207,6 @@ header {
 @media (max-width: 1024px) {
   header {
     nav ul {
-      gap: clamp(20px, 6vw, 60px);
-      
       li {
         font-size: clamp(12px, 2vw, 18px);
         
@@ -257,6 +258,8 @@ header {
           width: 100%;
           text-align: center;
           font-size: 18px;
+          flex: none;
+          justify-content: center;
           
           a {
             display: block;
