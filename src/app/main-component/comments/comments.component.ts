@@ -5,6 +5,7 @@ interface Comment {
   text: string;
   date: string;
   linkedIn: string;
+  linkedInImg: string | null;
   backgroundImage: string | null;
 }
 
@@ -22,6 +23,7 @@ export class CommentsComponent {
       text: 'Great portfolio! I really liked the project on XYZ.',
       date: '2023-01-01',
       linkedIn: 'https://www.linkedin.com/in/johndoe',
+      linkedInImg: 'null',
       backgroundImage: 'null'
     },
     {
@@ -29,6 +31,7 @@ export class CommentsComponent {
       text: 'Impressive work! The design of ABC is stunning.',
       date: '2023-01-02',
       linkedIn: 'https://www.linkedin.com/in/janesmith',
+      linkedInImg: 'null',  
       backgroundImage: 'null'
     },
     {
@@ -36,6 +39,7 @@ export class CommentsComponent {
       text: 'Your skills in Angular are top-notch! Keep it up!',
       date: '2023-01-03',
       linkedIn: 'https://www.linkedin.com/in/alicejohnson',
+      linkedInImg: 'null',
       backgroundImage: 'null'
     }
   ];
