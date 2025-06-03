@@ -13,9 +13,6 @@ $accent: #1073EA;
   color: white;
 }
 
-// ─────────────────────────────────────────────
-// Container
-// ─────────────────────────────────────────────
 .max-content {
   max-width: 1440px;
   width: 90%;
@@ -34,9 +31,6 @@ $accent: #1073EA;
   width: 100%;
 }
 
-// ─────────────────────────────────────────────
-// Left‑hand copy block
-// ─────────────────────────────────────────────
 .contact-info {
   width: 55%;
   display: flex;
@@ -66,32 +60,27 @@ $accent: #1073EA;
   }
 }
 
-// ─────────────────────────────────────────────
-// Right‑hand form card
-// ─────────────────────────────────────────────
 .contact-form {
   width: 40%;
   align-self: flex-end;
 
-  // card outline to match the template
   form {
     display: flex;
     flex-direction: column;
   }
 
-  /* Each input/textarea is wrapped by .form-group */
   .form-group {
     position: relative;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
     &:hover{
-    border-top: 1px solid $accent; // top border to match the template
+    border-top: 1px solid $accent;
     }
     &:focus-within {
       border-top: 1px solid white;
       & input,textarea{
-        border: none; // bottom border to match the template
+        border: none;
       } 
     }
     
