@@ -116,7 +116,7 @@ $accent: #1073EA;
       resize: none;
     }
     }
-  }
+  
 
   // Checkbox row
   .checkbox {
@@ -144,10 +144,6 @@ $accent: #1073EA;
       color: $accent;
       text-decoration: underline;
       transition: color 0.3s ease;
-
-      &:hover {
-        color: $accent-focus;
-      }
     }
   }
 
@@ -167,7 +163,6 @@ $accent: #1073EA;
     align-self: flex-end;
 
     &:hover {
-      background: $accent-focus;
       color: black;
       box-shadow: none;
       transform: translateY(2px);
