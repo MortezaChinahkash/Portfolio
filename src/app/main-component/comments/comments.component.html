@@ -6,7 +6,6 @@
         <h1>Colleagues' Thoughts</h1>
       </div>
     </div>
-
     <div class="comment-window">
       @for(comment of comments; track comment.name; let i = $index){
         <div class="comment-card card-{{i}}" [ngStyle]="{'background-image': 'url(' + comment.backgroundImage + ')'}">
@@ -14,15 +13,10 @@
           <div class="comment-content">
             <p class="comment-text">{{ comment.text }}</p>
             <div class="comment-footer">
-              
-              
-  
               <div class="comment-author">
                 <h2 class="comment-name">{{ comment.name }}</h2>
                 <p class="comment-role">{{ comment.role }}</p>
               </div>
-
-              
               <div class="comment-image">
                 <img [src]="comment.linkedIn" alt="{{ comment.name }}" />
                 <p>Profile</p>
