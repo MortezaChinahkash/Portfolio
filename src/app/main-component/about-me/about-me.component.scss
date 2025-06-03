@@ -22,59 +22,66 @@ section {
   align-items: center;
   justify-content: center;
   flex: 1;
-}
-.paper-input1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 3;
-  margin-top: -45px;
-  transform: rotate(-2deg);
-  width: 41%;
-  color: white;
-  font-weight: bold;
+  position: relative;
 }
 
-.paper-input2 {
-  margin-top: -90px;
+.paper-card {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: white;
-  width: 47%;
-  transform: rotate(2deg);
   font-weight: bold;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px 30px;
+  margin: -20px 0;
 }
 
-.paper-input3 {
-  margin-top: -100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  width: 54%;
-  transform: rotate(5deg);
-  font-weight: bold;
-}
-
-.paper {
+.paper-card1 {
+  background-image: url('/assets/png/Design material/02_Ripped Paper/Option 3/1.png');
   width: 100%;
-  max-width: 400px;
-  height: auto;
-  margin-bottom: 1rem;
+  height: 150px;
+  transform: rotate(7deg);
+  z-index: 3;
+  margin-bottom: -40px;
 }
 
-.paper1 {
-  margin-bottom: -40px;
+.paper-card2 {
+  background-image: url('/assets/png/Design material/02_Ripped Paper/Option 3/2.png');
+  width: 100%;
+  height: 150px;
+  transform: rotate(-1deg);
   z-index: 2;
-  transform: rotate(-2deg);
+  margin-bottom: -50px;
 }
-.dev-img {
-  width: 50px;
+
+.paper-card3 {
+  background-image: url('/assets/png/Design material/02_Ripped Paper/Option 3/3.png');
+  width: 100%;
+  height: 150px;
+  transform: rotate(2deg);
+  z-index: 1;
 }
-.paper3 {
-  z-index: -1;
-  transform: rotate(5deg);
+
+.paper-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+  img {
+    width: 50px;
+    height: auto;
+  }
+  
+  span {
+    flex: 1;
+    text-align: right;
+    margin-left: 15px;
+    font-size: clamp(14px, 1.5vw, 16px);
+  }
 }
 
 .about-me {
@@ -115,34 +122,15 @@ section {
 
   div:hover {
     background: #24dd80;
-      box-shadow: none;
+    box-shadow: none;
     transform: translateY(2px);
   }
 }
 
-@media (max-width: 900px) {
-  .paper-and-about {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .paper {
-    max-width: 300px;
-  }
+.talk-button {
+  align-self: flex-end;
 }
 
-@media (max-width: 600px) {
-  .paper-and-about {
-    padding: 0 20px;
-  }
-
-  .about-me h1 {
-    font-size: 2rem;
-  }
-}
-.talk-button{
-    align-self: flex-end;
-}
 .line {
   width: 200px;
   height: 20px;
@@ -163,5 +151,108 @@ section {
   }
   100% {
     clip-path: inset(0 100% 0 0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .paper-card1 {
+    width: 300px;
+    height: 100px;
+  }
+  
+  .paper-card2 {
+    width: 320px;
+    height: 110px;
+  }
+  
+  .paper-card3 {
+    width: 350px;
+    height: 120px;
+  }
+  
+  .paper-content {
+    img {
+      width: 40px;
+    }
+    
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .paper-and-about {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .torn-papers {
+    order: 2;
+    margin-top: 2rem;
+  }
+  
+  .about-me {
+    order: 1;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .paper-card1,
+  .paper-card2,
+  .paper-card3 {
+    width: 280px;
+    height: 90px;
+    margin-bottom: -30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .paper-and-about {
+    padding: 0 20px;
+  }
+
+  .about-me h1 {
+    font-size: 2rem;
+  }
+  
+  .paper-card1,
+  .paper-card2,
+  .paper-card3 {
+    width: 250px;
+    height: 80px;
+    padding: 15px 20px;
+  }
+  
+  .paper-content {
+    img {
+      width: 35px;
+    }
+    
+    span {
+      font-size: 12px;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .paper-card1,
+  .paper-card2,
+  .paper-card3 {
+    width: 220px;
+    height: 70px;
+    padding: 10px 15px;
+  }
+  
+  .paper-content {
+    img {
+      width: 30px;
+    }
+    
+    span {
+      font-size: 11px;
+    }
   }
 }
