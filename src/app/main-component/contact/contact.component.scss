@@ -92,7 +92,7 @@ $accent: #1073EA;
       border-top: 1px solid white;
       & input,textarea{
         border: none; // bottom border to match the template
-      } // top border to match the template
+      } 
     }
     
 
@@ -107,7 +107,7 @@ $accent: #1073EA;
     textarea {
       font-size: clamp(14px, 1.2vw, 16px);
       background: none;
-      border: none;            // removed old border‑bottom
+      border: none;            
       border-radius: 0;
       color: white;
       padding: 6px 0;
@@ -130,7 +130,7 @@ $accent: #1073EA;
     }
   }
   }
-  
+
   .checkbox {
     display: flex;
     align-items: flex-start;
