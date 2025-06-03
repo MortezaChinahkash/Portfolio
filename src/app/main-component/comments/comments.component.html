@@ -1,1 +1,38 @@
-<p>comments works!</p>
+<section class="comments-section">
+  <div class="comments-content">
+    <div class="comments-header">
+      <div class="header-text">
+        <h3>IN THEIR WORDS:</h3>
+        <h1>Colleagues' Thoughts</h1>
+      </div>
+      <div class="header-arrow">
+        <svg width="80" height="60" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 30C30 10 50 40 80 30M80 30L70 20M80 30L70 40" stroke="#4169E1" stroke-width="4"/>
+        </svg>
+      </div>
+    </div>
+    <div class="comment-window">
+      @for(comment of comments; track comment.name; let i = $index){
+        <div class="comment-card card-{{i}}" [ngStyle]="{'background-image': 'url(' + comment.backgroundImage + ')'}">
+          <div class="comment-content">
+            <p class="comment-text">{{ comment.text }}</p>
+            <div class="comment-footer">
+              <div class="comment-author">
+                <h2 class="comment-name">{{ comment.name }}</h2>
+                <p class="comment-role">{{ comment.role }}</p>
+              </div>
+              <a class="linkedin-link" [href]="comment.linkedIn" target="_blank">
+                <span class="linkedin-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </span>
+                Profile
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
