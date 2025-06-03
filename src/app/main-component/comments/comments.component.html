@@ -7,13 +7,10 @@
       </div>
     </div>
 
-
-    
     <div class="comment-window">
       @for(comment of comments; track comment.name; let i = $index){
         <div class="comment-card card-{{i}}" [ngStyle]="{'background-image': 'url(' + comment.backgroundImage + ')'}">
-          
-          
+          <div class="hover-line"></div>
           <div class="comment-content">
             <p class="comment-text">{{ comment.text }}</p>
             <div class="comment-footer">

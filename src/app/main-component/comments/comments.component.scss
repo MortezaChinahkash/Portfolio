@@ -9,6 +9,7 @@
     max-width: 1440px;
     width: 100%;
     padding: 0 36px;
+    z-index: 2;
   }
 
   .comments-header {
@@ -43,123 +44,144 @@
   }
 }
 
-  .comment-window {
-    position: relative;
-    min-height: 500px;
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.comment-window {
+  position: relative;
+  min-height: 500px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .comment-card {
+.comment-card {
+  position: absolute;
+  width: 550px;
+  min-height: 320px;
+  padding: 35px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .hover-line {
     position: absolute;
-    width: 550px;
-    min-height: 320px;
-    padding: 35px;
-    border-radius: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-size: cover;
+    background-image: url('/assets/png/Design%20material/03_Stickers/02_Testimonials/Color%20option%203/Line.png');
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-    color: #000;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  // Positionierung der Karten wie im Bild
+  &.card-0 {
+    left: 0px;
+    top: 20px;
+    z-index: 3;
+    transform: rotate(-8deg);
+  }
+
+  &.card-1 {
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%) rotate(2deg);
+    z-index: 1;
+  }
+
+  &.card-2 {
+    right: 0px;
+    top: 20px;
+    z-index: 0;
+    transform: rotate(8deg);
+  }
+
+  &:hover {
+    z-index: 10;
+    .hover-line {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+
+  .comment-content {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
-    // Positionierung der Karten wie im Bild
-    &.card-0 {
-      left: 0px;
-      top: 20px;
-      z-index: 3;
-      transform: rotate(-8deg);
-    }
-    
-    &.card-1 {
-      left: 50%;
-      top: 60px;
-      transform: translateX(-50%) rotate(2deg);
-      z-index: 1;
-    }
-    
-    &.card-2 {
-      right: 0px;
-      top: 20px;
-      z-index: 0;
-      transform: rotate(8deg);
-    }
+  }
 
-    &:hover {
-      z-index: 10;
-    }
+  .comment-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-weight: 400;
+    flex-grow: 1;
+  }
 
-    .comment-content {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+  .comment-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
 
-    .comment-text {
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 25px;
-      font-weight: 400;
-      flex-grow: 1;
-    }
-
-    .comment-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-top: auto;
-
-      .comment-author {
-        .comment-name {
-          font-size: 18px;
-          font-weight: 700;
-          margin: 0 0 5px 0;
-          color: #000;
-        }
-
-        .comment-role {
-          font-size: 14px;
-          margin: 0;
-          color: #000;
-          font-weight: 400;
-        }
+    .comment-author {
+      .comment-name {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0 0 5px 0;
+        color: #000;
       }
 
-      .linkedin-link {
-        display: flex;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 8px 12px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-size: 12px;
-        font-weight: 600;
-        transition: background-color 0.3s ease;
+      .comment-role {
+        font-size: 14px;
+        margin: 0;
+        color: #000;
+        font-weight: 400;
+      }
+    }
 
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.9);
-        }
+    .linkedin-link {
+      display: flex;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
 
-        .linkedin-icon {
-          display: inline-block;
-          margin-right: 6px;
-          
-          svg {
-            width: 14px;
-            height: 14px;
-          }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+     
+
+      .linkedin-icon {
+        display: inline-block;
+        margin-right: 6px;
+
+        svg {
+          width: 14px;
+          height: 14px;
         }
       }
     }
   }
-
+}
 
 // Responsive Design
 @media (max-width: 1200px) {
@@ -167,11 +189,11 @@
     .comment-window {
       .comment-card {
         width: 380px;
-        
+
         &.card-0 {
           left: -80px;
         }
-        
+
         &.card-2 {
           right: -80px;
         }
@@ -187,12 +209,12 @@
         display: none;
       }
     }
-    
+
     .comment-window {
       flex-direction: column;
       align-items: center;
       height: auto;
-      
+
       .comment-card {
         position: relative;
         margin: 30px 0;
@@ -202,7 +224,7 @@
         transform: none !important;
         width: 90%;
         max-width: 400px;
-        
+
         &:hover {
           transform: translateY(-10px) !important;
         }
