@@ -8,7 +8,7 @@ import { CommentsComponent } from './comments/comments.component';
 
 @Component({
   selector: 'app-main-component',
-  imports: [ ATFComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, ContactComponent, CommentsComponent],
+  imports: [ ATFComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, CommentsComponent, ContactComponent],
   templateUrl: './main-component.component.html',
   styleUrl: './main-component.component.scss'
 })
