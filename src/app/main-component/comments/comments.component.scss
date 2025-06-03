@@ -120,7 +120,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    z-index: 2;
   }
 
   .comment-text {
@@ -128,7 +128,7 @@
     line-height: 1.6;
     margin-bottom: 25px;
     font-weight: 400;
-    flex-grow: 1;
+    flex: 1;
   }
 
   .comment-footer {
