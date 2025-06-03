@@ -72,7 +72,7 @@ section {
   width: 100%;
   
   img {
-    width: 50px;
+    width: clamp(30px, 5vw, 50px);
     height: auto;
   }
   
@@ -154,20 +154,6 @@ section {
 }
 
 @media (max-width: 1200px) {
-  .paper-card1 {
-    width: 300px;
-    height: 100px;
-  }
-  
-  .paper-card2 {
-    width: 320px;
-    height: 110px;
-  }
-  
-  .paper-card3 {
-    width: 350px;
-    height: 120px;
-  }
   
   .paper-content {
     img {
@@ -187,10 +173,6 @@ section {
     gap: 3rem;
   }
 
-  .torn-papers {
-    order: 2;
-    margin-top: 2rem;
-  }
   
   .about-me {
     order: 1;
@@ -198,13 +180,7 @@ section {
     text-align: center;
   }
   
-  .paper-card1,
-  .paper-card2,
-  .paper-card3 {
-    width: 280px;
-    height: 90px;
-    margin-bottom: -30px;
-  }
+
 }
 
 @media (max-width: 600px) {
