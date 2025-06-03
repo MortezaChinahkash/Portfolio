@@ -49,15 +49,17 @@
   min-height: clamp(400px, 50vw, 500px);
   margin-top: clamp(40px, 8vw, 80px);
   display: flex;
+  justify-content: center; // Center alignment
   align-items: center;
   width: 100%;
+  max-width: 100%; // Ensure full width usage
 }
 
 .comment-card {
   position: absolute;
-  width: clamp(300px, 30vw, 500px); // Reduced width percentage
+  width: clamp(300px, 30vw, 550px); // Etwas reduzierte max-Breite
   min-height: clamp(250px, 28vw, 320px);
-  padding: clamp(20px, 3vw, 35px);
+  padding: clamp(14px, 3vw, 36px);
   border-radius: clamp(15px, 2vw, 20px);
   background-size: cover;
   background-position: center;
@@ -67,6 +69,29 @@
   display: flex;
   flex-direction: column;
 
+  // Linke Karte - am linken Rand ausgerichtet
+  &.card-0 {
+    left: 0; // Direkt am linken Rand
+    top: clamp(0px, 2vw, 0px);
+    z-index: 3;
+    transform: rotate(-8deg);
+  }
+
+  // Mittlere Karte - zentriert
+  &.card-1 {
+    left: 50%;
+    top: clamp(0px, 5vw, 0px);
+    transform: translateX(-50%) rotate(2deg);
+    z-index: 1;
+  }
+
+  // Rechte Karte - am rechten Rand ausgerichtet
+  &.card-2 {
+    right: 0; // Direkt am rechten Rand
+    top: clamp(0px, 2vw, 0px);
+    z-index: 0;
+    transform: rotate(8deg);
+  }
 
   .hover-line {
     position: absolute;
@@ -83,28 +108,6 @@
     transition: opacity 0.3s ease;
     pointer-events: none;
     z-index: 1;
-  }
-
-  
-  &.card-0 {
-    left: clamp(50px, 8vw, 0px); 
-    top: clamp(0px, 2vw, 0px);
-    z-index: 3;
-    transform: rotate(clamp(-12deg, -10deg, -8deg));
-  }
-
-  &.card-1 {
-    left: 50%;
-    top: clamp(0px, 5vw, 0px);
-    transform: translateX(-50%) rotate(clamp(1deg, 1.5deg, 2deg));
-    z-index: 1;
-  }
-
-  &.card-2 {
-    right: clamp(50px, 8vw, 120px); 
-    top: clamp(0px, 2vw, 0px);
-    z-index: 0;
-    transform: rotate(clamp(8deg, 10deg, 12deg));
   }
 
   &:hover {
@@ -198,29 +201,21 @@
 // New breakpoint for medium screens (1025px-1200px)
 @media (max-width: 1200px) and (min-width: 1025px) {
   .comment-card {
-    width: clamp(280px, 25vw, 350px); // Smaller cards
-    
-    &.card-0 {
-      left: clamp(20px, 10vw, 150px); // More space on left
-    }
-
-    &.card-2 {
-      right: clamp(20px, 10vw, 150px); // More space on right
-    }
+    width: clamp(280px, 28vw, 350px); // Etwas schmaler
   }
 }
 
-// Tablet and larger mobile devices
+// Tablet screens
 @media (max-width: 1024px) and (min-width: 769px) {
   .comment-card {
-    width: clamp(280px, 25vw, 330px); // Even smaller cards for this range
+    width: clamp(280px, 25vw, 330px); // Noch schmaler
     
     &.card-0 {
-      left: clamp(30px, 12vw, 180px); // Much more space on left
+      left: 20px; // Kleiner Abstand zum Rand
     }
 
     &.card-2 {
-      right: clamp(30px, 12vw, 180px); // Much more space on right
+      right: 20px; // Kleiner Abstand zum Rand
     }
   }
 }
@@ -307,15 +302,26 @@
   }
 }
 
-// Large screens optimization
-@media (min-width: 1440px) {
+// Add this new media query specifically for the problematic range
+// Problematischer Bereich - verbesserte Überlappung zwischen 950px und 1250px
+@media (max-width: 1250px) and (min-width: 951px) {
   .comment-card {
+    // Angepasste Breite für diesen Bereich
+    width: clamp(350px, 31vw, 450px);
+    
+    // Negative Positionierung für die linke Karte
     &.card-0 {
-      left: 100px; // More space on large screens
+      left: 0px; // Negative Position für bessere Überlappung
     }
-
+    
+    // Erhöhter z-index für die mittlere Karte
+    &.card-1 {
+      z-index: 2;
+    }
+    
+    // Negative Positionierung für die rechte Karte
     &.card-2 {
-      right: 100px; // More space on large screens
+      right: 0px; // Negative Position für bessere Überlappung
     }
   }
 }
