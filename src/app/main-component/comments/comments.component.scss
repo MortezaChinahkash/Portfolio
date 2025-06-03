@@ -54,7 +54,7 @@
 
 .comment-card {
   position: absolute;
-  width: clamp(300px, 35vw, 450px); // Reduced max width
+  width: clamp(300px, 30vw, 450px); // Reduced width percentage
   min-height: clamp(250px, 28vw, 320px);
   padding: clamp(20px, 3vw, 35px);
   border-radius: clamp(15px, 2vw, 20px);
@@ -86,7 +86,7 @@
 
   // Adjusted positioning to stay within container
   &.card-0 {
-    left: clamp(0px, 5vw, 80px); // Changed to keep within bounds
+    left: clamp(10px, 8vw, 120px); // Increased minimum and percentage
     top: clamp(10px, 2vw, 20px);
     z-index: 3;
     transform: rotate(clamp(-12deg, -10deg, -8deg));
@@ -100,7 +100,7 @@
   }
 
   &.card-2 {
-    right: clamp(0px, 5vw, 80px); // Changed to keep within bounds
+    right: clamp(10px, 8vw, 120px); // Increased minimum and percentage
     top: clamp(10px, 2vw, 20px);
     z-index: 0;
     transform: rotate(clamp(8deg, 10deg, 12deg));
@@ -129,7 +129,6 @@
     line-height: 1.6;
     margin-bottom: clamp(15px, 2.5vw, 25px);
     font-weight: 400;
-    flex: 1;
   }
 
   .comment-footer {
@@ -137,11 +136,8 @@
     justify-content: space-between;
     align-items: center;
     margin-top: auto;
-    gap: 10px;
 
     .comment-author {
-      flex: 1;
-      min-width: 150px;
       
       .comment-name {
         font-size: clamp(14px, 1.6vw, 18px);
@@ -188,17 +184,32 @@
   }
 }
 
-// Tablet and larger mobile devices
-@media (max-width: 1024px) and (min-width: 769px) {
+// New breakpoint for medium screens (1025px-1200px)
+@media (max-width: 1200px) and (min-width: 1025px) {
   .comment-card {
-    width: clamp(280px, 40vw, 380px); // Reduced max width
+    width: clamp(280px, 25vw, 350px); // Smaller cards
     
     &.card-0 {
-      left: clamp(10px, 3vw, 40px); // Adjusted for tablet
+      left: clamp(20px, 10vw, 150px); // More space on left
     }
 
     &.card-2 {
-      right: clamp(10px, 3vw, 40px); // Adjusted for tablet
+      right: clamp(20px, 10vw, 150px); // More space on right
+    }
+  }
+}
+
+// Tablet and larger mobile devices
+@media (max-width: 1024px) and (min-width: 769px) {
+  .comment-card {
+    width: clamp(280px, 25vw, 330px); // Even smaller cards for this range
+    
+    &.card-0 {
+      left: clamp(30px, 12vw, 180px); // Much more space on left
+    }
+
+    &.card-2 {
+      right: clamp(30px, 12vw, 180px); // Much more space on right
     }
   }
 }
@@ -215,29 +226,29 @@
     align-items: center;
     gap: 20px;
   }
-
-  .comment-card {
-    position: relative !important;
-    width: 90% !important;
-    max-width: 400px !important;
-    margin: 15px 0 !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    transform: rotate(0deg) !important;
+  
+  // More specific selector for mobile
+  .comment-window .comment-card {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: 15px 0;
+    left: auto;
+    right: auto;
+    top: auto;
+    transform: rotate(0deg);
     
     &.card-0, &.card-1, &.card-2 {
-      position: relative !important;
-      left: auto !important;
-      right: auto !important;
-      top: auto !important;
-      transform: rotate(0deg) !important;
+      position: relative;
+      left: auto;
+      right: auto;
+      top: auto;
+      transform: rotate(0deg);
     }
 
     .comment-footer {
       justify-content: space-between;
       align-items: flex-start;
-      gap: 15px;
 
       .linkedin-link {
         align-self: flex-end;
@@ -256,29 +267,30 @@
     }
   }
 
-  .comment-card {
-    width: 95% !important;
-    padding: 20px !important;
+  // More specific selector for small mobile
+  .comment-window .comment-card {
+    width: 95%;
+    padding: 20px;
     
     .comment-text {
-      font-size: 14px !important;
+      font-size: 14px;
       line-height: 1.5;
     }
 
     .comment-footer {
       .comment-author {
         .comment-name {
-          font-size: 16px !important;
+          font-size: 16px;
         }
 
         .comment-role {
-          font-size: 12px !important;
+          font-size: 12px;
         }
       }
 
       .linkedin-link {
-        font-size: 11px !important;
-        padding: 6px 10px !important;
+        font-size: 11px;
+        padding: 6px 10px;
       }
     }
   }
@@ -288,11 +300,11 @@
 @media (min-width: 1440px) {
   .comment-card {
     &.card-0 {
-      left: 60px; // Fixed position within 1440px container
+      left: 100px; // More space on large screens
     }
 
     &.card-2 {
-      right: 60px; // Fixed position within 1440px container
+      right: 100px; // More space on large screens
     }
   }
 }
