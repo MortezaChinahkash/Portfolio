@@ -26,7 +26,7 @@ export class CommentsComponent {
       text: 'Sascha really kept the team together with his great organization and clear communication. We wouldn\'t have got this far without his commitment.',
       date: '2023-01-01',
       linkedIn: 'https://www.linkedin.com/in/johndoe',
-      backgroundImage: 'assets/images/note-orange.jpg'
+      backgroundImage: '/assets/png/Design material/03_Stickers/02_Testimonials/Color option 3/A.png'
     },
     {
       name: 'Michael Weber',
@@ -34,7 +34,7 @@ export class CommentsComponent {
       text: 'It was a pleasure to work with Sascha. He knows how to motivate and encourage team members to deliver the best work possible, always adding value during each brainstorm. Regarding the well-being of team members, he was always present and willing to listen and help others, with a great sense of humor as well.',
       date: '2023-01-02',
       linkedIn: 'https://www.linkedin.com/in/janesmith',
-      backgroundImage: 'assets/images/note-orange-wrinkled.jpg'
+      backgroundImage: '/assets/png/Design material/03_Stickers/02_Testimonials/Color option 3/B.png'
     },
     {
       name: 'Anna Schmidt',
@@ -42,7 +42,7 @@ export class CommentsComponent {
       text: 'Sascha was an exceptional team colleague at DA. His positive attitude and willingness to take on challenges made a significant contribution to us achieving our goals.',
       date: '2023-01-03',
       linkedIn: 'https://www.linkedin.com/in/alicejohnson',
-      backgroundImage: 'assets/images/note-orange.jpg'
+      backgroundImage: '/assets/png/Design material/03_Stickers/02_Testimonials/Color option 3/A.png'
     }
   ];
 
