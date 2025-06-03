@@ -82,7 +82,17 @@ $accent: #1073EA;
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: clamp(24px, 3vw, 32px);
+    padding-top: 20px;
+    &:hover{
+    border-top: 1px solid $accent; // top border to match the template
+    }
+    &:focus-within {
+      border-top: 1px solid white;
+      & input,textarea{
+        border: none; // bottom border to match the template
+      } // top border to match the template
+    }
+    
 
     label {
       font-size: clamp(14px, 1.2vw, 26px);
@@ -100,6 +110,7 @@ $accent: #1073EA;
       color: white;
       padding: 6px 0;
       text-indent: 20px;
+      border-bottom: 1px solid $accent;
 
       &::placeholder {
         color: white;
@@ -108,15 +119,15 @@ $accent: #1073EA;
 
       &:focus {
         outline: none;
-        color: white;         // visual feedback handled by ::after
+        border-bottom: 1px solid white;
+        
       }
-    }
 
     textarea {
       resize: none;
     }
-    }
-  
+  }
+  }
 
   // Checkbox row
   .checkbox {
