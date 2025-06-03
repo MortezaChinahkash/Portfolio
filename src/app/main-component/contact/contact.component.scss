@@ -29,6 +29,7 @@ $accent: #1073EA;
 .contact-page {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: clamp(2rem, 5vw, 5rem);
   width: 100%;
 }
@@ -179,6 +180,11 @@ $accent: #1073EA;
       transform: translateY(2px);
     }
   }
+}
+.arrow{
+  width: clamp(350px, 2vw, 250px);
+  margin-top: 50px;
+  align-self: flex-end;
 }
 
 // ─────────────────────────────────────────────
