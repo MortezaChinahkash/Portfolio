@@ -54,14 +54,13 @@
 
 .comment-card {
   position: absolute;
-  width: clamp(300px, 30vw, 450px); // Reduced width percentage
+  width: clamp(300px, 30vw, 500px); // Reduced width percentage
   min-height: clamp(250px, 28vw, 320px);
   padding: clamp(20px, 3vw, 35px);
   border-radius: clamp(15px, 2vw, 20px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 clamp(8px, 1.5vw, 15px) clamp(20px, 3vw, 35px) rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   color: #000;
   display: flex;
@@ -86,22 +85,22 @@
 
   // Adjusted positioning to stay within container
   &.card-0 {
-    left: clamp(10px, 8vw, 120px); // Increased minimum and percentage
-    top: clamp(10px, 2vw, 20px);
+    left: clamp(50px, 8vw, 0px); // Increased minimum and percentage
+    top: clamp(10px, 2vw, 0px);
     z-index: 3;
     transform: rotate(clamp(-12deg, -10deg, -8deg));
   }
 
   &.card-1 {
     left: 50%;
-    top: clamp(30px, 5vw, 60px);
+    top: clamp(0px, 5vw, 0px);
     transform: translateX(-50%) rotate(clamp(1deg, 1.5deg, 2deg));
     z-index: 1;
   }
 
   &.card-2 {
-    right: clamp(10px, 8vw, 120px); // Increased minimum and percentage
-    top: clamp(10px, 2vw, 20px);
+    right: clamp(50px, 8vw, 120px); // Increased minimum and percentage
+    top: clamp(10px, 2vw, 0px);
     z-index: 0;
     transform: rotate(clamp(8deg, 10deg, 12deg));
   }
