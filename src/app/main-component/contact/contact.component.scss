@@ -13,6 +13,13 @@ $accent: #1073EA;
   color: white;
 }
 
+.contact-logo{
+  width: clamp(150px, 10vw, 250px);
+  align-self: flex-end;
+  transform: rotate(-20deg);
+  padding-bottom: 20px;
+}
+
 .max-content {
   max-width: 1440px;
   width: 90%;
@@ -63,6 +70,8 @@ $accent: #1073EA;
 .contact-form {
   width: 40%;
   align-self: flex-end;
+  display: flex;
+  flex-direction: column;
 
   form {
     display: flex;
@@ -74,16 +83,19 @@ $accent: #1073EA;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
-    &:hover{
-    border-top: 1px solid $accent;
-    }
-    &:focus-within {
-      border-top: 1px solid white;
-      & input,textarea{
-        border: none;
-      } 
+    border-top: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    
+    &:hover {
+      border-top: 1px solid $accent;
     }
     
+    &:focus-within {
+      border-top: 1px solid white;
+      & input, textarea {
+        border-bottom: 1px solid white;
+      } 
+    }
 
     label {
       font-size: clamp(14px, 1.2vw, 26px);
@@ -111,13 +123,12 @@ $accent: #1073EA;
       &:focus {
         outline: none;
         border-bottom: 1px solid white;
-        
       }
+    }
 
     textarea {
       resize: none;
     }
-  }
   }
 
   .checkbox {
@@ -138,7 +149,6 @@ $accent: #1073EA;
     label {
       font-size: clamp(12px, 1vw, 14px);
       line-height: 1.5;
-      
     }
 
     .privacy {
@@ -161,19 +171,22 @@ $accent: #1073EA;
     transition: all 0.2s ease;
     box-shadow: 2px 2px 0 1px white;
     align-self: flex-end;
+    transform: translateY(0);
 
     &:hover {
-      color: black;
+      background-color: $accent;
+      color: white;
       box-shadow: none;
       transform: translateY(2px);
     }
   }
 }
-.arrow{
+
+.arrow {
   width: clamp(350px, 2vw, 250px);
   margin-top: 50px;
   align-self: flex-end;
-   clip-path: inset(0 100% 0 0);
+  clip-path: inset(0 100% 0 0);
   animation: lineReveal 6s infinite;
 }
 
