@@ -130,8 +130,7 @@ $accent: #1073EA;
     }
   }
   }
-
-  // Checkbox row
+  
   .checkbox {
     display: flex;
     align-items: flex-start;
@@ -142,9 +141,9 @@ $accent: #1073EA;
     input[type="checkbox"] {
       width: 20px;
       height: 20px;
-      accent-color: $accent;   // blue checkmark
+      accent-color: $accent;
       cursor: pointer;
-      margin-top: 3px;         // aligns with first line of text
+      margin-top: 3px;
     }
 
     label {
@@ -160,7 +159,6 @@ $accent: #1073EA;
     }
   }
 
-  // Submit button – white outline style
   button {
     margin-top: clamp(16px, 2vw, 24px);
     padding: clamp(12px, 1.5vw, 16px) clamp(20px, 2.5vw, 30px);
@@ -186,11 +184,25 @@ $accent: #1073EA;
   width: clamp(350px, 2vw, 250px);
   margin-top: 50px;
   align-self: flex-end;
+   clip-path: inset(0 100% 0 0);
+  animation: lineReveal 6s infinite;
 }
 
-// ─────────────────────────────────────────────
-// Media queries
-// ─────────────────────────────────────────────
+@keyframes lineReveal {
+  0%, 50% {
+    clip-path: inset(0 100% 0 0);
+  }
+  66.7% {
+    clip-path: inset(0 0 0 0);
+  }
+  83.3% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
 @media (max-width: 900px) {
   .contact-page {
     flex-direction: column;
