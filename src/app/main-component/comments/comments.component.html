@@ -5,12 +5,15 @@
         <h3>IN THEIR WORDS:</h3>
         <h1>Colleagues' Thoughts</h1>
       </div>
-      <div class="header-arrow">
-      </div>
     </div>
+
+
+    
     <div class="comment-window">
       @for(comment of comments; track comment.name; let i = $index){
         <div class="comment-card card-{{i}}" [ngStyle]="{'background-image': 'url(' + comment.backgroundImage + ')'}">
+          
+          
           <div class="comment-content">
             <p class="comment-text">{{ comment.text }}</p>
             <div class="comment-footer">
