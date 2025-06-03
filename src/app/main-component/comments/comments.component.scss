@@ -3,39 +3,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px;
+  margin-top: clamp(80px, 10vw, 150px);
+  padding: 0 20px;
 
   .comments-content {
     max-width: 1440px;
     width: 100%;
-    padding: 0 36px;
+    padding: 0 clamp(20px, 3vw, 36px);
     z-index: 2;
   }
 
   .comments-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: clamp(40px, 6vw, 60px);
     position: relative;
-    justify-self: flex-end;
 
     .header-text {
       display: inline-block;
       position: relative;
-      justify-self: flex-end;
     }
 
     h3 {
       color: #000000;
-      font-size: 1rem;
+      font-size: clamp(0.8rem, 1.2vw, 1rem);
       font-weight: 600;
       margin-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      justify-self: flex-end;
     }
 
     h1 {
-      font-size: 4rem;
+      font-size: clamp(2.5rem, 6vw, 4rem);
       font-weight: 700;
       margin: 0;
       color: #000;
@@ -46,23 +44,24 @@
 
 .comment-window {
   position: relative;
-  min-height: 500px;
-  margin-top: 80px;
+  min-height: clamp(400px, 50vw, 500px);
+  margin-top: clamp(40px, 8vw, 80px);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .comment-card {
   position: absolute;
-  width: 550px;
-  min-height: 320px;
-  padding: 35px;
-  border-radius: 20px;
+  width: clamp(300px, 35vw, 450px); // Reduced max width
+  min-height: clamp(250px, 28vw, 320px);
+  padding: clamp(20px, 3vw, 35px);
+  border-radius: clamp(15px, 2vw, 20px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 clamp(8px, 1.5vw, 15px) clamp(20px, 3vw, 35px) rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   color: #000;
   display: flex;
@@ -78,37 +77,38 @@
     background-image: url('/assets/png/Design%20material/03_Stickers/02_Testimonials/Color%20option%203/Line.png');
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 20px;
+    border-radius: clamp(15px, 2vw, 20px);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
     z-index: 1;
   }
 
-  // Positionierung der Karten wie im Bild
+  // Adjusted positioning to stay within container
   &.card-0 {
-    left: 0px;
-    top: 20px;
+    left: clamp(0px, 5vw, 80px); // Changed to keep within bounds
+    top: clamp(10px, 2vw, 20px);
     z-index: 3;
-    transform: rotate(-8deg);
+    transform: rotate(clamp(-12deg, -10deg, -8deg));
   }
 
   &.card-1 {
     left: 50%;
-    top: 60px;
-    transform: translateX(-50%) rotate(2deg);
+    top: clamp(30px, 5vw, 60px);
+    transform: translateX(-50%) rotate(clamp(1deg, 1.5deg, 2deg));
     z-index: 1;
   }
 
   &.card-2 {
-    right: 0px;
-    top: 20px;
-    z-index: 0;
-    transform: rotate(8deg);
+    right: clamp(0px, 5vw, 80px); // Changed to keep within bounds
+    top: clamp(10px, 2vw, 20px);
+    z-index: 2;
+    transform: rotate(clamp(8deg, 10deg, 12deg));
   }
 
   &:hover {
     z-index: 10;
+    
     .hover-line {
       opacity: 1;
       z-index: 1;
@@ -121,12 +121,13 @@
     flex-direction: column;
     flex: 1;
     z-index: 2;
+    position: relative;
   }
 
   .comment-text {
-    font-size: 16px;
+    font-size: clamp(12px, 1.4vw, 16px);
     line-height: 1.6;
-    margin-bottom: 25px;
+    margin-bottom: clamp(15px, 2.5vw, 25px);
     font-weight: 400;
     flex: 1;
   }
@@ -136,17 +137,22 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-top: auto;
+    flex-wrap: wrap;
+    gap: 10px;
 
     .comment-author {
+      flex: 1;
+      min-width: 150px;
+      
       .comment-name {
-        font-size: 18px;
+        font-size: clamp(14px, 1.6vw, 18px);
         font-weight: 700;
         margin: 0 0 5px 0;
         color: #000;
       }
 
       .comment-role {
-        font-size: 14px;
+        font-size: clamp(11px, 1.2vw, 14px);
         margin: 0;
         color: #000;
         font-weight: 400;
@@ -158,77 +164,142 @@
       align-items: center;
       background-color: rgba(0, 0, 0, 0.8);
       color: white;
-      padding: 8px 12px;
-      border-radius: 8px;
+      padding: clamp(6px, 1vw, 8px) clamp(8px, 1.2vw, 12px);
+      border-radius: clamp(6px, 0.8vw, 8px);
       text-decoration: none;
-      font-size: 12px;
+      font-size: clamp(10px, 1vw, 12px);
       font-weight: 600;
       transition: background-color 0.3s ease;
+      white-space: nowrap;
 
       &:hover {
         background-color: rgba(0, 0, 0, 0.9);
       }
-     
 
       .linkedin-icon {
         display: inline-block;
-        margin-right: 6px;
+        margin-right: clamp(4px, 0.6vw, 6px);
 
         svg {
-          width: 14px;
-          height: 14px;
+          width: clamp(12px, 1.2vw, 14px);
+          height: clamp(12px, 1.2vw, 14px);
         }
       }
     }
   }
 }
 
-// Responsive Design
-@media (max-width: 1200px) {
-  .comments-section {
-    .comment-window {
-      .comment-card {
-        width: 380px;
+// Tablet and larger mobile devices
+@media (max-width: 1024px) and (min-width: 769px) {
+  .comment-card {
+    width: clamp(280px, 40vw, 380px); // Reduced max width
+    
+    &.card-0 {
+      left: clamp(10px, 3vw, 40px); // Adjusted for tablet
+    }
 
-        &.card-0 {
-          left: -80px;
-        }
-
-        &.card-2 {
-          right: -80px;
-        }
-      }
+    &.card-2 {
+      right: clamp(10px, 3vw, 40px); // Adjusted for tablet
     }
   }
 }
 
-@media (max-width: 900px) {
+// Mobile devices
+@media (max-width: 768px) {
   .comments-section {
-    .comments-header {
-      .header-arrow {
-        display: none;
-      }
+    margin-top: 60px;
+  }
+  
+  .comment-window {
+    min-height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .comment-card {
+    position: relative !important;
+    width: 90% !important;
+    max-width: 400px !important;
+    margin: 15px 0 !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    transform: rotate(0deg) !important;
+    
+    &.card-0, &.card-1, &.card-2 {
+      position: relative !important;
+      left: auto !important;
+      right: auto !important;
+      top: auto !important;
+      transform: rotate(0deg) !important;
     }
 
-    .comment-window {
+    &:hover {
+      transform: translateY(-8px) !important;
+      left: auto !important;
+      right: auto !important;
+    }
+
+    .comment-footer {
       flex-direction: column;
-      align-items: center;
-      height: auto;
+      align-items: flex-start;
+      gap: 15px;
 
-      .comment-card {
-        position: relative;
-        margin: 30px 0;
-        left: auto !important;
-        right: auto !important;
-        top: auto !important;
-        transform: none !important;
-        width: 90%;
-        max-width: 400px;
+      .linkedin-link {
+        align-self: flex-end;
+      }
+    }
+  }
+}
 
-        &:hover {
-          transform: translateY(-10px) !important;
+// Very small mobile devices
+@media (max-width: 480px) {
+  .comments-section {
+    padding: 0 15px;
+    
+    .comments-content {
+      padding: 0 10px;
+    }
+  }
+
+  .comment-card {
+    width: 95% !important;
+    padding: 20px !important;
+    
+    .comment-text {
+      font-size: 14px !important;
+      line-height: 1.5;
+    }
+
+    .comment-footer {
+      .comment-author {
+        .comment-name {
+          font-size: 16px !important;
+        }
+
+        .comment-role {
+          font-size: 12px !important;
         }
       }
+
+      .linkedin-link {
+        font-size: 11px !important;
+        padding: 6px 10px !important;
+      }
+    }
+  }
+}
+
+// Large screens optimization
+@media (min-width: 1440px) {
+  .comment-card {
+    &.card-0 {
+      left: 60px; // Fixed position within 1440px container
+    }
+
+    &.card-2 {
+      right: 60px; // Fixed position within 1440px container
     }
   }
 }
