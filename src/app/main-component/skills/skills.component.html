@@ -4,16 +4,16 @@
       <h3>MY STACK</h3><h1>Skill set</h1>
     </div>
     <div class="skills-description">
-      <img class="skill-paper"
-           src="assets/png/Design material/02_Ripped Paper/1.Skills description.png">
-      <p>
-        My skills are a blend of design and development, allowing me to create
-        visually appealing and functional web applications.
-      </p>
+      <div class="skill-paper">
+        <p>
+          My skills are a blend of design and development, allowing me to create
+          visually appealing and functional web applications.
+        </p>
+      </div>
       <div class="different-skills">
         @for (skill of skills; track skill) {
           <div class="skill">
-            <img [src]="skill.image"><span>{{ skill.name }}</span>
+            <img class="skill-icon" [src]="skill.image"><span>{{ skill.name }}</span>
           </div>
         }
       </div>
@@ -51,3 +51,4 @@
 
   </div>
 </section>
+
