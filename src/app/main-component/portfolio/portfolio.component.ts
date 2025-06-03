@@ -22,7 +22,7 @@ export class PortfolioComponent {
   projects: PortfolioItem[] = [
     {
       title: 'Join',
-      description: 'Description coming soon',
+      description: 'A modern, Kanban-style task manager designed to bring remote teams together and keep projects flowing. Join lets users create workspaces, assign tasks with deadlines and subtasks, and reorganize everything via smooth drag-and-drop—no page refresh required. Real-time updates are delivered with WebSockets so every teammate sees changes the instant they happen, while role-based access control keeps sensitive boards private.',
       imageUrl: 'null',
       projectUrl: 'null',
       gitHubUrl: 'null',
@@ -71,7 +71,7 @@ export class PortfolioComponent {
     },
     {
       title: 'DABubble',
-      description: 'Project description coming soon',
+      description: 'A lightweight, privacy-first discussion hub built to replace scattered WhatsApp groups and long email chains in university courses and bootcamps. DABubble combines Slack-style channels with threaded conversations, emoji reactions, and file sharing—all neatly organized around each class or cohort—so students and instructors can keep Q&A, announcements, and resources in one searchable space.',
       imageUrl: 'null',
       projectUrl: 'null',
       gitHubUrl: 'null',
