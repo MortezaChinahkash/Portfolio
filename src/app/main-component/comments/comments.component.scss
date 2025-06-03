@@ -15,6 +15,7 @@
     text-align: center;
     margin-bottom: 60px;
     position: relative;
+    justify-self: flex-end;
 
     .header-text {
       display: inline-block;
@@ -24,18 +25,20 @@
 
     h3 {
       color: #000000;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 600;
       margin-bottom: 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
+      justify-self: flex-end;
     }
 
     h1 {
-      font-size: 52px;
+      font-size: 4rem;
       font-weight: 700;
       margin: 0;
       color: #000;
+      letter-spacing: 1px;
     }
   }
 }
