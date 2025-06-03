@@ -102,7 +102,7 @@
   &.card-2 {
     right: clamp(0px, 5vw, 80px); // Changed to keep within bounds
     top: clamp(10px, 2vw, 20px);
-    z-index: 2;
+    z-index: 0;
     transform: rotate(clamp(8deg, 10deg, 12deg));
   }
 
