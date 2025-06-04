@@ -53,13 +53,16 @@
       </ul>
     </nav>
 
-    <div class="language-toggle">
-      <img src="" alt="">
-      <p>EN</p>
-      <div class="toggle-switch">
+    <div class="language-toggle" (click)="toggleLanguage()">
+      <div class="toggle-en">
+        EN
+      </div>
+      <div class="toggle-switch" [class.toggled]="!isEnglish">
         <div class="toggle-circle"></div>
       </div>
-      <p>DE</p>
+      <div class="toggle-de">
+        DE
+      </div>
     </div>
   </header>
 </div>
