@@ -183,9 +183,12 @@ header {
       transition: transform 0.3s ease;
       position: absolute;
       left: 0;
+      cursor: pointer;
+      z-index: 2; /* Höherer z-index damit es klickbar bleibt */
     }
 
-    &.de-active .toggle-circle {
+    /* Der Selektor war falsch verschachtelt */
+    .toggle-circle.de-active {
       transform: translateX(15px);
     }
   }
