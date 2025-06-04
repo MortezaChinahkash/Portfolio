@@ -23,30 +23,24 @@
          (mousedown)="onMouseDown($event)"
          (dragstart)="onDragStart($event)">
 
-      <img class="note"
-           src="assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/A.png"
-           [class.visible]="currentState === 'default'"
-           draggable="false">
+      <div class="note note-default"
+           [class.visible]="currentState === 'default'">
+        @if (currentState !== 'final') {
+          <span class="peel-text">Pull to peel</span>
+        }
+        @if (currentState === 'default') {
+          <img class="arrow" src="/assets/png/Design material/03_Stickers/Arrow.png" alt="">
+        }
+      </div>
 
-      <img class="note"
-           src="assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/B.png"
-           [class.visible]="currentState === 'transition'"
-           draggable="false">
+      <div class="note note-transition"
+           [class.visible]="currentState === 'transition'">
+      </div>
 
-      <img class="note"
-           src="assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/C.png"
-           [class.visible]="currentState === 'final'"
-           draggable="false">
-
-      @if (currentState !== 'final') {
-        <span class="peel-text">Pull to peel</span>
-      }
-      @if (currentState === 'default') {
-        <img class="arrow" src="/assets/png/Design material/03_Stickers/Arrow.png" alt="">
-      }
-      @if (currentState === 'final') {
+      <div class="note note-final"
+           [class.visible]="currentState === 'final'">
         <span class="peel-text text-final">currently learning these Skills:</span>
-      }
+      </div>
     </div>
 
   </div>
