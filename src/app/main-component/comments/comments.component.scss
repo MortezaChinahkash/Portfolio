@@ -16,7 +16,25 @@
   .arrow{
     width: 150px;
     margin-right: 20px;
+    clip-path: inset(0 100% 0 0);
+    animation: lineReveal 6s infinite;
+}
+
+@keyframes lineReveal {
+  0%, 50% {
+    clip-path: inset(0 0 0 100%);
   }
+  66.7% {
+    clip-path: inset(0 0 0 0);
+  }
+  83.3% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+  
 
   .arrow-h3{
     display: flex;
