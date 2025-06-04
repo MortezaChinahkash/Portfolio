@@ -213,12 +213,20 @@ header {
   color: white;
   display: flex;
   align-items: center;
+  gap: 5px;
 }
+.toggle-switch{
+  width: 30px;
+  height: 10px;
+  background-color: #24DD80;
+  border-radius: 10px;
 
-// Mobile Anpassungen
-@media (max-width: 768px) {
-  .language-toggle {
-    width: clamp(50px, 8vw, 70px);
+  .toggle-circle {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
   }
 }
 
