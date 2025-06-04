@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { TranslationService } from '../../shared/services/translation.service';
 
 interface PortfolioItem {
@@ -15,86 +16,73 @@ interface PortfolioItem {
 
 @Component({
   selector: 'app-portfolio',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
+  projects: PortfolioItem[] = [];
+  
   constructor(public translationService: TranslationService) {}
-
-  projects: PortfolioItem[] = [
-    {
-      title: 'Join',
-      description: 'A modern, Kanban-style task manager designed to bring remote teams together and keep projects flowing. Join lets users create workspaces, assign tasks with deadlines and subtasks, and reorganize everything via smooth drag-and-drop—no page refresh required. Real-time updates are delivered with WebSockets so every teammate sees changes the instant they happen, while role-based access control keeps sensitive boards private.',
-      imageUrl: 'null',
-      projectUrl: 'null',
-      gitHubUrl: 'null',
-      technologies: [
-        {
-          name: 'Angular',
-          imageUrl: '/assets/png/icons/Skill Icons/Angular.png',
-        },
-        {
-          name: 'TypeScript',
-          imageUrl: '',
-        },
-        {
-          name: 'SASS',
-          imageUrl: '',
-        },
-      ],
-      isFeatured: true,
-      isInProgress: true,
-      compId: 'join-project',
-    },
-    {
-        title: 'El Pollo Loco – A Feather-Flinging 2-D Jump-’n’-Run',
-        description:
-          'Dive into a sun-scorched desert canyon where a fearless farmhand faces off against a riotous flock of mutant chickens. El Pollo Loco blends classic side-scrolling action with slap-stick humor and crisp, hand-drawn art to deliver a fast-paced platformer that feels both nostalgic and fresh.',
+  
+  ngOnInit() {
+    this.updateProjects();
+    
+    // Aktualisiere Projekte, wenn sich die Sprache ändert
+    this.translationService.currentLang$.subscribe(() => {
+      this.updateProjects();
+    });
+  }
+  
+  updateProjects() {
+    this.projects = [
+      {
+        // Verwende Übersetzungen für Titel und Beschreibung
+        title: this.translationService.t('join_title'),
+        description: this.translationService.t('join_description'),
+        imageUrl: 'null',
+        projectUrl: 'null',
+        gitHubUrl: 'null',
+        technologies: [
+          { name: 'Angular', imageUrl: '/assets/png/icons/Skill Icons/Angular.png' },
+          { name: 'TypeScript', imageUrl: '' },
+          { name: 'SASS', imageUrl: '' },
+        ],
+        isFeatured: true,
+        isInProgress: true,
+        compId: 'join-project',
+      },
+      {
+        title: this.translationService.t('pollo_title'),
+        description: this.translationService.t('pollo_description'),
         imageUrl: '',
         projectUrl: '',
         gitHubUrl: '',
-      technologies: [
-        {
-          name: 'JavaScript',
-          imageUrl: '',
-        },
-        {
-          name: 'CSS',
-          imageUrl: '',
-        },
-        {
-          name: 'HTML',
-          imageUrl: '',
-        },
-      ],
-      isFeatured: false,
-      isInProgress: true,
-      compId: 'el-pollo-loco',
-    },
-    {
-      title: 'DABubble',
-      description: 'A lightweight, privacy-first discussion hub built to replace scattered WhatsApp groups and long email chains in university courses and bootcamps. DABubble combines Slack-style channels with threaded conversations, emoji reactions, and file sharing—all neatly organized around each class or cohort—so students and instructors can keep Q&A, announcements, and resources in one searchable space.',
-      imageUrl: 'null',
-      projectUrl: 'null',
-      gitHubUrl: 'null',
-      technologies: [
-        {
-          name: 'Angular',
-          imageUrl: '',
-        },
-        {
-          name: 'TypeScript',
-          imageUrl: '',
-        },
-        {
-          name: 'SASS',
-          imageUrl: '',
-        },
-      ],
-      isFeatured: true,
-      isInProgress: true,
-      compId: 'dabubble',
-    }
-  ];
+        technologies: [
+          { name: 'JavaScript', imageUrl: '' },
+          { name: 'CSS', imageUrl: '' },
+          { name: 'HTML', imageUrl: '' },
+        ],
+        isFeatured: false,
+        isInProgress: true,
+        compId: 'el-pollo-loco',
+      },
+      {
+        title: this.translationService.t('dabubble_title'),
+        description: this.translationService.t('dabubble_description'),
+        imageUrl: 'null',
+        projectUrl: 'null',
+        gitHubUrl: 'null',
+        technologies: [
+          { name: 'Angular', imageUrl: '' },
+          { name: 'TypeScript', imageUrl: '' },
+          { name: 'SASS', imageUrl: '' },
+        ],
+        isFeatured: true,
+        isInProgress: true,
+        compId: 'dabubble',
+      }
+    ];
+  }
 }
