@@ -54,11 +54,11 @@
     </nav>
 
     <div class="language-toggle">
-      <div class="toggle-en" [class.active]="currentLanguage === 'en'" (click)="currentLanguage = 'en'">EN</div>
-      <div class="toggle-switch" [class.de-active]="currentLanguage === 'de'" (click)="currentLanguage = currentLanguage === 'en' ? 'de' : 'en'">
-        <div class="toggle-circle"></div>
+      <div class="toggle-en" [class.active]="currentLanguage === 'en'" (click)="toggleLanguage('en')">EN</div>
+      <div class="toggle-switch">
+        <div class="toggle-circle" [class.de-active]="currentLanguage === 'de'" (click)="switchLanguage()"></div>
       </div>
-      <div class="toggle-de" [class.active]="currentLanguage === 'de'" (click)="currentLanguage = 'de'">DE</div>
+      <div class="toggle-de" [class.active]="currentLanguage === 'de'" (click)="toggleLanguage('de')">DE</div>
     </div>
   </header>
 </div>
