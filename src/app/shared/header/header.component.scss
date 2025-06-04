@@ -16,7 +16,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 clamp(10px, 2vw, 20px);
-  
+
   .initials {
     position: relative;
     width: clamp(50px, 8vw, 75px);
@@ -55,14 +55,14 @@ header {
       }
     }
   }
-  
+
   nav {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 clamp(20px, 4vw, 40px);
-    
+
     ul {
       display: flex;
       justify-content: space-evenly;
@@ -71,7 +71,7 @@ header {
       list-style: none;
       margin: 0;
       padding: 0;
-      
+
       li {
         font-size: clamp(14px, 2.5vw, 20px);
         font-weight: 500;
@@ -81,14 +81,14 @@ header {
         flex: 1;
         display: flex;
         justify-content: center;
-        
+
         a {
           color: inherit;
           text-decoration: none;
           position: relative;
           display: inline-block;
           padding: 10px;
-          
+
           img {
             position: absolute;
             transition: clip-path 0.3s ease-out;
@@ -108,7 +108,7 @@ header {
       left: -10%;
       clip-path: inset(0 0 100% 0);
     }
-    
+
     &:hover img {
       clip-path: inset(0 0 0 0);
     }
@@ -122,7 +122,7 @@ header {
       left: -20%;
       clip-path: inset(0 100% 0 0);
     }
-    
+
     &:hover img {
       clip-path: inset(0 0 0 0);
     }
@@ -136,7 +136,7 @@ header {
       right: -20%;
       clip-path: inset(0 100% 0 0);
     }
-    
+
     &:hover img {
       clip-path: inset(0 0 0 0);
     }
@@ -150,36 +150,34 @@ header {
       left: -10%;
       clip-path: inset(0 100% 0 0);
     }
-    
+
     &:hover img {
       clip-path: inset(0 0 0 0);
     }
   }
-
 }
 
-
-
 .language-toggle {
-  color: #1AA8B5;
+  color: #1aa8b5;
   display: flex;
   align-items: center;
   gap: 5px;
-}
-.toggle-switch{
-  width: 30px;
-  height: 10px;
-  background-color: #24DD80;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
 
-  .toggle-circle {
-    width: 15px;
-    height: 15px;
-    background-color: #1073EA;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
+  .toggle-switch {
+    width: 30px;
+    height: 10px;
+    background-color: #24dd80;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+    .toggle-circle {
+      width: 15px;
+      height: 15px;
+      background-color: #1073ea;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
   }
 }
 
@@ -195,10 +193,10 @@ header {
     nav ul {
       li {
         font-size: clamp(12px, 2vw, 18px);
-        
+
         a {
           padding: 8px;
-          
+
           img {
             width: 100px;
             height: 80px;
@@ -213,11 +211,7 @@ header {
 @media (max-width: 768px) {
   header {
     height: clamp(70px, 8vw, 80px);
-    
-    .mobile-menu-btn {
-      display: flex;
-    }
-    
+
     nav {
       position: fixed;
       top: 0;
@@ -230,32 +224,27 @@ header {
       z-index: 1000;
       padding-top: 100px;
       margin: 0;
-      
-      &.mobile-menu-open {
-        left: 0;
-      }
-      
       ul {
         flex-direction: column;
         gap: 30px;
         padding: 40px 20px;
-        
+
         li {
           width: 100%;
           text-align: center;
           font-size: 18px;
           flex: none;
           justify-content: center;
-          
+
           a {
             display: block;
             padding: 15px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            
+
             &:hover {
               background-color: rgba(255, 255, 255, 0.1);
             }
-            
+
             img {
               position: relative;
               width: 80px;
@@ -268,10 +257,6 @@ header {
         }
       }
     }
-    
-    .toggle {
-      width: clamp(50px, 8vw, 70px);
-    }
   }
 }
 
@@ -280,43 +265,32 @@ header {
   header {
     height: 60px;
     padding: 0 15px;
-    
+
     .initials {
       width: 45px;
       height: 45px;
     }
-    
+
     nav {
       width: 250px;
       padding-top: 80px;
-      
+
       ul {
         padding: 30px 15px;
         gap: 20px;
-        
+
         li {
           font-size: 16px;
-          
+
           a {
             padding: 12px;
-            
+
             img {
               width: 60px;
               height: 40px;
             }
           }
         }
-      }
-    }
-    
-    .toggle {
-      width: 50px;
-    }
-    
-    .mobile-menu-btn {
-      .hamburger-line {
-        width: 20px;
-        height: 2px;
       }
     }
   }
@@ -329,22 +303,18 @@ header {
       width: 40px;
       height: 40px;
     }
-    
+
     nav {
       width: 220px;
-      
+
       ul li {
         font-size: 14px;
-        
+
         a img {
           width: 50px;
           height: 35px;
         }
       }
-    }
-    
-    .toggle {
-      width: 45px;
     }
   }
 }
@@ -353,14 +323,14 @@ header {
 @media (max-width: 768px) and (orientation: landscape) {
   header {
     height: 60px;
-    
+
     nav {
       padding-top: 70px;
-      
+
       ul {
         padding: 20px;
         gap: 15px;
-        
+
         li a {
           padding: 8px;
         }
