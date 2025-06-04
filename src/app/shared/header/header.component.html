@@ -53,6 +53,12 @@
       </ul>
     </nav>
 
-    <img class="toggle" src="assets/png/toggles/Property 1=Toggle Left.png" />
+    <div class="language-toggle" (click)="toggleLanguage()">
+      <div class="toggle-container" [class.toggled]="isGerman">
+        <div class="toggle-slider"></div>
+        <span class="language-label left" [class.active]="!isGerman">EN</span>
+        <span class="language-label right" [class.active]="isGerman">DE</span>
+      </div>
+    </div>
   </header>
 </div>
