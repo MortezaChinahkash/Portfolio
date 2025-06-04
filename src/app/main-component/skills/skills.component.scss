@@ -73,7 +73,7 @@
   align-items: center;
   position: relative;
 
-  // Angepasstes Styling für das neue div-Element
+
   .skill-paper {
     width: 100%;
     position: relative;
@@ -89,7 +89,6 @@
     p {
       color: black;
       font-size: clamp(0.9rem, 1.5vw, 1.3rem);
-      font-weight: bold;
       text-align: center;
       position: absolute;
       width: 80%;
@@ -111,7 +110,7 @@
   }
 }
 
-// Medienabfragen aktualisieren
+
 
 
 .skill {
@@ -144,7 +143,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    /* Reduziert um 20px auf jeder Seite (40px gesamt) */
     width: clamp(160px, 25vw, 260px);
     rotate: 7deg;
     opacity: 0;
@@ -196,7 +194,7 @@
 
 .note-image-unpeeled { transform: rotate(7deg); }
 .note { 
-  width: clamp(160px, 25vw, 260px); /* Reduziert um 20px auf jeder Seite */
+  width: clamp(160px, 25vw, 260px); 
   rotate: 7deg; 
   user-select: none; 
 }
@@ -217,7 +215,6 @@
     width: 100%;
     
     p {
-      /* Anpassung für mobile Ansicht */
       position: absolute;
       width: 70%;
       font-weight: bold;
