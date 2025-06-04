@@ -45,6 +45,13 @@ export interface TranslationSet {
   email: string;
   message: string;
   send: string;
+  
+  // Form Placeholders
+  name_placeholder: string;
+  email_placeholder: string;
+  message_placeholder: string;
+  privacy_policy: string;
+  agree_privacy: string;
 }
 
 @Injectable({
@@ -95,7 +102,14 @@ export class TranslationService {
       name: 'Name',
       email: 'Email',
       message: 'Message',
-      send: 'Send'
+      send: 'Send',
+
+      // Form Placeholders
+      name_placeholder: 'Enter your name',
+      email_placeholder: 'Enter your email address',
+      message_placeholder: 'What would you like to discuss?',
+      privacy_policy: 'privacy policy',
+      agree_privacy: "I've read the privacy policy and agree to the processing of my data as outlined."
     },
     de: {
       // Header
@@ -136,7 +150,14 @@ export class TranslationService {
       name: 'Name',
       email: 'E-Mail',
       message: 'Nachricht',
-      send: 'Senden'
+      send: 'Senden',
+
+      // Form Placeholders
+      name_placeholder: 'Gib deinen Namen ein',
+      email_placeholder: 'Gib deine E-Mail-Adresse ein',
+      message_placeholder: 'Worüber möchtest du sprechen?',
+      privacy_policy: 'Datenschutzerklärung',
+      agree_privacy: "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
     }
   };
 

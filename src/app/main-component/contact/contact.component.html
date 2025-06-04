@@ -4,24 +4,58 @@
       <div class="contact-info">
         <h3>{{ translationService.t('contact_me') }}</h3>
         <h1>{{ translationService.t('ready_to_work') }}</h1>
-        <p>{{ translationService.t('contact_text1') }}</p>
-        <p>{{ translationService.t('contact_text2') }}</p>
+        <p>
+          {{ translationService.t('contact_text1') }}
+        </p>
+
+        <p>
+          {{ translationService.t('contact_text2') }}
+        </p>
         <img class="arrow" src="/assets/png/Design material/00_Hand-drawn lines/05_Contact/Color option 3.png" alt="">
       </div>
       <div class="contact-form">
+
         <img class="contact-logo" src="/assets/png/logo/Logo-C.png" alt="">
+
         <form>
           <div class="form-group">
             <label for="name">{{ translationService.t('name') }}</label>
-            <input type="text" id="name" name="name">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="{{ translationService.t('name_placeholder') }}"
+              required
+            />
           </div>
           <div class="form-group">
             <label for="email">{{ translationService.t('email') }}</label>
-            <input type="email" id="email" name="email">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="{{ translationService.t('email_placeholder') }}"
+              required
+            />
           </div>
           <div class="form-group">
             <label for="message">{{ translationService.t('message') }}</label>
-            <textarea id="message" name="message"></textarea>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="{{ translationService.t('message_placeholder') }}"
+              rows="1"
+              required
+            ></textarea>
+          </div>
+          <div class="checkbox">
+            <input class="privacy-checkbox"
+              type="checkbox"
+              name="privacy-policy"
+              id="privacy-policy"
+              required
+            />
+            <label for="privacy-policy" [innerHTML]="getPrivacyText()"></label>
           </div>
           <button type="submit">{{ translationService.t('send') }}</button>
         </form>
