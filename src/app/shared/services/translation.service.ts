@@ -132,21 +132,24 @@ export class TranslationService {
       agree_privacy_end: " and agree to the processing of my data as outlined.",
 
       // Comments Section
-      in_their_words: 'In their words',
-      colleagues_thoughts: "Colleagues' thoughts",
-      profile: 'Profile',
+      in_their_words: "IN THEIR WORDS:",
+      colleagues_thoughts: "Colleagues' Thoughts",
+      profile: "Profile",
       
-      // Kommentare (falls statisch)
-      comment1_text: 'Morteza is an exceptional developer who consistently delivers high-quality work. Their attention to detail and problem-solving skills are top-notch.',
-      comment1_name: 'John Doe',
-      comment1_role: 'Project Manager at XYZ',
-      comment2_text: 'Working with Morteza was a game-changer for our project. Their expertise in frontend development brought our vision to life.',
-      comment2_name: 'Jane Smith',
-      comment2_role: 'Creative Director at ABC',
-      comment3_text: 'I highly recommend Morteza for any development project. They are skilled, reliable, and a great team player.',
-      comment3_name: 'Emily Johnson',
-      comment3_role: 'Lead Developer at 123'
+      // Kommentare (Beispiele - passe diese an deine tatsächlichen Inhalte an)
+      comment1_text: "Working with Morteza was a pleasure. His attention to detail and creative problem-solving skills made our project a success.",
+      comment1_name: "Sarah Johnson",
+      comment1_role: "Senior Developer",
+      
+      comment2_text: "Morteza is an exceptional frontend developer with a keen eye for design and user experience. He consistently delivers high-quality code.",
+      comment2_name: "Michael Chen",
+      comment2_role: "Project Manager",
+      
+      comment3_text: "I was impressed by Morteza's ability to quickly grasp complex requirements and turn them into elegant solutions.",
+      comment3_name: "Julia Müller",
+      comment3_role: "UX Designer"
     },
+    
     de: {
       // Header
       about_me: 'Über mich',
@@ -197,20 +200,22 @@ export class TranslationService {
       agree_privacy_end: " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
 
       // Comments Section
-      in_their_words: 'In ihren Worten',
-      colleagues_thoughts: "Gedanken der Kollegen",
-      profile: 'Profil',
+      in_their_words: "IN IHREN WORTEN:",
+      colleagues_thoughts: "Meinungen von Kollegen",
+      profile: "Profil",
       
-      // Kommentare (falls statisch)
-      comment1_text: 'Morteza ist ein außergewöhnlicher Entwickler, der konsequent hochwertige Arbeit liefert. Sein Auge fürs Detail und seine Problemlösungsfähigkeiten sind erstklassig.',
-      comment1_name: 'Max Mustermann',
-      comment1_role: 'Projektleiter bei XYZ',
-      comment2_text: 'Die Zusammenarbeit mit Morteza war ein Wendepunkt für unser Projekt. Seine Expertise in der Frontend-Entwicklung hat unsere Vision zum Leben erweckt.',
-      comment2_name: 'Erika Musterfrau',
-      comment2_role: 'Kreativdirektorin bei ABC',
-      comment3_text: 'Ich empfehle Morteza für jedes Entwicklungsprojekt. Er ist kompetent, zuverlässig und ein großartiger Teamplayer.',
-      comment3_name: 'Hans Müller',
-      comment3_role: 'Leitender Entwickler bei 123'
+      // Kommentare (Beispiele - passe diese an deine tatsächlichen Inhalte an)
+      comment1_text: "Die Zusammenarbeit mit Morteza war ein Vergnügen. Seine Aufmerksamkeit fürs Detail und seine kreativen Problemlösungsfähigkeiten haben unser Projekt zum Erfolg geführt.",
+      comment1_name: "Sarah Johnson",
+      comment1_role: "Senior Entwicklerin",
+      
+      comment2_text: "Morteza ist ein außergewöhnlicher Frontend-Entwickler mit einem ausgeprägten Gespür für Design und Benutzererfahrung. Er liefert stets qualitativ hochwertigen Code.",
+      comment2_name: "Michael Chen",
+      comment2_role: "Projektmanager",
+      
+      comment3_text: "Ich war beeindruckt von Mortezas Fähigkeit, komplexe Anforderungen schnell zu erfassen und in elegante Lösungen umzusetzen.",
+      comment3_name: "Julia Müller",
+      comment3_role: "UX Designerin"
     }
   };
 
