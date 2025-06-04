@@ -4,9 +4,9 @@
       <div class="header-text">
         <div class="arrow-h3">
         <img class="arrow" src="/assets/png/Design material/00_Hand-drawn lines/04_Testimonials/Color option 3.png" alt="">
-        <h3>IN THEIR WORDS:</h3>
+        <h3>{{ translationService.t('in_their_words') }}</h3>
         </div>
-        <h1>Colleagues' Thoughts</h1>
+        <h1>{{ translationService.t('colleagues_thoughts') }}</h1>
       </div>
     </div>
     <div class="comment-window">
@@ -22,7 +22,7 @@
               </div>
               <div class="comment-image">
                 <img [src]="comment.linkedIn" alt="{{ comment.name }}" />
-                <p>Profile</p>
+                <p>{{ translationService.t('profile') }}</p>
               </div>
             </div>
           </div>

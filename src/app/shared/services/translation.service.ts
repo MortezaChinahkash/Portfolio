@@ -59,6 +59,7 @@ export interface TranslationSet {
   // Comments Section
   in_their_words: string;
   colleagues_thoughts: string;
+  profile: string;  // Überprüfe die korrekte Benennung
   
   // Kommentar-Rollen (werden für alle Kommentare verwendet)
   role_frontend: string;
@@ -132,6 +133,7 @@ export class TranslationService {
       // Comments Section
       in_their_words: "IN THEIR WORDS:",
       colleagues_thoughts: "Colleagues' Thoughts",
+      profile: "Profile",
       
       // Kommentar-Rollen
       role_frontend: "Frontend Developer",
@@ -196,6 +198,7 @@ export class TranslationService {
       // Comments Section
       in_their_words: "IN IHREN WORTEN:",
       colleagues_thoughts: "Meinungen von Kollegen",
+      profile: "Profil",
       
       // Kommentar-Rollen
       role_frontend: "Frontend Entwickler",
