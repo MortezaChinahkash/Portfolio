@@ -64,7 +64,7 @@ export class TranslationService {
       contact: 'Contact',
       
       // ATF (Hero)
-      hero_title: "Hi, I'm Morteza",
+      hero_title: "I'm Morteza",
       hero_subtitle: 'Frontend Developer',
       lets_talk: "Let's talk",
       
@@ -105,9 +105,9 @@ export class TranslationService {
       contact: 'Kontakt',
       
       // ATF (Hero)
-      hero_title: "Hallo, ich bin Morteza",
+      hero_title: "Ich bin Morteza Chinahkash",
       hero_subtitle: 'Frontend Entwickler',
-      lets_talk: "Lass uns reden",
+      lets_talk: "Lass uns reden!",
       
       // About
       who_am_i: "WER IST MORTEZA",
