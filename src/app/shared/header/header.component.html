@@ -53,12 +53,12 @@
       </ul>
     </nav>
 
-    <div class="language-toggle" (click)="toggleLanguage()">
-      <div class="toggle-container" [class.toggled]="isGerman">
-        <div class="toggle-slider"></div>
-        <span class="language-label left" [class.active]="!isGerman">EN</span>
-        <span class="language-label right" [class.active]="isGerman">DE</span>
+    <div class="language-toggle">
+      <p>EN</p>
+      <div class="toggle-switch">
+        <div class="toggle-circle"></div>
       </div>
+      <p>DE</p>
     </div>
   </header>
 </div>

@@ -9,11 +9,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  isGerman = true; // Default auf Deutsch
+  isEnglish: boolean = true; // Default auf Englisch
 
   toggleLanguage() {
-    this.isGerman = !this.isGerman;
-    console.log('Sprache gewechselt zu:', this.isGerman ? 'DE' : 'EN');
+    this.isEnglish = !this.isEnglish;
+    console.log('Sprache gewechselt zu:', this.isEnglish ? 'EN' : 'DE');
     // Hier später die Sprachumschaltung implementieren
   }
 }

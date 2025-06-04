@@ -166,6 +166,12 @@ header {
     &:hover {
       transform: scale(1.1);
     }
+    
+    .toggle-image {
+      width: 100%;
+      height: auto;
+      transition: opacity 0.3s ease;
+    }
   }
 }
 
@@ -204,109 +210,21 @@ header {
 }
 
 .language-toggle {
-  cursor: pointer;
-  user-select: none;
-  
-  .toggle-container {
-    position: relative;
-    width: clamp(70px, 10vw, 90px);
-    height: clamp(35px, 5vw, 45px);
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 25px;
-    border: 2px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 8px;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-      transform: scale(1.05);
-    }
-    
-    .toggle-slider {
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: clamp(30px, 4vw, 38px);
-      height: calc(100% - 4px);
-      background-color: white;
-      border-radius: 20px;
-      transition: transform 0.3s ease;
-      z-index: 1;
-    }
-    
-    &.toggled .toggle-slider {
-      transform: translateX(clamp(35px, 5vw, 45px));
-    }
-    
-    .language-label {
-      position: relative;
-      z-index: 2;
-      font-size: clamp(12px, 1.5vw, 14px);
-      font-weight: 600;
-      color: white;
-      transition: color 0.3s ease;
-      
-      &.active {
-        color: #333;
-      }
-      
-      &.left {
-        margin-left: 2px;
-      }
-      
-      &.right {
-        margin-right: 2px;
-      }
-    }
-  }
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 // Mobile Anpassungen
 @media (max-width: 768px) {
   .language-toggle {
-    .toggle-container {
-      width: 70px;
-      height: 35px;
-      padding: 0 6px;
-      
-      .toggle-slider {
-        width: 30px;
-      }
-      
-      &.toggled .toggle-slider {
-        transform: translateX(35px);
-      }
-      
-      .language-label {
-        font-size: 12px;
-      }
-    }
+    width: clamp(50px, 8vw, 70px);
   }
 }
 
 @media (max-width: 480px) {
   .language-toggle {
-    .toggle-container {
-      width: 60px;
-      height: 30px;
-      padding: 0 5px;
-      
-      .toggle-slider {
-        width: 25px;
-      }
-      
-      &.toggled .toggle-slider {
-        transform: translateX(30px);
-      }
-      
-      .language-label {
-        font-size: 10px;
-      }
-    }
+    width: 50px;
   }
 }
 
