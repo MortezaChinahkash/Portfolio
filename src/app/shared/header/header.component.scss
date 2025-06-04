@@ -220,11 +220,13 @@ header {
   height: 10px;
   background-color: #24DD80;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
 
   .toggle-circle {
-    width: 10px;
-    height: 10px;
-    background-color: white;
+    width: 15px;
+    height: 15px;
+    background-color: #1073EA;
     border-radius: 50%;
     transition: transform 0.3s ease;
   }
