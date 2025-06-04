@@ -1,12 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
-import { ATFComponent } from './main-component/atf/atf.component';
-import { AboutMeComponent } from './main-component/about-me/about-me.component';
-import { SkillsComponent } from './main-component/skills/skills.component';
-import { PortfolioComponent } from './main-component/portfolio/portfolio.component';
-import { ContactComponent } from './main-component/contact/contact.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { TranslationService } from './shared/services/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +10,13 @@ import { FooterComponent } from './shared/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Portfolio';
+  
+  constructor(private translationService: TranslationService) {}
+  
+  ngOnInit(): void {
+    // Initialisiere Sprache beim App-Start
+    this.translationService.initLanguage();
+  }
 }
