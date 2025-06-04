@@ -168,6 +168,7 @@ header {
     height: 10px;
     background-color: #24dd80;
     border-radius: 10px;
+    border: 0.5px solid white;
     display: flex;
     align-items: center;
 
@@ -176,7 +177,33 @@ header {
       height: 15px;
       background-color: #1073ea;
       border-radius: 50%;
+      border: 1px solid white;
       transition: transform 0.3s ease;
+    }
+  }
+  .toggle-en {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-image: url('/assets/png/toggles/Toggle Left.png');
+    }
+  }
+
+    .toggle-de {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-image: url('/assets/png/toggles/Toggle Right.png');
     }
   }
 }
