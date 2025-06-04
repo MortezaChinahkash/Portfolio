@@ -156,23 +156,6 @@ header {
     }
   }
 
-  .toggle {
-    width: clamp(60px, 10vw, 100px);
-    height: auto;
-    flex-shrink: 0;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    
-    &:hover {
-      transform: scale(1.1);
-    }
-    
-    .toggle-image {
-      width: 100%;
-      height: auto;
-      transition: opacity 0.3s ease;
-    }
-  }
 }
 
 // Mobile Navigation Styles
