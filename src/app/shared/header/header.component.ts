@@ -1,27 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-// Definiere einen Typ für die unterstützten Sprachen
-type SupportedLanguage = 'en' | 'de';
-
-// Einfaches Interface für Sprachen
-interface Language {
-  code: SupportedLanguage;
-  label: string;
-}
-
-// Definiere die Struktur für einen Sprachsatz
-interface TranslationSet {
-  about_me: string;
-  skills: string;
-  projects: string;
-  contact: string;
-}
-
-// Verwende eine Type statt Interface für Translations
-type Translations = {
-  [key in SupportedLanguage]: TranslationSet;
-};
+import { TranslationService, SupportedLanguage } from '../../shared/services/translation.service';
 
 @Component({
   selector: 'app-header',
@@ -30,46 +9,34 @@ type Translations = {
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
-  // Array mit Sprachen
-  languages: Language[] = [
-    { code: 'en', label: 'EN' },
-    { code: 'de', label: 'DE' }
-  ];
-  
-  // Aktuelle Sprache mit dem korrekten Typ
+export class HeaderComponent implements OnInit {
+  // Aktuelle Sprache
   currentLanguage: SupportedLanguage = 'en';
   
-  // Übersetzungsobjekt mit korrekter Typisierung
-  translations: Translations = {
-    en: {
-      about_me: 'About me',
-      skills: 'Skills',
-      projects: 'Projects',
-      contact: 'Contact'
-    },
-    de: {
-      about_me: 'Über mich',
-      skills: 'Fähigkeiten',
-      projects: 'Projekte',
-      contact: 'Kontakt'
-    }
-  };
+  constructor(public translationService: TranslationService) {}
+  
+  ngOnInit(): void {
+    // Sprache aus dem Service übernehmen
+    this.translationService.currentLang$.subscribe(lang => {
+      this.currentLanguage = lang;
+    });
+  }
   
   // Methode zum Wechseln der Sprache
   toggleLanguage(code: SupportedLanguage): void {
     if (this.currentLanguage !== code) {
-      this.currentLanguage = code;
+      this.translationService.setLanguage(code);
     }
   }
   
   // Toggle-Methode für den Switch
   switchLanguage(): void {
-    this.currentLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
+    const newLang = this.currentLanguage === 'en' ? 'de' : 'en';
+    this.toggleLanguage(newLang);
   }
   
-  // Methode zum Abrufen von Übersetzungen
-  getText(key: keyof TranslationSet): string {
-    return this.translations[this.currentLanguage][key];
+  // Hilfsmethode für das Template
+  getText(key: keyof TranslationService['translations']['en']): string {
+    return this.translationService.t(key);
   }
 }
