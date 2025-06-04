@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslationService } from '../../shared/services/translation.service';
 
 interface PortfolioItem {
   title: string;
@@ -19,6 +20,8 @@ interface PortfolioItem {
   styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {
+  constructor(public translationService: TranslationService) {}
+
   projects: PortfolioItem[] = [
     {
       title: 'Join',

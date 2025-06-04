@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../../shared/services/translation.service';
 
 interface Skill { name: string; image: string; }
 
@@ -12,6 +13,7 @@ interface Skill { name: string; image: string; }
 })
 export class SkillsComponent {
 
+  constructor(public translationService: TranslationService) {}
 
   skills: Skill[] = [
     { name:'HTML',       image:'assets/png/icons/Skill Icons/HTML.png' },
