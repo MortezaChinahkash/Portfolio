@@ -11,12 +11,4 @@ import { TranslationService } from '../../shared/services/translation.service';
 })
 export class ContactComponent {
   constructor(public translationService: TranslationService) {}
-  
-  // Hilfsmethode für den Datenschutztext mit Link
-  getPrivacyText(): string {
-    const text = this.translationService.t('agree_privacy');
-    const privacyLabel = this.translationService.t('privacy_policy');
-    return text.replace('privacy policy', 
-      `<a class="privacy" href="#">${privacyLabel}</a>`);
-  }
 }

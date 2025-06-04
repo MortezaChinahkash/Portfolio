@@ -206,6 +206,16 @@ $accent: #1073EA;
   }
 }
 
+.privacy-link {
+  color: #1073ea;
+  text-decoration: underline;
+  cursor: pointer;
+  
+  &:hover {
+    color: #24dd80;
+  }
+}
+
 @media (max-width: 900px) {
   .contact-page {
     flex-direction: column;

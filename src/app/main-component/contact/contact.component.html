@@ -55,7 +55,11 @@
               id="privacy-policy"
               required
             />
-            <label for="privacy-policy" [innerHTML]="getPrivacyText()"></label>
+            <label for="privacy-policy">
+              {{ translationService.t('agree_privacy_start') }}
+              <a href="/privacy" class="privacy-link">{{ translationService.t('privacy_policy') }}</a>
+              {{ translationService.t('agree_privacy_end') }}
+            </label>
           </div>
           <button type="submit">{{ translationService.t('send') }}</button>
         </form>
