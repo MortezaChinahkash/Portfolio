@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// Einfaches Interface für Sprachen
+interface Language {
+  code: string;
+  label: string;
+}
+
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -9,15 +15,24 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  isEnglish: boolean = true; // Default auf Englisch
-  currentLanguage: 'en' | 'de' = 'en'; // Default language
-
-
-  toggleLanguage(language: 'en' | 'de'): void {
-    // Only change if clicking on inactive language
-    if (this.currentLanguage !== language) {
-      this.currentLanguage = language;
-      // Here you would implement your language change logic
+  // Array mit Sprachen
+  languages: Language[] = [
+    { code: 'en', label: 'EN' },
+    { code: 'de', label: 'DE' }
+  ];
+  
+  // Aktuelle Sprache
+  currentLanguage: string = 'en';
+  
+  // Methode zum Wechseln der Sprache
+  toggleLanguage(code: string): void {
+    if (this.currentLanguage !== code) {
+      this.currentLanguage = code;
     }
+  }
+  
+  // Toggle-Methode für den Switch
+  switchLanguage(): void {
+    this.currentLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
   }
 }
