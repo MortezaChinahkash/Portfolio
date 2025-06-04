@@ -55,6 +55,22 @@ export interface TranslationSet {
   agree_privacy_start: string;
   privacy_policy: string;
   agree_privacy_end: string;
+
+  // Comments Section
+  in_their_words: string;
+  colleagues_thoughts: string;
+  profile: string;
+  
+  // Kommentare (falls statisch)
+  comment1_text: string;
+  comment1_name: string;
+  comment1_role: string;
+  comment2_text: string;
+  comment2_name: string;
+  comment2_role: string;
+  comment3_text: string;
+  comment3_name: string;
+  comment3_role: string;
 }
 
 @Injectable({
@@ -113,7 +129,23 @@ export class TranslationService {
       message_placeholder: 'What would you like to discuss?',
       agree_privacy_start: "I've read the ",
       privacy_policy: "privacy policy",
-      agree_privacy_end: " and agree to the processing of my data as outlined."
+      agree_privacy_end: " and agree to the processing of my data as outlined.",
+
+      // Comments Section
+      in_their_words: 'In their words',
+      colleagues_thoughts: "Colleagues' thoughts",
+      profile: 'Profile',
+      
+      // Kommentare (falls statisch)
+      comment1_text: 'Morteza is an exceptional developer who consistently delivers high-quality work. Their attention to detail and problem-solving skills are top-notch.',
+      comment1_name: 'John Doe',
+      comment1_role: 'Project Manager at XYZ',
+      comment2_text: 'Working with Morteza was a game-changer for our project. Their expertise in frontend development brought our vision to life.',
+      comment2_name: 'Jane Smith',
+      comment2_role: 'Creative Director at ABC',
+      comment3_text: 'I highly recommend Morteza for any development project. They are skilled, reliable, and a great team player.',
+      comment3_name: 'Emily Johnson',
+      comment3_role: 'Lead Developer at 123'
     },
     de: {
       // Header
@@ -162,7 +194,23 @@ export class TranslationService {
       message_placeholder: 'Worüber möchtest du sprechen?',
       agree_privacy_start: "Ich habe die ",
       privacy_policy: "Datenschutzerklärung",
-      agree_privacy_end: " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+      agree_privacy_end: " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+
+      // Comments Section
+      in_their_words: 'In ihren Worten',
+      colleagues_thoughts: "Gedanken der Kollegen",
+      profile: 'Profil',
+      
+      // Kommentare (falls statisch)
+      comment1_text: 'Morteza ist ein außergewöhnlicher Entwickler, der konsequent hochwertige Arbeit liefert. Sein Auge fürs Detail und seine Problemlösungsfähigkeiten sind erstklassig.',
+      comment1_name: 'Max Mustermann',
+      comment1_role: 'Projektleiter bei XYZ',
+      comment2_text: 'Die Zusammenarbeit mit Morteza war ein Wendepunkt für unser Projekt. Seine Expertise in der Frontend-Entwicklung hat unsere Vision zum Leben erweckt.',
+      comment2_name: 'Erika Musterfrau',
+      comment2_role: 'Kreativdirektorin bei ABC',
+      comment3_text: 'Ich empfehle Morteza für jedes Entwicklungsprojekt. Er ist kompetent, zuverlässig und ein großartiger Teamplayer.',
+      comment3_name: 'Hans Müller',
+      comment3_role: 'Leitender Entwickler bei 123'
     }
   };
 
