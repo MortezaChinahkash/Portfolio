@@ -171,6 +171,8 @@ header {
     border: 0.5px solid white;
     display: flex;
     align-items: center;
+    position: relative;
+    cursor: pointer;
 
     .toggle-circle {
       width: 15px;
@@ -179,9 +181,17 @@ header {
       border-radius: 50%;
       border: 1px solid white;
       transition: transform 0.3s ease;
+      position: absolute;
+      left: 0;
+    }
+
+    &.de-active .toggle-circle {
+      transform: translateX(15px);
     }
   }
-  .toggle-en {
+
+  .toggle-en,
+  .toggle-de {
     background-size: cover;
     background-repeat: no-repeat;
     width: 30px;
@@ -189,20 +199,23 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+  }
+
+  .toggle-en {
     &:hover {
+      background-image: url('/assets/png/toggles/Toggle Left.png');
+    }
+    &.active {
       background-image: url('/assets/png/toggles/Toggle Left.png');
     }
   }
 
-    .toggle-de {
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .toggle-de {
     &:hover {
+      background-image: url('/assets/png/toggles/Toggle Right.png');
+    }
+    &.active {
       background-image: url('/assets/png/toggles/Toggle Right.png');
     }
   }
