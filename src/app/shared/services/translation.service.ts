@@ -59,18 +59,16 @@ export interface TranslationSet {
   // Comments Section
   in_their_words: string;
   colleagues_thoughts: string;
-  profile: string;
   
-  // Kommentare (falls statisch)
+  // Kommentar-Rollen (werden für alle Kommentare verwendet)
+  role_frontend: string;
+  role_backend: string;
+  role_ux: string;
+  
+  // Kommentar-Texte (einzeln für jeden Kommentar)
   comment1_text: string;
-  comment1_name: string;
-  comment1_role: string;
   comment2_text: string;
-  comment2_name: string;
-  comment2_role: string;
   comment3_text: string;
-  comment3_name: string;
-  comment3_role: string;
 }
 
 @Injectable({
@@ -134,20 +132,16 @@ export class TranslationService {
       // Comments Section
       in_their_words: "IN THEIR WORDS:",
       colleagues_thoughts: "Colleagues' Thoughts",
-      profile: "Profile",
       
-      // Kommentare (Beispiele - passe diese an deine tatsächlichen Inhalte an)
-      comment1_text: "Working with Morteza was a pleasure. His attention to detail and creative problem-solving skills made our project a success.",
-      comment1_name: "Sarah Johnson",
-      comment1_role: "Senior Developer",
+      // Kommentar-Rollen
+      role_frontend: "Frontend Developer",
+      role_backend: "Backend Developer",
+      role_ux: "UX Designer",
       
-      comment2_text: "Morteza is an exceptional frontend developer with a keen eye for design and user experience. He consistently delivers high-quality code.",
-      comment2_name: "Michael Chen",
-      comment2_role: "Project Manager",
-      
-      comment3_text: "I was impressed by Morteza's ability to quickly grasp complex requirements and turn them into elegant solutions.",
-      comment3_name: "Julia Müller",
-      comment3_role: "UX Designer"
+      // Kommentar-Texte
+      comment1_text: "Sascha really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+      comment2_text: "It was a pleasure to work with Sascha. He knows how to motivate and encourage team members to deliver the best work possible, always adding value during each brainstorm.",
+      comment3_text: "Sascha was an exceptional team colleague at DA. His positive attitude and willingness to take on challenges made a significant contribution to us achieving our goals."
     },
     
     de: {
@@ -202,20 +196,16 @@ export class TranslationService {
       // Comments Section
       in_their_words: "IN IHREN WORTEN:",
       colleagues_thoughts: "Meinungen von Kollegen",
-      profile: "Profil",
       
-      // Kommentare (Beispiele - passe diese an deine tatsächlichen Inhalte an)
-      comment1_text: "Die Zusammenarbeit mit Morteza war ein Vergnügen. Seine Aufmerksamkeit fürs Detail und seine kreativen Problemlösungsfähigkeiten haben unser Projekt zum Erfolg geführt.",
-      comment1_name: "Sarah Johnson",
-      comment1_role: "Senior Entwicklerin",
+      // Kommentar-Rollen
+      role_frontend: "Frontend Entwickler",
+      role_backend: "Backend Entwickler",
+      role_ux: "UX Designer",
       
-      comment2_text: "Morteza ist ein außergewöhnlicher Frontend-Entwickler mit einem ausgeprägten Gespür für Design und Benutzererfahrung. Er liefert stets qualitativ hochwertigen Code.",
-      comment2_name: "Michael Chen",
-      comment2_role: "Projektmanager",
-      
-      comment3_text: "Ich war beeindruckt von Mortezas Fähigkeit, komplexe Anforderungen schnell zu erfassen und in elegante Lösungen umzusetzen.",
-      comment3_name: "Julia Müller",
-      comment3_role: "UX Designerin"
+      // Kommentar-Texte
+      comment1_text: "Sascha hat das Team mit seiner großartigen Organisation und klaren Kommunikation wirklich zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
+      comment2_text: "Es war eine Freude, mit Sascha zu arbeiten. Er weiß, wie man Teammitglieder motiviert und ermutigt, die bestmögliche Arbeit zu leisten, und bringt bei jedem Brainstorming einen Mehrwert.",
+      comment3_text: "Sascha war ein außergewöhnlicher Teamkollege bei DA. Seine positive Einstellung und seine Bereitschaft, Herausforderungen anzunehmen, haben maßgeblich dazu beigetragen, dass wir unsere Ziele erreicht haben."
     }
   };
 
