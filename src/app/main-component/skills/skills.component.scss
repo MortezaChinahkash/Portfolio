@@ -21,7 +21,7 @@
   filter: grayscale(100%);
   transition: all 0.3s ease;
   position: relative;
-  
+
   &:hover {
     filter: grayscale(0%);
     transform: scale(1.2);
@@ -84,7 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     p {
       color: black;
       font-size: clamp(0.9rem, 1.5vw, 1.3rem);
@@ -130,8 +130,8 @@
   cursor: grab;
   user-select: none;
 
-  &.dragging { 
-    cursor: grabbing; 
+  &.dragging {
+    cursor: grabbing;
   }
 
   .note {
@@ -142,7 +142,7 @@
     height: clamp(160px, 25vw, 260px);
     transform: rotate(7deg);
     opacity: 0;
-    transition: opacity .25s ease;
+    transition: opacity 0.25s ease;
     pointer-events: none;
     display: flex;
     align-items: center;
@@ -150,27 +150,31 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    
-    &.visible { 
-      opacity: 1; 
+
+    &.visible {
+      opacity: 1;
     }
   }
 
   .note-default {
-    background-image: url('/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/A.png');
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url("/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/A.png");
   }
 
   .note-transition {
-    background-image: url('/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/B.png');
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url("/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/B.png");
   }
 
   .note-final {
-    background-image: url('/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/C.png');
+    background-image: url("/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/C.png");
   }
 
   .peel-text {
     font-size: clamp(1.2rem, 2vw, 2rem);
-    font-family: 'Kalam', Courier, monospace;
+    font-family: "Kalam", Courier, monospace;
     font-weight: bold;
     color: white;
     z-index: 2;
@@ -182,9 +186,9 @@
 
   .text-final {
     font-size: clamp(0.9rem, 1.3vw, 1.4rem);
-    font-family: 'Kalam', Courier, monospace;
+    font-family: "Kalam", Courier, monospace;
     font-weight: bold;
-    color: black;
+    color: white;
     transform: rotate(0deg);
     margin-top: 0;
     padding: 20px;
@@ -214,15 +218,15 @@
     text-align: center;
     gap: clamp(1rem, 2vw, 2rem);
   }
-  
+
   .skills-header {
     width: 100%;
     align-items: center;
   }
-  
+
   .skills-description {
     width: 100%;
-    
+
     p {
       position: absolute;
       width: 70%;
@@ -232,23 +236,23 @@
 }
 
 @media (max-width: 600px) {
-  .skills-content { 
-    padding: clamp(20px, 4vw, 40px); 
+  .skills-content {
+    padding: clamp(20px, 4vw, 40px);
   }
-  
+
   .note-pull {
     margin-top: clamp(20px, 4vw, 40px);
-    
+
     .peel-text {
       font-size: clamp(1rem, 1.5vw, 1.5rem);
     }
-    
+
     .text-final {
       font-size: clamp(0.8rem, 1.1vw, 1.2rem);
       padding: 15px;
     }
   }
-  
+
   .skills-description p {
     font-size: 0.9rem;
   }
