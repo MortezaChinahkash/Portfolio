@@ -89,6 +89,9 @@ export interface TranslationSet {
   agree_privacy_start: string;
   privacy_policy: string;
   agree_privacy_end: string;
+
+  // Projekt Details
+  project_details: string;
 }
 
 @Injectable({
@@ -184,6 +187,9 @@ export class TranslationService {
       agree_privacy_start: 'I agree to the',
       privacy_policy: 'Privacy Policy',
       agree_privacy_end: 'and',
+
+      // Projekt Details
+      project_details: "Project details",
     },
     
     de: {
@@ -270,6 +276,9 @@ export class TranslationService {
       agree_privacy_start: 'Ich stimme der',
       privacy_policy: 'Datenschutzbestimmungen',
       agree_privacy_end: 'und den',
+
+      // Projekt Details
+      project_details: "Projektdetails",
     }
   };
 

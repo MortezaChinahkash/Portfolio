@@ -55,6 +55,10 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 .progress-icon {
   width: 20%;
@@ -73,4 +77,63 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+img.screen {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  transition: height 0.4s ease;
+}
+.project-details-btn {
+  position: absolute;
+  bottom: -50px;
+  right: 20px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.project-details-btn a {
+  display: block;
+  padding: 12px 24px;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.project-details-btn a:hover {
+  background-color: #1E90FF;
+  transform: translateY(-2px);
+}
+.project-details:hover {
+  .overlay {
+    height: 100%;
+  }
+  .project-details-btn {
+    bottom: 20px;
+    opacity: 1;
+  }
+  img.screen {
+    transform: scale(1.05);
+  }
 }

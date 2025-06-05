@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { TranslationService } from '../../shared/services/translation.service';
 
 interface PortfolioItem {
@@ -18,7 +19,7 @@ interface PortfolioItem {
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })

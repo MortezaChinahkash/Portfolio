@@ -13,13 +13,22 @@
     @for (project of projects; track project.compId) {
     <div class="project-card">
       <div class="project-details">
-        <img
-          class="screen"
-          [src]="
-            '/assets/png/Design material/screens/' + project.compId + '.png'
-          "
-          alt="Project Screenshot"
-        />
+        <!-- Image Container mit Overlay und Button -->
+        <div class="image-container">
+          <img
+            class="screen"
+            [src]="'/assets/png/Design material/screens/' + project.compId + '.png'"
+            alt="Project Screenshot"
+          />
+          <!-- Overlay, das beim Hover erscheint -->
+          <div class="overlay"></div>
+          <!-- Button, der beim Hover erscheint -->
+          <div class="project-details-btn">
+            <a [routerLink]="['/projects', project.id]">
+              {{ translationService.t('project_details') }}
+            </a>
+          </div>
+        </div>
       </div>
 
       <div class="project-info">
@@ -31,3 +40,5 @@
     }
   </div>
 </section>
+
+  
