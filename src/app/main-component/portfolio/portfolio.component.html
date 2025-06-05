@@ -24,7 +24,7 @@
           <div class="overlay"></div>
           <!-- Button, der beim Hover erscheint -->
           <div class="project-details-btn">
-            <a [routerLink]="['/projects', project.id]">
+            <a [routerLink]="['/projects/project-' + project.compId]">
               {{ translationService.t('project_details') }}
             </a>
           </div>
