@@ -5,7 +5,7 @@
   padding: 0 clamp(16px, 3vw, 36px);
   position: relative;
   top: 0;
-
+  mix-blend-mode: difference;
   z-index: 1000;
 }
 
@@ -64,7 +64,6 @@ header {
     justify-content: center;
     align-items: center;
     margin: 0 clamp(20px, 4vw, 40px);
-      mix-blend-mode: difference;
 
     ul {
       display: flex;
@@ -74,7 +73,6 @@ header {
       list-style: none;
       margin: 0;
       padding: 0;
-        mix-blend-mode: difference;
 
       li {
         font-size: clamp(14px, 2.5vw, 20px);
