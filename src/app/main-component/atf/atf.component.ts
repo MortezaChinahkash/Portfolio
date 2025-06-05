@@ -1,39 +1,39 @@
 import { Component } from '@angular/core';
 import { TranslationService } from '../../shared/services/translation.service';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-atf',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './atf.component.html',
   styleUrl: './atf.component.scss'
 })
 export class ATFComponent {
+  constructor(public translationService: TranslationService) {}
 
-constructor(public translationService: TranslationService) {}
+  onLetterHover(event: MouseEvent): void {
+    const span = event.target as HTMLSpanElement;
 
-onLetterHover(event: MouseEvent): void {
-  const span = event.target as HTMLSpanElement;
+    if (span.dataset['active'] === 'true') return; 
+    span.dataset['active'] = 'true';
 
-  if (span.dataset['active'] === 'true') return; 
-  span.dataset['active'] = 'true';
+    const char = span.textContent || '';
+    span.textContent = char === char.toUpperCase()
+      ? char.toLowerCase()
+      : char.toUpperCase();
+  }
 
-  const char = span.textContent || '';
-  span.textContent = char === char.toUpperCase()
-    ? char.toLowerCase()
-    : char.toUpperCase();
-}
+  onLetterExit(event: MouseEvent): void {
+    const span = event.target as HTMLSpanElement;
 
-onLetterExit(event: MouseEvent): void {
-  const span = event.target as HTMLSpanElement;
+    if (span.dataset['active'] !== 'true') return;
+    span.dataset['active'] = 'false';
 
-  if (span.dataset['active'] !== 'true') return;
-  span.dataset['active'] = 'false';
-
-  const char = span.textContent || '';
-  span.textContent = char === char.toUpperCase()
-    ? char.toLowerCase()
-    : char.toUpperCase();
-}
-  
+    const char = span.textContent || '';
+    span.textContent = char === char.toUpperCase()
+      ? char.toLowerCase()
+      : char.toUpperCase();
+  }
 }
