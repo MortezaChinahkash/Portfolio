@@ -3,5 +3,12 @@
     min-height: 100vh;
     background-image: url('/assets/png/Design material/01_Background/Img Original Size/Note book paper.png');
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
+    z-index: 2;
+}
+.black-bg{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
