@@ -108,7 +108,7 @@ export class TranslationService {
       contact: 'Contact',
       
       // ATF (Hero)
-      hero_title: "I'm Morteza",
+      hero_title: "I'm Morteza Chinahkash",
       hero_subtitle: 'Frontend Developer',
       lets_talk: "Let's talk",
       
