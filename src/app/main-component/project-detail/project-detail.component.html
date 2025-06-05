@@ -1,1 +1,47 @@
-<p>project-detail works!</p>
+<section class="project-detail" *ngIf="project">
+  <div class="project-content">
+    <div class="project-header">
+      <h1 class="project-title">{{ project.title }}</h1>
+      
+      <div class="technologies">
+        @for (tech of project.technologies; track tech.name) {
+          @if (tech.imageUrl) {
+            <div class="tech-icon">
+              <img [src]="tech.imageUrl" [alt]="tech.name">
+            </div>
+          }
+        }
+      </div>
+    </div>
+    
+    <div class="project-image">
+      <img [src]="'/assets/png/Design material/screens/' + project.compId + '.png'" alt="Project Screenshot">
+    </div>
+    
+    <div class="project-description">
+      <p>{{ project.description }}</p>
+    </div>
+    
+    <div class="project-links">
+      @if (project.projectUrl !== 'null') {
+        <a [href]="project.projectUrl" target="_blank" class="project-link">
+          {{ translationService.t('view_project') }}
+        </a>
+      }
+      @if (project.gitHubUrl !== 'null') {
+        <a [href]="project.gitHubUrl" target="_blank" class="project-link">
+          {{ translationService.t('github_repo') }}
+        </a>
+      }
+      @if (project.isInProgress) {
+        <div class="in-progress-badge">
+          {{ translationService.t('in_progress') }}
+        </div>
+      }
+    </div>
+    
+    <div class="back-button">
+      <a routerLink="/">{{ "Back to Projects" }}</a>
+    </div>
+  </div>
+</section>

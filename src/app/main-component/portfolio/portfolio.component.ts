@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslationService } from '../../shared/services/translation.service';
 
-interface PortfolioItem {
+export interface PortfolioItem {
   title: string;
   description: string;
   imageUrl: string;
