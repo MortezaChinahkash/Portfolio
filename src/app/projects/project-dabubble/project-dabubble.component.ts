@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-project-dabubble',
   imports: [],
   templateUrl: './project-dabubble.component.html',
-  styleUrl: './project-dabubble.component.scss'
+  styleUrl: './../projects.component.scss',
 })
 export class ProjectDabubbleComponent {
 
