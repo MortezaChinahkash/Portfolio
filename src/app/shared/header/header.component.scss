@@ -2,9 +2,15 @@ header {
   position: absolute;
   width: 100%;
   height: 100px;
-  z-index: 1000;
+  z-index: 1000; // Höherer z-index als der Projektbereich
+  top: 0; // Explizit auf 0 setzen
+  left: 0; // Explizit auf 0 setzen
+}
+
+// Hintergrund nur auf Projektseiten anzeigen
+header.project-header {
   background-position: left top;
-  background-size: cover;
+  background-size: 100%; 
   background-repeat: no-repeat;
   background-origin: border-box;
   background-image: url('/assets/png/Design material/01_Background/Img Original Size/Note book paper.png');

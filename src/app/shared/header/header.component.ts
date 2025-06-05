@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router, NavigationEnd } from '@angular/router';
 import { TranslationService, SupportedLanguage } from '../../shared/services/translation.service';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -12,14 +14,33 @@ import { TranslationService, SupportedLanguage } from '../../shared/services/tra
 export class HeaderComponent implements OnInit {
   // Aktuelle Sprache
   currentLanguage: SupportedLanguage = 'en';
+  isProjectPage = false;
   
-  constructor(public translationService: TranslationService) {}
+  constructor(
+    public translationService: TranslationService,
+    private router: Router
+  ) {}
   
   ngOnInit(): void {
     // Sprache aus dem Service übernehmen
     this.translationService.currentLang$.subscribe(lang => {
       this.currentLanguage = lang;
     });
+    
+    // Überprüfen der aktuellen Route
+    this.checkCurrentRoute(this.router.url);
+    
+    // Auf Routenänderungen hören
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.checkCurrentRoute(event.url);
+    });
+  }
+  
+  // Überprüft, ob wir auf einer Projektseite sind
+  private checkCurrentRoute(url: string): void {
+    this.isProjectPage = url.includes('/projects/');
   }
   
   // Methode zum Wechseln der Sprache
