@@ -2,27 +2,24 @@
   <header>
     <div class="initials">
       <img src="/assets/png/logo/Logo.png" class="logo-normal" alt="Logo" />
-      <img
-        src="/assets/png/logo/Logo_Hover.png"
-        class="logo-hover"
-        alt="Logo Hover"
-      />
+      <img src="/assets/png/logo/Logo_Hover.png" class="logo-hover" alt="Logo Hover" />
     </div>
+
     <nav>
       <ul>
         <li>
           <a class="about" href="#about-me">
+            <span class="invert">{{ translationService.t('about_me') }}</span>
             <img
               class="about-image"
               src="assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/1.png"
               alt="About"
             />
-            {{ translationService.t('about_me') }}
           </a>
         </li>
         <li>
           <a class="skills" href="#skills">
-            {{ translationService.t('skills') }}
+            <span class="invert">{{ translationService.t('skills') }}</span>
             <img
               class="skills-image"
               src="assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/2.png"
@@ -32,7 +29,7 @@
         </li>
         <li>
           <a class="projects" href="#portfolio">
-            {{ translationService.t('projects') }}
+            <span class="invert">{{ translationService.t('projects') }}</span>
             <img
               class="projects-image"
               src="assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/3.png"
@@ -42,7 +39,7 @@
         </li>
         <li>
           <a class="contact" href="#contact">
-            {{ translationService.t('contact') }}
+            <span class="invert">{{ translationService.t('contact') }}</span>
             <img
               class="contact-image"
               src="assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/4.png"
@@ -54,11 +51,23 @@
     </nav>
 
     <div class="language-toggle">
-      <div class="toggle-en" [class.active]="currentLanguage === 'en'" (click)="toggleLanguage('en')">EN</div>
+      <div
+        class="toggle-en"
+        [class.active]="currentLanguage === 'en'"
+        (click)="toggleLanguage('en')"
+      >EN</div>
       <div class="toggle-switch">
-        <div class="toggle-circle" [class.de-active]="currentLanguage === 'de'" (click)="switchLanguage()"></div>
+        <div
+          class="toggle-circle"
+          [class.de-active]="currentLanguage === 'de'"
+          (click)="switchLanguage()"
+        ></div>
       </div>
-      <div class="toggle-de" [class.active]="currentLanguage === 'de'" (click)="toggleLanguage('de')">DE</div>
+      <div
+        class="toggle-de"
+        [class.active]="currentLanguage === 'de'"
+        (click)="toggleLanguage('de')"
+      >DE</div>
     </div>
   </header>
 </div>
