@@ -12,6 +12,7 @@ interface PortfolioItem {
   isFeatured: boolean;
   isInProgress: boolean;
   compId: string;
+  id: number;
 }
 
 @Component({
@@ -38,7 +39,6 @@ export class PortfolioComponent implements OnInit {
   updateProjects() {
     this.projects = [
       {
-        // Verwende Übersetzungen für Titel und Beschreibung
         title: this.translationService.t('join_title'),
         description: this.translationService.t('join_description'),
         imageUrl: 'null',
@@ -52,6 +52,7 @@ export class PortfolioComponent implements OnInit {
         isFeatured: true,
         isInProgress: true,
         compId: 'join-project',
+        id: 1
       },
       {
         title: this.translationService.t('pollo_title'),
@@ -67,6 +68,7 @@ export class PortfolioComponent implements OnInit {
         isFeatured: false,
         isInProgress: true,
         compId: 'el-pollo-loco',
+        id: 2
       },
       {
         title: this.translationService.t('dabubble_title'),
@@ -82,6 +84,7 @@ export class PortfolioComponent implements OnInit {
         isFeatured: true,
         isInProgress: true,
         compId: 'dabubble',
+        id: 3 
       }
     ];
   }
