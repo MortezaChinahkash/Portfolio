@@ -9,7 +9,7 @@ import { PortfolioItem } from '../../shared/models/portfolio-item.model';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './project-join.component.html',
-  styleUrl: './project-join.component.scss'
+  styleUrl: './../projects.component.scss',
 })
 export class ProjectJoinComponent implements OnInit {
   project: PortfolioItem | undefined;

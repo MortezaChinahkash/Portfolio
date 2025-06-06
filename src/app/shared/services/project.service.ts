@@ -34,14 +34,16 @@ export class ProjectService {
   getProjectByCompId(compId: string): PortfolioItem | undefined {
     console.log('Looking for project with compId:', compId);
     console.log('Available projects:', this.projects);
-    const project = this.projects.find(p => p.compId === compId);
+    
+    // Das Problem könnte beim Vergleich liegen - stellen wir sicher, dass wir korrekt vergleichen
+    const project = this.projects.find(p => p.compId.toLowerCase() === compId.toLowerCase());
+    
     console.log('Found project:', project);
     return project;
   }
 
   // Projekte initialisieren
   private initProjects() {
-    // Hardcoded projects for now - ideal würden diese aus einer API kommen
     this.projects = [
       {
         id: 1,
@@ -75,7 +77,7 @@ export class ProjectService {
         ],
         isFeatured: true,
         isInProgress: false,
-        compId: 'el-pollo-loco'
+        compId: 'el-pollo-loco'  // WICHTIG: Diese compId muss exakt mit der in der Komponente gesuchten übereinstimmen
       },
       {
         id: 3,
@@ -95,6 +97,9 @@ export class ProjectService {
         compId: 'dabubble'
       }
     ];
+    
+    // Debug-Ausgabe nach der Initialisierung
+    console.log('Projects initialized:', this.projects.map(p => ({title: p.title, compId: p.compId})));
   }
 
   // Debugging-Methode
