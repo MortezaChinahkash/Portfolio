@@ -1,15 +1,159 @@
-.project-page{
-    width: 100%;
-    min-height: 100vh;
-    background-image: url('/assets/png/Design material/01_Background/Img Original Size/Note book paper.png');
-    background-position: left top;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    z-index: 2;
+.project-page {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('/assets/png/Design material/01_Background/Img Original Size/Note book paper.png');
+  background-position: left top;
+  background-size: cover; // Ändere zu cover für bessere Responsivität
+  background-repeat: no-repeat;
+  z-index: 2;
 }
-.black-bg{
-    background-color: #000;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+
+.black-bg {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.max-content {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3vw, 36px);
+  position: relative;
+}
+
+.project-container {
+  padding-top: 120px;
+  padding-bottom: 60px;
+  color: white;
+}
+
+.project-header {
+  margin-bottom: clamp(20px, 5vw, 40px);
+  
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+  }
+}
+
+.project-description {
+  margin-bottom: clamp(20px, 5vw, 40px);
+  max-width: 800px;
+  
+  p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+  }
+}
+
+.technologies {
+  margin-bottom: clamp(20px, 5vw, 40px);
+  
+  h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: clamp(10px, 3vw, 20px);
+  }
+  
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(10px, 3vw, 20px);
+    
+    .tech-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: clamp(10px, 2vw, 15px);
+      border-radius: 8px;
+      width: clamp(100px, 20vw, 120px);
+      
+      .tech-icon {
+        width: clamp(40px, 8vw, 60px);
+        height: clamp(40px, 8vw, 60px);
+        margin-bottom: clamp(5px, 2vw, 10px);
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      
+      .tech-name {
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        text-align: center;
+      }
+    }
+  }
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(10px, 3vw, 20px);
+  
+  a {
+    display: inline-block;
+    padding: clamp(8px, 2vw, 12px) clamp(16px, 3vw, 24px);
+    border-radius: 30px;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    
+    &.github-link {
+      background-color: #333;
+      color: white;
+      
+      &:hover {
+        background-color: #555;
+      }
+    }
+    
+    &.live-link {
+      background-color: #4CAF50;
+      color: white;
+      
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: white;
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  .project-container {
+    padding-top: 100px;
+  }
+
+  .tech-list {
+    justify-content: center;
+  }
+  
+  .project-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-container {
+    padding-top: 80px;
+  }
+  
+  .tech-item {
+    width: calc(50% - 20px) !important;
+  }
 }

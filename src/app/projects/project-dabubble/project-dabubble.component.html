@@ -1,5 +1,46 @@
 <div class="black-bg">
-<section class="project-page">
-
-</section>
+  <section class="project-page">
+    <div class="max-content">
+      @if (project) {
+        <div class="project-container">
+          <div class="project-header">
+            <h1>{{ project.title }}</h1>
+          </div>
+          
+          <div class="project-description">
+            <p>{{ project.description }}</p>
+          </div>
+          
+          <div class="technologies">
+            <h2>Technologies</h2>
+            <div class="tech-list">
+              @for (tech of project.technologies; track tech.name) {
+                <div class="tech-item">
+                  @if (tech.imageUrl) {
+                    <div class="tech-icon">
+                      <img [src]="tech.imageUrl" [alt]="tech.name">
+                    </div>
+                  }
+                  <span class="tech-name">{{ tech.name }}</span>
+                </div>
+              }
+            </div>
+          </div>
+          
+          @if (project.gitHubUrl !== 'null' || project.projectUrl !== 'null') {
+            <div class="project-links">
+              @if (project.gitHubUrl !== 'null') {
+                <a [href]="project.gitHubUrl" target="_blank" class="github-link">GitHub</a>
+              }
+              @if (project.projectUrl !== 'null') {
+                <a [href]="project.projectUrl" target="_blank" class="live-link">Live Demo</a>
+              }
+            </div>
+          }
+        </div>
+      } @else {
+        <div class="loading">Loading project information...</div>
+      }
+    </div>
+  </section>
 </div>
