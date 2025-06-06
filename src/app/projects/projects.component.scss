@@ -6,6 +6,9 @@
   background-size: cover; // Ändere zu cover für bessere Responsivität
   background-repeat: no-repeat;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+    align-items: center;
 }
 
 .black-bg {
@@ -48,6 +51,13 @@
   }
 }
 
+.project-detail-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 .technologies {
   margin-bottom: clamp(20px, 5vw, 40px);
   

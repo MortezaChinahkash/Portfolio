@@ -44,22 +44,56 @@ export class ProjectService {
     // Hardcoded projects for now - ideal würden diese aus einer API kommen
     this.projects = [
       {
+        id: 1,
+        title: 'Join',
+        description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+        imageUrl: '/assets/png/Design material/screens/Join.png',
+        projectUrl: 'https://example.com/join-live',
+        gitHubUrl: 'https://github.com/yourusername/join',
+        technologies: [
+          { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
+          { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' },
+          { name: 'Firebase', imageUrl: '/assets/png/icons/Skill Icons/Firebase.png' },
+          { name: 'Angular', imageUrl: '/assets/png/icons/Skill Icons/Angular.png' },
+          { name: 'TypeScript', imageUrl: '/assets/png/icons/Skill Icons/TypeScript.png' }
+        ],
+        isFeatured: true,
+        isInProgress: false,
+        compId: 'join'
+      },
+      {
+        id: 2,
+        title: 'El Pollo Loco',
+        description: 'Jump and run game based on object-oriented JavaScript. Help Pepe find coins and salsa bottles to defeat the crazy chicken.',
+        imageUrl: '/assets/png/Design material/screens/El_Pollo.png',
+        projectUrl: 'https://example.com/el-pollo-loco',
+        gitHubUrl: 'https://github.com/yourusername/el-pollo-loco',
+        technologies: [
+          { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
+          { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' },
+          { name: 'JavaScript', imageUrl: '/assets/png/icons/Skill Icons/JavaScript.png' }
+        ],
+        isFeatured: true,
+        isInProgress: false,
+        compId: 'el-pollo-loco'
+      },
+      {
         id: 3,
         title: 'DABubble',
         description: 'Ein Slack-ähnlicher Messaging-Dienst mit Echtzeit-Kommunikation.',
-        imageUrl: '/assets/images/projects/dabubble.jpg',
+        imageUrl: '/assets/png/Design material/screens/DA_Bubble.png',
         projectUrl: 'https://example.com/dabubble',
         gitHubUrl: 'https://github.com/yourusername/dabubble',
         technologies: [
           { name: 'Angular', imageUrl: '/assets/png/icons/Skill Icons/Angular.png' },
           { name: 'TypeScript', imageUrl: '/assets/png/icons/Skill Icons/TypeScript.png' },
-          { name: 'SASS', imageUrl: '/assets/png/icons/Skill Icons/SASS.png' }
+          { name: 'SASS', imageUrl: '/assets/png/icons/Skill Icons/SASS.png' },
+          { name: 'Firebase', imageUrl: '/assets/png/icons/Skill Icons/Firebase.png' }
         ],
         isFeatured: true,
         isInProgress: false,
         compId: 'dabubble'
-      },
-      // Weitere Projekte hier...
+      }
     ];
   }
 
@@ -69,9 +103,6 @@ export class ProjectService {
     if (this.projects.length === 0) {
       console.error('No projects initialized in service!');
     }
-    
-    const dabubbleProject = this.getProjectByCompId('dabubble');
-    console.log('Dabubble project from service:', dabubbleProject);
     
     return this.projects.length > 0;
   }
