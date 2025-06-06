@@ -1,1 +1,78 @@
-<p>project-join works!</p>
+<div class="black-bg">
+  <section class="project-page">
+    <div class="max-content">
+      @if (project) {
+        <div class="project-detail-wrapper">
+          <!-- Left side with paper background -->
+          <div class="left-section">
+            <div class="content-wrapper">
+              <div class="back-link">
+                <a routerLink="/projects">
+                  <span class="arrow">←</span> Go Back
+                </a>
+              </div>
+              
+              <div class="project-headline">
+                <h1>{{ project.title }}</h1>
+                <div class="blue-underline"></div>
+              </div>
+              
+              <div class="section-block">
+                <h2>Description</h2>
+                <p>{{ project.description }}</p>
+              </div>
+              
+              <div class="section-block">
+                <h2>Implementation Details</h2>
+                <p>Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.</p>
+              </div>
+              
+              <div class="duration-info">
+                <strong>Duration:</strong> 5 weeks
+              </div>
+              
+              <div class="tech-stack">
+                @for (tech of project.technologies; track tech.name) {
+                  <div class="tech-icon">
+                    <img [src]="tech.imageUrl" [alt]="tech.name">
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right side with black background -->
+          <div class="right-section">
+            <div class="project-image-container">
+              @if (project.imageUrl) {
+                <img [src]="project.imageUrl" [alt]="project.title" class="project-image">
+                <div class="featured-badge">
+                  <div class="wave-line"></div>
+                  <div class="badge-text">
+                    <span>Featured Project</span>
+                    <span class="check-text">check all details</span>
+                  </div>
+                </div>
+              }
+            </div>
+            
+            <div class="action-buttons">
+              @if (project.gitHubUrl) {
+                <a [href]="project.gitHubUrl" target="_blank" class="btn github-btn">GitHub</a>
+              }
+              @if (project.projectUrl) {
+                <a [href]="project.projectUrl" target="_blank" class="btn live-btn">Live Test</a>
+              }
+            </div>
+            
+            <div class="next-project-link">
+              <a routerLink="/projects/el-pollo-loco">Next Project <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+      } @else {
+        <div class="loading">Loading project information...</div>
+      }
+    </div>
+  </section>
+</div>
