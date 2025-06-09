@@ -30,8 +30,8 @@
 }
 
 .back-link {
-  padding-top: 150px;
-  padding-left: 20px;
+  padding-top: clamp(80px, 12vw, 150px);
+  padding-left: clamp(16px, 2vw, 20px);
   
   a {
     color: black;
@@ -60,31 +60,31 @@
 }
 
 .left-section {
-  width: 60%;
+  width: 50%;
   display: flex;
   align-items: center;
-  padding-left: 50px;
+  padding-left: clamp(20px, 5vw, 50px);
 }
 
 .content-wrapper {
-  max-width: 500px;
+  max-width: clamp(350px, 80vw, 500px);
   width: 100%;
 }
 
 .project-headline {
-  margin-bottom: 40px;
+  margin-bottom: clamp(30px, 5vw, 40px);
   
   h1 {
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 900;
     color: #1a1a1a;
-    margin: 0 0 15px 0;
+    margin: 0 0 clamp(10px, 2vw, 15px) 0;
     line-height: 0.9;
     letter-spacing: -2px;
   }
   
   .blue-underline {
-    width: 290px;
+    width: clamp(220px, 25vw, 290px);
     height: 20px;
     background-image: url('/assets/png/Design material/00_Hand-drawn lines/01_About me/Color option 3.png');
     background-size: contain;
@@ -94,19 +94,19 @@
 }
 
 .section-block {
-  margin-bottom: 30px;
+  margin-bottom: clamp(20px, 4vw, 30px);
   
   h2 {
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
     font-weight: 700;
     color: #1a1a1a;
-    margin-bottom: 12px;
+    margin-bottom: clamp(8px, 1.5vw, 12px);
   }
   
   p {
     color: #333;
     line-height: 1.6;
-    font-size: 15px;
+    font-size: clamp(14px, 1.5vw, 15px);
     text-align: justify;
     margin: 0;
   }
