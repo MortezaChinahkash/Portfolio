@@ -3,12 +3,12 @@
   min-height: 100vh;
   background-image: url('/assets/png/Design material/01_Background/Img Original Size/Note book paper.png');
   background-position: left top;
-  background-size: cover; // Ändere zu cover für bessere Responsivität
+  background-size: cover;
   background-repeat: no-repeat;
   z-index: 2;
   display: flex;
   justify-content: center;
-    align-items: center;
+  align-items: center;
 }
 
 .black-bg {
@@ -24,65 +24,22 @@
   margin: 0 auto;
   padding: 0 clamp(16px, 3vw, 36px);
   position: relative;
-}
-
-.project-container {
-  padding-top: 120px;
-  padding-bottom: 60px;
-  color: white;
-}
-
-.project-header {
-  margin-bottom: clamp(20px, 5vw, 40px);
-  
-  h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: 1rem;
-  }
-}
-
-.project-description {
-  margin-bottom: clamp(20px, 5vw, 40px);
-  max-width: 800px;
-  
-  p {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    line-height: 1.6;
-  }
-}
-
-.project-detail-wrapper {
-  display: flex;
-  width: 100%;
   height: 100vh;
-}
-
-.left-section {
-  width: 50%;
-  background-position: left top;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
-  align-items: center;
-  padding: 60px 80px;
-}
-
-.content-wrapper {
-  max-width: 400px;
-  width: 100%;
+  flex-direction: column;
 }
 
 .back-link {
-  margin-bottom: 40px;
+  padding-top: 150px;
   
   a {
-    color: #FF6B35;
+    color: black;
     text-decoration: none;
     font-size: 16px;
     display: flex;
     align-items: center;
     gap: 8px;
-    font-weight: 500;
+    font-weight: bold;
     
     .arrow {
       font-size: 18px;
@@ -92,6 +49,25 @@
       color: #e55a2b;
     }
   }
+}
+
+.project-detail-wrapper {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  align-items: center;
+}
+
+.left-section {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.content-wrapper {
+  max-width: 400px;
+  width: 100%;
 }
 
 .project-headline {
@@ -164,13 +140,11 @@
 
 .right-section {
   width: 50%;
-  background-color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  padding: 60px;
+  padding-left: 40px;
 }
 
 .project-image-container {
@@ -230,7 +204,6 @@
 .action-buttons {
   display: flex;
   gap: 20px;
-  margin-bottom: 60px;
   
   .btn {
     padding: 14px 32px;
@@ -266,9 +239,9 @@
 }
 
 .next-project-link {
-  position: absolute;
-  bottom: 60px;
-  right: 60px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: flex-end;
   
   a {
     color: white;
@@ -292,6 +265,31 @@
         transform: translateX(5px);
       }
     }
+  }
+}
+
+.project-container {
+  padding-top: 120px;
+  padding-bottom: 60px;
+  color: white;
+}
+
+.project-header {
+  margin-bottom: clamp(20px, 5vw, 40px);
+  
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+  }
+}
+
+.project-description {
+  margin-bottom: clamp(20px, 5vw, 40px);
+  max-width: 800px;
+  
+  p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
   }
 }
 
@@ -381,42 +379,24 @@
 }
 
 // Media Queries
-@media (max-width: 1200px) {
-  .left-section {
-    padding: 40px 60px;
-  }
-  
-  .project-headline h1 {
-    font-size: 3.5rem;
-  }
-  
-  .project-image-container .project-image {
-    max-width: 400px;
-  }
-}
-
 @media (max-width: 1024px) {
   .project-detail-wrapper {
     flex-direction: column;
-    height: auto;
-    min-height: 100vh;
+    gap: 40px;
   }
   
   .left-section,
   .right-section {
     width: 100%;
+    padding: 0;
   }
   
   .left-section {
-    min-height: 60vh;
-    padding: 60px 40px;
-    justify-content: center;
+    order: 2;
   }
   
   .right-section {
-    min-height: 60vh;
-    padding: 40px;
-    position: relative;
+    order: 1;
   }
   
   .project-headline h1 {
@@ -424,30 +404,14 @@
   }
   
   .next-project-link {
-    position: static;
-    margin-top: 20px;
+    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
-  .project-container {
-    padding-top: 100px;
-  }
-
-  .tech-list {
-    justify-content: center;
-  }
-  
-  .project-links {
-    justify-content: center;
-  }
-  
-  .left-section {
-    padding: 40px 30px;
-  }
-  
-  .right-section {
-    padding: 30px;
+  .back-link {
+    padding-top: 40px;
+    margin-bottom: 30px;
   }
   
   .project-headline h1 {
@@ -498,14 +462,6 @@
 }
 
 @media (max-width: 480px) {
-  .project-container {
-    padding-top: 80px;
-  }
-  
-  .tech-item {
-    width: calc(50% - 20px) !important;
-  }
-  
   .project-headline h1 {
     font-size: 2rem;
   }
