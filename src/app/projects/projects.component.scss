@@ -31,6 +31,7 @@
 
 .back-link {
   padding-top: 150px;
+  padding-left: 20px;
   
   a {
     color: black;
@@ -59,14 +60,14 @@
 }
 
 .left-section {
-  width: 50%;
+  width: 60%;
   display: flex;
   align-items: center;
-  padding-right: 40px;
+  padding-left: 50px;
 }
 
 .content-wrapper {
-  max-width: 400px;
+  max-width: 500px;
   width: 100%;
 }
 
@@ -144,7 +145,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 40px;
+  padding-right: 50px;	
 }
 
 .project-image-container {
@@ -204,7 +205,8 @@
 .action-buttons {
   display: flex;
   gap: 20px;
-  
+  align-self: flex-end;
+
   .btn {
     padding: 14px 32px;
     border-radius: 25px;
@@ -239,6 +241,7 @@
 }
 
 .next-project-link {
+  padding-right: 20px;
   padding-bottom: 80px;
   display: flex;
   justify-content: flex-end;
@@ -337,7 +340,7 @@
 
 .project-links {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: clamp(10px, 3vw, 20px);
   
   a {
@@ -379,6 +382,12 @@
 }
 
 // Media Queries
+@media (max-width: 1480px) {
+  .project-page{
+    background-size: 100% 100%;
+  }
+}
+
 @media (max-width: 1024px) {
   .project-detail-wrapper {
     flex-direction: column;

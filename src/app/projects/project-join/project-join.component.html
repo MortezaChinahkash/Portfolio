@@ -2,16 +2,16 @@
   <section class="project-page">
     <div class="max-content">
       @if (project) {
+        <!-- Back link at top of max-content -->
+        <div class="back-link">
+          <a routerLink="/projects">
+            <img src="/assets/png/Design material/00_Hand-drawn lines/Back 1.png" alt=""> Go Back
+          </a>
+        </div>
+        
         <div class="project-detail-wrapper">
-          <!-- Left side with paper background -->
           <div class="left-section">
             <div class="content-wrapper">
-              <div class="back-link">
-                <a routerLink="/projects">
-                  <span class="arrow">←</span> Go Back
-                </a>
-              </div>
-              
               <div class="project-headline">
                 <h1>{{ project.title }}</h1>
                 <div class="blue-underline"></div>
@@ -28,7 +28,7 @@
               </div>
               
               <div class="duration-info">
-                <strong>Duration:</strong> 5 weeks
+                <strong>Duration:</strong> 4 weeks
               </div>
               
               <div class="tech-stack">
@@ -41,13 +41,11 @@
             </div>
           </div>
           
-          <!-- Right side with black background -->
           <div class="right-section">
             <div class="project-image-container">
               @if (project.imageUrl) {
                 <img [src]="project.imageUrl" [alt]="project.title" class="project-image">
                 <div class="featured-badge">
-                  <div class="wave-line"></div>
                   <div class="badge-text">
                     <span>Featured Project</span>
                     <span class="check-text">check all details</span>
@@ -64,11 +62,12 @@
                 <a [href]="project.projectUrl" target="_blank" class="btn live-btn">Live Test</a>
               }
             </div>
-            
-            <div class="next-project-link">
-              <a routerLink="/projects/el-pollo-loco">Next Project <span class="arrow">→</span></a>
-            </div>
           </div>
+        </div>
+        
+        <!-- Next project link at bottom of max-content -->
+        <div class="next-project-link">
+          <a routerLink="/projects/el-pollo-loco">Next Project <span class="arrow">→</span></a>
         </div>
       } @else {
         <div class="loading">Loading project information...</div>
