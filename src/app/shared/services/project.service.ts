@@ -43,12 +43,31 @@ export class ProjectService {
   }
 
   // Projekte initialisieren
-  private initProjects() {
+  private initProjects(): void {
     this.projects = [
       {
         id: 1,
-        title: 'Join',
-        description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+        compId: 'dabubble',
+        title: this.translationService.t('dabubble_title'),
+        description: this.translationService.t('dabubble_description'),
+        imageUrl: '/assets/png/Design material/screens/DA_Bubble.png',
+        projectsImageUrl: '/assets/png/Design material/screens/dabubble.png',
+        projectUrl: 'https://example.com/dabubble',
+        gitHubUrl: 'https://github.com/yourusername/dabubble',
+        technologies: [
+          { name: 'Angular', imageUrl: '/assets/png/icons/Skill Icons/Angular.png' },
+          { name: 'TypeScript', imageUrl: '/assets/png/icons/Skill Icons/TypeScript.png' },
+          { name: 'SASS', imageUrl: '/assets/png/icons/Skill Icons/SASS.png' },
+          { name: 'Firebase', imageUrl: '/assets/png/icons/Skill Icons/Firebase.png' }
+        ],
+        isFeatured: true,
+        isInProgress: false
+      },
+      {
+        id: 2,
+        compId: 'join',
+        title: this.translationService.t('join_title'),
+        description: this.translationService.t('join_description'),
         imageUrl: '/assets/png/Design material/screens/Join.png',
         projectsImageUrl: '/assets/png/Design material/screens/join-project.png',
         projectUrl: 'https://example.com/join-live',
@@ -61,13 +80,13 @@ export class ProjectService {
           { name: 'TypeScript', imageUrl: '/assets/png/icons/Skill Icons/TypeScript.png' }
         ],
         isFeatured: true,
-        isInProgress: false,
-        compId: 'join'
+        isInProgress: false
       },
       {
-        id: 2,
-        title: 'El Pollo Loco',
-        description: 'Jump and run game based on object-oriented JavaScript. Help Pepe find coins and salsa bottles to defeat the crazy chicken.',
+        id: 3,
+        compId: 'el-pollo-loco',
+        title: this.translationService.t('pollo_title'),
+        description: this.translationService.t('pollo_description'),
         imageUrl: '/assets/png/Design material/screens/El_Pollo.png',
         projectsImageUrl: '/assets/png/Design material/screens/el-pollo-loco.png',
         projectUrl: 'https://example.com/el-pollo-loco',
@@ -78,26 +97,7 @@ export class ProjectService {
           { name: 'JavaScript', imageUrl: '/assets/png/icons/Skill Icons/JavaScript.png' }
         ],
         isFeatured: true,
-        isInProgress: false,
-        compId: 'el-pollo-loco'  // WICHTIG: Diese compId muss exakt mit der in der Komponente gesuchten übereinstimmen
-      },
-      {
-        id: 3,
-        title: 'DABubble',
-        description: 'Ein Slack-ähnlicher Messaging-Dienst mit Echtzeit-Kommunikation.',
-        imageUrl: '/assets/png/Design material/screens/DA_Bubble.png',
-        projectsImageUrl: '/assets/png/Design material/screens/dabubble.png',
-        projectUrl: 'https://example.com/dabubble',
-        gitHubUrl: 'https://github.com/yourusername/dabubble',
-        technologies: [
-          { name: 'Angular', imageUrl: '/assets/png/icons/Skill Icons/Angular.png' },
-          { name: 'TypeScript', imageUrl: '/assets/png/icons/Skill Icons/TypeScript.png' },
-          { name: 'SASS', imageUrl: '/assets/png/icons/Skill Icons/SASS.png' },
-          { name: 'Firebase', imageUrl: '/assets/png/icons/Skill Icons/Firebase.png' }
-        ],
-        isFeatured: true,
-        isInProgress: false,
-        compId: 'dabubble'
+        isInProgress: false
       }
     ];
     

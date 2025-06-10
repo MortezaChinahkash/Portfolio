@@ -130,6 +130,15 @@ export interface TranslationSet {
   
   // Imprint
   imprint_content: string;
+
+  // Project specific content
+  project_implementation_text: string;
+  project_duration_weeks: string;
+  tech_stack_label: string;
+
+  // Project specific details
+  project_duration_value: string;
+  project_role_workflow: string;
 }
 
 @Injectable({
@@ -187,9 +196,9 @@ export class TranslationService {
       pollo_title: "El Pollo Loco – A Feather-Flinging 2-D Jump-'n'-Run",
       pollo_description: "Dive into a sun-scorched desert canyon where a fearless farmhand faces off against a riotous flock of mutant chickens. El Pollo Loco blends classic side-scrolling action with slap-stick humor and crisp, hand-drawn art to deliver a fast-paced platformer that feels both nostalgic and fresh.",
       
-      // DABubble Projekt
+      // DABubble Projekt  
       dabubble_title: "DABubble",
-      dabubble_description: "A lightweight, privacy-first discussion hub built to replace scattered WhatsApp groups and long email chains in university courses and bootcamps. DABubble combines Slack-style channels with threaded conversations, emoji reactions, and file sharing.",
+      dabubble_description: "A lightweight, privacy-friendly discussion platform designed to replace scattered WhatsApp groups and long email chains in university courses and bootcamps. DABubble combines Slack-like channels with structured conversations, emoji reactions, and file sharing.",
       
       // Comments Section
       in_their_words: "IN THEIR WORDS",
@@ -266,6 +275,15 @@ export class TranslationService {
       
       // Imprint
       imprint_content: "Imprint works!",
+
+      // Project specific content
+      project_implementation_text: "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.",
+      project_duration_weeks: "weeks",
+      tech_stack_label: "Tech Stack",
+
+      // Project specific details
+      project_duration_value: "4",
+      project_role_workflow: "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.",
     },
     
     de: {
@@ -393,6 +411,15 @@ export class TranslationService {
       
       // Imprint
       imprint_content: "Impressum funktioniert!",
+
+      // Project specific content
+      project_implementation_text: "Kurzer Text, der deine Rolle oder den Arbeitsablauf für dieses spezifische Projekt beschreibt. Lass einen Recruiter mehr über dein Wissen und deine Fähigkeit erfahren, selbstständig oder kollaborativ in einer strukturierten Weise zu arbeiten.",
+      project_duration_weeks: "Wochen",
+      tech_stack_label: "Tech Stack",
+
+      // Project specific details
+      project_duration_value: "4",
+      project_role_workflow: "Kurzer Text, der deine Rolle oder den Arbeitsablauf für dieses spezifische Projekt beschreibt. Lass einen Recruiter mehr über dein Wissen und deine Fähigkeit erfahren, selbstständig oder kollaborativ in einer strukturierten Weise zu arbeiten.",
     }
   };
 
