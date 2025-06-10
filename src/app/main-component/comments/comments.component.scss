@@ -20,10 +20,9 @@
     animation: lineReveal 6s infinite;
   }
 
-  // Move the media query inside the .comments-section
   @media (max-width: 400px) {
     .arrow {
-      width: 75px; // Half the original size
+      width: 75px;
       margin-right: 10px;
     }
   }
