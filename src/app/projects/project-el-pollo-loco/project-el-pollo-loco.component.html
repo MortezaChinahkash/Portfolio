@@ -14,7 +14,7 @@
             <div class="content-wrapper">
               <div class="project-headline">
                 <h1>{{ project.title }}</h1>
-                <div class="blue-underline"></div>
+                <img class="blue-underline" src="/assets/png/Design material/00_Hand-drawn lines/01_About me/Color option 3.png" alt="">
               </div>
               
               <div class="section-block">
@@ -45,12 +45,6 @@
             <div class="project-image-container">
               @if (project.imageUrl) {
                 <img [src]="project.imageUrl" [alt]="project.title" class="project-image">
-                <div class="featured-badge">
-                  <div class="badge-text">
-                    <span>Featured Project</span>
-                    <span class="check-text">check all details</span>
-                  </div>
-                </div>
               }
             </div>
             
@@ -64,8 +58,6 @@
             </div>
           </div>
         </div>
-        
-        <!-- Next project link at bottom of max-content -->
         <div class="next-project-link">
           <a routerLink="/projects/el-pollo-loco">Next Project <span class="arrow">→</span></a>
         </div>
