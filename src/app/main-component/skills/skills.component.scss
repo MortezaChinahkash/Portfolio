@@ -56,9 +56,8 @@
   }
 
   h1 {
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: 2.5rem;
     font-weight: 800;
-    line-height: 1.1;
     margin-top: clamp(0.5rem, 1vw, 1rem);
     display: flex;
     justify-content: flex-end;
@@ -76,7 +75,6 @@
   .skill-paper {
     width: 100%;
     position: relative;
-    height: clamp(150px, 30vw, 100px);
     background-image: url("/assets/png/Design material/02_Ripped Paper/1.Skills description.png");
     background-size: contain;
     background-position: center;
@@ -84,19 +82,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto; 
 
     p {
       color: black;
       font-size: clamp(0.9rem, 1.5vw, 1.3rem);
       text-align: center;
-      position: absolute;
+      position: static; 
       width: 80%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      margin: 0 auto;
+      padding: 40px 10px;
       z-index: 2;
-      margin: 0;
-      padding: 0;
+      transform: none;
+      top: auto;
+      left: auto;
     }
   }
 
@@ -233,6 +232,10 @@
       font-weight: bold;
     }
   }
+  .skills-content {
+    padding: clamp(20px, 4vw, 20px);
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -255,5 +258,10 @@
 
   .skills-description p {
     font-size: 0.9rem;
+  }
+}
+@media (max-width: 460px) {
+  .skill-paper {
+    background-image: url("/assets/png/Design material/02_Ripped Paper/peeled-skill.png");
   }
 }
