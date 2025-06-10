@@ -17,16 +17,17 @@ section {
 }
 
 .torn-papers {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex: 1;
   position: relative;
+  width: 100%;
 }
 
 .paper-card {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,8 +36,9 @@ section {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 20px 30px;
+  padding: 40px 40px;
   margin: -20px 0;
+  width: 100%;
 }
 
 .paper-card1 {
@@ -153,81 +155,17 @@ section {
   }
 }
 
-@media (max-width: 1200px) {
-  
-  .paper-content {
-    img {
-      width: 40px;
-    }
-    
-    span {
-      font-size: 14px;
-    }
-  }
-}
-
 @media (max-width: 900px) {
   .paper-and-about {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
     gap: 3rem;
   }
 
   
   .about-me {
-    order: 1;
     align-items: center;
     text-align: center;
   }
-  
-
 }
 
-@media (max-width: 600px) {
-  .paper-and-about {
-    padding: 0 20px;
-  }
-
-  .about-me h1 {
-    font-size: 2rem;
-  }
-  
-  .paper-card1,
-  .paper-card2,
-  .paper-card3 {
-    width: 250px;
-    height: 80px;
-    padding: 15px 20px;
-  }
-  
-  .paper-content {
-    img {
-      width: 35px;
-    }
-    
-    span {
-      font-size: 12px;
-      margin-left: 10px;
-    }
-  }
-}
-
-@media (max-width: 400px) {
-  .paper-card1,
-  .paper-card2,
-  .paper-card3 {
-    width: 220px;
-    height: 70px;
-    padding: 10px 15px;
-  }
-  
-  .paper-content {
-    img {
-      width: 30px;
-    }
-    
-    span {
-      font-size: 11px;
-    }
-  }
-}
