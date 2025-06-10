@@ -243,7 +243,87 @@
     width: 100%;
   }
 }
+@media (max-width: 768px) {
+  .skill-icon {
+    animation: skillReveal 12s ease-in-out infinite;
+    animation-fill-mode: both;
+  }
 
+  // Sequential animation delays for 15 icons
+  .skill:nth-child(1) .skill-icon {
+    animation-delay: 0s;
+  }
+
+  .skill:nth-child(2) .skill-icon {
+    animation-delay: 0.8s;
+  }
+
+  .skill:nth-child(3) .skill-icon {
+    animation-delay: 1.6s;
+  }
+
+  .skill:nth-child(4) .skill-icon {
+    animation-delay: 2.4s;
+  }
+
+  .skill:nth-child(5) .skill-icon {
+    animation-delay: 3.2s;
+  }
+
+  .skill:nth-child(6) .skill-icon {
+    animation-delay: 4.0s;
+  }
+
+  .skill:nth-child(7) .skill-icon {
+    animation-delay: 4.8s;
+  }
+
+  .skill:nth-child(8) .skill-icon {
+    animation-delay: 5.6s;
+  }
+
+  .skill:nth-child(9) .skill-icon {
+    animation-delay: 6.4s;
+  }
+
+  .skill:nth-child(10) .skill-icon {
+    animation-delay: 7.2s;
+  }
+
+  .skill:nth-child(11) .skill-icon {
+    animation-delay: 8.0s;
+  }
+
+  .skill:nth-child(12) .skill-icon {
+    animation-delay: 8.8s;
+  }
+
+  .skill:nth-child(13) .skill-icon {
+    animation-delay: 9.6s;
+  }
+
+  .skill:nth-child(14) .skill-icon {
+    animation-delay: 10.4s;
+  }
+
+  .skill:nth-child(15) .skill-icon {
+    animation-delay: 11.2s;
+  }
+}
+
+// Animation keyframes - each icon lights up for a brief moment
+@keyframes skillReveal {
+  0%, 6.67%, 93.33%, 100% {
+    filter: grayscale(100%);
+    transform: scale(1);
+    opacity: 1;
+  }
+  3.33% {
+    filter: grayscale(0%);
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
 @media (max-width: 600px) {
   .skills-content {
     padding: clamp(20px, 4vw, 40px);
