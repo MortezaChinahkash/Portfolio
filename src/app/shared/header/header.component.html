@@ -70,6 +70,27 @@
           (click)="toggleLanguage('de')"
         >DE</div>
       </div>
+
+      <!-- Burger Menu Button -->
+      <button class="burger-menu" (click)="isMenuOpen = true" aria-label="Menü öffnen">
+        <img src="/assets/png/Design material/00_Hand-drawn lines/00_Header/Menu - Mobile icon/02_Color OP 3 While pressing 2.png" alt="Menü">
+      </button>
+
+      <!-- Overlay Menu -->
+      <div class="overlay-menu" *ngIf="isMenuOpen">
+        <button class="close-menu" (click)="isMenuOpen = false" aria-label="Menü schließen">
+          <img src="/assets/png/Design material/00_Hand-drawn lines/00_Header/Menu - Mobile icon/02_Color OP 3 While pressing 1.png" alt="Schließen">
+        </button>
+        <nav>
+          <ul>
+            <li><a href="/link1">Link 1</a></li>
+            <li><a href="/link2">Link 2</a></li>
+            <li><a href="/link3">Link 3</a></li>
+            <!-- Weitere Links -->
+          </ul>
+        </nav>
+      </div>
+      
     </div>
   </div>
 </header>

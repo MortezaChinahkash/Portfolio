@@ -249,6 +249,72 @@ header.project-header {
   }
 }
 
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.overlay-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('/assets/png/Design material/01_Background/Img Original Size/12 Isolated Paper Rips copia.png') no-repeat center center/cover;
+  z-index: 2000;
+  padding: 32px;
+  animation: fadeIn 0.2s;
+
+  .close-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    margin-bottom: 32px;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 24px 0;
+    }
+
+    a {
+      font-size: 2rem;
+      color: #222;
+      text-decoration: none;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .max-content {
     width: 100%;
@@ -257,7 +323,9 @@ header.project-header {
     margin-top: 10px;
   }
   .header-content {
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     nav {
       display: none;
     }
@@ -268,5 +336,15 @@ header.project-header {
     .initials {
       margin-bottom: 10px;
     }
+  }
+
+  .burger-menu {
+    display: block;
+    z-index: 1100;
+  }
+
+  nav,
+  .header-links {
+    display: none;
   }
 }

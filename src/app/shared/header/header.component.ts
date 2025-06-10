@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   // Aktuelle Sprache
   currentLanguage: SupportedLanguage = 'en';
   isProjectPage = false;
+  isMenuOpen = false;
   
   constructor(
     public translationService: TranslationService,
