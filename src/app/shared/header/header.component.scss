@@ -249,160 +249,24 @@ header.project-header {
   }
 }
 
-@media (max-width: 480px) {
-  .language-toggle {
-    width: 50px;
-  }
-}
-
-// Tablet styles
-@media (max-width: 1024px) {
-  .header-content {
-    nav ul {
-      li {
-        font-size: clamp(12px, 2vw, 18px);
-
-        a {
-          padding: 8px;
-
-          img {
-            width: 100px;
-            height: 80px;
-          }
-        }
-      }
-    }
-  }
-}
-
-// Mobile styles
 @media (max-width: 768px) {
-  header {
-    height: clamp(70px, 8vw, 80px);
+  .max-content {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+  }
+  .header-content {
 
     nav {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 280px;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.95);
-      backdrop-filter: blur(10px);
-      transition: left 0.3s ease;
-      z-index: 1000;
-      padding-top: 100px;
-      margin: 0;
-      ul {
-        flex-direction: column;
-        gap: 30px;
-        padding: 40px 20px;
-
-        li {
-          width: 100%;
-          text-align: center;
-          font-size: 18px;
-          flex: none;
-          justify-content: center;
-
-          a {
-            display: block;
-            padding: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-            &:hover {
-              background-color: rgba(255, 255, 255, 0.1);
-            }
-
-            img {
-              position: relative;
-              width: 80px;
-              height: 60px;
-              margin: 10px 0;
-              clip-path: none !important;
-              opacity: 0.7;
-            }
-          }
-        }
-      }
+      display: none;
     }
-  }
-}
-
-// Small mobile styles
-@media (max-width: 480px) {
-  header {
-    height: 60px;
-    padding: 0 15px;
+    .language-toggle {
+      display: none;
+    }
 
     .initials {
-      width: 45px;
-      height: 45px;
-    }
-
-    nav {
-      width: 250px;
-      padding-top: 80px;
-
-      ul {
-        padding: 30px 15px;
-        gap: 20px;
-
-        li {
-          font-size: 16px;
-
-          a {
-            padding: 12px;
-
-            img {
-              width: 60px;
-              height: 40px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-// Very small screens
-@media (max-width: 320px) {
-  header {
-    .initials {
-      width: 40px;
-      height: 40px;
-    }
-
-    nav {
-      width: 220px;
-
-      ul li {
-        font-size: 14px;
-
-        a img {
-          width: 50px;
-          height: 35px;
-        }
-      }
-    }
-  }
-}
-
-// Landscape mobile
-@media (max-width: 768px) and (orientation: landscape) {
-  header {
-    height: 60px;
-
-    nav {
-      padding-top: 70px;
-
-      ul {
-        padding: 20px;
-        gap: 15px;
-
-        li a {
-          padding: 8px;
-        }
-      }
+      margin-bottom: 10px;
     }
   }
 }
