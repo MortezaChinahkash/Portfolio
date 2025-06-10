@@ -54,7 +54,7 @@ $accent: #1073EA;
   }
 
   h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2rem, 4vw, 3rem); // Adjusted to match other pages
     font-weight: 700;
     margin-bottom: clamp(20px, 3vw, 40px);
     line-height: 1.1;
@@ -190,6 +190,9 @@ $accent: #1073EA;
   clip-path: inset(0 100% 0 0);
   animation: lineReveal 6s infinite;
 }
+.arrow-mobile{
+  display: none;
+}
 
 @keyframes lineReveal {
   0%, 50% {
@@ -217,6 +220,20 @@ $accent: #1073EA;
 }
 
 @media (max-width: 900px) {
+  .arrow-mobile {
+    display: block;
+    width: 50%;
+    margin-top: 50px;
+    align-self: flex-end;
+    clip-path: inset(0 100% 0 0);
+    animation: lineReveal 6s infinite;
+  }
+  .submit-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px ;
+  }
   .arrow{
     display: none;
   }
@@ -229,6 +246,7 @@ $accent: #1073EA;
   .contact-info{
     margin-top: 60px;
     width: 100%;
+    justify-content: flex-start;
   }
   .contact-page {
     flex-direction: column;
