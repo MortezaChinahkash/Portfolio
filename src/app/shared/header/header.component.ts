@@ -61,4 +61,11 @@ export class HeaderComponent implements OnInit {
   getText(key: keyof TranslationService['translations']['en']): string {
     return this.translationService.t(key);
   }
+
+  // Menü mit Verzögerung schließen
+  closeMenuWithDelay(): void {
+    setTimeout(() => {
+      this.isMenuOpen = false;
+    }, 100);
+  }
 }

@@ -110,22 +110,22 @@
         <nav class="overlay-nav">
           <ul>
             <li>
-              <a class="about" href="#about-me" (click)="isMenuOpen = false">
+              <a class="about" href="#about-me" (click)="closeMenuWithDelay()">
                 <span class="invert">{{ translationService.t('about_me') }}</span>
               </a>
             </li>
             <li>
-              <a class="skills" href="#skills" (click)="isMenuOpen = false">
+              <a class="skills" href="#skills" (click)="closeMenuWithDelay()">
                 <span class="invert">{{ translationService.t('skills') }}</span>
               </a>
             </li>
             <li>
-              <a class="projects" href="#portfolio" (click)="isMenuOpen = false">
+              <a class="projects" href="#portfolio" (click)="closeMenuWithDelay()">
                 <span class="invert">{{ translationService.t('projects') }}</span>
               </a>
             </li>
             <li>
-              <a class="contact" href="#contact" (click)="isMenuOpen = false">
+              <a class="contact" href="#contact" (click)="closeMenuWithDelay()">
                 <span class="invert">{{ translationService.t('contact') }}</span>
               </a>
             </li>

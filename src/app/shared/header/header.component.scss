@@ -363,23 +363,25 @@ header.project-header {
     justify-content: center;
     align-items: center;
 
-    nav ul {
+    ul {
       list-style: none;
       padding: 0;
       margin: 0;
       text-align: center;
+      display: flex;
+      flex-direction: column;
 
       li {
         margin: 24px 0;
 
         a {
           font-size: 2rem;
-          color: #222;
+          color: white;
           text-decoration: none;
           display: inline-block;
 
           span {
-            color: #222;
+            color: white;
           }
         }
       }
@@ -425,15 +427,6 @@ header.project-header {
   .burger-menu {
     display: block;
     z-index: 1100;
-  }
-
-  // These elements should only be visible in the overlay on mobile
-  .overlay-nav {
-    display: flex;
-  }
-  
-  .language-toggle-overlay {
-    display: flex;
   }
 }
 
