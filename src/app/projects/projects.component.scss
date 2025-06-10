@@ -67,7 +67,7 @@
 }
 
 .content-wrapper {
-  max-width: clamp(350px, 80vw, 500px);
+  max-width: clamp(200px, 25vw, 450px);
   width: 100%;
 }
 
@@ -158,44 +158,6 @@
     height: auto;
     border-radius: 12px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  }
-  
-  .featured-badge {
-    background-color: #FFD700;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: rotate(15deg);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    border: 3px solid #FFA500;
-    
-    .badge-text {
-      text-align: center;
-      color: #1a1a1a;
-      font-weight: 800;
-      transform: rotate(-15deg);
-      
-      span {
-        display: block;
-        font-size: 11px;
-        line-height: 1.1;
-        
-        &:first-child {
-          font-size: 12px;
-          margin-bottom: 2px;
-        }
-        
-        &.check-text {
-          font-size: 9px;
-          font-weight: 600;
-          opacity: 0.8;
-        }
-      }
-    }
   }
 }
 
@@ -385,36 +347,69 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .project-detail-wrapper {
-    flex-direction: column;
-    gap: 40px;
-  }
+// @media (max-width: 1024px) {
+//   // .project-detail-wrapper {
+//   //   flex-direction: column;
+//   //   gap: 40px;
+//   // }
   
-  .left-section,
-  .right-section {
-    width: 100%;
-    padding: 0;
-  }
+//   // .left-section,
+//   // .right-section {
+//   //   width: 100%;
+//   //   padding: 0;
+//   // }
   
-  .left-section {
-    order: 2;
-  }
+//   .left-section {
+//     order: 2;
+//   }
   
-  .right-section {
-    order: 1;
-  }
+//   .right-section {
+//     order: 1;
+//   }
   
-  .project-headline h1 {
-    font-size: 3rem;
-  }
+//   .project-headline h1 {
+//     font-size: 3rem;
+//   }
   
-  .next-project-link {
-    justify-content: center;
-  }
-}
+//   .next-project-link {
+//     justify-content: center;
+//   }
+// }
 
 @media (max-width: 768px) {
+  .black-bg{
+    height: 100%;
+    width: 100%;
+  }
+  .content-wrapper{
+    width: 100%;
+  }
+  .left-section {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .max-content {
+    padding: 0 16px;
+    flex-direction: column;
+  }
+  .next-project-link {
+    padding-right: 0;
+    padding-bottom: 40px;
+    justify-content: center;
+  }
+  .project-page{
+    background-image: url("/assets/png/Design material/01_Background/16_Project view background mobile.png");
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+
+  }
+    .project-detail-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+  }
   .back-link {
     padding-top: 40px;
     margin-bottom: 30px;
@@ -433,11 +428,10 @@
   }
   
   .project-image-container .project-image {
-    max-width: 100%;
+    width: 450px;
   }
   
   .action-buttons {
-    flex-direction: column;
     align-items: center;
     gap: 15px;
     
