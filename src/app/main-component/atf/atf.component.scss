@@ -259,9 +259,12 @@ display: none;
     align-items: center; 
   }
 }
-h1{
-  span{
-    font-size: clamp(3.1rem, 8vw, 6rem);
+h1 {
+  span {
+    display: block;
+    width: 10vw;
+    font-size: clamp(3.5rem, 5vw, 6rem);
+    line-height: 1;
   }
 }
 .hero-row-space{
