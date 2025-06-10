@@ -18,7 +18,15 @@
     margin-right: 20px;
     clip-path: inset(0 100% 0 0);
     animation: lineReveal 6s infinite;
-}
+  }
+
+  // Move the media query inside the .comments-section
+  @media (max-width: 400px) {
+    .arrow {
+      width: 75px; // Half the original size
+      margin-right: 10px;
+    }
+  }
 
 @keyframes lineReveal {
   0%, 50% {
