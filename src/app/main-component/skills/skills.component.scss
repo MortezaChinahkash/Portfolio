@@ -219,13 +219,9 @@
     gap: clamp(1rem, 2vw, 2rem);
   }
 
-  .skills-header {
+   .skills-header {
+    align-self: flex-end;
     width: 100%;
-    align-items: center;
-    
-    h3, h1 {
-      justify-content: center;
-    }
   }
 
   .skills-description {
@@ -280,4 +276,5 @@
       font-size: clamp(0.8rem, 3vw, 1rem);
     }
   }
+ 
 }
