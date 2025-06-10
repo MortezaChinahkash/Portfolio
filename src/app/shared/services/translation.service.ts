@@ -259,7 +259,7 @@ export class TranslationService {
 
       // Contact Section
       contact_me: 'Kontaktiere mich',
-      ready_to_work: 'Bereit, zusammenzuarbeiten?',
+      ready_to_work: 'Lass uns zusammen arbeiten!',
       contact_text1: 'Ich würde mich freuen, von dir zu hören! Egal, ob du eine Frage zu meiner Arbeit hast, ein Projekt besprechen möchtest oder einfach nur Hallo sagen möchtest, zögere nicht, mich zu kontaktieren.',
       contact_text2: 'Du kannst mich über das folgende Formular kontaktieren oder dich mit mir in den sozialen Medien verbinden.',
       name: 'Name',

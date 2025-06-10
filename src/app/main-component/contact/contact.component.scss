@@ -21,6 +21,10 @@ $accent: #1073EA;
   padding-bottom: 20px;
 }
 
+.contact-logo-mobile{
+  display: none;
+}
+
 .max-content {
   max-width: 1440px;
   width: 90%;
@@ -190,6 +194,7 @@ $accent: #1073EA;
   clip-path: inset(0 100% 0 0);
   animation: lineReveal 6s infinite;
 }
+
 .arrow-mobile{
   display: none;
 }
@@ -241,12 +246,15 @@ $accent: #1073EA;
     display: none;
   }
   .max-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+
   }
   .contact-info{
     margin-top: 60px;
     width: 100%;
-    justify-content: flex-start;
   }
   .contact-page {
     flex-direction: column;
