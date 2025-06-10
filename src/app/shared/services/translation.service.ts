@@ -193,7 +193,7 @@ export class TranslationService {
       join_description: "A modern, Kanban-style task manager designed to bring remote teams together and keep projects flowing. Join lets users create workspaces, assign tasks with deadlines and subtasks, and reorganize everything via smooth drag-and-drop—no page refresh required.",
       
       // El Pollo Loco Projekt
-      pollo_title: "El Pollo Loco – A Feather-Flinging 2-D Jump-'n'-Run",
+      pollo_title: "El Pollo Loco",
       pollo_description: "Dive into a sun-scorched desert canyon where a fearless farmhand faces off against a riotous flock of mutant chickens. El Pollo Loco blends classic side-scrolling action with slap-stick humor and crisp, hand-drawn art to deliver a fast-paced platformer that feels both nostalgic and fresh.",
       
       // DABubble Projekt  
@@ -329,7 +329,7 @@ export class TranslationService {
       join_description: "Ein moderner, Kanban-ähnlicher Aufgabenmanager, der für die Zusammenarbeit von Remote-Teams entwickelt wurde. Join ermöglicht Benutzern, Arbeitsbereiche zu erstellen, Aufgaben mit Fristen und Unteraufgaben zuzuweisen und alles per Drag-and-Drop neu zu organisieren – ohne Neuladen der Seite.",
       
       // El Pollo Loco Projekt
-      pollo_title: "El Pollo Loco – Ein federsprühendes 2D-Jump-'n'-Run",
+      pollo_title: "El Pollo Loco",
       pollo_description: "Tauche ein in eine sonnenverbrannte Wüstenschlucht, in der ein furchtloser Farmarbeiter gegen eine aufständische Herde mutierter Hühner antritt. El Pollo Loco verbindet klassische Side-Scrolling-Action mit Slapstick-Humor und klarer, handgezeichneter Kunst.",
       
       // DABubble Projekt

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ProjectService } from '../../shared/services/project.service';
+import { TranslationService } from '../../shared/services/translation.service';
 import { PortfolioItem } from '../../shared/models/portfolio-item.model';
 
 @Component({
@@ -14,7 +15,10 @@ import { PortfolioItem } from '../../shared/models/portfolio-item.model';
 export class ProjectElPolloLocoComponent implements OnInit {
   project: PortfolioItem | undefined;
 
-  constructor(private projectService: ProjectService) {}
+  constructor(
+    private projectService: ProjectService,
+    public translationService: TranslationService
+  ) {}
 
   ngOnInit() {
     // Debug ProjectService
@@ -36,8 +40,8 @@ export class ProjectElPolloLocoComponent implements OnInit {
   private createFallbackProject(): PortfolioItem {
     return {
       id: 998,
-      title: 'El Pollo Loco',
-      description: 'Jump and run game based on object-oriented JavaScript. Help Pepe find coins and salsa bottles to defeat the crazy chicken.',
+      title: this.translationService.t('pollo_title'),
+      description: this.translationService.t('pollo_description'),
       imageUrl: '/assets/png/Design material/screens/El_Pollo.png',
       projectsImageUrl: '/assets/png/Design material/screens/el-pollo-project.png',
       projectUrl: 'https://example.com/el-pollo-loco',
@@ -53,4 +57,3 @@ export class ProjectElPolloLocoComponent implements OnInit {
     };
   }
 }
-// 

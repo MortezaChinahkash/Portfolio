@@ -5,7 +5,7 @@
         <!-- Back link at top of max-content -->
         <div class="back-link">
           <a routerLink="/projects">
-            <img src="/assets/png/Design material/00_Hand-drawn lines/Back 1.png" alt=""> Go Back
+            <img src="/assets/png/Design material/00_Hand-drawn lines/Back 1.png" alt=""> {{ translationService.t('go_back') }}
           </a>
         </div>
         
@@ -18,17 +18,17 @@
               </div>
               
               <div class="section-block">
-                <h2>Description</h2>
-                <p>{{ project.description }}</p>
+                <h2>{{ translationService.t('description') }}</h2>
+                <p>{{ translationService.t('pollo_description') }}</p>
               </div>
               
               <div class="section-block">
-                <h2>Implementation Details</h2>
-                <p>Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.</p>
+                <h2>{{ translationService.t('implementation_details') }}</h2>
+                <p>{{ translationService.t('project_role_workflow') }}</p>
               </div>
               
               <div class="duration-info">
-                <strong>Duration:</strong> 4 weeks
+                <strong>{{ translationService.t('duration') }}:</strong> {{ translationService.t('project_duration_value') }} {{ translationService.t('project_duration_weeks') }}
               </div>
               
               <div class="tech-stack">
@@ -50,19 +50,19 @@
             
             <div class="action-buttons">
               @if (project.gitHubUrl) {
-                <a [href]="project.gitHubUrl" target="_blank" class="btn github-btn">GitHub</a>
+                <a [href]="project.gitHubUrl" target="_blank" class="btn github-btn">{{ translationService.t('github') }}</a>
               }
               @if (project.projectUrl) {
-                <a [href]="project.projectUrl" target="_blank" class="btn live-btn">Live Test</a>
+                <a [href]="project.projectUrl" target="_blank" class="btn live-btn">{{ translationService.t('live_test') }}</a>
               }
             </div>
           </div>
         </div>
         <div class="next-project-link">
-          <a routerLink="/projects/el-pollo-loco">Next Project <span class="arrow">→</span></a>
+          <a routerLink="/projects/dabubble">{{ translationService.t('next_project') }} <span class="arrow">→</span></a>
         </div>
       } @else {
-        <div class="loading">Loading project information...</div>
+        <div class="loading">{{ translationService.t('loading_project') }}</div>
       }
     </div>
   </section>
