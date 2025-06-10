@@ -1,16 +1,20 @@
-<header [ngClass]="{'project-header': isProjectPage}">
+<header [ngClass]="{ 'project-header': isProjectPage }">
   <div class="max-content">
     <div class="header-content">
       <div class="initials">
         <img src="/assets/png/logo/Logo.png" class="logo-normal" alt="Logo" />
-        <img src="/assets/png/logo/Logo_Hover.png" class="logo-hover" alt="Logo Hover" />
+        <img
+          src="/assets/png/logo/Logo_Hover.png"
+          class="logo-hover"
+          alt="Logo Hover"
+        />
       </div>
-  
+
       <nav>
         <ul>
           <li>
             <a class="about" href="#about-me">
-              <span class="invert">{{ translationService.t('about_me') }}</span>
+              <span class="invert">{{ translationService.t("about_me") }}</span>
               <img
                 class="about-image"
                 src="assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/1.png"
@@ -20,7 +24,7 @@
           </li>
           <li>
             <a class="skills" href="#skills">
-              <span class="invert">{{ translationService.t('skills') }}</span>
+              <span class="invert">{{ translationService.t("skills") }}</span>
               <img
                 class="skills-image"
                 src="assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/2.png"
@@ -30,7 +34,7 @@
           </li>
           <li>
             <a class="projects" href="#portfolio">
-              <span class="invert">{{ translationService.t('projects') }}</span>
+              <span class="invert">{{ translationService.t("projects") }}</span>
               <img
                 class="projects-image"
                 src="assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/3.png"
@@ -40,7 +44,7 @@
           </li>
           <li>
             <a class="contact" href="#contact">
-              <span class="invert">{{ translationService.t('contact') }}</span>
+              <span class="invert">{{ translationService.t("contact") }}</span>
               <img
                 class="contact-image"
                 src="assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/4.png"
@@ -50,13 +54,15 @@
           </li>
         </ul>
       </nav>
-  
+
       <div class="language-toggle">
         <div
           class="toggle-en"
           [class.active]="currentLanguage === 'en'"
           (click)="toggleLanguage('en')"
-        >EN</div>
+        >
+          EN
+        </div>
         <div class="toggle-switch">
           <div
             class="toggle-circle"
@@ -68,27 +74,44 @@
           class="toggle-de"
           [class.active]="currentLanguage === 'de'"
           (click)="toggleLanguage('de')"
-        >DE</div>
+        >
+          DE
+        </div>
       </div>
 
-      
-      <button class="burger-menu" (click)="isMenuOpen = true" aria-label="Menü öffnen">
-        <img src="/assets/png/Design material/00_Hand-drawn lines/00_Header/Menu - Mobile icon/02_Color OP 3 While pressing 2.png" alt="Menü">
+      <button
+        class="burger-menu"
+        (click)="isMenuOpen = true"
+        aria-label="Menü öffnen"
+      >
+        <img
+          src="/assets/png/Design material/00_Hand-drawn lines/00_Header/Menu - Mobile icon/02_Color OP 3 While pressing 2.png"
+          alt="Menü"
+        />
       </button>
 
-      
       <div class="overlay-menu" *ngIf="isMenuOpen">
         <div class="overlay-header">
           <div class="initials">
-            <img src="/assets/png/logo/Logo.png" class="logo-normal" alt="Logo" />
-            <img src="/assets/png/logo/Logo_Hover.png" class="logo-hover" alt="Logo Hover" />
+            <img
+              src="/assets/png/logo/Logo.png"
+              class="logo-normal"
+              alt="Logo"
+            />
+            <img
+              src="/assets/png/logo/Logo_Hover.png"
+              class="logo-hover"
+              alt="Logo Hover"
+            />
           </div>
           <div class="language-toggle-overlay">
             <div
               class="toggle-en"
               [class.active]="currentLanguage === 'en'"
               (click)="toggleLanguage('en')"
-            >EN</div>
+            >
+              EN
+            </div>
             <div class="toggle-switch">
               <div
                 class="toggle-circle"
@@ -100,41 +123,81 @@
               class="toggle-de"
               [class.active]="currentLanguage === 'de'"
               (click)="toggleLanguage('de')"
-            >DE</div>
+            >
+              DE
+            </div>
           </div>
-          <button class="close-menu" (click)="isMenuOpen = false" aria-label="Menü schließen">
-            <img src="/assets/png/Design material/00_Hand-drawn lines/00_Header/Menu - Mobile icon/02_Color OP 3 While pressing 1.png" alt="Schließen">
+          <button
+            class="close-menu"
+            (click)="isMenuOpen = false"
+            aria-label="Menü schließen"
+          >
+            <img
+              src="/assets/png/Design material/00_Hand-drawn lines/00_Header/Menu - Mobile icon/02_Color OP 3 While pressing 1.png"
+              alt="Schließen"
+            />
           </button>
         </div>
-        
+        <div class="overlay-navigation">
         <nav class="overlay-nav">
           <ul>
             <li>
               <a class="about" href="#about-me" (click)="closeMenuWithDelay()">
-                <span class="invert">{{ translationService.t('about_me') }}</span>
+                <span class="invert">{{
+                  translationService.t("about_me")
+                }}</span>
               </a>
             </li>
             <li>
               <a class="skills" href="#skills" (click)="closeMenuWithDelay()">
-                <span class="invert">{{ translationService.t('skills') }}</span>
+                <span class="invert">{{ translationService.t("skills") }}</span>
               </a>
             </li>
             <li>
-              <a class="projects" href="#portfolio" (click)="closeMenuWithDelay()">
-                <span class="invert">{{ translationService.t('projects') }}</span>
+              <a
+                class="projects"
+                href="#portfolio"
+                (click)="closeMenuWithDelay()"
+              >
+                <span class="invert">{{
+                  translationService.t("projects")
+                }}</span>
               </a>
             </li>
             <li>
               <a class="contact" href="#contact" (click)="closeMenuWithDelay()">
-                <span class="invert">{{ translationService.t('contact') }}</span>
+                <span class="invert">{{
+                  translationService.t("contact")
+                }}</span>
               </a>
             </li>
           </ul>
+          <div class="hero-socials">
+          <div class="social-circle">
+            <img
+              class="social-pic"
+              src="assets/png/icons/LinkedIn.png"
+              alt="LinkedIn"
+            />
+          </div>
+          <div class="social-circle">
+            <img
+              class="social-pic"
+              src="assets/png/icons/Github.png"
+              alt="GitHub"
+            />
+          </div>
+          <div class="social-circle">
+            <img
+              class="social-pic"
+              src="assets/png/icons/Mail.png"
+              alt="Mail"
+            />
+          </div>
+        </div>
         </nav>
-    
-        
+        </div>
       </div>
-      
     </div>
   </div>
 </header>

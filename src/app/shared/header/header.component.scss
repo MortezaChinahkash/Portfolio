@@ -98,8 +98,8 @@ header.project-header {
         flex: 1;
         display: flex;
         justify-content: center;
-        color: #fff; /* Basis: reines Weiß  */
-        transition: opacity 0.2s; /* optional smooth    */
+        color: #fff;
+        transition: opacity 0.2s;
       }
 
       a {
@@ -248,7 +248,42 @@ header.project-header {
     }
   }
 }
+.hero-socials {
+  display: flex;
+  gap: 1rem;
+  z-index: 3;
+  align-self: center;
+  justify-self: flex-start;
+  margin-top: 50px;
+}
+.overlay-nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.social-circle {
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  background: rgba(0,0,0,0.15);
+  transition: background 0.3s;
+}
+
+.social-circle:hover {
+  background: #1aa8b5;
+}
+
+.social-pic {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
 .burger-menu {
   display: none;
   background: none;
@@ -263,6 +298,7 @@ header.project-header {
 
 .overlay-menu {
   display: flex;
+
   flex-direction: column;
   position: fixed;
   top: 0;
@@ -273,7 +309,7 @@ header.project-header {
   z-index: 2000;
   animation: fadeIn 0.2s;
   padding: 20px;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   .overlay-header {
     display: flex;
