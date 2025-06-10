@@ -1,7 +1,4 @@
 .hero {
-  position: relative;
-  top: 0;
-  left: 0;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -10,7 +7,7 @@
   padding: 0;
   background: url("./../../../../public/assets/png/Design material/01_Background/Design Size Relation@3x/01_Hero.png");
   background-position: center 95%;
-  background-size: 110% 100%;
+  background-size: cover;
   color: white;
   z-index: 1;
 }
@@ -48,10 +45,12 @@
 .hero-row--top,
 .hero-row--bottom {
   align-items: flex-start;
+  position: relative;
 }
 
 .hero-row-space {
   margin: 0.5rem 0;
+  position: relative;
 }
 
 .hand-hello {
@@ -133,14 +132,19 @@
 }
 
 .hero-pic {
-  max-width: 160px;
-  width: 25vw;
+  position: relative;
+  margin-top: -150px;
+  margin-bottom: 30px;
+  max-width: clamp(120px, 20vw, 250px);
+  width: clamp(80px, 18vw, 220px);
   height: auto;
-  border-radius: 12px;
   object-fit: cover;
-  margin-left: 2vw;
-  box-shadow: 0 0 12px rgba(0,0,0,.25);
+  margin-left: clamp(1vw, 3vw, 5vw);
+  transform: rotate(10deg);
 }
+
+// For screens 768px and above - position right after "Frontend"
+
 
 .atf-btn {
   display: inline-block;
@@ -205,28 +209,6 @@
 
 }
 
-@media (max-width: 900px) {
-  .hero-socials {
-    flex-direction: row;
-    align-items: center;
-    margin-left: 0;
-    margin-top: 2rem;
-    gap: 1rem;
-    align-self: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-socials {
-    left: 16px;
-    bottom: 10vh;
-    gap: 0.75rem;
-  }
-  .responsive-title {
-    line-height: 1;
-    margin: -0.25rem 0;
-  }
-}
 
 @media (max-width: 900px) {
   .max-content {
@@ -242,12 +224,27 @@
     gap: 1rem;
   }
 }
-
+@media (max-width: 768px) {
+  .hero-pic {
+    left: 60%;
+    top: 30%;
+  }
+}
 @media (max-width: 600px) {
   .responsive-title {
     font-size: clamp(1.5rem, 7vw, 3rem);
   }
+    .hero-socials {
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 2rem;
+    gap: 1rem;
+    align-self: center;
+  }
   .hero-pic {
+    left: clamp(45%, 55vw, 65%);
+    top: clamp(20%, 25vw, 30%);
     max-width: 90px;
     width: 32vw;
     margin-left: 0.5vw;
@@ -264,5 +261,14 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin: 0.4rem 0;
+  }
+    .hero-socials {
+    left: 16px;
+    bottom: 10vh;
+    gap: 0.75rem;
+  }
+  .responsive-title {
+    line-height: 1;
+    margin: -0.25rem 0;
   }
 }
