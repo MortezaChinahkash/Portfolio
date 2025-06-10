@@ -39,6 +39,7 @@ export class ProjectElPolloLocoComponent implements OnInit {
       title: 'El Pollo Loco',
       description: 'Jump and run game based on object-oriented JavaScript. Help Pepe find coins and salsa bottles to defeat the crazy chicken.',
       imageUrl: '/assets/png/Design material/screens/El_Pollo.png',
+      projectsImageUrl: '/assets/png/Design material/screens/el-pollo-project.png',
       projectUrl: 'https://example.com/el-pollo-loco',
       gitHubUrl: 'https://github.com/yourusername/el-pollo-loco',
       technologies: [

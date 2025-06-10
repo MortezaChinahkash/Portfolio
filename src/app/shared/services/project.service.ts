@@ -50,6 +50,7 @@ export class ProjectService {
         title: 'Join',
         description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
         imageUrl: '/assets/png/Design material/screens/Join.png',
+        projectsImageUrl: '/assets/png/Design material/screens/join-project.png',
         projectUrl: 'https://example.com/join-live',
         gitHubUrl: 'https://github.com/yourusername/join',
         technologies: [
@@ -68,6 +69,7 @@ export class ProjectService {
         title: 'El Pollo Loco',
         description: 'Jump and run game based on object-oriented JavaScript. Help Pepe find coins and salsa bottles to defeat the crazy chicken.',
         imageUrl: '/assets/png/Design material/screens/El_Pollo.png',
+        projectsImageUrl: '/assets/png/Design material/screens/el-pollo-project.png',
         projectUrl: 'https://example.com/el-pollo-loco',
         gitHubUrl: 'https://github.com/yourusername/el-pollo-loco',
         technologies: [
@@ -84,6 +86,7 @@ export class ProjectService {
         title: 'DABubble',
         description: 'Ein Slack-ähnlicher Messaging-Dienst mit Echtzeit-Kommunikation.',
         imageUrl: '/assets/png/Design material/screens/DA_Bubble.png',
+        projectsImageUrl: '/assets/png/Design material/screens/dabubble-project.png',
         projectUrl: 'https://example.com/dabubble',
         gitHubUrl: 'https://github.com/yourusername/dabubble',
         technologies: [

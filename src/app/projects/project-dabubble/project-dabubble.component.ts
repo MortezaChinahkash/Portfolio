@@ -43,6 +43,7 @@ export class ProjectDabubbleComponent implements OnInit {
       title: 'DABubble Chat Application',
       description: 'Ein Slack-ähnlicher Messaging-Dienst mit Echtzeit-Kommunikation, Direktnachrichten, Channels und Dateianhängen. Entwickelt mit Angular und Firebase für Echtzeit-Datenverarbeitung.',
       imageUrl: '/assets/img/projects/dabubble.jpg',
+      projectsImageUrl: '/assets/png/Design material/screens/dabubble-project.png',
       projectUrl: 'https://dabubble.example.com',
       gitHubUrl: 'https://github.com/example/dabubble',
       technologies: [

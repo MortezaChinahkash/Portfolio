@@ -2,6 +2,7 @@ export interface PortfolioItem {
   title: string;
   description: string;
   imageUrl: string;
+  projectsImageUrl: string;
   projectUrl: string;
   gitHubUrl: string;
   technologies: { name: string; imageUrl: string }[];

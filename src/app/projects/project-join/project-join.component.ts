@@ -44,6 +44,7 @@ export class ProjectJoinComponent implements OnInit {
       title: 'Join',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       imageUrl: '/assets/png/Design material/screens/Join.png',
+      projectsImageUrl: '/assets/png/Design material/screens/join-project.png',
       projectUrl: 'https://join.example.com',
       gitHubUrl: 'https://github.com/yourusername/join',
       technologies: [
