@@ -2,12 +2,20 @@
   <div class="projects-content">
     <div class="projects-intro">
       <div class="header">
-        <h3>{{ translationService.t('my_craft') || 'Default text' }}</h3>
-        <h1 class="projects-title">{{ translationService.t('projects_title') || 'Default text' }}</h1>
-        <img src="" alt="">
+        <h3>{{ translationService.t("my_craft") || "Default text" }}</h3>
+        <div class="projects-title-container">
+          <h1 class="projects-title">
+            {{ translationService.t("projects_title") || "Default text" }}
+          </h1>
+          <img
+            class="underline"
+            src="/assets/png/Design material/00_Hand-drawn lines/03_Portfolio/Color option 3.png"
+            alt=""
+          />
+        </div>
       </div>
       <p class="projects-description">
-        {{ translationService.t('projects_description') || 'Default text' }}
+        {{ translationService.t("projects_description") || "Default text" }}
       </p>
     </div>
 
@@ -26,7 +34,7 @@
           <!-- Button, der beim Hover erscheint -->
           <div class="project-details-btn">
             <a [routerLink]="['/projects/project-' + project.compId]">
-              {{ translationService.t('project_details') || 'Default text' }}
+              {{ translationService.t("project_details") || "Default text" }}
             </a>
           </div>
         </div>
@@ -41,4 +49,3 @@
     }
   </div>
 </section>
-
