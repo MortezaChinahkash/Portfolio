@@ -73,29 +73,29 @@
   position: relative;
 
   .skill-paper {
-    width: 100%;
+    width: fit-content;
+    min-width: clamp(250px, 40vw, 400px);
+    max-width: 100%;
     position: relative;
     background-image: url("/assets/png/Design material/02_Ripped Paper/1.Skills description.png");
-    background-size: contain;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto; 
+    height: auto;
+    min-height: clamp(120px, 15vw, 180px);
 
     p {
       color: black;
       font-size: clamp(0.9rem, 1.5vw, 1.3rem);
       text-align: center;
-      position: static; 
-      width: 80%;
+      width: 85%;
       margin: 0 auto;
-      padding: 40px 10px;
+      padding: clamp(30px, 5vw, 50px) clamp(20px, 4vw, 40px);
       z-index: 2;
-      transform: none;
-      top: auto;
-      left: auto;
+      line-height: 1.4;
     }
   }
 
@@ -105,6 +105,7 @@
     flex-wrap: wrap;
     gap: clamp(0.5rem, 1vw, 1rem);
     justify-content: center;
+    margin-top: clamp(20px, 3vw, 40px);
   }
 }
 
@@ -221,17 +222,26 @@
   .skills-header {
     width: 100%;
     align-items: center;
+    
+    h3, h1 {
+      justify-content: center;
+    }
   }
 
   .skills-description {
     width: 100%;
 
-    p {
-      position: absolute;
-      width: 70%;
-      font-weight: bold;
+    .skill-paper {
+      min-width: clamp(200px, 60vw, 350px);
+      
+      p {
+        width: 80%;
+        font-weight: bold;
+        padding: clamp(25px, 4vw, 40px) clamp(15px, 3vw, 30px);
+      }
     }
   }
+  
   .skills-content {
     padding: clamp(20px, 4vw, 20px);
     width: 100%;
@@ -263,5 +273,11 @@
 @media (max-width: 460px) {
   .skills-description .skill-paper {
     background-image: url("/assets/png/Design material/02_Ripped Paper/peeled-skill.png");
+    min-width: clamp(180px, 80vw, 300px);
+    
+    p {
+      padding: clamp(20px, 4vw, 35px) clamp(15px, 3vw, 25px);
+      font-size: clamp(0.8rem, 3vw, 1rem);
+    }
   }
 }
