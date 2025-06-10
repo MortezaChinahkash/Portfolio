@@ -143,9 +143,6 @@
   transform: rotate(10deg);
 }
 
-// For screens 768px and above - position right after "Frontend"
-
-
 .atf-btn {
   display: inline-block;
   padding: 0.75rem 2rem;
@@ -197,6 +194,9 @@
   height: 26px;
   object-fit: contain;
 }
+.hero-pic-mobile{
+  display: none;
+}
 
 @media (min-width: 1800px) {
   .atf-content{
@@ -206,6 +206,14 @@
   .hero{
     background-position: center 95%;
   }
+}
+@media (max-width: 767px) {
+.hero-pic-mobile{
+  display: block;
+  transform: rotate(10deg);
+  width: 200px;
+  height: auto;
+}
 }
 
 @media (max-width: 767px) {
