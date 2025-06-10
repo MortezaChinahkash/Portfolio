@@ -217,8 +217,18 @@ $accent: #1073EA;
 }
 
 @media (max-width: 900px) {
+  .arrow{
+    display: none;
+  }
+  .contact-logo{
+    display: none;
+  }
+  .max-content{
+    width: 100%;
+  }
   .contact-info{
     margin-top: 60px;
+    width: 100%;
   }
   .contact-page {
     flex-direction: column;
