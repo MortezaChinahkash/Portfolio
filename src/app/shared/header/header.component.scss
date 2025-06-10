@@ -264,8 +264,6 @@ header.project-header {
 .overlay-menu {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
   position: fixed;
   top: 0;
   left: 0;
@@ -273,35 +271,103 @@ header.project-header {
   height: 100vh;
   background: url('/assets/png/Design material/01_Background/Img Original Size/12 Isolated Paper Rips copia.png') no-repeat center center/cover;
   z-index: 2000;
-  padding: 32px;
   animation: fadeIn 0.2s;
+  padding: 20px;
+  justify-content: space-between;
 
   .close-menu {
     background: none;
     border: none;
     cursor: pointer;
+    align-self: flex-end;
+    margin-bottom: 20px;
 
     img {
       width: 40px;
       height: 40px;
     }
-
-    margin-bottom: 32px;
   }
 
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .overlay-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    li {
-      margin: 24px 0;
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+
+      li {
+        margin: 24px 0;
+
+        a {
+          font-size: 2rem;
+          color: #222;
+          text-decoration: none;
+          display: inline-block;
+
+          span {
+            color: #222;
+          }
+        }
+      }
+    }
+  }
+
+  .language-toggle-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #222;
+
+    .toggle-switch {
+      width: 30px;
+      height: 10px;
+      background-color: #24dd80;
+      border-radius: 10px;
+      border: 0.5px solid #222;
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+
+      .toggle-circle {
+        width: 15px;
+        height: 15px;
+        background-color: #1073ea;
+        border-radius: 50%;
+        border: 1px solid #222;
+        transition: transform 0.3s ease;
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .toggle-circle.de-active {
+        transform: translateX(15px);
+      }
     }
 
-    a {
-      font-size: 2rem;
+    .toggle-en,
+    .toggle-de {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
       color: #222;
-      text-decoration: none;
+
+      &.active {
+        color: #24dd80;
+      }
     }
   }
 }
@@ -318,17 +384,20 @@ header.project-header {
 @media (max-width: 768px) {
   .max-content {
     width: 100%;
-    padding: 0;
+    padding: 0 20px;
     margin: 0;
     margin-top: 10px;
   }
+
   .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     nav {
       display: none;
     }
+    
     .language-toggle {
       display: none;
     }
@@ -343,8 +412,23 @@ header.project-header {
     z-index: 1100;
   }
 
-  nav,
-  .header-links {
+  // These elements should only be visible in the overlay on mobile
+  .overlay-nav {
+    display: flex;
+  }
+  
+  .language-toggle-overlay {
+    display: flex;
+  }
+}
+
+// Hide overlay elements on desktop
+@media (min-width: 769px) {
+  .overlay-nav {
+    display: none;
+  }
+  
+  .language-toggle-overlay {
     display: none;
   }
 }
