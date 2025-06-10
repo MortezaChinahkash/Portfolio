@@ -271,14 +271,18 @@
     margin: 15px auto;
     
     &.card-0 {
+
       transform: rotate(-5deg);
     }
     
     &.card-1 {
       transform: rotate(0deg);
+      z-index: 3;
+      margin-top: -40px;
     }
     
     &.card-2 {
+      margin-top: -40px;
       transform: rotate(5deg);
     }
 
