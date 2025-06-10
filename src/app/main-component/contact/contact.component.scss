@@ -217,6 +217,9 @@ $accent: #1073EA;
 }
 
 @media (max-width: 900px) {
+  .contact-info{
+    margin-top: 60px;
+  }
   .contact-page {
     flex-direction: column;
   }
@@ -235,22 +238,3 @@ $accent: #1073EA;
   }
 }
 
-@media (max-width: 600px) {
-  .contact {
-    padding: clamp(40px, 6vw, 60px) 0;
-  }
-
-  .contact-page {
-    gap: clamp(1.5rem, 3vw, 2.5rem);
-  }
-
-  .contact-info {
-    h1 {
-      font-size: clamp(2rem, 4vw, 3rem);
-    }
-  }
-
-  .checkbox label {
-    font-size: 11px;
-  }
-}
