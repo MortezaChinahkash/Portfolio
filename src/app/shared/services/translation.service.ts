@@ -92,6 +92,44 @@ export interface TranslationSet {
 
   // Projekt Details
   project_details: string;
+
+  // Legal/Footer
+  legal_notice: string;
+  copyright: string;
+  
+  // Project Navigation
+  go_back: string;
+  next_project: string;
+  github: string;
+  live_test: string;
+  
+  // Project Content
+  description: string;
+  implementation_details: string;
+  duration: string;
+  tech_stack: string;
+  loading_project: string;
+  
+  // Skills Section
+  pull_to_peel: string;
+  currently_learning: string;
+  
+  // Form Labels
+  enter_your_name: string;
+  enter_your_email: string;
+  enter_your_message: string;
+  
+  // Social Media
+  linkedin: string;
+  github_social: string;
+  mail: string;
+  
+  // Menu/Navigation
+  menu_open: string;
+  menu_close: string;
+  
+  // Imprint
+  imprint_content: string;
 }
 
 @Injectable({
@@ -190,6 +228,44 @@ export class TranslationService {
 
       // Projekt Details
       project_details: "Project details",
+
+      // Legal/Footer
+      legal_notice: "Legal Notice",
+      copyright: "© Morteza Chinahkash 2025",
+      
+      // Project Navigation
+      go_back: "Go Back",
+      next_project: "Next Project",
+      github: "GitHub",
+      live_test: "Live Test",
+      
+      // Project Content
+      description: "Description",
+      implementation_details: "Implementation Details",
+      duration: "Duration",
+      tech_stack: "Tech Stack",
+      loading_project: "Loading project information...",
+      
+      // Skills Section
+      pull_to_peel: "Pull to peel",
+      currently_learning: "currently learning these Skills:",
+      
+      // Form Labels
+      enter_your_name: "Enter your name",
+      enter_your_email: "Enter your email",
+      enter_your_message: "Enter your message",
+      
+      // Social Media
+      linkedin: "LinkedIn",
+      github_social: "GitHub",
+      mail: "Email",
+      
+      // Menu/Navigation
+      menu_open: "Open menu",
+      menu_close: "Close menu",
+      
+      // Imprint
+      imprint_content: "Imprint works!",
     },
     
     de: {
@@ -279,6 +355,44 @@ export class TranslationService {
 
       // Projekt Details
       project_details: "Projektdetails",
+
+      // Legal/Footer
+      legal_notice: "Impressum",
+      copyright: "© Morteza Chinahkash 2025",
+      
+      // Project Navigation
+      go_back: "Zurück",
+      next_project: "Nächstes Projekt",
+      github: "GitHub",
+      live_test: "Live Test",
+      
+      // Project Content
+      description: "Beschreibung",
+      implementation_details: "Implementierungsdetails",
+      duration: "Dauer",
+      tech_stack: "Tech Stack",
+      loading_project: "Projektinformationen werden geladen...",
+      
+      // Skills Section
+      pull_to_peel: "Ziehen zum Abziehen",
+      currently_learning: "lerne derzeit diese Fähigkeiten:",
+      
+      // Form Labels
+      enter_your_name: "Gib deinen Namen ein",
+      enter_your_email: "Gib deine E-Mail ein",
+      enter_your_message: "Gib deine Nachricht ein",
+      
+      // Social Media
+      linkedin: "LinkedIn",
+      github_social: "GitHub",
+      mail: "E-Mail",
+      
+      // Menu/Navigation
+      menu_open: "Menü öffnen",
+      menu_close: "Menü schließen",
+      
+      // Imprint
+      imprint_content: "Impressum funktioniert!",
     }
   };
 

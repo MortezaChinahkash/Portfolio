@@ -82,7 +82,7 @@
       <button
         class="burger-menu"
         (click)="isMenuOpen = true"
-        aria-label="Menü öffnen"
+        [attr.aria-label]="translationService.t('menu_open')"
       >
         <img
           src="/assets/png/Design material/00_Hand-drawn lines/00_Header/Menu - Mobile icon/02_Color OP 3 While pressing 2.png"
@@ -130,7 +130,7 @@
           <button
             class="close-menu"
             (click)="isMenuOpen = false"
-            aria-label="Menü schließen"
+            [attr.aria-label]="translationService.t('menu_close')"
           >
             <img
               src="/assets/png/Design material/00_Hand-drawn lines/00_Header/Menu - Mobile icon/02_Color OP 3 While pressing 1.png"
