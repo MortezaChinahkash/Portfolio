@@ -32,11 +32,10 @@ section {
   justify-content: center;
   align-items: center;
   color: white;
-  font-weight: bold;
+  font-weight: 400;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 40px 40px;
   margin: -20px 0;
   width: 100%;
 }
@@ -45,7 +44,7 @@ section {
   background-image: url('/assets/png/Design material/02_Ripped Paper/Option 3/1.png');
   width: 100%;
   min-height: 150px;
-  transform: rotate(7deg);
+  transform: rotate(5deg);
   z-index: 3;
   margin-bottom: -40px;
 }
@@ -73,7 +72,8 @@ section {
   align-items: center;
   max-width: 300px;
   width: 100%;
-  
+  padding: 40px 10px;
+
   img {
     width: clamp(30px, 5vw, 50px);
     height: auto;
@@ -159,23 +159,63 @@ section {
   section{
     padding: 100px 0;
   }
-  
+  .torn-papers {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
   .paper-and-about {
+
     flex-direction: column-reverse;
-    text-align: center;
     gap: 3rem;
-    padding: 0 20px;
     width: 100%;
+    padding: 0 20px;
   }
   span{
-    text-align: center;
     margin: 0;
     font-weight: 400;
   }
   
   .about-me {
+    align-items: flex-start;
+
+    p{
+      text-align: start;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .paper-card1 {
+    background-image: url("/assets/png/Design material/02_Ripped Paper/Option 3/Mobile/About me 4.png");
+    margin-bottom: clamp(-80px, calc(-80px + 20 * ((100vw - 320px) / 280)), -60px);
+    transform: rotate(-2deg);
+    height: 120px;
+  }
+  .paper-card2 {
+    background-image: url("/assets/png/Design material/02_Ripped Paper/Option 3/Mobile/About me 5.png");
+    margin-bottom: clamp(-80px, calc(-80px + 20 * ((100vw - 320px) / 280)), -60px);
+    min-height: 120px;  
+  }
+  .paper-card3 {
+    background-image: url("/assets/png/Design material/02_Ripped Paper/Option 3/Mobile/About me 6.png");
+    min-height: 120px;
+  }
+  .paper-content {
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    gap: 5px;
+    padding: 40px 10px;
+    width: 100%;
+    span{
+      text-align: start;
+      font-size: clamp(16px, 5vw, 20px);
+    }
+  }
+  .line {
+    width: 150px;
+    height: 15px;
+    margin-top: -25px;
   }
 }
 
