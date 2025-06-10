@@ -251,6 +251,7 @@
   .comments-section {
     margin-top: 60px;
     padding: 0 20px;
+    margin-bottom: 60px;
   }
   
   .comment-window {
@@ -271,19 +272,49 @@
     margin: 15px auto;
     
     &.card-0 {
-
       transform: rotate(-5deg);
+      
+      .hover-line {
+        animation: hoverLineEffect 6s ease-in-out infinite;
+        animation-delay: 0s;
+      }
     }
     
     &.card-1 {
       transform: rotate(0deg);
       z-index: 3;
       margin-top: -40px;
+      
+      .hover-line {
+        animation: hoverLineEffect 6s ease-in-out infinite;
+        animation-delay: 2s;
+      }
     }
     
     &.card-2 {
       margin-top: -40px;
       transform: rotate(5deg);
+      
+      .hover-line {
+        animation: hoverLineEffect 6s ease-in-out infinite;
+        animation-delay: 4s;
+      }
+    }
+
+    .hover-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-image: url('/assets/png/Design%20material/03_Stickers/02_Testimonials/Color%20option%203/Line.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: clamp(15px, 2vw, 20px);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
     }
 
     .comment-footer {
@@ -297,25 +328,31 @@
   }
 }
 
+// Animation keyframes for hover line effect only
+@keyframes hoverLineEffect {
+  0%, 16.67%, 83.33%, 100% {
+    opacity: 0;
+  }
+  33.33%, 50% {
+    opacity: 1;
+  }
+}
 
-
-
-@media (max-width: 1250px) and (min-width: 951px) {@media (max-width: 1250px) and (min-width: 951px) {
-  .comment-card {  .comment-card {
-    width: clamp(400px, 31vw, 450px);    width: clamp(400px, 31vw, 450px);
-    
+// Clean up the duplicate media query
+@media (max-width: 1250px) and (min-width: 951px) {
+  .comment-card {
+    width: clamp(400px, 31vw, 450px);
     
     &.card-0 {
-      left: 0px;   left: 0px; 
-    }}
-    
+      left: 0px;
+    }
 
-    &.card-1 {.card-1 {
-      z-index: 2;  z-index: 2;
-    }    }
+    &.card-1 {
+      z-index: 2;
+    }
     
     &.card-2 {
-      right: 0px;  right: 0px; 
-    }}
+      right: 0px;
+    }
   }
 }
