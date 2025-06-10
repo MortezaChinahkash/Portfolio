@@ -225,6 +225,17 @@ $accent: #1073EA;
 }
 
 @media (max-width: 900px) {
+  h3{
+    align-self: flex-start;
+  }
+  h1 {
+    align-self: flex-start;
+    text-align: left;
+  }
+  p{
+    align-self: flex-start;
+    text-align: left;
+  }
   .arrow-mobile {
     display: block;
     width: 50%;
