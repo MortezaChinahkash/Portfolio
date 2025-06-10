@@ -228,6 +228,13 @@ $accent: #1073EA;
   align-self: flex-end;
 }
 @media (max-width: 900px) {
+  .contact-logo-mobile{
+    display: block;
+    width: clamp(150px, 10vw, 250px);
+    align-self: flex-end;
+    transform: rotate(-20deg);
+    margin-bottom: -80px;
+  }
   h3{
     align-self: flex-start;
   }
