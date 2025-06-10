@@ -44,7 +44,7 @@ section {
 .paper-card1 {
   background-image: url('/assets/png/Design material/02_Ripped Paper/Option 3/1.png');
   width: 100%;
-  height: 150px;
+  min-height: 150px;
   transform: rotate(7deg);
   z-index: 3;
   margin-bottom: -40px;
@@ -69,8 +69,9 @@ section {
 
 .paper-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  max-width: 300px;
   width: 100%;
   
   img {
@@ -80,8 +81,7 @@ section {
   
   span {
     text-align: right;
-    margin-left: 15px;
-    font-size: clamp(12px, 1.5vw, 16px);
+    font-size: clamp(14px, 5vw, 22px);
   }
 }
 
@@ -156,12 +156,22 @@ section {
 }
 
 @media (max-width: 900px) {
+  section{
+    padding: 100px 0;
+  }
+  
   .paper-and-about {
     flex-direction: column-reverse;
     text-align: center;
     gap: 3rem;
+    padding: 0 20px;
+    width: 100%;
   }
-
+  span{
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+  }
   
   .about-me {
     align-items: center;
