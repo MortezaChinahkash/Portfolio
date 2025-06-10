@@ -73,23 +73,22 @@
 
 .project-headline {
   margin-bottom: clamp(30px, 5vw, 40px);
+  width: fit-content; // Change from display: inline-block
   
   h1 {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 900;
     color: #1a1a1a;
-    margin: 0 0 clamp(10px, 2vw, 15px) 0;
     line-height: 0.9;
     letter-spacing: -2px;
+    margin: 0;
+    width: fit-content;
   }
   
   .blue-underline {
-    width: clamp(220px, 25vw, 290px);
-    height: 20px;
-    background-image: url('/assets/png/Design material/00_Hand-drawn lines/01_About me/Color option 3.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left center;
+    width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
@@ -394,7 +393,7 @@
   }
   
   .blue-underline {
-    width: 220px;
+    width: 100%; // Remove fixed width
   }
   
   .content-wrapper {
@@ -441,7 +440,7 @@
   }
   
   .blue-underline {
-    width: 180px;
+    width: 100%; // Remove fixed width here too
   }
   
   .tech-stack {
