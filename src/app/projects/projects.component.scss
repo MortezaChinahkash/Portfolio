@@ -349,106 +349,181 @@
 }
 
 @media (max-width: 768px) {
-  .black-bg{
+  .black-bg {
     height: 100%;
     width: 100%;
   }
-  .content-wrapper{
-    width: 100%;
-  }
-  .left-section {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .max-content {
-    padding: 0 16px;
-    flex-direction: column;
-  }
-  .next-project-link {
-    padding-right: 0;
-    padding-bottom: 40px;
-    justify-content: center;
-  }
-  .project-page{
+
+  .project-page {
     background-image: url("/assets/png/Design material/01_Background/16_Project view background mobile.png");
     background-size: cover;
     background-position: center;
-    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+  }
 
-  }
-    .project-detail-wrapper {
-    flex-direction: column;
+  .max-content {
+    padding: 0 20px;
+    height: auto;
+    min-height: 100vh;
     justify-content: flex-start;
-    gap: 40px;
   }
+
   .back-link {
-    padding-top: 40px;
+    padding-top: 120px; // Space for header
+    padding-left: 0;
     margin-bottom: 30px;
-  }
-  
-  .project-headline h1 {
-    font-size: 2.5rem;
-  }
-  
-  .blue-underline {
-    width: 100%; // Remove fixed width
-  }
-  
-  .content-wrapper {
-    max-width: 100%;
-  }
-  
-  .project-image-container .project-image {
-    width: 450px;
-  }
-  
-  .action-buttons {
-    align-items: center;
-    gap: 15px;
     
-    .btn {
-      width: 200px;
-      text-align: center;
+    a {
+      font-size: 14px;
+      font-weight: 600;
+      
+      img {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
-  
-  .featured-badge {
-    width: 100px !important;
-    height: 100px !important;
-    top: -20px !important;
-    right: -20px !important;
+
+  .project-detail-wrapper {
+    flex-direction: column;
+    gap: 40px;
+    align-items: stretch;
+  }
+
+  .left-section {
+    width: 100%;
+    padding: 0;
+    order: 2; // Content comes after image
+  }
+
+  .content-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project-headline {
+    margin-bottom: 30px;
+    text-align: left;
     
-    .badge-text span {
-      font-size: 9px !important;
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    
+    .blue-underline {
+      width: 100%;
+      max-width: 200px; // Limit the underline width
+    }
+  }
+
+  .section-block {
+    margin-bottom: 20px;
+    
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: left; // Remove justify on mobile
+    }
+  }
+
+  .duration-info {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .tech-stack {
+    gap: 15px;
+    margin-bottom: 30px;
+    
+    .tech-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .right-section {
+    width: 100%;
+    padding: 0;
+    order: 1; // Image comes first
+    margin-bottom: 20px;
+  }
+
+  .project-image-container {
+    margin-bottom: 30px;
+    align-self: center;
+    
+    .project-image {
+      max-width: 100%;
+      width: 100%;
+      max-width: 350px; // Limit max width on mobile
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .action-buttons {
+    justify-content: center;
+    align-self: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    
+    .btn {
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      min-width: 120px;
+      text-align: center;
       
-      &:first-child {
-        font-size: 10px !important;
+      &.github-btn {
+        background-color: transparent;
+        color: white;
+        border: 2px solid #666;
       }
       
-      &.check-text {
-        font-size: 8px !important;
+      &.live-btn {
+        background-color: #00D4AA;
+        color: white;
+        border: 2px solid #00D4AA;
       }
+    }
+  }
+
+  .next-project-link {
+    padding: 0;
+    padding-bottom: 40px;
+    justify-content: center;
+    
+    a {
+      font-size: 16px;
+      font-weight: 600;
     }
   }
 }
 
+// Additional breakpoint for very small screens
 @media (max-width: 480px) {
   .project-headline h1 {
     font-size: 2rem;
   }
   
-  .blue-underline {
-    width: 100%; // Remove fixed width here too
+  .project-image-container .project-image {
+    max-width: 300px;
   }
   
-  .tech-stack {
-    flex-wrap: wrap;
-    gap: 8px;
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
     
-    .tech-icon {
-      width: 30px;
-      height: 30px;
+    .btn {
+      width: 200px;
     }
   }
 }
