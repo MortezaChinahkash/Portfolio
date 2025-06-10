@@ -237,7 +237,6 @@
 }
 
 .next-project-link {
-  padding-right: 20px;
   padding-top: 30px; // Add top padding
   display: flex;
   align-self: flex-end;
@@ -384,7 +383,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
   .black-bg {
     height: 100%;
     width: 100%;
