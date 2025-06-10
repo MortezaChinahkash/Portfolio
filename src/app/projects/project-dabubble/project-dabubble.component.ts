@@ -10,7 +10,7 @@ import { PortfolioItem } from '../../shared/models/portfolio-item.model';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './project-dabubble.component.html',
-  styleUrl: './project-dabubble.component.scss',
+  styleUrl: './../projects.component.scss',
 })
 export class ProjectDabubbleComponent implements OnInit {
   project: PortfolioItem | undefined;
