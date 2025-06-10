@@ -78,78 +78,61 @@
 
       
       <div class="overlay-menu" *ngIf="isMenuOpen">
-        <button class="close-menu" (click)="isMenuOpen = false" aria-label="Menü schließen">
-          <img src="/assets/png/Design material/00_Hand-drawn lines/00_Header/Menu - Mobile icon/02_Color OP 3 While pressing 1.png" alt="Schließen">
-        </button>
-        <div class="initials">
-          <img src="/assets/png/logo/Logo.png" class="logo-normal" alt="Logo" />
-          <img src="/assets/png/logo/Logo_Hover.png" class="logo-hover" alt="Logo Hover" />
+        <div class="overlay-header">
+          <div class="initials">
+            <img src="/assets/png/logo/Logo.png" class="logo-normal" alt="Logo" />
+            <img src="/assets/png/logo/Logo_Hover.png" class="logo-hover" alt="Logo Hover" />
+          </div>
+          <div class="language-toggle-overlay">
+            <div
+              class="toggle-en"
+              [class.active]="currentLanguage === 'en'"
+              (click)="toggleLanguage('en')"
+            >EN</div>
+            <div class="toggle-switch">
+              <div
+                class="toggle-circle"
+                [class.de-active]="currentLanguage === 'de'"
+                (click)="switchLanguage()"
+              ></div>
+            </div>
+            <div
+              class="toggle-de"
+              [class.active]="currentLanguage === 'de'"
+              (click)="toggleLanguage('de')"
+            >DE</div>
+          </div>
+          <button class="close-menu" (click)="isMenuOpen = false" aria-label="Menü schließen">
+            <img src="/assets/png/Design material/00_Hand-drawn lines/00_Header/Menu - Mobile icon/02_Color OP 3 While pressing 1.png" alt="Schließen">
+          </button>
         </div>
-
+        
         <nav class="overlay-nav">
           <ul>
             <li>
-              <a class="about" href="#about-me">
+              <a class="about" href="#about-me" (click)="isMenuOpen = false">
                 <span class="invert">{{ translationService.t('about_me') }}</span>
-                <img
-                  class="about-image"
-                  src="assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/1.png"
-                  alt="About"
-                />
               </a>
             </li>
             <li>
-              <a class="skills" href="#skills">
+              <a class="skills" href="#skills" (click)="isMenuOpen = false">
                 <span class="invert">{{ translationService.t('skills') }}</span>
-                <img
-                  class="skills-image"
-                  src="assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/2.png"
-                  alt="Skills"
-                />
               </a>
             </li>
             <li>
-              <a class="projects" href="#portfolio">
+              <a class="projects" href="#portfolio" (click)="isMenuOpen = false">
                 <span class="invert">{{ translationService.t('projects') }}</span>
-                <img
-                  class="projects-image"
-                  src="assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/3.png"
-                  alt="Projects"
-                />
               </a>
             </li>
             <li>
-              <a class="contact" href="#contact">
+              <a class="contact" href="#contact" (click)="isMenuOpen = false">
                 <span class="invert">{{ translationService.t('contact') }}</span>
-                <img
-                  class="contact-image"
-                  src="assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/4.png"
-                  alt="Contact"
-                />
               </a>
             </li>
           </ul>
         </nav>
     
-        <div class="language-toggle-overlay">
-          <div
-            class="toggle-en"
-            [class.active]="currentLanguage === 'en'"
-            (click)="toggleLanguage('en')"
-          >EN</div>
-          <div class="toggle-switch">
-            <div
-              class="toggle-circle"
-              [class.de-active]="currentLanguage === 'de'"
-              (click)="switchLanguage()"
-            ></div>
-          </div>
-          <div
-            class="toggle-de"
-            [class.active]="currentLanguage === 'de'"
-            (click)="toggleLanguage('de')"
-          >DE</div>
-        </div>
+        
       </div>
       
     </div>

@@ -226,7 +226,7 @@ header.project-header {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    z-index: 2000;
     cursor: pointer;
   }
 
@@ -275,16 +275,85 @@ header.project-header {
   padding: 20px;
   justify-content: space-between;
 
+  .overlay-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
   .close-menu {
     background: none;
     border: none;
     cursor: pointer;
-    align-self: flex-end;
-    margin-bottom: 20px;
+    order: 3; // Move to the right
 
     img {
       width: 40px;
       height: 40px;
+    }
+  }
+
+  .initials {
+    order: 1; // Move to the left
+  }
+
+  .language-toggle-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #000; // Change to black for better contrast
+    order: 2; // Keep in the middle
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    .toggle-switch {
+      width: 30px;
+      height: 10px;
+      background-color: #24dd80;
+      border-radius: 10px;
+      border: 0.5px solid #000; // Change to black
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+
+      .toggle-circle {
+        width: 15px;
+        height: 15px;
+        background-color: #1073ea;
+        border-radius: 50%;
+        border: 1px solid #000; // Change to black
+        transition: transform 0.3s ease;
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .toggle-circle.de-active {
+        transform: translateX(15px);
+      }
+    }
+
+    .toggle-en,
+    .toggle-de {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: white; 
+      font-weight: bold;
+      font-size: 14px;
+      background-size: cover;
+
+      &.active {
+        color: #24dd80;
+        background-image: url('/assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/Toggle.png'); // Force green color when active
+      }
     }
   }
 
@@ -313,60 +382,6 @@ header.project-header {
             color: #222;
           }
         }
-      }
-    }
-  }
-
-  .language-toggle-overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    color: #222;
-
-    .toggle-switch {
-      width: 30px;
-      height: 10px;
-      background-color: #24dd80;
-      border-radius: 10px;
-      border: 0.5px solid #222;
-      display: flex;
-      align-items: center;
-      position: relative;
-      cursor: pointer;
-
-      .toggle-circle {
-        width: 15px;
-        height: 15px;
-        background-color: #1073ea;
-        border-radius: 50%;
-        border: 1px solid #222;
-        transition: transform 0.3s ease;
-        position: absolute;
-        left: 0;
-        cursor: pointer;
-        z-index: 2;
-      }
-
-      .toggle-circle.de-active {
-        transform: translateX(15px);
-      }
-    }
-
-    .toggle-en,
-    .toggle-de {
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: #222;
-
-      &.active {
-        color: #24dd80;
       }
     }
   }
