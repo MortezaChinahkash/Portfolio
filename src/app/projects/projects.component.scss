@@ -72,6 +72,7 @@
 
 .project-detail-wrapper {
   display: flex;
+  margin-top: 200px;
   justify-content: space-between;
   width: 100%;;
   align-items: center; // Change from center to flex-start
@@ -80,6 +81,7 @@
 }
 
 .left-section {
+  align-self: flex-start;
   width: 45%;
   display: flex;
   align-items: center;
