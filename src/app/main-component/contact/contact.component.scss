@@ -190,19 +190,18 @@ $accent: #1073EA;
   }
 
   button {
-    margin-top: clamp(16px, 2vw, 24px);
-    padding: clamp(12px, 1.5vw, 16px) clamp(20px, 2.5vw, 30px);
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: clamp(16px, 1.2vw, 18px);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 2px 2px 0 1px white;
-    align-self: flex-end;
-    transform: translateY(0);
+    margin-top: 50px;
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  border: 2px solid white;
+  border-radius: 25px;
+  box-shadow: 2px 2px 0px 1px #ffffff;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.2rem;
 
     &:hover {
       background-color: #24dd80;
