@@ -33,6 +33,7 @@ footer {
     img {
       width: clamp(40px, 5vw, 60px);
       height: clamp(40px, 5vw, 60px);
+      cursor: pointer;
     }
 
     p {
