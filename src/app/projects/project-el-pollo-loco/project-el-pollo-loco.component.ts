@@ -22,14 +22,12 @@ export class ProjectElPolloLocoComponent implements OnInit {
 
   ngOnInit() {
     // Debug ProjectService
-    console.log('ProjectService check in El Pollo Loco component:');
     this.projectService.debugProjects();
     
     // Explizit nach 'el-pollo-loco' suchen (nicht 'el-pollo')
     this.project = this.projectService.getProjectByCompId('el-pollo-loco');
     
     // Debugging
-    console.log('El Pollo Loco project data after retrieval:', this.project);
     
     if (!this.project) {
       console.warn('Using fallback project data for El Pollo Loco');

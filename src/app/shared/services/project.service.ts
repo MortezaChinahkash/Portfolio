@@ -32,13 +32,10 @@ export class ProjectService {
 
   // Methode zum Abrufen eines Projekts nach compId
   getProjectByCompId(compId: string): PortfolioItem | undefined {
-    console.log('Looking for project with compId:', compId);
-    console.log('Available projects:', this.projects);
     
     // Das Problem könnte beim Vergleich liegen - stellen wir sicher, dass wir korrekt vergleichen
     const project = this.projects.find(p => p.compId.toLowerCase() === compId.toLowerCase());
     
-    console.log('Found project:', project);
     return project;
   }
 
@@ -102,12 +99,10 @@ export class ProjectService {
     ];
     
     // Debug-Ausgabe nach der Initialisierung
-    console.log('Projects initialized:', this.projects.map(p => ({title: p.title, compId: p.compId})));
   }
 
   // Debugging-Methode
   public debugProjects() {
-    console.log('Projects in service:', this.projects);
     if (this.projects.length === 0) {
       console.error('No projects initialized in service!');
     }

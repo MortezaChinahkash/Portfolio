@@ -13,7 +13,7 @@
       <nav>
         <ul>
           <li>
-            <a class="about" href="#about-me">
+            <a class="about" [routerLink]="['/']" fragment="about-me">
               <span class="invert">{{ translationService.t("about_me") }}</span>
               <img
                 class="about-image"
@@ -23,7 +23,7 @@
             </a>
           </li>
           <li>
-            <a class="skills" href="#skills">
+            <a class="skills" [routerLink]="['/']" fragment="skills">
               <span class="invert">{{ translationService.t("skills") }}</span>
               <img
                 class="skills-image"
@@ -33,7 +33,7 @@
             </a>
           </li>
           <li>
-            <a class="projects" href="#portfolio">
+            <a class="projects" [routerLink]="['/']" fragment="portfolio">
               <span class="invert">{{ translationService.t("projects") }}</span>
               <img
                 class="projects-image"
@@ -43,7 +43,7 @@
             </a>
           </li>
           <li>
-            <a class="contact" href="#contact">
+            <a class="contact" [routerLink]="['/']" fragment="contact">
               <span class="invert">{{ translationService.t("contact") }}</span>
               <img
                 class="contact-image"
@@ -142,21 +142,22 @@
         <nav class="overlay-nav">
           <ul>
             <li>
-              <a class="about" href="#about-me" (click)="closeMenuWithDelay()">
+              <a class="about" [routerLink]="['/']" fragment="about-me" (click)="closeMenuWithDelay()">
                 <span class="invert">{{
                   translationService.t("about_me")
                 }}</span>
               </a>
             </li>
             <li>
-              <a class="skills" href="#skills" (click)="closeMenuWithDelay()">
+              <a class="skills" [routerLink]="['/']" fragment="skills" (click)="closeMenuWithDelay()">
                 <span class="invert">{{ translationService.t("skills") }}</span>
               </a>
             </li>
             <li>
               <a
                 class="projects"
-                href="#portfolio"
+                [routerLink]="['/']"
+                fragment="portfolio"
                 (click)="closeMenuWithDelay()"
               >
                 <span class="invert">{{
@@ -165,7 +166,7 @@
               </a>
             </li>
             <li>
-              <a class="contact" href="#contact" (click)="closeMenuWithDelay()">
+              <a class="contact" [routerLink]="['/']" fragment="contact" (click)="closeMenuWithDelay()">
                 <span class="invert">{{
                   translationService.t("contact")
                 }}</span>
