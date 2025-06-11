@@ -1,63 +1,91 @@
 .impressum {
   max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  margin-top: 50px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #fdfdfd;
-  color: #333;
+  width: 90%;
+  margin: 150px auto 3rem auto;
+  padding: 2.5rem;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #2e2e2e;
+  line-height: 1.8;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
 
   h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #2c3e50;
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
     text-align: center;
+    color: #1a1a1a;
   }
 
   section {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 
     h2 {
-      font-size: 1.6rem;
-      color: #1a5276;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.2rem;
+      font-size: 1.75rem;
+      color: #0a66c2;
+      margin-bottom: 0.75rem;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 0.3rem;
     }
 
     h3 {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      color: #2e86c1;
+      font-size: 1.25rem;
+      margin-top: 1.25rem;
+      color: #1c6dd0;
     }
 
     p {
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
+      font-size: 1.05rem;
+      letter-spacing: 0.01rem;
     }
 
     a {
-      color: #2980b9;
+      color: #0a66c2;
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
 
       &:hover {
+        color: #084b99;
         text-decoration: underline;
       }
     }
   }
 
   footer {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     text-align: center;
-    margin-top: 3rem;
-    color: #777;
+    margin-top: 4rem;
+    color: #888;
 
     a {
-      color: #777;
+      color: #888;
+      font-weight: 500;
 
       &:hover {
         color: #000;
       }
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 1.5rem;
+    h1 {
+      font-size: 2rem;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+    }
+
+    section h3 {
+      font-size: 1.1rem;
+    }
+
+    section p {
+      font-size: 1rem;
     }
   }
 }

@@ -3,21 +3,22 @@ import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { TranslationService, SupportedLanguage } from '../../shared/services/translation.service';
 import { filter } from 'rxjs/operators';
-import { RouterModule } from '@angular/router'; // Add this import
+import { RouterModule } from '@angular/router'; 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterModule], // Add RouterModule here
+  imports: [CommonModule, RouterModule], 
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
   // Aktuelle Sprache
   currentLanguage: SupportedLanguage = 'en';
-  isProjectPage = false;
-  isMenuOpen = false;
-  
+  isProjectPage: boolean = false;
+  isMenuOpen: boolean = false;
+  isImprint: boolean = false;
+
   constructor(
     public translationService: TranslationService,
     private router: Router
@@ -43,6 +44,7 @@ export class HeaderComponent implements OnInit {
   // Überprüft, ob wir auf einer Projektseite sind
   private checkCurrentRoute(url: string): void {
     this.isProjectPage = url.includes('/projects/');
+    this.isImprint = url.includes('/imprint');
   }
   
   // Methode zum Wechseln der Sprache
