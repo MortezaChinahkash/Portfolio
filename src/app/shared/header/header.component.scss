@@ -9,10 +9,10 @@ header {
 
 header.project-header {
   background-position: left top;
-  background-size: 100%; 
+  background-size: 100%;
   background-repeat: no-repeat;
   background-origin: border-box;
-  background-image: url('/assets/png/Design material/01_Background/Img Original Size/Note book paper.png');
+  background-image: url("/assets/png/Design material/01_Background/Img Original Size/Note book paper.png");
 }
 
 .max-content {
@@ -106,11 +106,11 @@ header.project-header {
         position: relative;
         display: inline-block;
         padding: 10px;
-        
+
         span {
           mix-blend-mode: difference;
         }
-        
+
         img {
           position: absolute;
           transition: clip-path 0.3s ease-out;
@@ -256,7 +256,7 @@ header.project-header {
   margin-top: 50px;
 }
 
-.overlay-nav{
+.overlay-nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -271,7 +271,7 @@ header.project-header {
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  background: rgba(0,0,0,0.15);
+  background: rgba(0, 0, 0, 0.15);
   transition: background 0.3s;
 }
 
@@ -305,7 +305,8 @@ header.project-header {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('/assets/png/Design material/01_Background/Img Original Size/12 Isolated Paper Rips copia.png') no-repeat center center/cover;
+  background: url("/assets/png/Design material/01_Background/Img Original Size/12 Isolated Paper Rips copia.png")
+    no-repeat center center/cover;
   z-index: 2000;
   animation: fadeIn 0.2s;
   padding: 20px;
@@ -381,14 +382,14 @@ header.project-header {
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      color: white; 
+      color: white;
       font-weight: bold;
       font-size: 14px;
       background-size: cover;
 
       &.active {
         color: #24dd80;
-        background-image: url('/assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/Toggle.png');
+        background-image: url("/assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/Toggle.png");
       }
     }
   }
@@ -434,40 +435,44 @@ header.project-header {
   }
 }
 @media (max-width: 1024px) {
-  header.project-header {
-    background-image: url('/assets/png/Design material/01_Background/Img Original Size/Note book paper small.png');
-  
-    .max-content {
-    width: 100%;
-    padding: 0 20px;
-    margin: 0;
-    margin-top: 10px;
-  }
-  header.project-header {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0));
-}
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-    
-    .language-toggle {
+  .header-content {
+    nav {
       display: none;
     }
+  }
 
-    .initials {
-      margin-bottom: 10px;
+  header.project-header {
+    background-image: url("/assets/png/Design material/01_Background/Img Original Size/Note book paper small.png");
+
+    .max-content {
+      width: 100%;
+      padding: 0 20px;
+      margin: 0;
+      margin-top: 10px;
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .language-toggle {
+          display: none;
+        }
+
+        .initials {
+          margin-bottom: 10px;
+        }
+      }
+
+      .burger-menu {
+        display: block;
+        z-index: 1100;
+      }
     }
   }
-
-  .burger-menu {
-    display: block;
-    z-index: 1100;
-  }
-
-  }
 }
+
 @media (max-width: 768px) {
   .max-content {
     width: 100%;
@@ -476,18 +481,22 @@ header.project-header {
     margin-top: 10px;
   }
   header.project-header {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0));
-}
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.555),
+      rgba(0, 0, 0, 0)
+    );
+  }
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     nav {
       display: none;
     }
-    
+
     .language-toggle {
       display: none;
     }
@@ -504,7 +513,6 @@ header.project-header {
 }
 
 @media (min-width: 769px) {
-  
   .language-toggle-overlay {
     display: none;
   }
