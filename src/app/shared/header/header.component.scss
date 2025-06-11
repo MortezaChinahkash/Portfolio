@@ -433,7 +433,41 @@ header.project-header {
     opacity: 1;
   }
 }
+@media (max-width: 1024px) {
+  header.project-header {
+    background-image: url('/assets/png/Design material/01_Background/Img Original Size/Note book paper small.png');
+  
+    .max-content {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0;
+    margin-top: 10px;
+  }
+  header.project-header {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0));
+}
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    
+    .language-toggle {
+      display: none;
+    }
+
+    .initials {
+      margin-bottom: 10px;
+    }
+  }
+
+  .burger-menu {
+    display: block;
+    z-index: 1100;
+  }
+
+  }
+}
 @media (max-width: 768px) {
   .max-content {
     width: 100%;
@@ -470,9 +504,6 @@ header.project-header {
 }
 
 @media (min-width: 769px) {
-  .overlay-nav {
-    display: none;
-  }
   
   .language-toggle-overlay {
     display: none;
