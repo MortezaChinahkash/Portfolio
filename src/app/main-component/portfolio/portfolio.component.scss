@@ -108,16 +108,18 @@ img.screen {
   transition: all 0.4s ease;
 }
 .project-details-btn a {
-  display: block;
-  padding: 12px 24px;
-  background-color: #000000;
-  color: #ffffff;
+  margin-top: 50px;
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: transparent;
+  color: white;
   font-weight: 600;
-  text-decoration: none;
-  border-radius: 40px;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  border: 2px solid white;
+  border-radius: 25px;
+  box-shadow: 2px 2px 0px 1px #ffffff;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.2rem;
 }
 .project-details-btn a:hover {
   background-color: #1E90FF;
