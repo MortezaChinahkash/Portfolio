@@ -20,7 +20,7 @@ footer {
 
     a{
       width: max-content;
-      cursor: pointer;
+      cursor: url("/assets/hand-pointer.png"), auto;
     }
   }
 
@@ -33,7 +33,7 @@ footer {
     img {
       width: clamp(40px, 5vw, 60px);
       height: clamp(40px, 5vw, 60px);
-      cursor: pointer;
+      cursor: url("/assets/hand-pointer.png"), auto;
     }
 
     p {
