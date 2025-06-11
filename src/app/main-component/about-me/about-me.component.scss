@@ -208,13 +208,12 @@ section {
   .paper-content {
     justify-content: center;
     align-items: center;
-    gap: 8px;
     padding: 40px 10px;
-    width: 100%;
+    width: 80%;
     
     span {
       text-align: center;
-      font-size: clamp(10px, 3vw, 16px);
+      font-size: clamp(13px, 3vw, 18px);
       white-space: nowrap;
     }
   }
