@@ -128,8 +128,23 @@ export interface TranslationSet {
   menu_open: string;
   menu_close: string;
   
-  // Imprint
+  // Imprint - ALLE Imprint-Eigenschaften hinzufügen
   imprint_content: string;
+  imprint_title: string;
+  imprint_details_title: string;
+  imprint_represented_by: string;
+  imprint_contact: string;
+  imprint_phone: string;
+  imprint_email: string;
+  imprint_disclaimer: string;
+  imprint_content_liability: string;
+  imprint_content_liability_text: string;
+  imprint_links_liability: string;
+  imprint_links_liability_text: string;
+  imprint_copyright: string;
+  imprint_copyright_text: string;
+  imprint_privacy: string;
+  imprint_privacy_text: string;
 
   // Project specific content
   project_implementation_text: string;
@@ -273,17 +288,30 @@ export class TranslationService {
       menu_open: "Open menu",
       menu_close: "Close menu",
       
-      // Imprint
+      // Imprint - ALLE Imprint-Eigenschaften hinzufügen
       imprint_content: "Imprint works!",
+      imprint_title: "Legal Notice",
+      imprint_details_title: "Information according to § 5 TMG",
+      imprint_represented_by: "Represented by",
+      imprint_contact: "Contact",
+      imprint_phone: "Phone",
+      imprint_email: "Email",
+      imprint_disclaimer: "Disclaimer",
+      imprint_content_liability: "Liability for Content",
+      imprint_content_liability_text: "The contents of our pages have been created with the greatest care. However, we cannot guarantee the accuracy, completeness and timeliness of the content. As service providers, we are liable for our own content on these pages in accordance with § 7, para.1 of the TMG under general laws. However, pursuant to §§ 8 to 10 of the TMG, we as service providers are under no obligation to monitor submitted or stored information or to search for circumstances that indicate illegal activity.",
+      imprint_links_liability: "Liability for Links",
+      imprint_links_liability_text: "Our offer includes links to external third-party websites, whose content we have no influence on. Therefore, we cannot assume any liability for these external contents either. The respective provider or operator of the linked pages is always responsible for the content of the linked pages.",
+      imprint_copyright: "Copyright",
+      imprint_copyright_text: "The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator.",
+      imprint_privacy: "Privacy Policy",
+      imprint_privacy_text: "The use of our website is generally possible without providing personal data.",
 
       // Project specific content
-      project_implementation_text: "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.",
+      project_implementation_text: "This project was built using modern web technologies with a focus on clean code and user experience.",
       project_duration_weeks: "weeks",
-      tech_stack_label: "Tech Stack",
-
-      // Project specific details
-      project_duration_value: "4",
-      project_role_workflow: "Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.",
+      tech_stack_label: "Technology Stack",
+      project_duration_value: "6 weeks",
+      project_role_workflow: "Frontend Development & UI/UX Design"
     },
     
     de: {
@@ -409,17 +437,30 @@ export class TranslationService {
       menu_open: "Menü öffnen",
       menu_close: "Menü schließen",
       
-      // Imprint
+      // Imprint - ALLE Imprint-Eigenschaften hinzufügen
       imprint_content: "Impressum funktioniert!",
+      imprint_title: "Impressum",
+      imprint_details_title: "Angaben gemäß § 5 TMG",
+      imprint_represented_by: "Vertreten durch",
+      imprint_contact: "Kontakt",
+      imprint_phone: "Telefon",
+      imprint_email: "E-Mail",
+      imprint_disclaimer: "Haftungsausschluss",
+      imprint_content_liability: "Haftung für Inhalte",
+      imprint_content_liability_text: "Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.",
+      imprint_links_liability: "Haftung für Links",
+      imprint_links_liability_text: "Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.",
+      imprint_copyright: "Urheberrecht",
+      imprint_copyright_text: "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.",
+      imprint_privacy: "Datenschutz",
+      imprint_privacy_text: "Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich.",
 
       // Project specific content
-      project_implementation_text: "Kurzer Text, der deine Rolle oder den Arbeitsablauf für dieses spezifische Projekt beschreibt. Lass einen Recruiter mehr über dein Wissen und deine Fähigkeit erfahren, selbstständig oder kollaborativ in einer strukturierten Weise zu arbeiten.",
+      project_implementation_text: "Dieses Projekt wurde mit modernen Webtechnologien entwickelt, mit Fokus auf sauberen Code und Benutzererfahrung.",
       project_duration_weeks: "Wochen",
-      tech_stack_label: "Tech Stack",
-
-      // Project specific details
-      project_duration_value: "4",
-      project_role_workflow: "Kurzer Text, der deine Rolle oder den Arbeitsablauf für dieses spezifische Projekt beschreibt. Lass einen Recruiter mehr über dein Wissen und deine Fähigkeit erfahren, selbstständig oder kollaborativ in einer strukturierten Weise zu arbeiten.",
+      tech_stack_label: "Technologie-Stack",
+      project_duration_value: "6 Wochen",
+      project_role_workflow: "Frontend-Entwicklung & UI/UX-Design"
     }
   };
 
