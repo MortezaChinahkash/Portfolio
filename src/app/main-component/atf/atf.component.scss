@@ -125,6 +125,11 @@
   transition: color 0.5s;
   color: #fff;
   cursor: pointer;
+  // Feste Breite für jeden Buchstaben basierend auf dem größeren Zeichen
+  width: 1ch;
+  text-align: center;
+  // Verhindert Layout-Shift bei Groß-/Kleinschreibung
+  font-variant-numeric: tabular-nums;
 }
 
 .responsive-title span:hover {
