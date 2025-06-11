@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
-import { TranslationService } from '../services/translation.service';
-import { RouterModule } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Router, NavigationEnd } from '@angular/router';
+import { TranslationService, SupportedLanguage } from '../../shared/services/translation.service';
+import { filter } from 'rxjs/operators';
+import { RouterModule } from '@angular/router'; 
 
 @Component({
   selector: 'app-footer',
@@ -10,5 +13,59 @@ import { RouterModule } from '@angular/router';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  constructor(public translationService: TranslationService) {}
+  currentLanguage: SupportedLanguage = 'en';
+  isMenuOpen: boolean = false;
+  isImprint: boolean = false;
+
+constructor(
+    public translationService: TranslationService,
+    private router: Router
+  ) {}
+  
+  ngOnInit(): void {
+    // Sprache aus dem Service übernehmen
+    this.translationService.currentLang$.subscribe(lang => {
+      this.currentLanguage = lang;
+    });
+    
+    // Überprüfen der aktuellen Route
+    this.checkCurrentRoute(this.router.url);
+    
+    // Auf Routenänderungen hören
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.checkCurrentRoute(event.url);
+    });
+  }
+  
+  // Überprüft, ob wir auf einer Projektseite sind
+  private checkCurrentRoute(url: string): void {
+    this.isImprint = url.includes('/imprint');
+  }
+  
+  // Methode zum Wechseln der Sprache
+  toggleLanguage(code: SupportedLanguage): void {
+    if (this.currentLanguage !== code) {
+      this.translationService.setLanguage(code);
+    }
+  }
+  
+  // Toggle-Methode für den Switch
+  switchLanguage(): void {
+    const newLang = this.currentLanguage === 'en' ? 'de' : 'en';
+    this.toggleLanguage(newLang);
+  }
+  
+  // Hilfsmethode für das Template
+  getText(key: keyof TranslationService['translations']['en']): string {
+    return this.translationService.t(key);
+  }
+
+  // Menü mit Verzögerung schließen
+  closeMenuWithDelay(): void {
+    setTimeout(() => {
+      this.isMenuOpen = false;
+    }, 100);
+  }
 }
