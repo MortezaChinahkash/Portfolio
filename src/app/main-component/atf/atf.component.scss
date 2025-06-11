@@ -125,9 +125,7 @@
   transition: color 0.5s;
   color: #fff;
   cursor: pointer;
-  // Feste Breite für jeden Buchstaben basierend auf dem größeren Zeichen
   text-align: center;
-  // Verhindert Layout-Shift bei Groß-/Kleinschreibung
 }
 
 .responsive-title span:hover {
@@ -137,9 +135,9 @@
 .hero-pic {
   position: relative;
   margin-top: -150px;
-  margin-bottom: 0;
-  max-width: clamp(80px, 15vw, 150px);
-  width: clamp(60px, 12vw, 150px);
+  margin-bottom: 30px;
+  max-width: clamp(120px, 20vw, 250px);
+  width: clamp(80px, 18vw, 220px);
   height: auto;
   object-fit: cover;
   margin-left: clamp(1vw, 3vw, 5vw);
@@ -214,31 +212,14 @@
 .hero-pic-mobile{
   display: block;
   transform: rotate(10deg);
-  width: 150px;
+  width: 200px;
   height: auto;
 }
 }
 
 @media (max-width: 767px) {
-
-#atf{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
 .hero{
   align-items: flex-start;
-}
-.max-content{
-  margin:0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 .hero-socials{
   display: none;
@@ -248,26 +229,54 @@ display: none;
 }
 .atf-content{
     position: static;
-    padding: 0 20px;
-    
+    margin-top: -50px;
 }
-
+.max-content{
+  padding: 0;
+  margin-top: 150px;
+}
 .atf-content{
   gap: 20px;
   width: 100%;
 
 }
-
+.hero-row {
+  align-self: flex-start;
+  position: static;
+  width: 100%;
 }
-h1 {
-  span {
-    display: block;
-    width: 10vw;
-    font-size: clamp(3.5rem, 5vw, 6rem);
-    line-height: 1;
+.spacer{
+  flex: 0;
+  display: none;
+}
+.hero-row--bottom{
+  display: flex;
+  justify-content: flex-end;
+  .atf-btn{
+    height: 45px;
+    width: max-content;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .hello-btn{
+    height: 45px;
+    width: max-content;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
   }
 }
 .hero-row-space{
   margin: 0;
 }
-
+}
+@media (max-width: 400px) {
+ .hero-pic-mobile{
+  width: 50%;
+  height: auto;
+ }
+}
