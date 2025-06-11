@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { TranslationService, SupportedLanguage } from '../../shared/services/translation.service';
 import { filter } from 'rxjs/operators';
+import { RouterModule } from '@angular/router'; // Add this import
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule], // Add RouterModule here
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
