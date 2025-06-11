@@ -204,39 +204,31 @@
   align-self: flex-end;
 
   .btn {
-    padding: 14px 32px;
-    border-radius: 25px;
-    text-decoration: none;
+    margin-top: 50px;
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: transparent;
+    color: white;
     font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border: 2px solid white;
+    border-radius: 25px;
+    box-shadow: 2px 2px 0px 1px #ffffff;
+    background-color: #00000069;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1.2rem;
 
-    &.github-btn {
-      background-color: transparent;
-      color: white;
-      border: 2px solid #666;
-
-      &:hover {
-        background-color: #666;
-        border-color: #666;
-      }
-    }
-
-    &.live-btn {
-      background-color: #00d4aa;
-      color: white;
-      border: 2px solid #00d4aa;
-
-      &:hover {
-        background-color: #00b894;
-        border-color: #00b894;
-      }
+    &:hover {
+      background: #24dd80;
+      color: black;
+      box-shadow: none;
+      transform: translateY(2px);
     }
   }
 }
 
 .next-project-link {
+  margin-top: 40px;
   padding-top: 30px; // Add top padding
   display: flex;
   align-self: flex-end;
@@ -509,25 +501,6 @@
     align-self: center;
     gap: 15px;
     margin-bottom: 30px; // Reduce margin since next-project-link follows
-
-    .btn {
-      padding: 12px 24px;
-      font-size: 14px;
-      font-weight: 600;
-      min-width: 120px;
-      text-align: center;
-
-      &.github-btn {
-        background-color: transparent;
-        color: white;
-        border: 2px solid #666;
-      }
-
-      &.live-btn {
-        background-color: #00d4aa;
-        color: white;
-        border: 2px solid #00d4aa;
-      }
     }
   }
 
@@ -541,7 +514,7 @@
       font-weight: 600;
     }
   }
-}
+
 
 // Additional breakpoint for very small screens
 @media (max-width: 480px) {
@@ -554,11 +527,11 @@
   }
 
   .action-buttons {
-    flex-direction: column;
     align-items: center;
 
     .btn {
-      width: 200px;
+      width: auto;
+      font-size: 12px;
     }
   }
 }
