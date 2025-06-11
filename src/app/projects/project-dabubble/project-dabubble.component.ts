@@ -1,35 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { TranslationService } from '../../shared/services/translation.service';
-import { ProjectNavigationService } from '../../shared/services/project-navigation.service';
 import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
+import { TranslationService } from '../../shared/services/translation.service';
+import { ProjectService } from '../../shared/services/project.service';
+import { ProjectNavigationService } from '../../shared/services/project-navigation.service';
+import { PortfolioItem } from '../../shared/models/portfolio-item.model';
 
 @Component({
   selector: 'app-project-dabubble',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './project-dabubble.component.html',
   styleUrl: './../projects.component.scss',
 })
 export class ProjectDabubbleComponent implements OnInit {
-  project: any;
+  project: PortfolioItem | undefined;
 
   constructor(
     public translationService: TranslationService,
-    private router: Router,
-    private projectNavigation: ProjectNavigationService
+    private projectService: ProjectService,
+    private projectNavigation: ProjectNavigationService,
+    private router: Router
   ) {}
 
-  ngOnInit(): void {
-    this.loadProject();
+  ngOnInit() {
+    this.project = this.projectService.getProjectByCompId('dabubble');
   }
 
-  navigateToNextProject(): void {
+  navigateToNextProject() {
     const nextProject = this.projectNavigation.getNextProject('dabubble');
-    this.router.navigate(['/project', nextProject]);
-  }
-
-  loadProject(): void {
-    // Dein bestehender Code...
+    this.router.navigate(['/projects', nextProject]); // Entferne 's' von 'projects'
   }
 }
