@@ -444,15 +444,16 @@ header.imprint-header {
 }
 @media (max-width: 1024px) {
 
-  .header-content {
-    nav {
-      display: none;
-    }
-  }
+  
 
   header.project-header {
     background-image: url("/assets/png/Design material/01_Background/Img Original Size/Note book paper small.png");
 
+    .header-content {
+    nav {
+      display: none;
+    }
+    }
     .max-content {
       width: 100%;
       padding: 0 20px;
