@@ -397,31 +397,20 @@
   }
 
   .back-link {
-    padding-top: 120px; // Space for header
-    padding-left: 0;
-    margin-bottom: 30px;
-
-    a {
-      font-size: 14px;
-      font-weight: 600;
-
-      img {
-        width: 20px;
-        height: 20px;
-      }
-    }
+    display: none;
   }
 
   .project-detail-wrapper {
     flex-direction: column;
     gap: 40px;
-    align-items: stretch;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   .left-section {
     width: 100%;
     padding: 0;
-    order: 1; // Text content comes first
+    order: 1; 
   }
 
   .content-wrapper {
