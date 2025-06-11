@@ -12,7 +12,9 @@
     padding: 0 clamp(20px, 3vw, 36px);
     z-index: 2;
   }
-
+  .linkedIn-icon{
+    filter: invert(1);
+  }
   .arrow{
     width: 150px;
     margin-right: 20px;
@@ -223,11 +225,17 @@
 .comment-image{
   display: flex;
   align-items: center;
+  cursor: url("/assets/hand-pointer.png"), auto;
   p{
     margin-left: 8px;
     font-weight: 600;
     font-size: clamp(14px, 1.6vw, 18px);
+    cursor: url("/assets/hand-pointer.png"), auto;
   }
+  img{
+    cursor: url("/assets/hand-pointer.png"), auto;
+  }
+
 
 }
 

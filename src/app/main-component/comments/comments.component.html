@@ -20,10 +20,12 @@
                 <h2 class="comment-name">{{ comment.name }}</h2>
                 <p class="comment-role">{{ comment.role }}</p>
               </div>
+              <a href="https://example.com/linkedIn" target="_blank" rel="noopener noreferrer">
               <div class="comment-image">
-                <img [src]="comment.linkedIn" alt="{{ comment.name }}" />
+                <img class="linkedIn-icon" src="/assets/png/icons/LinkedIn.png" alt="" />
                 <p>{{ translationService.t('profile') }}</p>
               </div>
+              </a>
             </div>
           </div>
         </div>
