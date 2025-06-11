@@ -142,19 +142,42 @@ $accent: #1073EA;
     align-items: flex-start;
     gap: 10px;
     margin-top: clamp(10px, 1.5vw, 20px);
+    position: relative;
 
     .privacy-checkbox,
     input[type="checkbox"] {
       width: 20px;
       height: 20px;
-      accent-color: $accent;
+      opacity: 0;
       cursor: pointer;
       margin-top: 3px;
+      position: absolute;
+      z-index: 2;
+    }
+
+    // Custom checkbox container
+    .custom-checkbox {
+      width: 20px;
+      height: 20px;
+      background-image: url("/assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/Toggle.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      margin-top: 3px;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    // Checkmark when checked
+    input[type="checkbox"]:checked + .custom-checkbox {
+      background-image: url("/assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/Check.png");
     }
 
     label {
       font-size: clamp(12px, 1vw, 14px);
       line-height: 1.5;
+      cursor: pointer;
     }
 
     .privacy {
