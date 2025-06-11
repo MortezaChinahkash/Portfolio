@@ -206,7 +206,8 @@
   position: relative;
   margin-bottom: 40px;
   display: flex;
-  align-self: center; // Change from flex-end to center
+  align-self: flex-end;
+  margin-right: 50px; // Change from flex-end to center
 
   .project-image {
     max-width: 500px;
@@ -221,6 +222,7 @@
   display: flex;
   gap: 20px;
   align-self: flex-end;
+  margin-right: 50px;
 
   .btn {
     margin-top: 50px;
@@ -247,33 +249,44 @@
 }
 
 .next-project-link {
-  margin-top: 40px;
-  padding-top: 30px; // Add top padding
+  margin-top: 200px;
+  padding-top: 30px;
   display: flex;
   align-self: flex-end;
 
   a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     display: flex;
     align-items: center;
     gap: 10px;
     transition: all 0.3s ease;
 
-    .arrow {
-      font-size: 22px;
-      transition: transform 0.3s ease;
+    img {
+      width: 50px;
+      transition: transform 0.6s ease-in-out;
+      animation: none;
     }
 
     &:hover {
       color: #00d4aa;
 
-      .arrow {
-        transform: translateX(5px);
+      img {
+        animation: arrowBounceRight 1s ease-in-out infinite;
       }
     }
+  }
+}
+
+@keyframes arrowBounceRight {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
   }
 }
 
