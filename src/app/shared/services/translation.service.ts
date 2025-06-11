@@ -183,8 +183,8 @@ export class TranslationService {
       about_me_text1: "Hi, I'm Morteza. I'm passionate about coding because I love solving real-world problems and turning ideas into working solutions. I'm constantly inspired by how fast technology evolves, and I'm always pushing myself to learn and improve.",
       about_me_text2: "Let's collaborate and build something remarkable together!",
       based_in: 'Based in Hamburg',
-      remote_work: 'Open to work Remote',
-      learning: 'Open to learn new Things',
+      remote_work: 'Open to work remote',
+      learning: 'Open to learn new things',
       
       // Skills
       my_stack: 'MY STACK',
@@ -333,7 +333,7 @@ imprint_privacy_text: "The use of our website is generally possible without prov
       about_me_text2: "Lass uns zusammenarbeiten und etwas Bemerkenswertes gemeinsam aufbauen!",
       based_in: 'Wohnhaft in Hamburg',
       remote_work: 'Offen für Remote-Arbeit',
-      learning: 'Offen für Neues',
+      learning: 'Offen um neues zu lernen',
       
       // Skills
       my_stack: 'MEINE TECHNOLOGIEN',

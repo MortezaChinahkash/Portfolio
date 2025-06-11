@@ -68,20 +68,24 @@ section {
 
 .paper-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   max-width: 300px;
   width: 100%;
   padding: 40px 10px;
+  gap: 10px;
 
   img {
     width: clamp(30px, 5vw, 50px);
     height: auto;
+    flex-shrink: 0;
   }
   
   span {
-    text-align: right;
-    font-size: clamp(14px, 5vw, 22px);
+    text-align: center;
+    font-size: clamp(12px, 3vw, 18px);
+    white-space: nowrap;
+    flex: 1;
   }
 }
 
@@ -204,12 +208,14 @@ section {
   .paper-content {
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     padding: 40px 10px;
     width: 100%;
-    span{
-      text-align: start;
-      font-size: clamp(16px, 5vw, 20px);
+    
+    span {
+      text-align: center;
+      font-size: clamp(10px, 3vw, 16px);
+      white-space: nowrap;
     }
   }
   .line {
