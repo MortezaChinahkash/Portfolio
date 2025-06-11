@@ -39,17 +39,20 @@
   display: flex;
   align-items: center;
   width: 80%;
-  margin: 0;
 }
 
 .hero-row--top,
 .hero-row--bottom {
   position: relative;
 }
+.rt-top{
+  margin-bottom: 25px;
+}
 
 .hero-row-space {
   justify-content: space-between;
-
+  align-items: center;
+  height: 86px;
   position: relative;
 }
 
@@ -72,7 +75,7 @@
   transition: background 0.5s, color 0.5s;
   font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 25px;
 }
 
 .hello-btn .normal-text { transition: opacity 0.3s; }
@@ -133,19 +136,16 @@
 }
 
 .hero-pic {
-  position: relative;
-  margin-top: -150px;
-  margin-bottom: 30px;
-  max-width: clamp(120px, 20vw, 250px);
-  width: clamp(80px, 18vw, 220px);
-  height: auto;
+  align-self: flex-end;
+  margin-bottom: 25px;
+  margin-right: 50px;
+  max-width: 200px;
+  width: 30%;
   object-fit: cover;
-  margin-left: clamp(1vw, 3vw, 5vw);
   transform: rotate(10deg);
 }
-
 .atf-btn {
-  margin-top: 50px;
+  margin-top: 25px;
   display: inline-block;
   padding: 0.75rem 2rem;
   background-color: transparent;
@@ -219,6 +219,15 @@
 }
 
 @media (max-width: 767px) {
+  .rt-top{
+    margin-bottom: 0;
+  }
+  .atf-btn{
+    margin: 0;
+  }
+  .hello-btn{
+    margin: 0;
+  }
   .responsive-title {
     font-size: 16.8vw; // Responsive Schriftgröße
     text-align: center; // Zentriert den Text
@@ -241,16 +250,20 @@ display: none;
 .max-content{
   padding: 0;
   margin-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .atf-content{
-  gap: 20px;
   width: 100%;
+  margin-top: 25px;
 
 }
 .hero-row {
   align-self: flex-start;
   position: static;
   width: 100%;
+  margin: 0;
 }
 .spacer{
   flex: 0;
@@ -275,11 +288,10 @@ display: none;
     display: flex;
     justify-content: center;
     align-items: center; 
+    margin-bottom: 20px;
   }
 }
-.hero-row-space{
-  margin: 0;
-}
+
 }
 @media (max-width: 400px) {
   .responsive-title {
