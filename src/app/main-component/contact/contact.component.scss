@@ -13,12 +13,14 @@ $accent: #1073EA;
   min-height: 100vh;
   color: white;
 }
-
+ form{
+  margin-top: 40px;
+ }
 .contact-logo{
   width: clamp(150px, 10vw, 250px);
   align-self: flex-end;
   transform: rotate(-20deg);
-  padding-bottom: 20px;
+  animation: slowRotate 60s linear infinite;
 }
 
 .contact-logo-mobile{
@@ -238,6 +240,15 @@ $accent: #1073EA;
   }
 }
 
+@keyframes slowRotate {
+  from {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(340deg);
+  }
+}
+
 .privacy-link {
   color: #1073ea;
   text-decoration: underline;
@@ -257,7 +268,9 @@ $accent: #1073EA;
     align-self: flex-end;
     transform: rotate(-20deg);
     margin-bottom: -80px;
+    animation: slowRotate 20s linear infinite;
   }
+  
   h3{
     align-self: flex-start;
   }
