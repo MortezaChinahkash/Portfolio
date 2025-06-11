@@ -40,15 +40,41 @@ export class SkillsComponent {
   startY       = 0;
   readonly threshold = 100;                         
   currentState: 'default' | 'transition' | 'final' = 'default';
+  isMobile: boolean = false;
 
-  onMouseDown(ev: MouseEvent) {
-    if (this.currentState === 'final') return;      
-    this.isDragging   = true;
-    this.startY       = ev.clientY;
-    this.currentState = 'transition';
+  ngOnInit() {
+    this.checkIfMobile();
+    window.addEventListener('resize', () => this.checkIfMobile());
+  }
 
-    window.addEventListener('mousemove', this.boundMove);
-    window.addEventListener('mouseup',   this.boundUp);
+  checkIfMobile() {
+    this.isMobile = window.innerWidth <= 768;
+  }
+
+  onMobileClick(event: MouseEvent) {
+    if (this.isMobile) {
+      event.preventDefault();
+      if (this.currentState === 'default') {
+        this.currentState = 'transition';
+        setTimeout(() => {
+          this.currentState = 'final';
+        }, 500);
+      } else if (this.currentState === 'final') {
+        this.currentState = 'default';
+      }
+    }
+  }
+
+  onMouseDown(event: MouseEvent) {
+    if (!this.isMobile) {
+      if (this.currentState === 'final') return;      
+      this.isDragging   = true;
+      this.startY       = event.clientY;
+      this.currentState = 'transition';
+
+      window.addEventListener('mousemove', this.boundMove);
+      window.addEventListener('mouseup',   this.boundUp);
+    }
   }
 
   onMouseMove(_: MouseEvent) {

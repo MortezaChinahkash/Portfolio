@@ -20,13 +20,15 @@
     </div>
     <div class="note-pull"
          [class.dragging]="isDragging"
+         [class.mobile]="isMobile"
          (mousedown)="onMouseDown($event)"
+         (click)="onMobileClick($event)"
          (dragstart)="onDragStart($event)">
 
       <div class="note note-default"
            [class.visible]="currentState === 'default'">
         @if (currentState !== 'final') {
-          <span class="peel-text">{{ translationService.t('pull_to_peel') }}</span>
+          <span class="peel-text">{{ isMobile ? translationService.t('click_to_peel') : translationService.t('pull_to_peel') }}</span>
           <img class="arrow" src="/assets/png/Design material/03_Stickers/Arrow.png" alt="">
         }
       </div>

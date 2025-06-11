@@ -112,6 +112,7 @@ export interface TranslationSet {
   
   // Skills Section
   pull_to_peel: string;
+  click_to_peel: string;
   currently_learning: string;
   
   // Form Labels
@@ -272,6 +273,7 @@ export class TranslationService {
       
       // Skills Section
       pull_to_peel: "Pull to peel",
+      click_to_peel: "Click to peel",
       currently_learning: "currently learning these Skills:",
       
       // Form Labels
@@ -421,6 +423,7 @@ imprint_privacy_text: "The use of our website is generally possible without prov
       
       // Skills Section
       pull_to_peel: "Ziehen zum Abziehen",
+      click_to_peel: "Klicken zum Abziehen",
       currently_learning: "lerne derzeit diese Fähigkeiten:",
       
       // Form Labels

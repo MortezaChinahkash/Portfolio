@@ -244,6 +244,25 @@
   }
 }
 @media (max-width: 768px) {
+  .note-pull {
+    cursor: pointer;
+
+    .peel-text {
+      font-size: clamp(0.4rem, 2vw, 1.3rem);
+      word-break: break-word;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      max-width: 90%;
+      line-height: 1.1;
+    }
+    &.mobile {
+      .note {
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  
+  
   .skill-icon {
     animation: skillReveal 12s ease-in-out infinite;
     animation-fill-mode: both;
