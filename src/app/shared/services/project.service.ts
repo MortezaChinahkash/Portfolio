@@ -101,6 +101,20 @@ export class ProjectService {
     // Debug-Ausgabe nach der Initialisierung
   }
 
+  // Neue Methode zum Abrufen des nächsten Projekts
+  getNextProject(currentCompId: string): PortfolioItem | undefined {
+    const currentIndex = this.projects.findIndex(p => p.compId === currentCompId);
+    if (currentIndex === -1) return undefined;
+    
+    const nextIndex = (currentIndex + 1) % this.projects.length;
+    return this.projects[nextIndex];
+  }
+
+  // Neue Methode zum Abrufen der Route für ein Projekt
+  getProjectRoute(compId: string): string {
+    return `/projects/project-${compId}`;
+  }
+
   // Debugging-Methode
   public debugProjects() {
     if (this.projects.length === 0) {

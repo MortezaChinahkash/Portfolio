@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class ProjectNavigationService {
   private projects = [
-    'dabubble',
-    'join', 
-    'pokedex'
+    'project-dabubble',
+    'project-join', 
+    'project-el-pollo-loco'
   ];
 
   getNextProject(currentProject: string): string {

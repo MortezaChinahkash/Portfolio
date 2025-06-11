@@ -28,7 +28,10 @@ export class ProjectDabubbleComponent implements OnInit {
   }
 
   navigateToNextProject() {
-    const nextProject = this.projectNavigation.getNextProject('dabubble');
-    this.router.navigate(['/projects', nextProject]); // Entferne 's' von 'projects'
+    const nextProject = this.projectService.getNextProject('dabubble');
+    if (nextProject) {
+      const route = this.projectService.getProjectRoute(nextProject.compId);
+      this.router.navigate([route]);
+    }
   }
 }
