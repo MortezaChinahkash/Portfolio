@@ -73,9 +73,10 @@
 .project-detail-wrapper {
   display: flex;
   justify-content: space-between;
-  flex: 1;
-  width: 100%;
-  align-items: center;
+  width: 100%;;
+  align-items: center; // Change from center to flex-start
+  height: auto; // Change from fit-content to auto
+  min-height: fit-content; // Add minimum height
 }
 
 .left-section {
@@ -196,15 +197,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  padding-right: 50px;
+  justify-content: flex-start; // Change from flex-end to flex-start
 }
 
 .project-image-container {
   position: relative;
   margin-bottom: 40px;
   display: flex;
-  align-self: flex-end;
+  align-self: center; // Change from flex-end to center
 
   .project-image {
     max-width: 500px;
