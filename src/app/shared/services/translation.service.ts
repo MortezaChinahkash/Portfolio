@@ -248,7 +248,7 @@ export class TranslationService {
       // Privacy Policy
       agree_privacy_start: 'I agree to the',
       privacy_policy: 'Privacy Policy',
-      agree_privacy_end: 'and',
+      agree_privacy_end: 'and agree to the processing of my personal data as outlined',
 
       // Projekt Details
       project_details: "Project details",
@@ -397,7 +397,7 @@ imprint_privacy_text: "The use of our website is generally possible without prov
       // Privacy Policy
       agree_privacy_start: 'Ich stimme der',
       privacy_policy: 'Datenschutzbestimmungen',
-      agree_privacy_end: 'und den',
+      agree_privacy_end: 'zu und stimme der Verarbeitung meiner personenbezogenen Daten wie beschrieben zu',
 
       // Projekt Details
       project_details: "Projektdetails",
