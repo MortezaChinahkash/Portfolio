@@ -80,7 +80,7 @@ header.imprint-header {
     }
   }
 
-  nav {
+  .navigation {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -450,7 +450,7 @@ header.imprint-header {
     background-image: url("/assets/png/Design material/01_Background/Img Original Size/Note book paper small.png");
 
     .header-content {
-    nav {
+    .navigation {
       display: none;
     }
     }

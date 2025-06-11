@@ -10,7 +10,7 @@
         />
       </a>
 
-      <nav>
+      <nav class="navigation">
         <ul>
           <li>
             <a class="about" href="#about-me">
@@ -139,31 +139,26 @@
           <nav class="overlay-nav">
             <ul>
               <li>
-                <a class="about" [routerLink]="['/']" fragment="about-me" (click)="closeMenuWithDelay()">
+                <a class="about" href="#about-me" (click)="closeMenuWithDelay()">
                   <span class="invert">{{
                     translationService.t("about_me")
                   }}</span>
                 </a>
               </li>
               <li>
-                <a class="skills" [routerLink]="['/']" fragment="skills" (click)="closeMenuWithDelay()">
+                <a class="skills" href="#skills" (click)="closeMenuWithDelay()">
                   <span class="invert">{{ translationService.t("skills") }}</span>
                 </a>
               </li>
               <li>
-                <a
-                  class="projects"
-                  [routerLink]="['/']"
-                  fragment="portfolio"
-                  (click)="closeMenuWithDelay()"
-                >
+                <a class="projects" href="#portfolio" (click)="closeMenuWithDelay()">
                   <span class="invert">{{
                     translationService.t("projects")
                   }}</span>
                 </a>
               </li>
               <li>
-                <a class="contact" [routerLink]="['/']" fragment="contact" (click)="closeMenuWithDelay()">
+                <a class="contact" href="#contact" (click)="closeMenuWithDelay()">
                   <span class="invert">{{
                     translationService.t("contact")
                   }}</span>
