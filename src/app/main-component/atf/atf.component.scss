@@ -248,6 +248,7 @@ display: none;
 }
 .atf-content{
     position: static;
+    padding: 0 20px;
     
 }
 
@@ -256,35 +257,7 @@ display: none;
   width: 100%;
 
 }
-.hero-row {
-  align-self: flex-start;
-  position: static;
-  width: 100%;
-}
-.spacer{
-  flex: 0;
-  display: none;
-}
-.hero-row--bottom{
-  display: flex;
-  justify-content: flex-end;
-  .atf-btn{
-    height: 45px;
-    width: max-content;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-  }
-  .hello-btn{
-    height: 45px;
-    width: max-content;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-  }
+
 }
 h1 {
   span {
@@ -297,4 +270,4 @@ h1 {
 .hero-row-space{
   margin: 0;
 }
-}
+
