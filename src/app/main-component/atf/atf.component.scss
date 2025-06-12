@@ -61,6 +61,7 @@
   flex-direction: column;
   align-items: flex-start;
   position: relative;
+  cursor: url("/assets/hand-pointer.png"), auto;
 }
 
 .hello-btn {
@@ -76,13 +77,15 @@
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 25px;
+  cursor: url("/assets/hand-pointer.png"), auto;
 }
 
-.hello-btn .normal-text { transition: opacity 0.3s; }
-.hello-btn .hover-text { display: none; white-space: nowrap; }
+.hello-btn .normal-text { transition: opacity 0.3s; cursor: url("/assets/hand-pointer.png"), auto; }
+.hello-btn .hover-text { display: none; white-space: nowrap; cursor: url("/assets/hand-pointer.png"), auto; }
 .hello-btn:hover {
   background: #1073ea;
   color: black;
+  cursor: url("/assets/hand-pointer.png"), auto;
 }
 .hello-btn:hover .normal-text { display: none; }
 .hello-btn:hover .hover-text { display: inline; }
@@ -127,7 +130,7 @@
   display: inline-block;
   transition: color 0.5s;
   color: #fff;
-  cursor: pointer;
+  cursor: url("/assets/hand-pointer.png"), auto;
   text-align: center;
 }
 
@@ -157,6 +160,7 @@
   cursor: pointer;
   transition: all 0.2s;
   font-size: 1.2rem;
+  cursor: url("/assets/hand-pointer.png"), auto;
 }
 
 .atf-btn:hover {
@@ -164,6 +168,7 @@
   color: black;
   box-shadow: none;
   transform: translateY(2px);
+  cursor: url("/assets/hand-pointer.png"), auto;
 }
 
 .hero-socials {
@@ -185,6 +190,7 @@
   height: 48px;
   background: rgba(0,0,0,0.15);
   transition: background 0.3s;
+  cursor: url("/assets/hand-pointer.png"), auto;
 }
 
 .social-circle:hover {
@@ -195,6 +201,7 @@
   width: 26px;
   height: 26px;
   object-fit: contain;
+  cursor: url("/assets/hand-pointer.png"), auto;
 }
 .hero-pic-mobile{
   display: none;
