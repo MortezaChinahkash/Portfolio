@@ -2,7 +2,6 @@
   <section class="project-page">
     <div class="max-content">
       @if (project) {
-      <!-- Back link at top of max-content -->
       <div class="back-link">
         <a href="#atf">
           <img
@@ -13,7 +12,6 @@
           {{ translationService.t("go_back") }}
         </a>
       </div>
-
       <div class="project-detail-wrapper">
         <div class="left-section">
           <div class="content-wrapper">
@@ -25,22 +23,18 @@
                 alt=""
               />
             </div>
-
             <div class="section-block">
               <h2>{{ translationService.t("description") }}</h2>
               <p>{{ translationService.t("join_description") }}</p>
             </div>
-
             <div class="section-block">
               <h2>{{ translationService.t("implementation_details") }}</h2>
               <p>{{ translationService.t("project_role_workflow") }}</p>
             </div>
-
             <div class="duration-info">
               <strong>{{ translationService.t("duration") }}:</strong>
               {{ translationService.t("project_duration_value") }}
             </div>
-
             <div class="tech-stack">
               @for (tech of project.technologies; track tech.name) {
               <div class="tech-icon">
@@ -60,7 +54,6 @@
             />
             }
           </div>
-
           <div class="action-buttons">
             @if (project.gitHubUrl) {
             <a
