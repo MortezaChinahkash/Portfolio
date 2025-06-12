@@ -26,6 +26,29 @@ h3 {
   display: flex;
   flex-wrap: wrap;
 }
+.btn{
+  display: none;
+  margin-top: 25px;
+  padding: 0.75rem 2rem;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-weight: 600;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  box-shadow: 2px 2px 0px 1px #000000;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1.2rem;
+  cursor: url("/assets/hand-pointer.png"), auto;
+
+  &:hover{
+  background: #24dd80;
+  color: black;
+  box-shadow: none;
+  transform: translateY(2px);
+  cursor: url("/assets/hand-pointer.png"), auto;
+  }
+}
 .projects-intro {
   width: 50%;
   padding: 50px;
@@ -110,21 +133,21 @@ img.screen {
 }
 .project-details-btn a {
   margin-top: 50px;
-  display: inline-block;
   padding: 0.75rem 2rem;
-  background-color: transparent;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: black;
   font-weight: 600;
-  border: 2px solid white;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 25px;
-  box-shadow: 2px 2px 0px 1px #ffffff;
+  box-shadow: 2px 2px 0px 1px #000000;
   cursor: pointer;
   transition: all 0.2s;
   font-size: 1.2rem;
   cursor: url("/assets/hand-pointer.png"), auto;
+  margin-bottom: 50px;
 }
 .project-details-btn a:hover {
-  background-color: #1E90FF;
+  background-color: #24dd80;
   transform: translateY(-2px);
 }
 .project-details:hover {
@@ -167,6 +190,13 @@ img.screen {
 
 
 @media (max-width: 768px) {
+  .btn{
+    display: block;
+    justify-self: flex-end;
+  }
+  .project-details-btn{
+    display: none;
+  }
   .projects-content{
     width: 100%;
     flex-direction: column;

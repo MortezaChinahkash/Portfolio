@@ -38,12 +38,16 @@
             </a>
           </div>
         </div>
+
       </div>
 
       <div class="project-info">
         <h2 class="project-title">{{ project.title }}</h2>
         <p class="project-description">{{ project.description }}</p>
         <div class="project-links"></div>
+        <button class="btn"><a [routerLink]="['/projects/project-' + project.compId]">
+              {{ translationService.t("project_details") || "Default text" }}
+            </a></button>
       </div>
     </div>
     }
