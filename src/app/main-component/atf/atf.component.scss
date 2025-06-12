@@ -170,15 +170,11 @@
 // HERO IMAGES
 // ===========================================
 .hero-pic {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  align-self: flex-end;
-  margin-right: 50px;
+  position: relative;
   max-width: 300px;
-  margin-bottom: 20px;
-  width: 30%;
-  height: 300px; 
+  margin-top: -225px;
+  width: 250px;// Feste Breite für Desktop
+  height: 250px; 
   background-image: url("/assets/png/Design material/Polaroid-Frame-Mockup copia 1.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -187,8 +183,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  justify-content: center;
   filter: grayscale(1);
+  transition: none;
 
   &::before {
     content: "Hey :D";
@@ -203,12 +199,27 @@
   }
 
   &:hover {
-    filter: grayscale(0);
-    transition: filter 0.3s;
+    animation: colorFlash 0.6s ease-out forwards;
     
     &::before {
       content: "Hello ;)";
     }
+  }
+}
+
+// Flash Animation für die Farbe
+@keyframes colorFlash {
+  0% {
+    filter: grayscale(1);
+  }
+  30% {
+    filter: grayscale(0) brightness(1.3) saturate(1.5);
+  }
+  60% {
+    filter: grayscale(0) brightness(1.1) saturate(1.2);
+  }
+  100% {
+    filter: grayscale(0);
   }
 }
 
@@ -220,6 +231,33 @@
   background-position: center;
   width: 150px; // Auch hier feste Breite
   height: 300px; // Und feste Höhe
+  transform: rotate(10deg);
+  // Hinzugefügt für das span Element:
+  position: relative;
+  justify-content: center;
+  align-items: flex-end;
+  filter: grayscale(1);
+  transition: none;
+
+  &::before {
+    content: "Hey :D";
+    z-index: 7777;
+    font-size: 20px; // Etwas kleiner für mobile
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 12px; // Angepasster Abstand für mobile
+    font-family: "Kalam", Courier, monospace;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    animation: colorFlash 0.6s ease-out forwards;
+    
+    &::before {
+      content: "Hello ;)";
+    }
+  }
 }
 
 // ===========================================
@@ -311,10 +349,11 @@
   }
 
   .hero-pic-mobile {
-    display: block;
+    display: flex; // Überschreibt das display: none
     transform: rotate(10deg);
     width: 200px;
-    height: 300px; // Fixed height for background div
+    height: 200px; // Fixed height for background div
+    // Die anderen Styles von oben werden automatisch übernommen
   }
 
   .hero-socials {
@@ -408,6 +447,11 @@
     width: 50%;
     height: 120px; // Proportional height for smaller screens
     margin-top: 25px;
+
+    &::before {
+      font-size: 16px; // Noch kleiner für sehr kleine Bildschirme
+      margin-bottom: 8px;
+    }
   }
 
   .responsive-title {
