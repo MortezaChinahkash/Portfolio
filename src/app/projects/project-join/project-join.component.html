@@ -2,72 +2,95 @@
   <section class="project-page">
     <div class="max-content">
       @if (project) {
-        <!-- Back link at top of max-content -->
-        <div class="back-link">
-          <a href="#atf">
-            <img class="breadcrumb-arrow" src="/assets/png/Design material/00_Hand-drawn lines/03_Portfolio/Breadcrumbs/Breadcrumb arrow 3.png" alt=""> {{ translationService.t('go_back') }}
-          </a>
-        </div>
-        
-        <div class="project-detail-wrapper">
-          <div class="left-section">
-            <div class="content-wrapper">
-              <div class="project-headline">
-                <h1>{{ project.title }}</h1>
-                <img class="blue-underline" src="/assets/png/Design material/00_Hand-drawn lines/01_About me/Color option 3.png" alt="">
-              </div>
-              
-              <div class="section-block">
-                <h2>{{ translationService.t('description') }}</h2>
-                <p>{{ translationService.t('join_description') }}</p>
-              </div>
-              
-              <div class="section-block">
-                <h2>{{ translationService.t('implementation_details') }}</h2>
-                <p>{{ translationService.t('project_role_workflow') }}</p>
-              </div>
-              
-              <div class="duration-info">
-                <strong>{{ translationService.t('duration') }}:</strong> {{ translationService.t('project_duration_value') }}
-              </div>
-              
-              <div class="tech-stack">
-                @for (tech of project.technologies; track tech.name) {
-                  <div class="tech-icon">
-                    <img [src]="tech.imageUrl" [alt]="tech.name">
-                  </div>
-                }
-              </div>
+      <!-- Back link at top of max-content -->
+      <div class="back-link">
+        <a href="#atf">
+          <img
+            class="breadcrumb-arrow"
+            src="/assets/png/Design material/00_Hand-drawn lines/03_Portfolio/Breadcrumbs/Breadcrumb arrow 3.png"
+            alt=""
+          />
+          {{ translationService.t("go_back") }}
+        </a>
+      </div>
+
+      <div class="project-detail-wrapper">
+        <div class="left-section">
+          <div class="content-wrapper">
+            <div class="project-headline">
+              <h1>{{ project.title }}</h1>
+              <img
+                class="blue-underline"
+                src="/assets/png/Design material/00_Hand-drawn lines/01_About me/Color option 3.png"
+                alt=""
+              />
             </div>
-          </div>
-          
-          <div class="right-section">
-            <div class="project-image-container">
-              @if (project.imageUrl) {
-                <img [src]="project.imageUrl" [alt]="project.title" class="project-image">
-              }
+
+            <div class="section-block">
+              <h2>{{ translationService.t("description") }}</h2>
+              <p>{{ translationService.t("join_description") }}</p>
             </div>
-            
-            <div class="action-buttons">
-              @if (project.gitHubUrl) {
-                <a [href]="project.gitHubUrl" target="_blank" class="btn github-btn">{{ translationService.t('github') }}</a>
-              }
-              @if (project.projectUrl) {
-                <a [href]="project.projectUrl" target="_blank" class="btn live-btn">{{ translationService.t('live_test') }}</a>
+
+            <div class="section-block">
+              <h2>{{ translationService.t("implementation_details") }}</h2>
+              <p>{{ translationService.t("project_role_workflow") }}</p>
+            </div>
+
+            <div class="duration-info">
+              <strong>{{ translationService.t("duration") }}:</strong>
+              {{ translationService.t("project_duration_value") }}
+            </div>
+
+            <div class="tech-stack">
+              @for (tech of project.technologies; track tech.name) {
+              <div class="tech-icon">
+                <img [src]="tech.imageUrl" [alt]="tech.name" />
+              </div>
               }
             </div>
           </div>
         </div>
-        
-        <!-- Next project link at bottom of max-content -->
-        <div class="next-project-link">
-          <a (click)="navigateToNextProject()">
-            {{ translationService.t('next_project') }} 
-            <img src="/assets/png/Design material/00_Hand-drawn lines/03_Portfolio/Breadcrumbs/Next project arrow 3.png" alt="">
-          </a>
+        <div class="right-section">
+          <div class="project-image-container">
+            @if (project.imageUrl) {
+            <img
+              [src]="project.imageUrl"
+              [alt]="project.title"
+              class="project-image"
+            />
+            }
+          </div>
+
+          <div class="action-buttons">
+            @if (project.gitHubUrl) {
+            <a
+              [href]="project.gitHubUrl"
+              target="_blank"
+              class="btn github-btn"
+              >{{ translationService.t("github") }}</a
+            >
+            } @if (project.projectUrl) {
+            <a
+              [href]="project.projectUrl"
+              target="_blank"
+              class="btn live-btn"
+              >{{ translationService.t("live_test") }}</a
+            >
+            }
+          </div>
         </div>
+      </div>
+      <div class="next-project-link">
+        <a (click)="navigateToNextProject()">
+          {{ translationService.t("next_project") }}
+          <img
+            src="/assets/png/Design material/00_Hand-drawn lines/03_Portfolio/Breadcrumbs/Next project arrow 3.png"
+            alt=""
+          />
+        </a>
+      </div>
       } @else {
-        <div class="loading">{{ translationService.t('loading_project') }}</div>
+      <div class="loading">{{ translationService.t("loading_project") }}</div>
       }
     </div>
   </section>
