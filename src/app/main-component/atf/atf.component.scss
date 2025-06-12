@@ -226,6 +226,9 @@
 }
 
 @media (max-width: 767px) {
+  .hero-row--top{
+    margin-bottom: 15px;
+  }
   .rt-top{
     margin-bottom: 0;
   }
@@ -234,6 +237,7 @@
   }
   .hello-btn{
     margin: 0;
+    margin-bottom: 15px;
   }
   .responsive-title {
     font-size: 16.8vw; // Responsive Schriftgröße
