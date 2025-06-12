@@ -1,3 +1,6 @@
+// ===========================================
+// MAIN HERO SECTION
+// ===========================================
 .hero {
   min-height: 100vh;
   width: 100%;
@@ -35,6 +38,9 @@
   padding: 0 20px;
 }
 
+// ===========================================
+// HERO ROWS LAYOUT
+// ===========================================
 .hero-row {
   display: flex;
   align-items: center;
@@ -45,9 +51,6 @@
 .hero-row--bottom {
   position: relative;
 }
-.rt-top{
-  margin-bottom: 25px;
-}
 
 .hero-row-space {
   justify-content: space-between;
@@ -56,6 +59,17 @@
   position: relative;
 }
 
+.rt-top {
+  margin-bottom: 25px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+// ===========================================
+// HELLO BUTTON & HAND ANIMATION
+// ===========================================
 .hand-hello {
   display: flex;
   flex-direction: column;
@@ -78,17 +92,44 @@
   font-weight: 600;
   margin-bottom: 25px;
   cursor: url("/assets/hand-pointer.png"), auto;
-}
 
-.hello-btn .normal-text { transition: opacity 0.3s; cursor: url("/assets/hand-pointer.png"), auto; }
-.hello-btn .hover-text { display: none; white-space: nowrap; cursor: url("/assets/hand-pointer.png"), auto; }
-.hello-btn:hover {
-  background: #1073ea;
-  color: black;
-  cursor: url("/assets/hand-pointer.png"), auto;
+  .normal-text { 
+    transition: opacity 0.3s; 
+    cursor: url("/assets/hand-pointer.png"), auto; 
+  }
+
+  .hover-text { 
+    display: none; 
+    white-space: nowrap; 
+    cursor: url("/assets/hand-pointer.png"), auto; 
+  }
+
+  &:hover {
+    background: #1073ea;
+    color: black;
+    cursor: url("/assets/hand-pointer.png"), auto;
+
+    .normal-text { 
+      display: none; 
+    }
+
+    .hover-text { 
+      display: inline; 
+    }
+
+    + .hand {
+      opacity: 1;
+      transform: translateX(240px) rotate(720deg);
+      transition: transform 1s, opacity 0.2s;
+    }
+  }
+
+  &:not(:hover) + .hand {
+    opacity: 0;
+    transform: translateX(0) rotate(0deg);
+    transition: transform 1s, opacity 0.5s;
+  }
 }
-.hello-btn:hover .normal-text { display: none; }
-.hello-btn:hover .hover-text { display: inline; }
 
 .hand {
   width: 30px;
@@ -100,22 +141,9 @@
   left: 0;
 }
 
-.hello-btn:hover + .hand {
-  opacity: 1;
-  transform: translateX(240px) rotate(720deg);
-  transition: transform 1s, opacity 0.2s;
-}
-
-.hello-btn:not(:hover) + .hand {
-  opacity: 0;
-  transform: translateX(0) rotate(0deg);
-  transition: transform 1s, opacity 0.5s;
-}
-
-.spacer {
-  flex: 1;
-}
-
+// ===========================================
+// RESPONSIVE TITLE & LETTERS
+// ===========================================
 .responsive-title {
   font-size: clamp(2rem, 8vw, 6rem);
   margin: 0;
@@ -123,30 +151,80 @@
   letter-spacing: 0.05em;
   font-weight: 800;
   line-height: 0.9;
-  margin: -0.5rem 0;
+  margin: -0.5rem 0;;
+
+  span {
+    display: inline-block;
+    transition: color 0.5s;
+    color: #fff;
+    cursor: url("/assets/hand-pointer.png"), auto;
+    text-align: center;
+
+    &:hover {
+      color: #1aa8b5;
+    }
+  }
 }
 
-.responsive-title span {
-  display: inline-block;
-  transition: color 0.5s;
-  color: #fff;
-  cursor: url("/assets/hand-pointer.png"), auto;
-  text-align: center;
-}
-
-.responsive-title span:hover {
-  color: #1aa8b5;
-}
-
+// ===========================================
+// HERO IMAGES
+// ===========================================
 .hero-pic {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   align-self: flex-end;
-  margin-bottom: 25px;
   margin-right: 50px;
-  max-width: 200px;
+  max-width: 300px;
+  margin-bottom: 20px;
   width: 30%;
-  object-fit: cover;
+  height: 300px; 
+  background-image: url("/assets/png/Design material/Polaroid-Frame-Mockup copia 1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   transform: rotate(10deg);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  justify-content: center;
+  filter: grayscale(1);
+
+  &::before {
+    content: "Hey :D";
+    z-index: 7777;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: "Kalam", Courier, monospace;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    filter: grayscale(0);
+    transition: filter 0.3s;
+    
+    &::before {
+      content: "Hello ;)";
+    }
+  }
 }
+
+.hero-pic-mobile {
+  display: none;
+  background-image: url("/assets/png/Design material/Polaroid-Frame-Mockup copia 1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 150px; // Auch hier feste Breite
+  height: 300px; // Und feste Höhe
+}
+
+// ===========================================
+// CTA BUTTON
+// ===========================================
 .atf-btn {
   margin-top: 25px;
   display: inline-block;
@@ -161,16 +239,19 @@
   transition: all 0.2s;
   font-size: 1.2rem;
   cursor: url("/assets/hand-pointer.png"), auto;
+
+  &:hover {
+    background: #24dd80;
+    color: black;
+    box-shadow: none;
+    transform: translateY(2px);
+    cursor: url("/assets/hand-pointer.png"), auto;
+  }
 }
 
-.atf-btn:hover {
-  background: #24dd80;
-  color: black;
-  box-shadow: none;
-  transform: translateY(2px);
-  cursor: url("/assets/hand-pointer.png"), auto;
-}
-
+// ===========================================
+// SOCIAL MEDIA LINKS
+// ===========================================
 .hero-socials {
   display: flex;
   flex-direction: column;
@@ -191,10 +272,10 @@
   background: rgba(0,0,0,0.15);
   transition: background 0.3s;
   cursor: url("/assets/hand-pointer.png"), auto;
-}
 
-.social-circle:hover {
-  background: #1aa8b5;
+  &:hover {
+    background: #1aa8b5;
+  }
 }
 
 .social-pic {
@@ -203,128 +284,136 @@
   object-fit: contain;
   cursor: url("/assets/hand-pointer.png"), auto;
 }
-.hero-pic-mobile{
-  display: none;
-}
 
+// ===========================================
+// RESPONSIVE BREAKPOINTS
+// ===========================================
+
+// Large screens (1800px+)
 @media (min-width: 1800px) {
-  .atf-content{
+  .atf-content {
     margin-bottom: 2rem;
   }
 
-  .hero{
+  .hero {
     background-position: center 95%;
   }
 }
-@media (max-width: 767px) {
-.hero-pic-mobile{
-  display: block;
-  transform: rotate(10deg);
-  width: 200px;
-  height: auto;
-}
-}
 
+// Mobile (767px and below)
 @media (max-width: 767px) {
-  .hero-row--top{
+  .hero {
+    align-items: flex-start;
+  }
+
+  .hero-pic {
+    display: none;
+  }
+
+  .hero-pic-mobile {
+    display: block;
+    transform: rotate(10deg);
+    width: 200px;
+    height: 300px; // Fixed height for background div
+  }
+
+  .hero-socials {
+    display: none;
+  }
+
+  .max-content {
+    padding: 0;
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .atf-content {
+    position: static;
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  .hero-row {
+    align-self: flex-start;
+    position: static;
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero-row--top {
     margin-bottom: 15px;
   }
-  .rt-top{
+
+  .rt-top {
     margin-bottom: 0;
   }
-  .atf-btn{
-    margin: 0;
-  }
-  .hello-btn{
-    margin: 0;
-    margin-bottom: 15px;
-  }
-  .responsive-title {
-    font-size: 16.8vw; // Responsive Schriftgröße
-    text-align: center; // Zentriert den Text
-    letter-spacing: -0.06em; // Leicht engerer Buchstabenabstand
-    line-height: 1.1; // Erhöhte Zeilenhöhe für bessere Lesbarkeit
-  }
-.hero{
-  align-items: flex-start;
-}
-.hero-socials{
-  display: none;
-}
-.hero-pic{
-display: none;
-}
-.atf-content{
-    position: static;
-    margin-top: -50px;
-}
-.max-content{
-  padding: 0;
-  margin-top: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.atf-content{
-  width: 100%;
-  margin-top: 25px;
 
-}
-.hero-row {
-  align-self: flex-start;
-  position: static;
-  width: 100%;
-  margin: 0;
-}
-.spacer{
-  flex: 0;
-  display: none;
-}
-.hero-row--bottom{
-  display: flex;
-  justify-content: flex-end;
-  .atf-btn{
-    height: 45px;
-    width: max-content;
-    padding: 20px;
+  .hero-row--bottom {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+    justify-content: flex-end;
+
+    .atf-btn {
+      height: 45px;
+      width: max-content;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0 0 0;
+    }
   }
-  .hello-btn{
+
+  .spacer {
+    flex: 0;
+    display: none;
+  }
+
+  .hello-btn {
     height: 45px;
     width: max-content;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center; 
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
+  }
+
+  .atf-btn {
+    margin: 0;
+  }
+
+  .responsive-title {
+    font-size: 16.8vw;
+    text-align: center;
+    letter-spacing: -0.06em;
+    line-height: 1.1;
   }
 }
 
-}
+// Small mobile (400px and below)
 @media (max-width: 400px) {
-  .responsive-title {
-    font-size: 14.5vw; // Verwendet nur viewport width für echte Responsivität
-    text-align: start;
-    letter-spacing: -0.03em;
-    line-height: 0.85; // Kompaktere Zeilen
-  }
-  
-  .max-content{
+  .max-content {
     margin: 0;
-    padding: 0 10px; // Minimal padding für Bildschirmränder
+    padding: 0 10px;
   }
   
-  .atf-content{
+  .atf-content {
     margin-top: 125px;
     width: 100%;
   }
   
-  .hero-pic-mobile{
+  .hero-pic-mobile {
     width: 50%;
-    height: auto;
+    height: 120px; // Proportional height for smaller screens
     margin-top: 25px;
+  }
+
+  .responsive-title {
+    font-size: 14.5vw;
+    text-align: start;
+    letter-spacing: -0.03em;
+    line-height: 0.85;
   }
 }
