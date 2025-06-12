@@ -82,37 +82,3 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
-  footer {
-    margin-top: -100px;
-    height: 100px;
-
-    .footer-content {
-      gap: 15px;
-    }
-
-    .footer-top {
-      gap: 10px;
-
-      img {
-        width: 35px;
-        height: 35px;
-      }
-
-      p {
-        font-size: 12px;
-      }
-    }
-
-    .footer-bottom {
-      gap: 15px;
-      flex-wrap: wrap;
-
-      .footer-link {
-        font-size: 12px;
-      }
-    }
-  }
-}
-
-
