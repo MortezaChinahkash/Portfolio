@@ -161,6 +161,7 @@ export interface TranslationSet {
   providedIn: 'root'
 })
 export class TranslationService {
+  private currentLanguage = 'en'; // Synchrone Property hinzufügen
   private currentLangSubject = new BehaviorSubject<SupportedLanguage>('en');
   currentLang$ = this.currentLangSubject.asObservable();
 
@@ -474,9 +475,14 @@ imprint_privacy_text: "Die Nutzung unserer Webseite ist in der Regel ohne Angabe
 
   // Sprache ändern
   setLanguage(lang: SupportedLanguage): void {
+    this.currentLanguage = lang; // Synchrone Property aktualisieren
     this.currentLangSubject.next(lang);
     // Speichern der Sprachpräferenz im localStorage
     localStorage.setItem('language', lang);
+  }
+
+  get currentLang(): string {
+    return this.currentLanguage;
   }
 
   // Liefert Übersetzung für einen Schlüssel

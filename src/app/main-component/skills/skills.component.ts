@@ -15,6 +15,10 @@ export class SkillsComponent {
 
   constructor(public translationService: TranslationService) {}
 
+  get ringClass(): string {
+    return this.translationService.currentLang === 'de' ? 'german' : 'english';
+  }
+
   skills: Skill[] = [
     { name:'HTML',       image:'assets/png/icons/Skill Icons/HTML.png' },
     { name:'CSS',        image:'assets/png/icons/Skill Icons/CSS.png' },
