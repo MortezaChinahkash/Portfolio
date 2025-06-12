@@ -70,14 +70,23 @@ footer {
     height: 120px;
 
     .footer-content {
-      align-items: center;
+      align-items: flex-start;
       text-align: center;
       gap: 20px;
+      width: 100%;
+      p{
+        font-size: 18px;;
+      }
     }
 
     .footer-bottom {
-      justify-content: center;
+      justify-content: space-between;
       gap: clamp(20px, 4vw, 40px);
+
+      .footer-link{
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
     }
   }
 }
