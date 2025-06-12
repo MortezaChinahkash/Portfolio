@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { ProjectService } from '../../shared/services/project.service';
 import { TranslationService } from '../../shared/services/translation.service';
 import { PortfolioItem } from '../../shared/models/portfolio-item.model';
@@ -17,7 +17,8 @@ export class ProjectElPolloLocoComponent implements OnInit {
 
   constructor(
     private projectService: ProjectService,
-    public translationService: TranslationService
+    public translationService: TranslationService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -32,6 +33,14 @@ export class ProjectElPolloLocoComponent implements OnInit {
     if (!this.project) {
       console.warn('Using fallback project data for El Pollo Loco');
       this.project = this.createFallbackProject();
+    }
+  }
+
+  navigateToNextProject() {
+    const nextProject = this.projectService.getNextProject('el-pollo-loco');
+    if (nextProject) {
+      const route = this.projectService.getProjectRoute(nextProject.compId);
+      this.router.navigate([route]);
     }
   }
 

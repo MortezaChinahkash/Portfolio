@@ -4,8 +4,8 @@
       @if (project) {
         <!-- Back link at top of max-content -->
         <div class="back-link">
-          <a routerLink="/projects">
-            <img src="/assets/png/Design material/00_Hand-drawn lines/Back 1.png" alt=""> {{ translationService.t('go_back') }}
+          <a href="#atf">
+            <img class="breadcrumb-arrow" src="/assets/png/Design material/00_Hand-drawn lines/03_Portfolio/Breadcrumbs/Breadcrumb arrow 3.png" alt=""> {{ translationService.t('go_back') }}
           </a>
         </div>
         
@@ -61,7 +61,10 @@
         
         <!-- Next project link at bottom of max-content -->
         <div class="next-project-link">
-          <a routerLink="/projects/el-pollo-loco">{{ translationService.t('next_project') }} <span class="arrow">→</span></a>
+          <a (click)="navigateToNextProject()" style="cursor: pointer;">
+            {{ translationService.t('next_project') }} 
+            <img src="/assets/png/Design material/00_Hand-drawn lines/03_Portfolio/Breadcrumbs/Next project arrow 3.png" alt="">
+          </a>
         </div>
       } @else {
         <div class="loading">{{ translationService.t('loading_project') }}</div>
