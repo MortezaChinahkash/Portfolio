@@ -201,6 +201,16 @@ a {
       text-align: start;
     }
   }
+
+  .paper-card1 {
+    margin-bottom: clamp(-40px, calc(-40px - 20 * ((900px - 100vw) / 400)), -60px);
+  }
+  .paper-card2 {
+    margin-bottom: clamp(-40px, calc(-40px - 20 * ((900px - 100vw) / 400)), -60px);
+  }
+  .paper-card3 {
+    margin-bottom: clamp(-30px, calc(-30px - 10 * ((900px - 100vw) / 400)), -40px);
+  }
 }
 @media (max-width: 600px) {
   .paper-card1 {
