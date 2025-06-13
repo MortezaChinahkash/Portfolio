@@ -461,3 +461,8 @@
     line-height: 0.85;
   }
 }
+@media(max-height: 815px) {
+  .atf-content {
+    margin-top: calc(300px - 0.15 * 100vh); // Increases as height decreases
+  }
+}
