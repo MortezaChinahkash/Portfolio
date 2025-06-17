@@ -36,6 +36,7 @@
   max-width: 1100px;
   width: 100%;
   padding: 0 20px;
+  margin-top: 175px;
 }
 
 // ===========================================
@@ -55,12 +56,12 @@
 .hero-row-space {
   justify-content: space-between;
   align-items: center;
-  height: 86px;
-  position: relative;
+    position: relative;
 }
 
 .rt-top {
   margin-bottom: 25px;
+  white-space: nowrap;
 }
 
 .spacer {
@@ -152,6 +153,8 @@
   font-weight: 800;
   line-height: 0.9;
   margin: -0.5rem 0;;
+  white-space: nowrap;
+  margin-top: 35px;
 
   span {
     display: inline-block;
