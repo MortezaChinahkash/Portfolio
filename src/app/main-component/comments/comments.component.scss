@@ -118,13 +118,11 @@
     left: 50%;
     top: clamp(0px, 5vw, 0px);
     transform: translateX(-50%) rotate(2deg);
-    z-index: 1;
   }
 
   &.card-2 {
     right: 0;
     top: clamp(0px, 2vw, 0px);
-    z-index: 0;
     transform: rotate(8deg);
   }
 
