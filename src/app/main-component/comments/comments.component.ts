@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Renderer2, ElementRef } from '@angular/core';
 import { CommonModule, NgStyle } from '@angular/common';
 import { TranslationService } from '../../shared/services/translation.service';
 
@@ -18,21 +18,43 @@ interface Comment {
   templateUrl: './comments.component.html',
   styleUrl: './comments.component.scss'
 })
-export class CommentsComponent implements OnInit {
+export class CommentsComponent implements OnInit, AfterViewInit {
   hoverLineImage: string = 'assets/png/Design%20material/03_Stickers/02_Testimonials/Color%20option%203/Line.png';
   comments: Comment[] = [];
 
-  constructor(public translationService: TranslationService) {}
+  constructor(
+    public translationService: TranslationService,
+    private renderer: Renderer2,
+    private el: ElementRef
+  ) {}
 
   ngOnInit() {
     this.updateComments();
     
-    // Aktualisiere Kommentare, wenn sich die Sprache ändert
     this.translationService.currentLang$.subscribe(() => {
       this.updateComments();
     });
   }
   
+  ngAfterViewInit() {
+    const cards = this.el.nativeElement.querySelectorAll('.comment-card');
+    cards.forEach((card: HTMLElement) => {
+      // Für Touch & Mouse
+      card.addEventListener('pointerdown', () => {
+        cards.forEach((c: HTMLElement) => c.classList.remove('touch-hover'));
+        card.classList.add('touch-hover');
+      });
+      // Entferne das Hover bei Pointer Up außerhalb der Card
+      card.addEventListener('pointerleave', () => {
+        card.classList.remove('touch-hover');
+      });
+      // Optional: Entferne das Hover auch beim Scrollen
+      card.addEventListener('pointercancel', () => {
+        card.classList.remove('touch-hover');
+      });
+    });
+  }
+
   updateComments() {
     // Kommentare mit übersetzten Texten erstellen, Rest bleibt unverändert
     this.comments = [
