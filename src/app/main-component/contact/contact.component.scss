@@ -3,14 +3,13 @@ $accent: #1073EA;
 .contact {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: clamp(60px, 8vw, 60px) 0;
+  padding: clamp(100px, 8vw, 60px) 0 20px 0;
   background-image: url("/assets/png/Design material/01_Background/Design Size Relation@3x/06_Contact.png");
-
   background-size: cover;
   background-position: top;
-  min-height: 100vh;
   color: white;
 }
  form{

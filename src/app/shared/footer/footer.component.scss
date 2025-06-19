@@ -1,8 +1,7 @@
 footer {
   position: relative;
-  margin-top: -150px;
   height: 150px;
-  width: 100%;
+  width: 95vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +9,7 @@ footer {
 
   .footer-content {
     max-width: 1440px;
-    width: 90%;
+    width: 100%;
     padding: 0 clamp(16px, 3vw, 36px);
     display: flex;
     flex-direction: column;
@@ -48,7 +47,7 @@ footer {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 15px;
+    margin-top: 15px;
 
     .footer-link {
       color: white;
@@ -66,7 +65,6 @@ footer {
 
 @media (max-width: 768px) {
   footer {
-    margin-top: -120px;
     height: 120px;
 
     .footer-content {
