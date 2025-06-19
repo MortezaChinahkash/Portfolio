@@ -160,6 +160,18 @@ a {
   }
 }
 
+@media (max-width: 1200px) {
+  .paper-card1 {
+    margin-bottom: clamp(-80px, calc(-80px + 30 * ((100vw - 900px) / 300)), -50px);
+  }
+  .paper-card2 {
+    margin-bottom: clamp(-80px, calc(-80px + 30 * ((100vw - 900px) / 300)), -50px);
+  }
+  .paper-card3 {
+    margin-bottom: clamp(-60px, calc(-60px + 20 * ((100vw - 900px) / 300)), -40px);
+  }
+}
+
 @media (max-width: 900px) {
   section{
     padding: 100px 0;
@@ -188,6 +200,16 @@ a {
     p{
       text-align: start;
     }
+  }
+
+  .paper-card1 {
+    margin-bottom: clamp(-40px, calc(-40px - 20 * ((900px - 100vw) / 400)), -60px);
+  }
+  .paper-card2 {
+    margin-bottom: clamp(-40px, calc(-40px - 20 * ((900px - 100vw) / 400)), -60px);
+  }
+  .paper-card3 {
+    margin-bottom: clamp(-30px, calc(-30px - 10 * ((900px - 100vw) / 400)), -40px);
   }
 }
 @media (max-width: 600px) {

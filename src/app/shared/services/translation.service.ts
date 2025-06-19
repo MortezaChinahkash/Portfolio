@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 // Definiere unterstützte Sprachen
 export type SupportedLanguage = 'en' | 'de';
@@ -164,6 +164,9 @@ export class TranslationService {
   private currentLanguage = 'en'; // Synchrone Property hinzufügen
   private currentLangSubject = new BehaviorSubject<SupportedLanguage>('en');
   currentLang$ = this.currentLangSubject.asObservable();
+
+  private languageChangedSource = new Subject<string>();
+  languageChanged$ = this.languageChangedSource.asObservable();
 
   // Alle Übersetzungen des Projekts
   private translations: { [key in SupportedLanguage]: TranslationSet } = {
@@ -477,6 +480,7 @@ imprint_privacy_text: "Die Nutzung unserer Webseite ist in der Regel ohne Angabe
   setLanguage(lang: SupportedLanguage): void {
     this.currentLanguage = lang; // Synchrone Property aktualisieren
     this.currentLangSubject.next(lang);
+    this.languageChangedSource.next(lang);
     // Speichern der Sprachpräferenz im localStorage
     localStorage.setItem('language', lang);
   }

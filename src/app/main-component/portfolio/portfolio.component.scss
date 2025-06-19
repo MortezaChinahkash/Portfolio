@@ -162,15 +162,24 @@ img.screen {
     transform: scale(0.95);
   }
 }
-.projects-title-container{
-  width: max-content;
+.projects-title-container {
+  display: inline-block;
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+  width: fit-content; // oder eine feste/maximale Breite, falls nötig
 }
-.underline{
-  width: 100%;
+.projects-title{
+  width: fit-content;
+}
+.underline {
+  display: block;
+  width: 100%; // jetzt füllt die Linie den Container aus
   height: 20px;
   margin-bottom: 50px;
   clip-path: inset(0 100% 0 0);
   animation: lineReveal 6s infinite;
+  box-sizing: border-box;
 }
 
 @keyframes lineReveal {

@@ -36,6 +36,7 @@
   max-width: 1100px;
   width: 100%;
   padding: 0 20px;
+  margin-top: 175px;
 }
 
 // ===========================================
@@ -55,12 +56,11 @@
 .hero-row-space {
   justify-content: space-between;
   align-items: center;
-  height: 86px;
-  position: relative;
+    position: relative;
 }
 
 .rt-top {
-  margin-bottom: 25px;
+  white-space: nowrap;
 }
 
 .spacer {
@@ -90,7 +90,6 @@
   transition: background 0.5s, color 0.5s;
   font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 25px;
   cursor: url("/assets/hand-pointer.png"), auto;
 
   .normal-text { 
@@ -152,6 +151,8 @@
   font-weight: 800;
   line-height: 0.9;
   margin: -0.5rem 0;;
+  white-space: nowrap;
+  margin-top: 35px;
 
   span {
     display: inline-block;
@@ -264,7 +265,7 @@
 // CTA BUTTON
 // ===========================================
 .atf-btn {
-  margin-top: 25px;
+  margin-top: 35px;
   display: inline-block;
   padding: 0.75rem 2rem;
   background-color: transparent;
@@ -459,5 +460,10 @@
     text-align: start;
     letter-spacing: -0.03em;
     line-height: 0.85;
+  }
+}
+@media(max-height: 815px) {
+  .atf-content {
+    margin-top: calc(300px - 0.15 * 100vh); // Increases as height decreases
   }
 }
