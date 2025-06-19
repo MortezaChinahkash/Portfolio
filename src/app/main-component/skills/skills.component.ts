@@ -40,9 +40,13 @@ export class SkillsComponent {
   private boundMove = (e: MouseEvent) => this.onMouseMove(e);
   private boundUp   = (e: MouseEvent) => this.onMouseUp(e);
 
-  isDragging   = false;
-  startY       = 0;
-  readonly threshold = 100;                         
+  isDragging: boolean = false;
+  /**
+   * Stores the initial Y-coordinate value, typically used to track the starting vertical position
+   * for drag or scroll events within the component.
+   */
+  startY: number = 0;
+  readonly threshold: number = 100;                         
   currentState: 'default' | 'transition' | 'final' = 'default';
   isMobile: boolean = false;
 
@@ -52,7 +56,7 @@ export class SkillsComponent {
   }
 
   checkIfMobile() {
-    this.isMobile = window.innerWidth <= 768;
+    this.isMobile = window.innerWidth <= 1366;
   }
 
   onMobileClick(event: MouseEvent) {
