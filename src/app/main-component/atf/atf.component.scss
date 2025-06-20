@@ -382,10 +382,6 @@
     margin: 0;
   }
 
-  .hero-row--top {
-    margin-bottom: 15px;
-  }
-
   .rt-top {
     margin-bottom: 0;
   }
@@ -417,7 +413,6 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    margin: 0 0 20px 0;
   }
 
   .atf-btn {
@@ -429,6 +424,8 @@
     text-align: center;
     letter-spacing: -0.06em;
     line-height: 1.1;
+    margin: 0;
+    margin: 10px 0 0 0;
   }
 }
 
@@ -460,10 +457,5 @@
     text-align: start;
     letter-spacing: -0.03em;
     line-height: 0.85;
-  }
-}
-@media(max-height: 815px) {
-  .atf-content {
-    margin-top: calc(300px - 0.15 * 100vh); // Increases as height decreases
   }
 }
