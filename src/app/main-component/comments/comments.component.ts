@@ -37,26 +37,25 @@ export class CommentsComponent implements OnInit, AfterViewInit {
   }
   
   ngAfterViewInit() {
+    const isTouch = window.matchMedia('(pointer: coarse)').matches;
+    if (!isTouch) return; 
+
     const cards = this.el.nativeElement.querySelectorAll('.comment-card');
     cards.forEach((card: HTMLElement) => {
-      // Für Touch & Mouse
-      card.addEventListener('pointerdown', () => {
+      card.addEventListener('pointerup', (e) => {
         cards.forEach((c: HTMLElement) => c.classList.remove('touch-hover'));
         card.classList.add('touch-hover');
       });
-      // Entferne das Hover bei Pointer Up außerhalb der Card
-      card.addEventListener('pointerleave', () => {
-        card.classList.remove('touch-hover');
-      });
-      // Optional: Entferne das Hover auch beim Scrollen
-      card.addEventListener('pointercancel', () => {
-        card.classList.remove('touch-hover');
-      });
+    });
+
+    document.addEventListener('pointerdown', (e) => {
+      if (![...cards].some(card => card.contains(e.target as Node))) {
+        cards.forEach((c: HTMLElement) => c.classList.remove('touch-hover'));
+      }
     });
   }
 
   updateComments() {
-    // Kommentare mit übersetzten Texten erstellen, Rest bleibt unverändert
     this.comments = [
       {
         name: 'Tobias Lange',
