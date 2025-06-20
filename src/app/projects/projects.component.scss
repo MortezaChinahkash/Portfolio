@@ -28,12 +28,12 @@
   display: flex;
   flex-direction: column;
 }
-.back-link-bottom{
+.back-link-bottom {
   display: none;
 
   a {
-    color: black;
     text-decoration: none;
+    color: black;
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -45,9 +45,13 @@
     img {
       transition: transform 0.6s ease-in-out;
       animation: none;
-      width: 50px;
+      width: 30px;
     }
 
+    span {
+      color: white;
+      font-size: 14px;
+    }
     &:hover {
       color: #e55a2b;
 
@@ -87,7 +91,13 @@
     }
   }
 }
-
+.back-next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
 @keyframes arrowBounce {
   0%,
   100% {
@@ -101,7 +111,7 @@
 .project-detail-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 100%;;
+  width: 100%;
   align-items: center; // Change from center to flex-start
   height: auto; // Change from fit-content to auto
   min-height: fit-content; // Add minimum height
@@ -250,7 +260,7 @@
   margin-bottom: 50px;
 
   .btn {
-        display: inline-block;
+    display: inline-block;
     padding: 0.75rem 2rem;
     background-color: transparent;
     color: white;
@@ -262,8 +272,7 @@
     cursor: pointer;
     transition: all 0.2s;
     font-size: 1.2rem;
-      cursor: url("/assets/hand-pointer.png"), auto;
-
+    cursor: url("/assets/hand-pointer.png"), auto;
 
     &:hover {
       background: #24dd80;
@@ -273,12 +282,17 @@
     }
   }
 }
-
+.back-next {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
 .next-project-link {
   display: flex;
   align-self: flex-end;
   cursor: url("/assets/hand-pointer.png"), auto;
-
 
   a {
     color: white;
@@ -289,15 +303,13 @@
     align-items: center;
     gap: 10px;
     transition: all 0.3s ease;
-      cursor: url("/assets/hand-pointer.png"), auto;
-
+    cursor: url("/assets/hand-pointer.png"), auto;
 
     img {
       width: 50px;
       transition: transform 0.6s ease-in-out;
       animation: none;
       cursor: url("/assets/hand-pointer.png"), auto;
-
     }
 
     &:hover {
@@ -438,11 +450,24 @@
 }
 
 @media (max-width: 920px) {
+  .next-project-link {
+    padding: 0; // More bottom padding for mobile
+    justify-content: center;
+
+    a {
+      font-size: 14px;
+      font-weight: 600;
+
+      img {
+        width: 30px;
+      }
+    }
+  }
   .black-bg {
     height: 100%;
     width: 100%;
   }
-  .content-wrapper{
+  .content-wrapper {
     margin: 150px 0 0 0;
   }
   .project-page {
@@ -462,10 +487,12 @@
   .back-link {
     display: none;
   }
-  .back-link-bottom{
+  .back-link-bottom {
     display: block;
   }
-
+  .back-next {
+    justify-content: space-between;
+  }
   .project-detail-wrapper {
     flex-direction: column;
     gap: 40px;
@@ -476,7 +503,7 @@
   .left-section {
     width: 100%;
     padding: 0;
-    order: 1; 
+    order: 1;
   }
 
   .content-wrapper {
@@ -534,7 +561,7 @@
     width: 100%;
     padding: 0;
     order: 2; // Image section comes second (at bottom)
-      }
+  }
 
   .project-image-container {
     margin-bottom: 30px;
@@ -554,19 +581,8 @@
     align-self: center;
     gap: 15px;
     margin-bottom: 100px; // Reduce margin since next-project-link follows
-    }
   }
-
-  .next-project-link {
-    padding: 0; // More bottom padding for mobile
-    justify-content: center;
-
-    a {
-      font-size: 16px;
-      font-weight: 600;
-    }
-  }
-
+}
 
 // Additional breakpoint for very small screens
 @media (max-width: 480px) {
