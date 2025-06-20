@@ -13,6 +13,9 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.header{
+  width: min-content;
+}
 .projects-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: bold;
