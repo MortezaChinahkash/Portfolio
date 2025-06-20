@@ -71,12 +71,24 @@
             >
             }
           </div>
+          <div class="back-next">
+            <div class="back-link-bottom">
+              <a href="#atf">
+                <img
+                  class="breadcrumb-arrow"
+                  src="/assets/png/Design material/00_Hand-drawn lines/03_Portfolio/Breadcrumbs/Breadcrumb arrow 3.png"
+                  alt=""
+                />
+                {{ translationService.t("go_back") }}
+              </a>
+            </div>
           <div class="next-project-link">
             <a (click)="navigateToNextProject()">
               {{ translationService.t('next_project') }} 
               <img src="/assets/png/Design material/00_Hand-drawn lines/03_Portfolio/Breadcrumbs/Next project arrow 3.png" alt="">
             </a>
           </div>
+        </div>
         </div>
       </div>
       } @else {

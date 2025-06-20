@@ -28,7 +28,35 @@
   display: flex;
   flex-direction: column;
 }
+.back-link-bottom{
+  display: none;
 
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    justify-self: flex-start;
+    font-size: 20px;
+
+    img {
+      transition: transform 0.6s ease-in-out;
+      animation: none;
+      width: 50px;
+    }
+
+    &:hover {
+      color: #e55a2b;
+
+      img {
+        animation: arrowBounce 1s ease-in-out infinite;
+      }
+    }
+  }
+}
 .back-link {
   padding-top: 100px;
   margin-bottom: 50px;
@@ -93,7 +121,7 @@
 }
 
 .project-headline {
-  width: fit-content;
+  width: min-content;
 
   h1 {
     font-size: clamp(2.5rem, 6vw, 4rem);
@@ -414,7 +442,9 @@
     height: 100%;
     width: 100%;
   }
-
+  .content-wrapper{
+    margin: 150px 0 0 0;
+  }
   .project-page {
     background-image: url("/assets/png/Design material/01_Background/16_Project view background mobile.png");
     background-size: cover;
@@ -424,7 +454,6 @@
   }
 
   .max-content {
-    padding: 0 20px;
     height: auto;
     min-height: 100vh;
     justify-content: flex-start;
@@ -432,6 +461,9 @@
 
   .back-link {
     display: none;
+  }
+  .back-link-bottom{
+    display: block;
   }
 
   .project-detail-wrapper {
@@ -453,18 +485,17 @@
   }
 
   .project-headline {
-    margin-bottom: 30px;
     text-align: left;
 
     h1 {
       font-size: 2.5rem;
       line-height: 1;
-      margin-bottom: 10px;
     }
 
     .blue-underline {
       width: 100%;
       max-width: 200px; // Limit the underline width
+      margin-top: 0;
     }
   }
 
@@ -522,7 +553,7 @@
     justify-content: center;
     align-self: center;
     gap: 15px;
-    margin-bottom: 30px; // Reduce margin since next-project-link follows
+    margin-bottom: 100px; // Reduce margin since next-project-link follows
     }
   }
 
