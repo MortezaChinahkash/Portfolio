@@ -1,6 +1,7 @@
 .project-page {
   width: 100%;
   min-height: 100vh;
+  height: 100%;
   background-image: url("/assets/png/Design material/01_Background/Img Original Size/Note book paper.png");
   background-position: left top;
   background-size: 100% 100%;
@@ -22,7 +23,6 @@
   max-width: 1440px;
   width: 90%;
   margin: 0 auto;
-  padding: 0 clamp(16px, 3vw, 36px);
   position: relative;
   height: 100vh;
   display: flex;
@@ -30,8 +30,8 @@
 }
 
 .back-link {
-  padding-top: clamp(80px, 12vw, 150px);
-  padding-left: clamp(16px, 2vw, 20px);
+  padding-top: 100px;
+  margin-bottom: 50px;
 
   a {
     color: black;
@@ -72,7 +72,6 @@
 
 .project-detail-wrapper {
   display: flex;
-  margin-top: 200px;
   justify-content: space-between;
   width: 100%;;
   align-items: center; // Change from center to flex-start
@@ -94,7 +93,6 @@
 }
 
 .project-headline {
-  margin-bottom: clamp(30px, 5vw, 40px);
   width: fit-content;
 
   h1 {
@@ -207,7 +205,6 @@
   margin-bottom: 40px;
   display: flex;
   align-self: flex-end;
-  margin-right: 50px; // Change from flex-end to center
 
   .project-image {
     max-width: 500px;
@@ -220,13 +217,12 @@
 
 .action-buttons {
   display: flex;
-  gap: 20px;
-  align-self: flex-end;
-  margin-right: 50px;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 50px;
 
   .btn {
-    margin-top: 50px;
-    display: inline-block;
+        display: inline-block;
     padding: 0.75rem 2rem;
     background-color: transparent;
     color: white;
@@ -251,8 +247,6 @@
 }
 
 .next-project-link {
-  margin-top: 200px;
-  padding-top: 30px;
   display: flex;
   align-self: flex-end;
   cursor: url("/assets/hand-pointer.png"), auto;
@@ -509,8 +503,7 @@
     width: 100%;
     padding: 0;
     order: 2; // Image section comes second (at bottom)
-    margin-bottom: 40px; // Add bottom margin for spacing
-  }
+      }
 
   .project-image-container {
     margin-bottom: 30px;
@@ -534,8 +527,7 @@
   }
 
   .next-project-link {
-    padding: 0;
-    padding-bottom: 60px; // More bottom padding for mobile
+    padding: 0; // More bottom padding for mobile
     justify-content: center;
 
     a {

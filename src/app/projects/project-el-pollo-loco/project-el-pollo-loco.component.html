@@ -56,15 +56,16 @@
                 <a [href]="project.projectUrl" target="_blank" class="btn live-btn">{{ translationService.t('live_test') }}</a>
               }
             </div>
+            <div class="next-project-link">
+              <a (click)="navigateToNextProject()">
+                {{ translationService.t('next_project') }} 
+                <img src="/assets/png/Design material/00_Hand-drawn lines/03_Portfolio/Breadcrumbs/Next project arrow 3.png" alt="">
+              </a>
+            </div>
           </div>
         </div>
         
-        <div class="next-project-link">
-          <a (click)="navigateToNextProject()">
-            {{ translationService.t('next_project') }} 
-            <img src="/assets/png/Design material/00_Hand-drawn lines/03_Portfolio/Breadcrumbs/Next project arrow 3.png" alt="">
-          </a>
-        </div>
+        
         
       } @else {
         <div class="loading">{{ translationService.t('loading_project') }}</div>
