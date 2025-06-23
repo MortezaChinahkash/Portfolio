@@ -136,6 +136,7 @@
 .project-headline {
   width: fit-content;
   margin-bottom: 30px;
+  display: inline-block;
 
   h1 {
     font-size: clamp(2.5rem, 6vw, 4rem);
@@ -573,12 +574,14 @@
   }  .project-headline {
     text-align: left;
     width: fit-content;
+    display: inline-block;
 
     h1 {
       font-size: 3rem;
       line-height: 1;
       width: fit-content;
       display: inline-block;
+      margin: 0;
     }
 
     .blue-underline {
@@ -634,7 +637,7 @@
 
     .project-image {
       width: 100%;
-      max-width: calc(100vw - 40px); // Vollbreite minus Abstand vom Rand
+      max-width: min(calc(100vw - 40px), 500px); // Vollbreite minus Abstand, aber max 500px
       border-radius: 8px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
@@ -700,21 +703,21 @@
 }
 
 // Additional breakpoint for very small screens
-@media (max-width: 480px) {
-  .project-headline {
+@media (max-width: 480px) {  .project-headline {
     width: fit-content;
+    display: inline-block;
     
     h1 {
       font-size: 2rem;
       width: fit-content;
       display: inline-block;
+      margin: 0;
     }
-  }
-  .project-image-container {
+  }.project-image-container {
     padding: 0 15px;
     
     .project-image {
-      max-width: calc(100vw - 30px); // Vollbreite minus kleinerer Abstand
+      max-width: min(calc(100vw - 30px), 400px); // Vollbreite minus kleinerer Abstand, aber max 400px
     }
   }
 
