@@ -8,12 +8,10 @@
           class="logo-hover"
           alt="Logo Hover"
         />
-      </a>
-
-      <nav class="navigation">
+      </a>      <nav class="navigation">
         <ul>
           <li>
-            <a class="about" href="#about-me">
+            <a class="about" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'about-me'" [href]="!isProjectPage && !isImprint ? '#about-me' : null">
               <span class="invert">{{ translationService.t("about_me") }}</span>
               <img
                 class="about-image"
@@ -23,7 +21,7 @@
             </a>
           </li>
           <li>
-            <a class="skills" href="#skills">
+            <a class="skills" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'skills'" [href]="!isProjectPage && !isImprint ? '#skills' : null">
               <span class="invert">{{ translationService.t("skills") }}</span>
               <img
                 class="skills-image"
@@ -33,7 +31,7 @@
             </a>
           </li>
           <li>
-            <a class="projects" href="#portfolio">
+            <a class="projects" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'portfolio'" [href]="!isProjectPage && !isImprint ? '#portfolio' : null">
               <span class="invert">{{ translationService.t("projects") }}</span>
               <img
                 class="projects-image"
@@ -43,7 +41,7 @@
             </a>
           </li>
           <li>
-            <a class="contact" href="#contact">
+            <a class="contact" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'contact'" [href]="!isProjectPage && !isImprint ? '#contact' : null">
               <span class="invert">{{ translationService.t("contact") }}</span>
               <img
                 class="contact-image"
@@ -135,30 +133,29 @@
             />
           </button>
         </div>
-        <div class="overlay-navigation">
-          <nav class="overlay-nav">
+        <div class="overlay-navigation">          <nav class="overlay-nav">
             <ul>
               <li>
-                <a class="about" href="#about-me" (click)="closeMenuWithDelay()">
+                <a class="about" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'about-me'" [href]="!isProjectPage && !isImprint ? '#about-me' : null" (click)="closeMenuWithDelay()">
                   <span class="invert">{{
                     translationService.t("about_me")
                   }}</span>
                 </a>
               </li>
               <li>
-                <a class="skills" href="#skills" (click)="closeMenuWithDelay()">
+                <a class="skills" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'skills'" [href]="!isProjectPage && !isImprint ? '#skills' : null" (click)="closeMenuWithDelay()">
                   <span class="invert">{{ translationService.t("skills") }}</span>
                 </a>
               </li>
               <li>
-                <a class="projects" href="#portfolio" (click)="closeMenuWithDelay()">
+                <a class="projects" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'portfolio'" [href]="!isProjectPage && !isImprint ? '#portfolio' : null" (click)="closeMenuWithDelay()">
                   <span class="invert">{{
                     translationService.t("projects")
                   }}</span>
                 </a>
               </li>
               <li>
-                <a class="contact" href="#contact" (click)="closeMenuWithDelay()">
+                <a class="contact" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'contact'" [href]="!isProjectPage && !isImprint ? '#contact' : null" (click)="closeMenuWithDelay()">
                   <span class="invert">{{
                     translationService.t("contact")
                   }}</span>
