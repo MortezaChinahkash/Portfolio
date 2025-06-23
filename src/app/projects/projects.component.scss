@@ -261,6 +261,8 @@
   width: 100%;
   justify-content: space-between;
   margin-bottom: 50px;
+  flex-wrap: wrap;
+  gap: 15px;
 
   .btn {
     display: inline-block;
@@ -276,6 +278,10 @@
     transition: all 0.2s;
     font-size: 1.2rem;
     cursor: url("/assets/hand-pointer.png"), auto;
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    min-width: 140px;
 
     &:hover {
       background: #24dd80;
@@ -300,10 +306,11 @@
     }
   }
 
+  // Container für In-Progress Status - zeigt nur den Status an
   .project-status-container {
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 
     .status-badge-large {
       display: inline-block;
@@ -322,16 +329,14 @@
     .status-description {
       color: white;
       font-size: 0.9rem;
-      margin: 10px 0;
+      margin: 10px 0 0 0;
       opacity: 0.8;
     }
   }
 
+  // Verstecke deaktivierte Buttons bei In-Progress Projekten komplett
   .disabled-buttons {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    gap: 20px;
+    display: none;
   }
 }
 .back-next {
@@ -628,12 +633,49 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
   }
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 100px;
 
+    .btn {
+      width: 100%;
+      max-width: 280px;
+      font-size: 1rem;
+      padding: 0.7rem 1.5rem;
+    }
+
+    .project-status-container {
+      .status-badge-large {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+      
+      .status-description {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
+// Tablet responsive styles
+@media (max-width: 1024px) and (min-width: 769px) {
   .action-buttons {
     justify-content: center;
-    align-self: center;
-    gap: 15px;
-    margin-bottom: 100px; // Reduce margin since next-project-link follows
+    gap: 20px;
+
+    .btn {
+      min-width: 160px;
+      font-size: 1.1rem;
+    }
+
+    .project-status-container {
+      .status-badge-large {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
   }
 }
 
@@ -648,11 +690,22 @@
   }
 
   .action-buttons {
-    align-items: center;
-
     .btn {
-      width: auto;
-      font-size: 12px;
+      width: 100%;
+      max-width: 250px;
+      font-size: 0.9rem;
+      padding: 0.6rem 1.2rem;
+    }
+
+    .project-status-container {
+      .status-badge-large {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+      
+      .status-description {
+        font-size: 0.8rem;
+      }
     }
   }
 }

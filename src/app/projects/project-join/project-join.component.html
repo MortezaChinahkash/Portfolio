@@ -58,10 +58,6 @@
                 <span class="status-badge-large">{{ translationService.t("project_in_progress") }}</span>
                 <p class="status-description">{{ translationService.t("project_links_disabled") }}</p>
               </div>
-              <div class="disabled-buttons">
-                <span class="btn btn-disabled">{{ translationService.t("github") }}</span>
-                <span class="btn btn-disabled">{{ translationService.t("live_test") }}</span>
-              </div>
             } @else {
               @if (project.gitHubUrl) {
               <a
