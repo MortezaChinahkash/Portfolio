@@ -32,6 +32,14 @@
       line-height: 1.4;
     }
   }
+  .different-skills {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.5rem, 1vw, 1rem);
+    justify-content: center;
+    margin-top: clamp(20px, 3vw, 40px);
+  }
 
   .arrow-bottom {
     position: absolute;
