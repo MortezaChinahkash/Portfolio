@@ -24,6 +24,16 @@
       </div>
       <div class="contact-form">
         <img class="contact-logo" src="/assets/png/logo/Logo-C.png" alt="" />        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <!-- Success Message -->
+          <div *ngIf="submitSuccess" class="success-message">
+            <p>{{ translationService.t("message_sent_success") }}</p>
+          </div>
+          
+          <!-- Error Message -->
+          <div *ngIf="submitError" class="error-message">
+            <p>{{ translationService.t("message_sent_error") }}</p>
+          </div>
+          
           <div class="form-group">
             <label for="name">{{ translationService.t("name") }}</label>
             <input
@@ -81,10 +91,10 @@
             />
             <button 
               type="submit" 
-              [disabled]="!contactForm.valid"
-              [class.disabled]="!contactForm.valid"
+              [disabled]="!contactForm.valid || isSubmitting"
+              [class.disabled]="!contactForm.valid || isSubmitting"
             >
-              {{ translationService.t("send") }}
+              {{ isSubmitting ? translationService.t("sending_message") : translationService.t("send") }}
             </button>
           </div>
         </form>

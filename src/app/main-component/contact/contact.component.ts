@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslationService } from '../../shared/services/translation.service';
 import { FooterComponent } from '../../shared/footer/footer.component';
+import { EmailService, ContactFormData } from '../../shared/services/email.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,10 +14,14 @@ import { FooterComponent } from '../../shared/footer/footer.component';
 })
 export class ContactComponent implements OnInit {
   contactForm!: FormGroup;
+  isSubmitting = false;
+  submitSuccess = false;
+  submitError = false;
 
   constructor(
     public translationService: TranslationService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private emailService: EmailService
   ) {}
 
   ngOnInit(): void {
@@ -73,10 +78,41 @@ export class ContactComponent implements OnInit {
 
   // Form absenden
   onSubmit(): void {
-    if (this.contactForm.valid) {
-      console.log('Form submitted:', this.contactForm.value);
-      // Hier würden Sie die Daten an einen Service oder Server senden
-      // Beispiel: this.contactService.sendMessage(this.contactForm.value);
+    if (this.contactForm.valid && !this.isSubmitting) {
+      this.isSubmitting = true;
+      this.submitSuccess = false;
+      this.submitError = false;
+
+      const formData: ContactFormData = {
+        name: this.contactForm.value.name,
+        email: this.contactForm.value.email,
+        message: this.contactForm.value.message
+      };
+
+      this.emailService.sendEmail(formData).subscribe({
+        next: (response) => {
+          console.log('E-Mail erfolgreich gesendet', response);
+          this.submitSuccess = true;
+          this.contactForm.reset();
+          this.contactForm.patchValue({ privacyPolicy: false });
+          this.isSubmitting = false;
+          
+          // Erfolgs-Nachricht nach 5 Sekunden ausblenden
+          setTimeout(() => {
+            this.submitSuccess = false;
+          }, 5000);
+        },
+        error: (error) => {
+          console.error('Fehler beim Senden der E-Mail', error);
+          this.submitError = true;
+          this.isSubmitting = false;
+          
+          // Fehler-Nachricht nach 5 Sekunden ausblenden
+          setTimeout(() => {
+            this.submitError = false;
+          }, 5000);
+        }
+      });
     } else {
       // Markiere alle Felder als touched, um Validierungsfehler anzuzeigen
       this.contactForm.markAllAsTouched();

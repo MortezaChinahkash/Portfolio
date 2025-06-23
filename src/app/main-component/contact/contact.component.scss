@@ -258,6 +258,45 @@ $accent: #1073EA;
   }
 }
 
+// Success and Error Messages
+.success-message,
+.error-message {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  animation: slideIn 0.3s ease-in-out;
+  
+  p {
+    margin: 0;
+    line-height: 1.4;
+  }
+}
+
+.success-message {
+  background-color: rgba(36, 221, 128, 0.2);
+  border: 1px solid #24dd80;
+  color: #24dd80;
+}
+
+.error-message {
+  background-color: rgba(255, 68, 68, 0.2);
+  border: 1px solid #ff4444;
+  color: #ff4444;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .arrow {
   width: clamp(350px, 2vw, 250px);
   margin-top: 50px;

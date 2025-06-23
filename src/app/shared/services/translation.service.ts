@@ -83,8 +83,7 @@ export interface TranslationSet {
   name_placeholder: string;
   email_placeholder: string;
   message_placeholder: string;
-  
-  // Form Validation Messages
+    // Form Validation Messages
   name_required: string;
   email_required: string;
   message_required: string;
@@ -93,6 +92,11 @@ export interface TranslationSet {
   email_invalid: string;
   name_min_length: string;
   message_min_length: string;
+  
+  // Form Submit Messages
+  sending_message: string;
+  message_sent_success: string;
+  message_sent_error: string;
   
   // Privacy Policy
   agree_privacy_start: string;
@@ -264,9 +268,13 @@ export class TranslationService {
       message_required: 'Message is required',
       privacy_required: 'You must accept the privacy policy',
       field_required: 'This field is required',
-      email_invalid: 'Please enter a valid email address',
-      name_min_length: 'Name must be at least 2 characters long',
+      email_invalid: 'Please enter a valid email address',      name_min_length: 'Name must be at least 2 characters long',
       message_min_length: 'Message must be at least 10 characters long',
+      
+      // Form Submit Messages
+      sending_message: 'Sending message...',
+      message_sent_success: 'Your message has been sent successfully! Thank you for contacting me.',
+      message_sent_error: 'Sorry, there was an error sending your message. Please try again later.',
       
       // Privacy Policy
       agree_privacy_start: 'I agree to the',
@@ -423,9 +431,13 @@ imprint_privacy_text: "The use of our website is generally possible without prov
       message_required: 'Nachricht ist erforderlich',
       privacy_required: 'Sie müssen die Datenschutzrichtlinie akzeptieren',
       field_required: 'Dieses Feld ist erforderlich',
-      email_invalid: 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
-      name_min_length: 'Name muss mindestens 2 Zeichen lang sein',
+      email_invalid: 'Bitte geben Sie eine gültige E-Mail-Adresse ein',      name_min_length: 'Name muss mindestens 2 Zeichen lang sein',
       message_min_length: 'Nachricht muss mindestens 10 Zeichen lang sein',
+      
+      // Form Submit Messages
+      sending_message: 'Nachricht wird gesendet...',
+      message_sent_success: 'Ihre Nachricht wurde erfolgreich gesendet! Vielen Dank für Ihre Kontaktaufnahme.',
+      message_sent_error: 'Entschuldigung, beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.',
       
       // Privacy Policy
       agree_privacy_start: 'Ich stimme der',
