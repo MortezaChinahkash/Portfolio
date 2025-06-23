@@ -71,20 +71,21 @@ export class HeaderComponent implements OnInit {
       this.isMenuOpen = false;
     }, 100);
   }
-
   // Navigation zu Sektionen
   navigateToSection(sectionId: string): void {
     if (this.isProjectPage || this.isImprint) {
-      // Wenn wir auf einer Projektseite oder Impressum sind, zur Startseite navigieren
-      this.router.navigate(['/'], { fragment: sectionId }).then(() => {
-        setTimeout(() => {
-          this.scrollToSection(sectionId);
-        }, 100);
-      });
+      this.navigateHomeAndScroll(sectionId);
     } else {
-      // Wenn wir bereits auf der Startseite sind, direkt scrollen
       this.scrollToSection(sectionId);
     }
+  }
+
+  private navigateHomeAndScroll(sectionId: string): void {
+    this.router.navigate(['/'], { fragment: sectionId }).then(() => {
+      setTimeout(() => {
+        this.scrollToSection(sectionId);
+      }, 100);
+    });
   }
 
   // Scrolling zu einer Sektion

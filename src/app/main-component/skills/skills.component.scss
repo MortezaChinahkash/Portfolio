@@ -1,34 +1,9 @@
-.skills {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("/assets/png/Design material/01_Background/Img Original Size/Skills BG.png");
-  width: 100%;
-  background-position: bottom;
-  background-size: cover;
-  color: white;
-  padding: clamp(60px, 8vw, 100px) 0;
-  padding-top: clamp(0px, 8vw, 0px);
-  height: auto;
-}
-
-.skill-icon {
-  width: clamp(30px, 4vw, 50px);
-  height: clamp(30px, 4vw, 50px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  filter: grayscale(100%);
-  transition: all 0.3s ease;
-  position: relative;
-  
-
-  &:hover {
-    filter: grayscale(0%);
-    transform: scale(1.2);
-    z-index: 5;
-  }
-}
+// Use modern @use syntax for better performance
+@use 'base';
+@use 'icons';
+@use 'description';
+@use 'animations';
+@use 'mobile';
 
 .skills-content {
   display: flex;

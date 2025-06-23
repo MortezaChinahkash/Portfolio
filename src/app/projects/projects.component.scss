@@ -1,10 +1,10 @@
-// Import modular styles for better performance and maintainability
-@import 'animations';
-@import 'layout';
-@import 'navigation';
-@import 'content';
-@import 'buttons';
-@import 'responsive';
+// Use modern @use syntax for better performance
+@use 'animations';
+@use 'layout';
+@use 'navigation';
+@use 'content';
+@use 'buttons';
+@use 'responsive';
 
 // Project container styles
 .project-container {

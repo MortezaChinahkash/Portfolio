@@ -1,0 +1,73 @@
+// Hover effects for navigation items
+.about {
+  img {
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    clip-path: inset(0 0 100% 0);
+  }
+
+  &:hover img {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.skills {
+  img {
+    width: 140%;
+    height: 120%;
+    bottom: -10%;
+    left: -20%;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  &:hover img {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.projects {
+  img {
+    width: 140%;
+    height: 120%;
+    bottom: -10%;
+    right: -20%;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  &:hover img {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.contact {
+  img {
+    width: 140%;
+    height: 120%;
+    bottom: -40%;
+    left: -10%;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  &:hover img {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.about-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.about:hover .about-image {
+  clip-path: polygon(50% 50%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 50%);
+  animation: revealOnlyFrom1230 1.5s ease-in-out forwards;
+  opacity: 1;
+}

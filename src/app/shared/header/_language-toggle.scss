@@ -1,0 +1,128 @@
+// Language toggle component styles
+.language-toggle {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  .toggle-switch {
+    width: 30px;
+    height: 10px;
+    background-color: #24dd80;
+    border-radius: 10px;
+    border: 0.5px solid white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: url("/assets/hand-pointer.png"), auto;
+
+    .toggle-circle {
+      width: 15px;
+      height: 15px;
+      background-color: #1073ea;
+      border-radius: 50%;
+      border: 1px solid white;
+      transition: transform 0.3s ease;
+      position: absolute;
+      left: 0;
+      cursor: url("/assets/hand-pointer.png"), auto;
+      z-index: 2;
+    }
+
+    .toggle-circle.de-active {
+      transform: translateX(15px);
+    }
+  }
+
+  .toggle-en,
+  .toggle-de {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    cursor: url("/assets/hand-pointer.png"), auto;
+  }
+
+  .toggle-en {
+    &:hover {
+      background-image: url("/assets/png/toggles/Toggle Left.png");
+      cursor: url("/assets/hand-pointer.png"), auto;
+    }
+    &.active {
+      color: #24dd80;
+    }
+  }
+
+  .toggle-de {
+    &:hover {
+      background-image: url("/assets/png/toggles/Toggle Right.png");
+      cursor: url("/assets/hand-pointer.png"), auto;
+    }
+    &.active {
+      color: #24dd80;
+    }
+  }
+}
+
+.language-toggle-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #000;
+  order: 2;
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  .toggle-switch {
+    width: 30px;
+    height: 10px;
+    background-color: #24dd80;
+    border-radius: 10px;
+    border: 0.5px solid #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    .toggle-circle {
+      width: 15px;
+      height: 15px;
+      background-color: #1073ea;
+      border-radius: 50%;
+      border: 1px solid #000;
+      transition: transform 0.3s ease;
+      position: absolute;
+      left: 0;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .toggle-circle.de-active {
+      transform: translateX(15px);
+    }
+  }
+
+  .toggle-en,
+  .toggle-de {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    background-size: cover;
+
+    &.active {
+      color: #24dd80;
+      background-image: url("/assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/Toggle.png");
+    }
+  }
+}

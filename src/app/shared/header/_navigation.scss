@@ -1,0 +1,53 @@
+// Navigation menu styles
+.navigation {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 clamp(20px, 4vw, 40px);
+  cursor: url("/assets/hand-pointer.png"), auto;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      font-size: clamp(14px, 2.5vw, 20px);
+      font-weight: 500;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: BricolageGrotesque, sans-serif;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      transition: opacity 0.2s;
+    }
+
+    a {
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      padding: 10px;
+
+      span {
+        mix-blend-mode: difference;
+        cursor: url("/assets/hand-pointer.png"), auto;
+      }
+
+      img {
+        position: absolute;
+        transition: clip-path 0.3s ease-out;
+        pointer-events: none;
+        z-index: -1;
+        mix-blend-mode: normal;
+        isolation: isolate;
+      }
+    }
+  }
+}

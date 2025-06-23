@@ -1,0 +1,88 @@
+// Mobile responsive styles for skills
+@media (max-width: 900px) { 
+  .skills-content {
+    flex-direction: column;
+    text-align: center;
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+
+   .skills-header {
+    align-self: flex-end;
+    width: 90%;
+    margin-right: 30px;
+    gap: 20px;
+  }
+
+  .skills-description {
+    width: 100%;
+
+    .skill-paper {
+      min-width: clamp(200px, 60vw, 350px);
+      
+      p {
+        width: 80%;
+        font-weight: bold;
+        padding: clamp(25px, 4vw, 40px) clamp(15px, 3vw, 30px);
+      }
+    }
+  }
+  
+  .skills-content {
+    padding: clamp(20px, 4vw, 20px);
+    width: 100%;
+  }
+}
+
+@media (max-width: 1050px) and (min-width: 900px) {
+  .skills-section {
+    max-width: 98vw;
+    width: 100%;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  .note-pull {
+    max-width: 100%;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    margin-left: -20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-content {
+    padding: clamp(20px, 4vw, 40px);
+  }
+
+  .note-pull {
+    margin-top: clamp(20px, 4vw, 40px);
+
+    .peel-text {
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+    }
+
+    .text-final {
+      font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+      padding: 15px;
+    }
+  }
+
+  .skills-description p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .skills-description .skill-paper {
+    background-image: url("/assets/png/Design material/02_Ripped Paper/peeled-skill.png");
+    min-width: clamp(180px, 80vw, 300px);
+    
+    p {
+      padding: clamp(20px, 4vw, 35px) clamp(15px, 3vw, 25px);
+      font-size: clamp(0.8rem, 3vw, 1rem);
+    }
+  }
+}

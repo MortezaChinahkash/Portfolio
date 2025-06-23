@@ -1,0 +1,120 @@
+// Social media and overlay menu styles
+.hero-socials {
+  display: flex;
+  gap: 1rem;
+  z-index: 3;
+  align-self: center;
+  justify-self: flex-start;
+  margin-top: 50px;
+}
+
+.social-circle {
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.15);
+  transition: background 0.3s;
+}
+
+.social-circle:hover {
+  background: #1aa8b5;
+}
+
+.social-pic {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.overlay-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("/assets/png/Design material/01_Background/Img Original Size/12 Isolated Paper Rips copia.png")
+    no-repeat center center/cover;
+  z-index: 2000;
+  animation: fadeIn 0.2s;
+  padding: 20px;
+  justify-content: flex-start;
+
+  .overlay-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .close-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    order: 3;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .initials {
+    order: 1;
+  }
+
+  .overlay-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+
+      li {
+        margin: 24px 0;
+
+        a {
+          font-size: 2rem;
+          color: white;
+          text-decoration: none;
+          display: inline-block;
+
+          span {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.overlay-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

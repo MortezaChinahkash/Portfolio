@@ -44,20 +44,13 @@ export class ContactComponent implements OnInit {
     const field = this.contactForm.get(fieldName);
     return field ? field.invalid && (field.dirty || field.touched) : false;
   }
-
   // Gibt die entsprechende Fehlermeldung zurück
   getErrorMessage(fieldName: string): string {
     const field = this.contactForm.get(fieldName);
     if (!field || !field.errors) return '';
 
     if (field.errors['required']) {
-      switch (fieldName) {
-        case 'name': return this.translationService.t('name_required');
-        case 'email': return this.translationService.t('email_required');
-        case 'message': return this.translationService.t('message_required');
-        case 'privacyPolicy': return this.translationService.t('privacy_required');
-        default: return this.translationService.t('field_required');
-      }
+      return this.getRequiredFieldError(fieldName);
     }
 
     if (field.errors['email']) {
@@ -65,57 +58,83 @@ export class ContactComponent implements OnInit {
     }
 
     if (field.errors['minlength']) {
-      const minLength = field.errors['minlength'].requiredLength;
-      switch (fieldName) {
-        case 'name': return this.translationService.t('name_min_length');
-        case 'message': return this.translationService.t('message_min_length');
-        default: return `Mindestens ${minLength} Zeichen erforderlich`;
-      }
+      return this.getMinLengthError(fieldName, field.errors['minlength'].requiredLength);
     }
 
     return '';
   }
 
+  private getRequiredFieldError(fieldName: string): string {
+    switch (fieldName) {
+      case 'name': return this.translationService.t('name_required');
+      case 'email': return this.translationService.t('email_required');
+      case 'message': return this.translationService.t('message_required');
+      case 'privacyPolicy': return this.translationService.t('privacy_required');
+      default: return this.translationService.t('field_required');
+    }
+  }
+
+  private getMinLengthError(fieldName: string, minLength: number): string {
+    switch (fieldName) {
+      case 'name': return this.translationService.t('name_min_length');
+      case 'message': return this.translationService.t('message_min_length');
+      default: return `Mindestens ${minLength} Zeichen erforderlich`;
+    }
+  }
   // Form absenden
   onSubmit(): void {
     if (this.contactForm.valid && !this.isSubmitting) {
-      this.isSubmitting = true;
-      this.submitSuccess = false;
-      this.submitError = false;
-
-      const formData: ContactFormData = {
-        name: this.contactForm.value.name,
-        email: this.contactForm.value.email,
-        message: this.contactForm.value.message
-      };
-
-      this.emailService.sendEmail(formData).subscribe({
-        next: (response) => {
-          console.log('E-Mail erfolgreich gesendet', response);
-          this.submitSuccess = true;
-          this.contactForm.reset();
-          this.contactForm.patchValue({ privacyPolicy: false });
-          this.isSubmitting = false;
-          
-          // Erfolgs-Nachricht nach 5 Sekunden ausblenden
-          setTimeout(() => {
-            this.submitSuccess = false;
-          }, 5000);
-        },
-        error: (error) => {
-          console.error('Fehler beim Senden der E-Mail', error);
-          this.submitError = true;
-          this.isSubmitting = false;
-          
-          // Fehler-Nachricht nach 5 Sekunden ausblenden
-          setTimeout(() => {
-            this.submitError = false;
-          }, 5000);
-        }
-      });
+      this.handleFormSubmission();
     } else {
-      // Markiere alle Felder als touched, um Validierungsfehler anzuzeigen
       this.contactForm.markAllAsTouched();
     }
+  }
+
+  private handleFormSubmission(): void {
+    this.prepareSubmission();
+    const formData = this.extractFormData();
+    
+    this.emailService.sendEmail(formData).subscribe({
+      next: (response) => this.handleSubmissionSuccess(response),
+      error: (error) => this.handleSubmissionError(error)
+    });
+  }
+
+  private prepareSubmission(): void {
+    this.isSubmitting = true;
+    this.submitSuccess = false;
+    this.submitError = false;
+  }
+
+  private extractFormData(): ContactFormData {
+    return {
+      name: this.contactForm.value.name,
+      email: this.contactForm.value.email,
+      message: this.contactForm.value.message
+    };
+  }
+
+  private handleSubmissionSuccess(response: any): void {
+    console.log('E-Mail erfolgreich gesendet', response);
+    this.submitSuccess = true;
+    this.resetForm();
+    this.hideMessageAfterDelay(() => this.submitSuccess = false);
+  }
+
+  private handleSubmissionError(error: any): void {
+    console.error('Fehler beim Senden der E-Mail', error);
+    this.submitError = true;
+    this.isSubmitting = false;
+    this.hideMessageAfterDelay(() => this.submitError = false);
+  }
+
+  private resetForm(): void {
+    this.contactForm.reset();
+    this.contactForm.patchValue({ privacyPolicy: false });
+    this.isSubmitting = false;
+  }
+
+  private hideMessageAfterDelay(callback: () => void): void {
+    setTimeout(callback, 5000);
   }
 }
