@@ -20,13 +20,17 @@ export class AppComponent implements OnInit {
     this.translationService.initLanguage();
 
     // Überprüfe beim Start
-    this.checkIfProjectPage(this.router.url);
-
-    // Reagiere auf Routenwechsel
+    this.checkIfProjectPage(this.router.url);    // Reagiere auf Routenwechsel
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       this.checkIfProjectPage(event.url);
+      
+      // Automatisch nach oben scrollen bei Routenänderungen
+      // aber nicht bei Fragment-Navigation (Links wie #about-me)
+      if (!event.url.includes('#')) {
+        window.scrollTo(0, 0);
+      }
     });
   }
 
