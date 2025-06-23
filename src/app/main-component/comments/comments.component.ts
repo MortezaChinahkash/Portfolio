@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, Renderer2, ElementRef } from '@angular/core';
 import { CommonModule, NgStyle } from '@angular/common';
-import { TranslationService } from '../../shared/services/translation.service';
+import { TranslationService, TranslationSet } from '../../shared/services/translation.service';
 
 interface Comment {
   name: string;
@@ -54,33 +54,25 @@ export class CommentsComponent implements OnInit, AfterViewInit {
       }
     });
   }
-
   updateComments() {
     this.comments = [
-      {
-        name: 'Tobias Lange',
-        role: this.translationService.t('role_frontend'),
-        text: this.translationService.t('comment1_text'),
-        date: '2023-01-01',
-        linkedIn: 'https://www.linkedin.com/in/johndoe',
-        backgroundImage: 'assets/png/Design%20material/03_Stickers/02_Testimonials/Color%20option%203/A.png'
-      },
-      {
-        name: 'Michael Weber',
-        role: this.translationService.t('role_backend'),
-        text: this.translationService.t('comment2_text'),
-        date: '2023-01-02',
-        linkedIn: 'https://www.linkedin.com/in/janesmith',
-        backgroundImage: 'assets/png/Design%20material/03_Stickers/02_Testimonials/Color%20option%203/b.png'
-      },
-      {
-        name: 'Anna Schmidt',
-        role: this.translationService.t('role_ux'),
-        text: this.translationService.t('comment3_text'),
-        date: '2023-01-03',
-        linkedIn: 'https://www.linkedin.com/in/alicejohnson',
-        backgroundImage: 'assets/png/Design%20material/03_Stickers/02_Testimonials/Color%20option%203/A.png'
-      }
+      this.createCommentData('Tobias Lange', 'role_frontend', 'comment1_text', 
+        'https://www.linkedin.com/in/johndoe', 'A.png'),
+      this.createCommentData('Michael Weber', 'role_backend', 'comment2_text', 
+        'https://www.linkedin.com/in/janesmith', 'b.png'),
+      this.createCommentData('Anna Schmidt', 'role_ux', 'comment3_text', 
+        'https://www.linkedin.com/in/alicejohnson', 'A.png')
     ];
+  }
+  private createCommentData(name: string, roleKey: string, textKey: string, 
+    linkedIn: string, imageName: string): Comment {
+    return {
+      name: name,
+      role: this.translationService.t(roleKey as any),
+      text: this.translationService.t(textKey as any),
+      date: '2023-01-01',
+      linkedIn: linkedIn,
+      backgroundImage: `assets/png/Design%20material/03_Stickers/02_Testimonials/Color%20option%203/${imageName}`
+    };
   }
 }

@@ -38,65 +38,88 @@ export class ProjectService {
     
     return project;
   }
-
   // Projekte initialisieren
   private initProjects(): void {
     this.projects = [
-      {
-        id: 1,
-        compId: 'dabubble',
-        title: this.translationService.t('dabubble_title'),
-        description: this.translationService.t('dabubble_description'),
-        imageUrl: '/assets/png/Design material/screens/DA_Bubble.png',
-        projectsImageUrl: '/assets/png/Design material/screens/dabubble.png',
-        projectUrl: 'https://example.com/dabubble',
-        gitHubUrl: 'https://github.com/yourusername/dabubble',        technologies: [
-          { name: 'Angular', imageUrl: '/assets/png/icons/Skill Icons/Angular.png' },
-          { name: 'TypeScript', imageUrl: '/assets/png/icons/Skill Icons/TypeScript.png' },
-          { name: 'SASS', imageUrl: '/assets/png/icons/Skill Icons/SASS.png' },
-          { name: 'Firebase', imageUrl: '/assets/png/icons/Skill Icons/Firebase.png' }
-        ],
-        isFeatured: true,
-        isInProgress: true
-      },
-      {
-        id: 2,
-        compId: 'join',
-        title: this.translationService.t('join_title'),
-        description: this.translationService.t('join_description'),
-        imageUrl: '/assets/png/Design material/screens/Join.png',
-        projectsImageUrl: '/assets/png/Design material/screens/join-project.png',
-        projectUrl: 'https://example.com/join-live',
-        gitHubUrl: 'https://github.com/yourusername/join',        technologies: [
-          { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
-          { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' },
-          { name: 'Firebase', imageUrl: '/assets/png/icons/Skill Icons/Firebase.png' },
-          { name: 'Angular', imageUrl: '/assets/png/icons/Skill Icons/Angular.png' },
-          { name: 'TypeScript', imageUrl: '/assets/png/icons/Skill Icons/TypeScript.png' }
-        ],
-        isFeatured: true,
-        isInProgress: true
-      },
-      {
-        id: 3,
-        compId: 'el-pollo-loco',
-        title: this.translationService.t('pollo_title'),
-        description: this.translationService.t('pollo_description'),
-        imageUrl: '/assets/png/Design material/screens/El_Pollo.png',
-        projectsImageUrl: '/assets/png/Design material/screens/el-pollo-loco.png',
-        projectUrl: 'https://example.com/el-pollo-loco',
-        gitHubUrl: 'https://github.com/yourusername/el-pollo-loco',
-        technologies: [
-          { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
-          { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' },
-          { name: 'JavaScript', imageUrl: '/assets/png/icons/Skill Icons/JavaScript.png' }
-        ],
-        isFeatured: true,
-        isInProgress: false
-      }
+      this.createDabubbleProject(),
+      this.createJoinProject(),
+      this.createElPolloLocoProject()
     ];
-    
-    // Debug-Ausgabe nach der Initialisierung
+  }
+
+  private createDabubbleProject(): PortfolioItem {
+    return {
+      id: 1,
+      compId: 'dabubble',
+      title: this.translationService.t('dabubble_title'),
+      description: this.translationService.t('dabubble_description'),
+      imageUrl: '/assets/png/Design material/screens/DA_Bubble.png',
+      projectsImageUrl: '/assets/png/Design material/screens/dabubble.png',
+      projectUrl: 'https://example.com/dabubble',
+      gitHubUrl: 'https://github.com/yourusername/dabubble',
+      technologies: this.getDabubbleTechnologies(),
+      isFeatured: true,
+      isInProgress: true
+    };
+  }
+
+  private createJoinProject(): PortfolioItem {
+    return {
+      id: 2,
+      compId: 'join',
+      title: this.translationService.t('join_title'),
+      description: this.translationService.t('join_description'),
+      imageUrl: '/assets/png/Design material/screens/Join.png',
+      projectsImageUrl: '/assets/png/Design material/screens/join-project.png',
+      projectUrl: 'https://example.com/join-live',
+      gitHubUrl: 'https://github.com/yourusername/join',
+      technologies: this.getJoinTechnologies(),
+      isFeatured: true,
+      isInProgress: true
+    };
+  }
+
+  private createElPolloLocoProject(): PortfolioItem {
+    return {
+      id: 3,
+      compId: 'el-pollo-loco',
+      title: this.translationService.t('pollo_title'),
+      description: this.translationService.t('pollo_description'),
+      imageUrl: '/assets/png/Design material/screens/El_Pollo.png',
+      projectsImageUrl: '/assets/png/Design material/screens/el-pollo-loco.png',
+      projectUrl: 'https://example.com/el-pollo-loco',
+      gitHubUrl: 'https://github.com/yourusername/el-pollo-loco',
+      technologies: this.getElPolloLocoTechnologies(),
+      isFeatured: true,
+      isInProgress: false
+    };
+  }
+
+  private getDabubbleTechnologies() {
+    return [
+      { name: 'Angular', imageUrl: '/assets/png/icons/Skill Icons/Angular.png' },
+      { name: 'TypeScript', imageUrl: '/assets/png/icons/Skill Icons/TypeScript.png' },
+      { name: 'SASS', imageUrl: '/assets/png/icons/Skill Icons/SASS.png' },
+      { name: 'Firebase', imageUrl: '/assets/png/icons/Skill Icons/Firebase.png' }
+    ];
+  }
+
+  private getJoinTechnologies() {
+    return [
+      { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
+      { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' },
+      { name: 'Firebase', imageUrl: '/assets/png/icons/Skill Icons/Firebase.png' },
+      { name: 'Angular', imageUrl: '/assets/png/icons/Skill Icons/Angular.png' },
+      { name: 'TypeScript', imageUrl: '/assets/png/icons/Skill Icons/TypeScript.png' }
+    ];
+  }
+
+  private getElPolloLocoTechnologies() {
+    return [
+      { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
+      { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' },
+      { name: 'JavaScript', imageUrl: '/assets/png/icons/Skill Icons/JavaScript.png' }
+    ];
   }
 
   // Neue Methode zum Abrufen des nächsten Projekts
