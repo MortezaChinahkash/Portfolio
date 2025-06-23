@@ -304,12 +304,16 @@
       }
     }
   }
-
   // Container für In-Progress Status - zeigt nur den Status an
   .project-status-container {
     width: 100%;
     text-align: center;
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
 
     .status-badge-large {
       display: inline-block;
@@ -322,14 +326,16 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .status-description {
       color: white;
       font-size: 0.9rem;
-      margin: 10px 0 0 0;
+      margin: 0;
       opacity: 0.8;
+      max-width: 300px;
+      line-height: 1.4;
     }
   }
 
@@ -642,16 +648,18 @@
       max-width: 280px;
       font-size: 1rem;
       padding: 0.7rem 1.5rem;
-    }
-
-    .project-status-container {
+    }    .project-status-container {
+      padding: 15px 0;
+      
       .status-badge-large {
         font-size: 1rem;
         padding: 10px 20px;
+        margin-bottom: 12px;
       }
       
       .status-description {
         font-size: 0.85rem;
+        max-width: 280px;
       }
     }
   }
@@ -667,12 +675,17 @@
       min-width: 160px;
       font-size: 1.1rem;
       flex: 0 0 auto;
-    }
-
-    .project-status-container {
+    }    .project-status-container {
+      padding: 15px 0;
+      
       .status-badge-large {
         font-size: 1rem;
         padding: 10px 20px;
+        margin-bottom: 12px;
+      }
+      
+      .status-description {
+        max-width: 250px;
       }
     }
   }
@@ -700,16 +713,18 @@
       max-width: 250px;
       font-size: 0.9rem;
       padding: 0.6rem 1.2rem;
-    }
-
-    .project-status-container {
+    }    .project-status-container {
+      padding: 10px 0;
+      
       .status-badge-large {
         font-size: 0.9rem;
         padding: 8px 16px;
+        margin-bottom: 10px;
       }
       
       .status-description {
         font-size: 0.8rem;
+        max-width: 220px;
       }
     }
   }
