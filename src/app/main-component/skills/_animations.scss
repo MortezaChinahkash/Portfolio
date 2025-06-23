@@ -1,6 +1,6 @@
 // Complex animations for skills section
 .skills-ring {
-  width: calc(20px + 100% + 20px);
+  width: calc(15px + 100% + 15px);
   background-image: url("/assets/png/Design material/00_Hand-drawn lines/02_Skills/Color option 3.png");
   background-position: center;
   background-size: cover;
@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -20px;
+  margin-left: -15px;
   clip-path: polygon(50% 50%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 50% 50%);
   animation: revealCycleFrom10 6s ease-in-out infinite;
 

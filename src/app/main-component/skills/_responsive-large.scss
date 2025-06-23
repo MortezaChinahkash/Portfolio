@@ -5,12 +5,14 @@
     padding: 50px 20px;
     gap: clamp(2rem, 4vw, 3rem);
     align-items: center;
+    overflow-x: hidden;
   }
 
   .skills-header {
     width: 100%;
     align-items: center;
     text-align: center;
+    margin-left: 0;
   }
 
   .skills-description {

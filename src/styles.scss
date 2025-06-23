@@ -14,6 +14,11 @@
     list-style: none;
   }
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
 .max-content {
   max-width: 1440px;
   width: 100%;
