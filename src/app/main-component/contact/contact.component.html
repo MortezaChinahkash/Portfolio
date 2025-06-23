@@ -23,17 +23,15 @@
         />
       </div>
       <div class="contact-form">
-        <img class="contact-logo" src="/assets/png/logo/Logo-C.png" alt="" />
-
-        <form>
+        <img class="contact-logo" src="/assets/png/logo/Logo-C.png" alt="" />        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="name">{{ translationService.t("name") }}</label>
             <input
               type="text"
               id="name"
-              name="name"
-              placeholder="{{ translationService.t('name_placeholder') }}"
-              required
+              formControlName="name"
+              [placeholder]="hasError('name') ? getErrorMessage('name') : translationService.t('name_placeholder')"
+              [class.error]="hasError('name')"
             />
           </div>
           <div class="form-group">
@@ -41,37 +39,39 @@
             <input
               type="email"
               id="email"
-              name="email"
-              placeholder="{{ translationService.t('email_placeholder') }}"
-              required
+              formControlName="email"
+              [placeholder]="hasError('email') ? getErrorMessage('email') : translationService.t('email_placeholder')"
+              [class.error]="hasError('email')"
             />
           </div>
           <div class="form-group">
             <label for="message">{{ translationService.t("message") }}</label>
             <textarea
               id="message"
-              name="message"
-              placeholder="{{ translationService.t('message_placeholder') }}"
+              formControlName="message"
+              [placeholder]="hasError('message') ? getErrorMessage('message') : translationService.t('message_placeholder')"
+              [class.error]="hasError('message')"
               rows="1"
-              required
             ></textarea>
           </div>
           <div class="checkbox">
             <input
               class="privacy-checkbox"
               type="checkbox"
-              name="privacy-policy"
+              formControlName="privacyPolicy"
               id="privacy-policy"
-              required
             />
-            <div class="custom-checkbox"></div>
-            <label for="privacy-policy">
+            <div class="custom-checkbox" [class.error]="hasError('privacyPolicy')"></div>
+            <label for="privacy-policy" [class.error-text]="hasError('privacyPolicy')">
               {{ translationService.t("agree_privacy_start") }}
               <a href="/imprint" class="privacy-link">{{
                 translationService.t("privacy_policy")
               }}</a>
               {{ translationService.t("agree_privacy_end") }}
             </label>
+            <div *ngIf="hasError('privacyPolicy')" class="error-message">
+              {{ getErrorMessage('privacyPolicy') }}
+            </div>
           </div>
           <div class="submit-button">
             <img
@@ -79,7 +79,13 @@
               src="/assets/png/Design material/00_Hand-drawn lines/05_Contact/Color option 3.png"
               alt=""
             />
-            <button type="submit">{{ translationService.t("send") }}</button>
+            <button 
+              type="submit" 
+              [disabled]="!contactForm.valid"
+              [class.disabled]="!contactForm.valid"
+            >
+              {{ translationService.t("send") }}
+            </button>
           </div>
         </form>
       </div>

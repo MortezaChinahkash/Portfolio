@@ -79,11 +79,20 @@ export interface TranslationSet {
   email: string;
   message: string;
   send: string;
-  
-  // Form Placeholders
+    // Form Placeholders
   name_placeholder: string;
   email_placeholder: string;
   message_placeholder: string;
+  
+  // Form Validation Messages
+  name_required: string;
+  email_required: string;
+  message_required: string;
+  privacy_required: string;
+  field_required: string;
+  email_invalid: string;
+  name_min_length: string;
+  message_min_length: string;
   
   // Privacy Policy
   agree_privacy_start: string;
@@ -244,11 +253,20 @@ export class TranslationService {
       email: 'Email',
       message: 'Message',
       send: 'Send',
-      
-      // Form Placeholders
+        // Form Placeholders
       name_placeholder: 'Enter your name',
       email_placeholder: 'Enter your email',
       message_placeholder: 'Enter your message',
+      
+      // Form Validation Messages
+      name_required: 'Name is required',
+      email_required: 'Email is required',
+      message_required: 'Message is required',
+      privacy_required: 'You must accept the privacy policy',
+      field_required: 'This field is required',
+      email_invalid: 'Please enter a valid email address',
+      name_min_length: 'Name must be at least 2 characters long',
+      message_min_length: 'Message must be at least 10 characters long',
       
       // Privacy Policy
       agree_privacy_start: 'I agree to the',
@@ -394,11 +412,20 @@ imprint_privacy_text: "The use of our website is generally possible without prov
       email: 'E-Mail',
       message: 'Nachricht',
       send: 'Senden',
-      
-      // Form Placeholders
+        // Form Placeholders
       name_placeholder: 'Gib deinen Namen ein',
       email_placeholder: 'Gib deine E-Mail ein',
       message_placeholder: 'Gib deine Nachricht ein',
+      
+      // Form Validation Messages
+      name_required: 'Name ist erforderlich',
+      email_required: 'E-Mail ist erforderlich',
+      message_required: 'Nachricht ist erforderlich',
+      privacy_required: 'Sie müssen die Datenschutzrichtlinie akzeptieren',
+      field_required: 'Dieses Feld ist erforderlich',
+      email_invalid: 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
+      name_min_length: 'Name muss mindestens 2 Zeichen lang sein',
+      message_min_length: 'Nachricht muss mindestens 10 Zeichen lang sein',
       
       // Privacy Policy
       agree_privacy_start: 'Ich stimme der',

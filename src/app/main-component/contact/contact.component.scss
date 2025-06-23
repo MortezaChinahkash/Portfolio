@@ -138,6 +138,25 @@ $accent: #1073EA;
     textarea {
       resize: none;
     }
+
+    // Form validation styles
+    input,
+    textarea {
+      &.error {
+        border-bottom: 1px solid #ff4444 !important;
+        background-color: rgba(255, 68, 68, 0.1);
+        
+        &::placeholder {
+          color: #ff4444;
+          opacity: 1;
+          font-weight: 500;
+        }
+      }
+      
+      &:focus.error {
+        border-bottom: 1px solid #ff4444 !important;
+      }
+    }
   }
 
   .checkbox {
@@ -172,6 +191,11 @@ $accent: #1073EA;
       margin-top: 3px;
       position: relative;
       flex-shrink: 0;
+
+      &.error {
+        border: 2px solid #ff4444;
+        background-color: rgba(255, 68, 68, 0.1);
+      }
     }
 
     // Checkmark when checked
@@ -220,6 +244,17 @@ $accent: #1073EA;
       box-shadow: none;
       transform: translateY(2px);
     }
+  }
+
+  label.error-text {
+    color: #ff4444;
+  }
+  
+  .error-message {
+    color: #ff4444;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 500;
   }
 }
 
@@ -270,6 +305,26 @@ $accent: #1073EA;
 }
 .submit-button{
   align-self: flex-end;
+  
+  button {
+    &.disabled {
+      opacity: 0.5;
+      cursor: not-allowed !important;
+      background-color: rgba(255, 255, 255, 0.3) !important;
+      color: rgba(255, 255, 255, 0.7) !important;
+      border-color: rgba(255, 255, 255, 0.5) !important;
+      box-shadow: none !important;
+      transform: none !important;
+      
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.3) !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+        box-shadow: none !important;
+        transform: none !important;
+        cursor: not-allowed !important;
+      }
+    }
+  }
 }
 @media (max-width: 900px) {
   .contact-logo-mobile{
@@ -339,5 +394,30 @@ $accent: #1073EA;
   .contact-form {
     width: 100%;
   }
+}
+
+// Touch device improvements for mobile
+@media (max-width: 768px) {
+  .form-group {
+    input,
+    textarea {
+      &.error {
+        background-color: rgba(255, 68, 68, 0.15);
+        animation: shake 0.5s ease-in-out;
+      }
+    }
+  }
+  
+  .checkbox {
+    .custom-checkbox.error {
+      animation: shake 0.5s ease-in-out;
+    }
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
 }
 
