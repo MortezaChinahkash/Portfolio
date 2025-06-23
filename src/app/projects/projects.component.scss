@@ -136,7 +136,7 @@
 .project-headline {
   width: fit-content;
   margin-bottom: 30px;
-  display: inline-block;
+  position: relative;
 
   h1 {
     font-size: clamp(2.5rem, 6vw, 4rem);
@@ -159,6 +159,9 @@
     overflow: hidden;
     clip-path: inset(0 100% 0 0);
     animation: lineReveal 6s infinite;
+    position: absolute;
+    left: 0;
+    right: 0;
 
     @keyframes lineReveal {
       0%,
@@ -574,7 +577,7 @@
   }  .project-headline {
     text-align: left;
     width: fit-content;
-    display: inline-block;
+    position: relative;
 
     h1 {
       font-size: 3rem;
@@ -589,6 +592,9 @@
       margin-top: 8px;
       margin-bottom: 50px;
       display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
     }
   }
 
@@ -705,13 +711,19 @@
 // Additional breakpoint for very small screens
 @media (max-width: 480px) {  .project-headline {
     width: fit-content;
-    display: inline-block;
+    position: relative;
     
     h1 {
       font-size: 2rem;
       width: fit-content;
       display: inline-block;
       margin: 0;
+    }
+
+    .blue-underline {
+      position: absolute;
+      left: 0;
+      right: 0;
     }
   }.project-image-container {
     padding: 0 15px;
