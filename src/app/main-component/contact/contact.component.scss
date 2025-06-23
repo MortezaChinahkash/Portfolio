@@ -158,23 +158,22 @@ $accent: #1073EA;
       }
     }
   }
-
   .checkbox {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     margin-top: clamp(10px, 1.5vw, 20px);
     position: relative;
-    cursor: url("/assets/hand-pointer.png"), auto;
-
-    .privacy-checkbox,
+    cursor: url("/assets/hand-pointer.png"), auto;    .privacy-checkbox,
     input[type="checkbox"] {
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
       opacity: 0;
       cursor: pointer;
-      margin-top: 3px;
+      margin: 0;
       position: absolute;
+      top: -5px;
+      left: -5px;
       z-index: 2;
       cursor: url("/assets/hand-pointer.png"), auto;
     }
