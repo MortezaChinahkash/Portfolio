@@ -28,11 +28,12 @@
 .note {
   width: clamp(150px, 20vw, 250px);
   height: clamp(150px, 20vw, 250px);
-  background-image: url("/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/B.png");
+  background-image: url("/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/A.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -51,7 +52,7 @@
 }
 
 .note-transition {
-  background-image: url("/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/A.png");
+  background-image: url("/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/B.png");
   z-index: 4;
 }
 
@@ -103,4 +104,36 @@
   width: 90%;
   margin: clamp(10px, 2vw, 20px) auto 0;
   text-align: center;
+}
+
+// Learning skills in final note
+.learning-skills {
+  display: flex;
+  gap: clamp(10px, 2vw, 15px);
+  justify-content: center;
+  align-items: center;
+  margin-top: clamp(10px, 2vw, 15px);
+  flex-wrap: wrap;
+}
+
+.learning-skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .learning-skill-icon {
+    width: clamp(30px, 4vw, 40px);
+    height: clamp(30px, 4vw, 40px);
+    object-fit: contain;
+    margin-bottom: clamp(3px, 1vw, 5px);
+  }
+
+  span {
+    color: white;
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    font-weight: 500;
+    text-align: center;
+    font-family: "Kalam", Courier, monospace;
+  }
 }

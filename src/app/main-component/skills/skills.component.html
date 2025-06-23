@@ -38,11 +38,17 @@
 
       <div class="note note-transition"
            [class.visible]="currentState === 'transition'">
-      </div>
-
-      <div class="note note-final"
+      </div>      <div class="note note-final"
            [class.visible]="currentState === 'final'">
         <span class="peel-text text-final">{{ translationService.t('currently_learning') }}</span>
+        <div class="learning-skills">
+          @for (skill of learningSkills; track skill) {
+            <div class="learning-skill">
+              <img class="learning-skill-icon" [src]="skill.image" [alt]="skill.name">
+              <span>{{ skill.name }}</span>
+            </div>
+          }
+        </div>
       </div>
     </div>
 

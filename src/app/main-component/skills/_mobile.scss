@@ -75,6 +75,22 @@
       font-size: clamp(0.8rem, 1.1vw, 1.2rem);
       padding: 15px;
     }
+
+    .learning-skills {
+      gap: clamp(5px, 1.5vw, 8px);
+      margin-top: clamp(5px, 1.5vw, 8px);
+    }
+
+    .learning-skill {
+      .learning-skill-icon {
+        width: clamp(25px, 3vw, 30px);
+        height: clamp(25px, 3vw, 30px);
+      }
+
+      span {
+        font-size: clamp(0.5rem, 0.8vw, 0.6rem);
+      }
+    }
   }
 
   .skills-description p {

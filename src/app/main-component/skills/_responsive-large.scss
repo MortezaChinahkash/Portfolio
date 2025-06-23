@@ -16,9 +16,9 @@
   .skills-description {
     width: 100%;
   }
-
   .note-pull {
     width: auto;
+    height: clamp(150px, 20vw, 250px);
     margin-top: clamp(20px, 4vw, 40px);
     transform: rotate(5deg);
   }
