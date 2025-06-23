@@ -71,4 +71,30 @@ export class HeaderComponent implements OnInit {
       this.isMenuOpen = false;
     }, 100);
   }
+
+  // Navigation zu Sektionen
+  navigateToSection(sectionId: string): void {
+    if (this.isProjectPage || this.isImprint) {
+      // Wenn wir auf einer Projektseite oder Impressum sind, zur Startseite navigieren
+      this.router.navigate(['/'], { fragment: sectionId }).then(() => {
+        setTimeout(() => {
+          this.scrollToSection(sectionId);
+        }, 100);
+      });
+    } else {
+      // Wenn wir bereits auf der Startseite sind, direkt scrollen
+      this.scrollToSection(sectionId);
+    }
+  }
+
+  // Scrolling zu einer Sektion
+  private scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
 }

@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
   currentLanguage: SupportedLanguage = 'en';
   isMenuOpen: boolean = false;
   isImprint: boolean = false;
@@ -67,5 +67,26 @@ constructor(
     setTimeout(() => {
       this.isMenuOpen = false;
     }, 100);
+  }
+
+  // Navigation zu Sektionen
+  navigateToSection(sectionId: string): void {
+    // Immer zur Startseite navigieren, da das Footer auf allen Seiten ist
+    this.router.navigate(['/'], { fragment: sectionId }).then(() => {
+      setTimeout(() => {
+        this.scrollToSection(sectionId);
+      }, 100);
+    });
+  }
+
+  // Scrolling zu einer Sektion
+  private scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   }
 }

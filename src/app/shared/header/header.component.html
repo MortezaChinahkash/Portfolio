@@ -11,7 +11,7 @@
       </a>      <nav class="navigation">
         <ul>
           <li>
-            <a class="about" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'about-me'" [href]="!isProjectPage && !isImprint ? '#about-me' : null">
+            <a class="about" (click)="navigateToSection('about-me')" style="cursor: pointer;">
               <span class="invert">{{ translationService.t("about_me") }}</span>
               <img
                 class="about-image"
@@ -21,7 +21,7 @@
             </a>
           </li>
           <li>
-            <a class="skills" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'skills'" [href]="!isProjectPage && !isImprint ? '#skills' : null">
+            <a class="skills" (click)="navigateToSection('skills')" style="cursor: pointer;">
               <span class="invert">{{ translationService.t("skills") }}</span>
               <img
                 class="skills-image"
@@ -31,7 +31,7 @@
             </a>
           </li>
           <li>
-            <a class="projects" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'portfolio'" [href]="!isProjectPage && !isImprint ? '#portfolio' : null">
+            <a class="projects" (click)="navigateToSection('portfolio')" style="cursor: pointer;">
               <span class="invert">{{ translationService.t("projects") }}</span>
               <img
                 class="projects-image"
@@ -41,7 +41,7 @@
             </a>
           </li>
           <li>
-            <a class="contact" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'contact'" [href]="!isProjectPage && !isImprint ? '#contact' : null">
+            <a class="contact" (click)="navigateToSection('contact')" style="cursor: pointer;">
               <span class="invert">{{ translationService.t("contact") }}</span>
               <img
                 class="contact-image"
@@ -136,26 +136,26 @@
         <div class="overlay-navigation">          <nav class="overlay-nav">
             <ul>
               <li>
-                <a class="about" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'about-me'" [href]="!isProjectPage && !isImprint ? '#about-me' : null" (click)="closeMenuWithDelay()">
+                <a class="about" (click)="navigateToSection('about-me'); closeMenuWithDelay()" style="cursor: pointer;">
                   <span class="invert">{{
                     translationService.t("about_me")
                   }}</span>
                 </a>
               </li>
               <li>
-                <a class="skills" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'skills'" [href]="!isProjectPage && !isImprint ? '#skills' : null" (click)="closeMenuWithDelay()">
+                <a class="skills" (click)="navigateToSection('skills'); closeMenuWithDelay()" style="cursor: pointer;">
                   <span class="invert">{{ translationService.t("skills") }}</span>
                 </a>
               </li>
               <li>
-                <a class="projects" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'portfolio'" [href]="!isProjectPage && !isImprint ? '#portfolio' : null" (click)="closeMenuWithDelay()">
+                <a class="projects" (click)="navigateToSection('portfolio'); closeMenuWithDelay()" style="cursor: pointer;">
                   <span class="invert">{{
                     translationService.t("projects")
                   }}</span>
                 </a>
               </li>
               <li>
-                <a class="contact" [routerLink]="isProjectPage || isImprint ? ['/'] : null" [fragment]="'contact'" [href]="!isProjectPage && !isImprint ? '#contact' : null" (click)="closeMenuWithDelay()">
+                <a class="contact" (click)="navigateToSection('contact'); closeMenuWithDelay()" style="cursor: pointer;">
                   <span class="invert">{{
                     translationService.t("contact")
                   }}</span>
