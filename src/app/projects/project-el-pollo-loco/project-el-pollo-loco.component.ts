@@ -43,7 +43,6 @@ export class ProjectElPolloLocoComponent implements OnInit {
       this.router.navigate([route]);
     }
   }
-
   private createFallbackProject(): PortfolioItem {
     return {
       id: 998,
@@ -53,14 +52,18 @@ export class ProjectElPolloLocoComponent implements OnInit {
       projectsImageUrl: '/assets/png/Design material/screens/el-pollo-project.png',
       projectUrl: 'https://example.com/el-pollo-loco',
       gitHubUrl: 'https://github.com/yourusername/el-pollo-loco',
-      technologies: [
-        { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
-        { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' },
-        { name: 'JavaScript', imageUrl: '/assets/png/icons/Skill Icons/JavaScript.png' }
-      ],
+      technologies: this.getPolloTechnologies(),
       isFeatured: true,
       isInProgress: false,
       compId: 'el-pollo-loco'
     };
+  }
+
+  private getPolloTechnologies() {
+    return [
+      { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
+      { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' },
+      { name: 'JavaScript', imageUrl: '/assets/png/icons/Skill Icons/JavaScript.png' }
+    ];
   }
 }
