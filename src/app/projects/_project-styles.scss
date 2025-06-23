@@ -1,0 +1,124 @@
+// Project-specific components and utilities
+.project-container {
+  padding-top: 120px;
+  padding-bottom: 60px;
+  color: white;
+}
+
+.project-header {
+  margin-bottom: clamp(20px, 5vw, 40px);
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+  }
+}
+
+.project-description {
+  margin-bottom: clamp(20px, 5vw, 40px);
+  max-width: 800px;
+
+  p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.6;
+  }
+}
+
+.technologies {
+  margin-bottom: clamp(20px, 5vw, 40px);
+
+  h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: clamp(10px, 3vw, 20px);
+  }
+
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(10px, 3vw, 20px);
+
+    .tech-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      img {
+        width: clamp(40px, 8vw, 60px);
+        height: clamp(40px, 8vw, 60px);
+        object-fit: contain;
+        margin-bottom: clamp(5px, 2vw, 10px);
+      }
+
+      span {
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        color: white;
+      }
+    }
+  }
+}
+
+.project-links {
+  margin-top: clamp(30px, 6vw, 50px);
+
+  .link-button {
+    display: inline-block;
+    padding: clamp(10px, 3vw, 15px) clamp(20px, 5vw, 30px);
+    margin-right: clamp(10px, 3vw, 20px);
+    margin-bottom: clamp(10px, 3vw, 15px);
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: url("/assets/hand-pointer.png"), auto;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background-color: #666;
+      border-color: #666;
+      color: #ccc;
+
+      &:hover {
+        background-color: #666;
+        color: #ccc;
+      }
+    }
+
+    &.github-link {
+      background-color: #333;
+      border-color: #333;
+
+      &:hover {
+        background-color: #555;
+        border-color: #555;
+      }
+    }
+
+    &.live-link {
+      background-color: #4caf50;
+      color: white;
+
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: white;
+}
