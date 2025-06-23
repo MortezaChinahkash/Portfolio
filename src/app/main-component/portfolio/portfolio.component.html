@@ -38,10 +38,13 @@
           </div>
         </div>
 
-      </div>
-
-      <div class="project-info">
+      </div>      <div class="project-info">
         <h2 class="project-title">{{ project.title }}</h2>
+        @if (project.isInProgress) {
+          <div class="project-status">
+            <span class="status-badge">{{ translationService.t("project_in_progress") }}</span>
+          </div>
+        }
         <p class="project-description">{{ project.description }}</p>
         <div class="project-links"></div>        <button class="btn"><a [routerLink]="['/projects/project-' + project.compId]">
               {{ translationService.t("project_details") || "Default text" }}

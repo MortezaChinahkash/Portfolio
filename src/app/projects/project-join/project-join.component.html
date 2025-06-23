@@ -52,22 +52,32 @@
               class="project-image"
             />
             }
-          </div>
-          <div class="action-buttons">
-            @if (project.gitHubUrl) {
-            <a
-              [href]="project.gitHubUrl"
-              target="_blank"
-              class="btn github-btn"
-              >{{ translationService.t("github") }}</a
-            >
-            } @if (project.projectUrl) {
-            <a
-              [href]="project.projectUrl"
-              target="_blank"
-              class="btn live-btn"
-              >{{ translationService.t("live_test") }}</a
-            >
+          </div>          <div class="action-buttons">
+            @if (project.isInProgress) {
+              <div class="project-status-container">
+                <span class="status-badge-large">{{ translationService.t("project_in_progress") }}</span>
+                <p class="status-description">{{ translationService.t("project_links_disabled") }}</p>
+              </div>
+              <div class="disabled-buttons">
+                <span class="btn btn-disabled">{{ translationService.t("github") }}</span>
+                <span class="btn btn-disabled">{{ translationService.t("live_test") }}</span>
+              </div>
+            } @else {
+              @if (project.gitHubUrl) {
+              <a
+                [href]="project.gitHubUrl"
+                target="_blank"
+                class="btn github-btn"
+                >{{ translationService.t("github") }}</a
+              >
+              } @if (project.projectUrl) {
+              <a
+                [href]="project.projectUrl"
+                target="_blank"
+                class="btn live-btn"
+                >{{ translationService.t("live_test") }}</a
+              >
+              }
             }
           </div>
           <div class="back-next">            <div class="back-link-bottom">

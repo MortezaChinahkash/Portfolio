@@ -102,9 +102,11 @@ export interface TranslationSet {
   agree_privacy_start: string;
   privacy_policy: string;
   agree_privacy_end: string;
-
   // Projekt Details
   project_details: string;
+  project_in_progress: string;
+  project_coming_soon: string;
+  project_links_disabled: string;
 
   // Legal/Footer
   legal_notice: string;
@@ -283,6 +285,9 @@ export class TranslationService {
 
       // Projekt Details
       project_details: "Project details",
+      project_in_progress: "In Progress",
+      project_coming_soon: "Coming Soon",
+      project_links_disabled: "Links will be available once the project is completed",
 
       // Legal/Footer
       legal_notice: "Legal Notice",
@@ -446,6 +451,9 @@ imprint_privacy_text: "The use of our website is generally possible without prov
 
       // Projekt Details
       project_details: "Projektdetails",
+      project_in_progress: "In Arbeit",
+      project_coming_soon: "Demnächst verfügbar",
+      project_links_disabled: "Links sind verfügbar, sobald das Projekt abgeschlossen ist",
 
       // Legal/Footer
       legal_notice: "Impressum",

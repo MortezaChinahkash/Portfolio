@@ -200,6 +200,23 @@ img.screen {
   }
 }
 
+// Status Badge für "In Arbeit"-Projekte
+.project-status {
+  margin: 8px 0;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #ff9800;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 @media (max-width: 768px) {
   .btn{

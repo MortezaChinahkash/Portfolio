@@ -50,15 +50,14 @@ export class ProjectService {
         imageUrl: '/assets/png/Design material/screens/DA_Bubble.png',
         projectsImageUrl: '/assets/png/Design material/screens/dabubble.png',
         projectUrl: 'https://example.com/dabubble',
-        gitHubUrl: 'https://github.com/yourusername/dabubble',
-        technologies: [
+        gitHubUrl: 'https://github.com/yourusername/dabubble',        technologies: [
           { name: 'Angular', imageUrl: '/assets/png/icons/Skill Icons/Angular.png' },
           { name: 'TypeScript', imageUrl: '/assets/png/icons/Skill Icons/TypeScript.png' },
           { name: 'SASS', imageUrl: '/assets/png/icons/Skill Icons/SASS.png' },
           { name: 'Firebase', imageUrl: '/assets/png/icons/Skill Icons/Firebase.png' }
         ],
         isFeatured: true,
-        isInProgress: false
+        isInProgress: true
       },
       {
         id: 2,
@@ -68,8 +67,7 @@ export class ProjectService {
         imageUrl: '/assets/png/Design material/screens/Join.png',
         projectsImageUrl: '/assets/png/Design material/screens/join-project.png',
         projectUrl: 'https://example.com/join-live',
-        gitHubUrl: 'https://github.com/yourusername/join',
-        technologies: [
+        gitHubUrl: 'https://github.com/yourusername/join',        technologies: [
           { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
           { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' },
           { name: 'Firebase', imageUrl: '/assets/png/icons/Skill Icons/Firebase.png' },
@@ -77,7 +75,7 @@ export class ProjectService {
           { name: 'TypeScript', imageUrl: '/assets/png/icons/Skill Icons/TypeScript.png' }
         ],
         isFeatured: true,
-        isInProgress: false
+        isInProgress: true
       },
       {
         id: 3,

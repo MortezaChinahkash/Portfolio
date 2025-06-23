@@ -283,6 +283,55 @@
       box-shadow: none;
       transform: translateY(2px);
     }
+
+    &.btn-disabled {
+      background-color: #666666;
+      color: #999999;
+      border-color: #666666;
+      box-shadow: none;
+      cursor: not-allowed;
+      opacity: 0.6;
+
+      &:hover {
+        background-color: #666666;
+        color: #999999;
+        transform: none;
+      }
+    }
+  }
+
+  .project-status-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+
+    .status-badge-large {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #ff9800;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 25px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 10px;
+    }
+
+    .status-description {
+      color: white;
+      font-size: 0.9rem;
+      margin: 10px 0;
+      opacity: 0.8;
+    }
+  }
+
+  .disabled-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
   }
 }
 .back-next {
