@@ -1,0 +1,28 @@
+// Individual skill item styles
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: clamp(5px, 1vw, 10px);
+
+  span {
+    color: white;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-weight: 500;
+    margin-top: clamp(5px, 1vw, 8px);
+    text-align: center;
+  }
+
+  img {
+    width: clamp(50px, 6vw, 70px);
+    height: clamp(50px, 6vw, 70px);
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    cursor: url("/assets/hand-pointer.png"), auto;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

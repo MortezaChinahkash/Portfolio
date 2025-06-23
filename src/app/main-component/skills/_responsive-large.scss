@@ -1,0 +1,82 @@
+// Large screen responsive styles (tablets and larger)
+@media (max-width: 1366px) {
+  .skills-content {
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+
+  .skills-header {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .skills-description {
+    width: 100%;
+  }
+
+  .note-container {
+    bottom: clamp(-120px, -12vw, -90px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills-content {
+    padding: 40px 15px;
+  }
+
+  .skills-description .skill-paper {
+    min-width: clamp(280px, 50vw, 350px);
+  }
+
+  .different-skills {
+    gap: clamp(0.8rem, 2vw, 1.2rem);
+  }
+
+  .skill img {
+    width: clamp(45px, 7vw, 65px);
+    height: clamp(45px, 7vw, 65px);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-content {
+    padding: 30px 10px;
+  }
+
+  .skills-description .skill-paper p {
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    padding: clamp(25px, 4vw, 40px) clamp(15px, 3vw, 30px);
+  }
+
+  .note {
+    width: clamp(120px, 25vw, 200px);
+    height: clamp(120px, 25vw, 200px);
+  }
+
+  .peel-text {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+  }
+
+  .text-final {
+    font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+    padding: 15px;
+  }
+
+  .skills-description p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .skills-description .skill-paper {
+    background-image: url("/assets/png/Design material/02_Ripped Paper/peeled-skill.png");
+    min-width: clamp(180px, 80vw, 300px);
+    
+    p {
+      padding: clamp(20px, 4vw, 35px) clamp(15px, 3vw, 25px);
+      font-size: clamp(0.8rem, 3vw, 1rem);
+    }
+  }
+}
