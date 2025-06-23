@@ -245,10 +245,10 @@
   position: relative;
   margin-bottom: 40px;
   display: flex;
-  align-self: flex-end;
+  align-self: stretch;
+  width: 100%;
 
   .project-image {
-    max-width: 500px;
     width: 100%;
     height: auto;
     border-radius: 12px;
@@ -261,8 +261,7 @@
   width: 100%;
   justify-content: space-between;
   margin-bottom: 50px;
-  flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
 
   .btn {
     display: inline-block;
@@ -278,10 +277,10 @@
     transition: all 0.2s;
     font-size: 1.2rem;
     cursor: url("/assets/hand-pointer.png"), auto;
-    flex: 1;
     text-align: center;
     text-decoration: none;
     min-width: 140px;
+    flex: 0 0 auto; // Buttons nehmen nur den benötigten Platz ein
 
     &:hover {
       background: #24dd80;
@@ -620,13 +619,12 @@
     padding: 0;
     order: 2; // Image section comes second (at bottom)
   }
-
   .project-image-container {
     margin-bottom: 30px;
     align-self: center;
+    width: 100%;
 
     .project-image {
-      max-width: 100%;
       width: 100%;
       max-width: 350px; // Limit max width on mobile
       border-radius: 8px;
@@ -662,12 +660,13 @@
 // Tablet responsive styles
 @media (max-width: 1024px) and (min-width: 769px) {
   .action-buttons {
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
 
     .btn {
       min-width: 160px;
       font-size: 1.1rem;
+      flex: 0 0 auto;
     }
 
     .project-status-container {
@@ -675,6 +674,12 @@
         font-size: 1rem;
         padding: 10px 20px;
       }
+    }
+  }
+
+  .project-image-container {
+    .project-image {
+      width: 100%;
     }
   }
 }
