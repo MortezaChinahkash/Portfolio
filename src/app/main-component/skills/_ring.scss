@@ -1,15 +1,26 @@
 // Note container and peel effects
 .note-container,
 .note-pull {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: clamp(-130px, -15vw, -100px);
-  z-index: 3;
+  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: url("/assets/hand-pointer.png"), auto;
+  justify-content: flex-start;
+  margin-top: clamp(40px, 8vw, 80px);
+  transform: rotate(8deg);
+  cursor: grab;
+  
+  &:hover {
+    cursor: grab;
+  }
+  
+  &:active {
+    cursor: grabbing;
+  }
+  
+  &.dragging {
+    cursor: grabbing;
+  }
 }
 
 .note {
