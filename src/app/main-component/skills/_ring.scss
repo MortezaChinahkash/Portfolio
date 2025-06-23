@@ -9,6 +9,8 @@
   margin-top: clamp(40px, 8vw, 80px);
   transform: rotate(8deg);
   cursor: grab;
+  position: relative;
+  height: clamp(150px, 20vw, 250px);
   
   &:hover {
     cursor: grab;
@@ -33,7 +35,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 3;
   opacity: 0;
   visibility: hidden;
@@ -47,10 +52,16 @@
 
 .note-transition {
   background-image: url("/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/A.png");
+  z-index: 4;
 }
 
 .note-final {
   background-image: url("/assets/png/Design material/03_Stickers/01_Skills - Peel off/Color option 3/C.png");
+  z-index: 5;
+}
+
+.note-default {
+  z-index: 3;
 }
 
 .peel-text {
@@ -63,6 +74,7 @@
   text-align: center;
   transform: rotate(8deg);
   margin-top: 20px;
+  position: relative;
 }
 
 .text-final {
@@ -74,6 +86,7 @@
   margin-top: 0;
   padding: 20px;
   line-height: 1.2;
+  position: relative;
 }
 
 .arrow {
