@@ -1,0 +1,43 @@
+// Skills description section
+.skills-description {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .skill-paper {
+    width: fit-content;
+    min-width: clamp(250px, 40vw, 400px);
+    max-width: 100%;
+    position: relative;
+    background-image: url("/assets/png/Design material/02_Ripped Paper/1.Skills description.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: clamp(120px, 15vw, 180px);
+
+    p {
+      color: black;
+      font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+      text-align: center;
+      width: 85%;
+      margin: 0;
+      padding: clamp(15px, 3vw, 30px);
+      line-height: 1.4;
+    }
+  }
+
+  .arrow-bottom {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(80px, 12vw, 120px);
+  }
+}

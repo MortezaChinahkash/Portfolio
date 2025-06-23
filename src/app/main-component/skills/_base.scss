@@ -1,0 +1,54 @@
+// Base layout for skills section
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/assets/png/Design material/01_Background/Img Original Size/Skills BG.png");
+  width: 100%;
+  background-position: bottom;
+  background-size: cover;
+  color: white;
+  padding: clamp(60px, 8vw, 100px) 0;
+  padding-top: clamp(0px, 8vw, 0px);
+  height: auto;
+}
+
+.skills-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  width: 90%;
+  padding: 100px;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.skills-header {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-top: 40px;
+
+  h3 {
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-weight: lighter;
+    margin-bottom: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .skills-title-container {
+    width: max-content;
+    align-self: flex-end;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-top: clamp(0.5rem, 1vw, 1rem);
+    text-align: center;
+    width: max-content;
+  }
+}

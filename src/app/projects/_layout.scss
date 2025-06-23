@@ -1,0 +1,64 @@
+// Layout styles for project pages
+.project-page {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-image: url("/assets/png/Design material/01_Background/Img Original Size/Note book paper.png");
+  background-position: left top;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black-bg {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.max-content {
+  max-width: 1440px;
+  width: 90%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-detail-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  height: auto;
+  min-height: fit-content;
+}
+
+.left-section {
+  align-self: flex-start;
+  width: 40%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  padding-left: clamp(20px, 5vw, 50px);
+}
+
+.right-section {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.content-wrapper {
+  width: 400px;
+  width: fit-content;
+}

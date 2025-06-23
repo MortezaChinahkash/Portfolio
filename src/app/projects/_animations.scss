@@ -1,0 +1,36 @@
+// Animation definitions for project components
+@keyframes arrowBounce {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes arrowBounceRight {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+}
+
+@keyframes lineReveal {
+  0%,
+  50% {
+    clip-path: inset(0 100% 0 0);
+  }
+  66.7% {
+    clip-path: inset(0 0 0 0);
+  }
+  83.3% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 100%);
+  }
+}

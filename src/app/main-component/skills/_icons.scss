@@ -1,0 +1,36 @@
+// Skill icons and grid styles
+.skill-icon {
+  width: clamp(30px, 4vw, 50px);
+  height: clamp(30px, 4vw, 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  position: relative;
+
+  &:hover {
+    filter: grayscale(0%);
+    transform: scale(1.2);
+    z-index: 5;
+  }
+}
+
+.skills-list {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: 40px;
+
+  .skills-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(10px, 1.5vw, 20px);
+    width: fit-content;
+    align-items: center;
+    justify-items: center;
+    min-width: clamp(120px, 15vw, 180px);
+  }
+}

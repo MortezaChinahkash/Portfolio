@@ -1,0 +1,103 @@
+// Project content styles (headlines, sections, tech stack, images)
+.project-headline {
+  width: fit-content;
+  margin-bottom: 30px;
+  position: relative;
+
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    color: #1a1a1a;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    margin: 0;
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+  }
+
+  .blue-underline {
+    display: block;
+    height: 20px;
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    clip-path: inset(0 100% 0 0);
+    animation: lineReveal 6s infinite;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+}
+
+.section-block {
+  margin-bottom: clamp(20px, 4vw, 30px);
+
+  h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: clamp(8px, 1.5vw, 12px);
+  }
+
+  p {
+    color: #333;
+    line-height: 1.6;
+    font-size: clamp(14px, 1.5vw, 15px);
+    text-align: justify;
+    margin: 0;
+  }
+}
+
+.duration-info {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 15px;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.tech-stack {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  .tech-icon {
+    width: 35px;
+    height: 35px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.project-image-container {
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  align-self: stretch;
+  width: 100%;
+
+  .project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+}

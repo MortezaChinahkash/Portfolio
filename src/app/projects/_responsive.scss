@@ -1,0 +1,268 @@
+// Mobile and responsive breakpoints
+@media (max-width: 1480px) {
+  .project-page {
+    background-size: 100% 100%;
+  }
+}
+
+@media (max-width: 920px) {
+  .next-project-link {
+    padding: 0;
+    justify-content: center;
+
+    a {
+      font-size: 14px;
+      font-weight: 600;
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+  
+  .black-bg {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .content-wrapper {
+    margin: 150px 0 0 0;
+  }
+  
+  .project-page {
+    background-image: url("/assets/png/Design material/01_Background/16_Project view background mobile.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .max-content {
+    height: auto;
+    min-height: 100vh;
+    justify-content: flex-start;
+  }
+
+  .back-link {
+    display: none;
+  }
+  
+  .back-link-bottom {
+    display: block;
+  }
+  
+  .back-next {
+    justify-content: space-between;
+  }
+  
+  .project-detail-wrapper {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .left-section {
+    width: 100%;
+    padding: 0;
+    order: 1;
+  }
+
+  .content-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .project-headline {
+    text-align: left;
+    width: fit-content;
+    position: relative;
+
+    h1 {
+      font-size: 3rem;
+      line-height: 1;
+      width: fit-content;
+      display: inline-block;
+      margin: 0;
+    }
+
+    .blue-underline {
+      width: 100%;
+      margin-top: 8px;
+      margin-bottom: 50px;
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .section-block {
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 1.7rem;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      text-align: left;
+    }
+  }
+
+  .duration-info {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .tech-stack {
+    gap: 15px;
+    margin-bottom: 30px;
+
+    .tech-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .right-section {
+    width: 100%;
+    padding: 0;
+    order: 2;
+  }
+  
+  .project-image-container {
+    margin-bottom: 30px;
+    align-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+
+    .project-image {
+      width: 100%;
+      max-width: min(calc(100vw - 40px), 500px);
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 100px;
+
+    .btn {
+      width: 100%;
+      max-width: 280px;
+      font-size: 1rem;
+      padding: 0.7rem 1.5rem;
+    }
+    
+    .project-status-container {
+      padding: 15px 0;
+      
+      .status-badge-large {
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin-bottom: 12px;
+      }
+      
+      .status-description {
+        font-size: 0.85rem;
+        max-width: 280px;
+      }
+    }
+  }
+}
+
+// Tablet responsive styles
+@media (max-width: 1024px) and (min-width: 769px) {
+  .action-buttons {
+    justify-content: space-between;
+    gap: 20px;
+
+    .btn {
+      min-width: 160px;
+      font-size: 1.1rem;
+      flex: 0 0 auto;
+    }
+    
+    .project-status-container {
+      padding: 15px 0;
+      
+      .status-badge-large {
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin-bottom: 12px;
+      }
+      
+      .status-description {
+        max-width: 250px;
+      }
+    }
+  }
+
+  .project-image-container {
+    .project-image {
+      width: 100%;
+    }
+  }
+}
+
+// Additional breakpoint for very small screens
+@media (max-width: 480px) {
+  .project-headline {
+    width: fit-content;
+    position: relative;
+    
+    h1 {
+      font-size: 2rem;
+      width: fit-content;
+      display: inline-block;
+      margin: 0;
+    }
+
+    .blue-underline {
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+  }
+  
+  .project-image-container {
+    padding: 0 15px;
+    
+    .project-image {
+      max-width: min(calc(100vw - 30px), 400px);
+    }
+  }
+
+  .action-buttons {
+    .btn {
+      width: 100%;
+      max-width: 250px;
+      font-size: 0.9rem;
+      padding: 0.6rem 1.2rem;
+    }
+    
+    .project-status-container {
+      padding: 10px 0;
+      
+      .status-badge-large {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        margin-bottom: 10px;
+      }
+      
+      .status-description {
+        font-size: 0.8rem;
+        max-width: 220px;
+      }
+    }
+  }
+}

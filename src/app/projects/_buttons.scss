@@ -1,0 +1,88 @@
+// Button styles and action components
+.action-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  gap: 20px;
+
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 25px;
+    box-shadow: 2px 2px 0px 1px #ffffff;
+    background-color: #00000069;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1.2rem;
+    cursor: url("/assets/hand-pointer.png"), auto;
+    text-align: center;
+    text-decoration: none;
+    min-width: 140px;
+    flex: 0 0 auto;
+
+    &:hover {
+      background: #24dd80;
+      color: black;
+      box-shadow: none;
+      transform: translateY(2px);
+    }
+
+    &.btn-disabled {
+      background-color: #666666;
+      color: #999999;
+      border-color: #666666;
+      box-shadow: none;
+      cursor: not-allowed;
+      opacity: 0.6;
+
+      &:hover {
+        background-color: #666666;
+        color: #999999;
+        transform: none;
+      }
+    }
+  }
+
+  .project-status-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+
+    .status-badge-large {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #ff9800;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 25px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 15px;
+    }
+
+    .status-description {
+      color: white;
+      font-size: 0.9rem;
+      margin: 0;
+      opacity: 0.8;
+      max-width: 300px;
+      line-height: 1.4;
+    }
+  }
+
+  .disabled-buttons {
+    display: none;
+  }
+}
