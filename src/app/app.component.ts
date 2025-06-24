@@ -39,20 +39,21 @@ export class AppComponent implements OnInit {
    * Sets up language initialization and route monitoring
    * @returns {void}
    */  ngOnInit(): void {
-    // Initialize AOS animations
+    // Initialize AOS animations with simpler config
     AOS.init({
-      duration: 1000,
+      duration: 800,
       easing: 'ease-in-out',
-      once: true,
-      mirror: false,
-      offset: 120
+      once: false,
+      mirror: true,
+      offset: 50,
+      disable: false
     });
     
     // Initialisiere Sprache beim App-Start
-    this.translationService.initLanguage();
-
-    // Überprüfe beim Start
-    this.checkIfProjectPage(this.router.url);    // Reagiere auf Routenwechsel
+    this.translationService.initLanguage();// Überprüfe beim Start
+    this.checkIfProjectPage(this.router.url);
+    
+    // Reagiere auf Routenwechsel
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
@@ -63,6 +64,11 @@ export class AppComponent implements OnInit {
       if (!event.url.includes('#')) {
         window.scrollTo(0, 0);
       }
+      
+      // AOS nach Routenänderung neu initialisieren
+      setTimeout(() => {
+        AOS.refresh();
+      }, 100);
     });
   }
 

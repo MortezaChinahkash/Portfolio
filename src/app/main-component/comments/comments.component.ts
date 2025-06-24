@@ -7,6 +7,7 @@
 import { Component, OnInit, AfterViewInit, Renderer2, ElementRef } from '@angular/core';
 import { CommonModule, NgStyle } from '@angular/common';
 import { TranslationService, TranslationSet } from '../../shared/services/translation.service';
+import * as AOS from 'aos';
 
 /**
  * Interface defining the structure of a comment/testimonial
@@ -56,8 +57,12 @@ export class CommentsComponent implements OnInit, AfterViewInit {
       this.updateComments();
     });
   }
-  
-  ngAfterViewInit() {
+    ngAfterViewInit() {
+    // AOS für diese Komponente initialisieren
+    setTimeout(() => {
+      AOS.refresh();
+    }, 100);
+
     const isTouch = window.matchMedia('(pointer: coarse)').matches;
     if (!isTouch) return; 
 
