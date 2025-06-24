@@ -87,8 +87,8 @@ export class ProjectService {
       description: this.translationService.t('pollo_description'),
       imageUrl: '/assets/png/Design material/screens/El_Pollo.png',
       projectsImageUrl: '/assets/png/Design material/screens/el-pollo-loco.png',
-      projectUrl: 'https://example.com/el-pollo-loco',
-      gitHubUrl: 'https://github.com/yourusername/el-pollo-loco',
+      projectUrl: 'https://m-chinahkash.de/el-pollo-loco/',
+      gitHubUrl: 'https://github.com/MortezaChinahkash/El-Pollo-Loco',
       technologies: this.getElPolloLocoTechnologies(),
       isFeatured: true,
       isInProgress: false
