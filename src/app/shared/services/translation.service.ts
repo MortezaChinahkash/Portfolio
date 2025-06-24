@@ -582,12 +582,21 @@ imprint_privacy_text: "Die Nutzung unserer Webseite ist in der Regel ohne Angabe
     const currentLang = this.currentLangSubject.value;
     return this.translations[currentLang][key];
   }
-
+  /**
+   * Short form method for getting translations in templates
+   * @param {keyof TranslationSet} key - The translation key
+   * @returns {string} The translated text
+   */
   // Kurzform für Templates
   t(key: keyof TranslationSet): string {
     return this.getTranslation(key);
   }
 
+  /**
+   * Initializes the language from localStorage or falls back to default
+   * @private
+   * @returns {void}
+   */
   // Initialisierung der Sprache aus dem localStorage
   initLanguage(): void {
     const savedLang = localStorage.getItem('language') as SupportedLanguage;
