@@ -1,9 +1,9 @@
 <section id="portfolio" class="portfolio">
   <div class="projects-content">
-    <div class="projects-intro">
+    <div class="projects-intro" data-aos="fade-up" data-aos-duration="800">
       <div class="header">
-        <h3>{{ translationService.t("my_craft") || "Default text" }}</h3>
-        <div class="projects-title-container">
+        <h3 data-aos="fade-right" data-aos-delay="200">{{ translationService.t("my_craft") || "Default text" }}</h3>
+        <div class="projects-title-container" data-aos="fade-up" data-aos-delay="400">
           <h1 class="projects-title">
             {{ translationService.t("projects_title") || "Default text" }}
           </h1>
@@ -11,16 +11,20 @@
             class="underline"
             src="/assets/png/Design material/00_Hand-drawn lines/03_Portfolio/Color option 3.png"
             alt=""
+            data-aos="zoom-in"
+            data-aos-delay="600"
           />
         </div>
       </div>
-      <p class="projects-description">
+      <p class="projects-description" data-aos="fade-up" data-aos-delay="800">
         {{ translationService.t("projects_description") || "Default text" }}
       </p>
     </div>
 
-    @for (project of projects; track project.compId) {
-    <div class="project-card">
+    @for (project of projects; track project.compId; let i = $index) {
+    <div class="project-card" 
+         data-aos="fade-up" 
+         [attr.data-aos-delay]="(i * 200) + 1000">
       <div class="project-details">
         <!-- Image Container mit Overlay und Button -->
         <div class="image-container">

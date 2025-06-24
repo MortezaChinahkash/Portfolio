@@ -9,6 +9,7 @@ import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { TranslationService } from './shared/services/translation.service';
 import { filter } from 'rxjs/operators';
+import * as AOS from 'aos';
 
 /**
  * Root application component managing routing and global state
@@ -37,8 +38,16 @@ export class AppComponent implements OnInit {
    * Component initialization lifecycle hook
    * Sets up language initialization and route monitoring
    * @returns {void}
-   */
-  ngOnInit(): void {
+   */  ngOnInit(): void {
+    // Initialize AOS animations
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+      offset: 120
+    });
+    
     // Initialisiere Sprache beim App-Start
     this.translationService.initLanguage();
 
