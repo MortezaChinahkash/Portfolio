@@ -542,12 +542,20 @@ imprint_privacy_text: "Die Nutzung unserer Webseite ist in der Regel ohne Angabe
       project_role_workflow: "Frontend-Entwicklung & UI/UX-Design"
     }
   };
-
+  /**
+   * Initializes the translation service and loads saved language preference
+   * @constructor
+   */
   constructor() {
     // Beim Start gespeicherte Sprache laden
     this.initLanguage();
   }
 
+  /**
+   * Changes the current language and persists the choice
+   * @param {SupportedLanguage} lang - The language to switch to ('en' or 'de')
+   * @returns {void}
+   */
   // Sprache ändern
   setLanguage(lang: SupportedLanguage): void {
     this.currentLanguage = lang; // Synchrone Property aktualisieren
