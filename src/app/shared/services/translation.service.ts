@@ -1,10 +1,22 @@
+/**
+ * @fileoverview Translation service for internationalization support
+ * @author Morteza Chinahkash
+ * @version 1.0.0
+ */
+
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
 
-// Definiere unterstützte Sprachen
+/**
+ * Supported languages in the application
+ * @typedef {'en' | 'de'} SupportedLanguage
+ */
 export type SupportedLanguage = 'en' | 'de';
 
-// Interface für alle Übersetzungen
+/**
+ * Interface defining all available translations
+ * @interface TranslationSet
+ */
 export interface TranslationSet {
   // Header
   about_me: string;
