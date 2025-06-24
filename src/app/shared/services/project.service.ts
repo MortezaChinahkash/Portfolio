@@ -65,9 +65,14 @@ export class ProjectService {
     
     // Das Problem könnte beim Vergleich liegen - stellen wir sicher, dass wir korrekt vergleichen
     const project = this.projects.find(p => p.compId.toLowerCase() === compId.toLowerCase());
-    
-    return project;
+      return project;
   }
+
+  /**
+   * Initializes all projects with current language translations
+   * @private
+   * @returns {void}
+   */
   // Projekte initialisieren
   private initProjects(): void {
     this.projects = [
@@ -77,6 +82,11 @@ export class ProjectService {
     ];
   }
 
+  /**
+   * Creates the DABubble project data object
+   * @private
+   * @returns {PortfolioItem} The DABubble project configuration
+   */
   private createDabubbleProject(): PortfolioItem {
     return {
       id: 1,
