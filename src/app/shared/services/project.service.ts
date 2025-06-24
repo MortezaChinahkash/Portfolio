@@ -1,13 +1,30 @@
+/**
+ * @fileoverview Service for managing portfolio projects data
+ * @author Morteza Chinahkash
+ * @version 1.0.0
+ */
+
 import { Injectable } from '@angular/core';
 import { TranslationService } from './translation.service';
 import { PortfolioItem } from '../models/portfolio-item.model';
 
+/**
+ * Service responsible for managing and providing portfolio project data
+ * @class ProjectService
+ * @injectable
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectService {
+  /** Array containing all portfolio projects */
   private projects: PortfolioItem[] = [];
 
+  /**
+   * Initializes the service and sets up language change subscriptions
+   * @param {TranslationService} translationService - Service for handling translations
+   * @constructor
+   */
   constructor(private translationService: TranslationService) {
     // Projekte initialisieren
     this.initProjects();
