@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Header navigation component with language switching and mobile menu
+ * @author Morteza Chinahkash
+ * @version 1.0.0
+ */
+
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
@@ -5,6 +11,11 @@ import { TranslationService, SupportedLanguage } from '../../shared/services/tra
 import { filter } from 'rxjs/operators';
 import { RouterModule } from '@angular/router'; 
 
+/**
+ * Header component providing navigation, language switching, and mobile menu functionality
+ * @class HeaderComponent
+ * @implements {OnInit}
+ */
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -13,17 +24,34 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
-  // Aktuelle Sprache
+  /** Current selected language */
   currentLanguage: SupportedLanguage = 'en';
+  
+  /** Flag indicating if currently on a project detail page */
   isProjectPage: boolean = false;
+  
+  /** Flag controlling mobile menu visibility */
   isMenuOpen: boolean = false;
+  
+  /** Flag indicating if currently on the imprint page */
   isImprint: boolean = false;
 
+  /**
+   * Initializes the header component with required services
+   * @param {TranslationService} translationService - Service for handling translations
+   * @param {Router} router - Angular router for navigation management
+   * @constructor
+   */
   constructor(
     public translationService: TranslationService,
     private router: Router
   ) {}
   
+  /**
+   * Component initialization lifecycle hook
+   * Sets up language subscription and route monitoring
+   * @returns {void}
+   */
   ngOnInit(): void {
     // Sprache aus dem Service übernehmen
     this.translationService.currentLang$.subscribe(lang => {
