@@ -352,8 +352,9 @@
   .hero-pic-mobile {
     display: flex; // Überschreibt das display: none
     transform: rotate(10deg);
-    width: 200px;
-    height: 200px; // Fixed height for background div
+    width: 250px;
+    margin-top: 25px;
+    height: 250px; // Fixed height for background div
     // Die anderen Styles von oben werden automatisch übernommen
   }
 
@@ -442,9 +443,8 @@
   }
   
   .hero-pic-mobile {
-    width: 50%;
-    height: 120px; // Proportional height for smaller screens
-    margin-top: 25px;
+    width: 70%;
+    height: 200px; // Proportional height for smaller screens
 
     &::before {
       font-size: 16px; // Noch kleiner für sehr kleine Bildschirme
