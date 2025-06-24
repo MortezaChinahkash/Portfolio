@@ -564,11 +564,19 @@ imprint_privacy_text: "Die Nutzung unserer Webseite ist in der Regel ohne Angabe
     // Speichern der Sprachpräferenz im localStorage
     localStorage.setItem('language', lang);
   }
-
+  /**
+   * Gets the current language as a string
+   * @returns {string} The current language code
+   */
   get currentLang(): string {
     return this.currentLanguage;
   }
 
+  /**
+   * Retrieves a translation for the given key
+   * @param {keyof TranslationSet} key - The translation key
+   * @returns {string} The translated text
+   */
   // Liefert Übersetzung für einen Schlüssel
   getTranslation(key: keyof TranslationSet): string {
     const currentLang = this.currentLangSubject.value;
