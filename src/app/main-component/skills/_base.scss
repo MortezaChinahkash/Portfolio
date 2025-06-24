@@ -27,7 +27,6 @@
   width: 20%;
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
   margin-top: 40px;
   margin-left: -10px;
 
@@ -36,22 +35,28 @@
     font-weight: lighter;
     margin-bottom: 20px;
     margin: 0;
+        margin-right: 25px;
+
     display: flex;
     justify-content: flex-end;
     text-align: right;
-  }
-
-  .skills-title-container {
-    width: max-content;
     align-self: flex-end;
-    margin-right: 25px;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-top: clamp(0.5rem, 1vw, 1rem);
-    text-align: center;
+  }  .skills-title-container {
     width: max-content;
+    margin-right: 25px;
+    height: auto;
+    min-height: 80px;
+      align-self: flex-end;
+
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-top: clamp(0.5rem, 1vw, 1rem);
+      text-align: center;
+      width: max-content;
+
+
+    }
   }
 }

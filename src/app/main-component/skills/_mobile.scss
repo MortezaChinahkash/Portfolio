@@ -5,15 +5,23 @@
     text-align: center;
     gap: clamp(1rem, 2vw, 2rem);
     align-items: center;
-    overflow-x: hidden;
-  }
-
-   .skills-header {
+  }   .skills-header {
     align-self: center;
     width: 90%;
     margin-right: 0;
     margin-left: 0;
     gap: 20px;
+    text-align: center;
+
+    h3 {
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .skills-title-container {
+      margin-right: 0;
+    }
   }
 
   .skills-description {
@@ -36,7 +44,7 @@
   }
   .note-pull {
     width: auto;
-    height: clamp(120px, 25vw, 200px);
+    height: 200px;
     margin-top: clamp(20px, 4vw, 40px);
     transform: rotate(3deg);
   }
@@ -49,11 +57,10 @@
     padding-left: 2vw;
     padding-right: 2vw;
     box-sizing: border-box;
-    overflow-x: hidden;
   }
     .note-pull {
     width: auto;
-    height: clamp(150px, 30vw, 250px);
+    height: 220px;
     margin-top: clamp(30px, 5vw, 50px);
     transform: rotate(6deg);
   }
@@ -64,8 +71,8 @@
     padding: clamp(20px, 4vw, 40px);
   }
   .note-pull {
-    width: auto;
-    height: clamp(120px, 25vw, 200px);
+    width: 300px;
+    height: 300px;
     margin-top: clamp(15px, 3vw, 30px);
     transform: rotate(2deg) scale(0.9);
 
