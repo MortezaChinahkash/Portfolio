@@ -1,9 +1,20 @@
+/**
+ * @fileoverview Main application component and entry point
+ * @author Morteza Chinahkash
+ * @version 1.0.0
+ */
+
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { TranslationService } from './shared/services/translation.service';
 import { filter } from 'rxjs/operators';
 
+/**
+ * Root application component managing routing and global state
+ * @class AppComponent
+ * @implements {OnInit}
+ */
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent],
@@ -11,10 +22,22 @@ import { filter } from 'rxjs/operators';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
+  /** Application title */
   title = 'Portfolio';
   
+  /**
+   * Initializes the main application component
+   * @param {TranslationService} translationService - Service for handling translations
+   * @param {Router} router - Angular router for navigation management
+   * @constructor
+   */
   constructor(private translationService: TranslationService, private router: Router) {}
   
+  /**
+   * Component initialization lifecycle hook
+   * Sets up language initialization and route monitoring
+   * @returns {void}
+   */
   ngOnInit(): void {
     // Initialisiere Sprache beim App-Start
     this.translationService.initLanguage();

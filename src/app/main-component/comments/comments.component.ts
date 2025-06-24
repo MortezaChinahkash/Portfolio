@@ -1,16 +1,37 @@
+/**
+ * @fileoverview Comments/testimonials component displaying client feedback
+ * @author Morteza Chinahkash
+ * @version 1.0.0
+ */
+
 import { Component, OnInit, AfterViewInit, Renderer2, ElementRef } from '@angular/core';
 import { CommonModule, NgStyle } from '@angular/common';
 import { TranslationService, TranslationSet } from '../../shared/services/translation.service';
 
+/**
+ * Interface defining the structure of a comment/testimonial
+ * @interface Comment
+ */
 interface Comment {
+  /** Name of the person giving the testimonial */
   name: string;
+  /** The testimonial text */
   text: string;
+  /** Date of the testimonial */
   date: string;
+  /** Professional role of the person */
   role: string;
+  /** LinkedIn profile URL */
   linkedIn: string;
+  /** Background image for the comment card */
   backgroundImage: string;
 }
 
+/**
+ * Component displaying client testimonials and feedback
+ * @class CommentsComponent
+ * @implements {OnInit, AfterViewInit}
+ */
 @Component({
   selector: 'app-comments',
   standalone: true,
