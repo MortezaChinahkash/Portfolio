@@ -184,18 +184,31 @@ export interface TranslationSet {
   project_role_workflow: string;
 }
 
+/**
+ * Translation service providing internationalization support for the portfolio application
+ * @class TranslationService
+ * @injectable
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class TranslationService {
-  private currentLanguage = 'en'; // Synchrone Property hinzufügen
+  /** Current selected language (synchronous property) */
+  private currentLanguage = 'en';
+  
+  /** BehaviorSubject for reactive language state management */
   private currentLangSubject = new BehaviorSubject<SupportedLanguage>('en');
+  
+  /** Observable stream of current language changes */
   currentLang$ = this.currentLangSubject.asObservable();
 
+  /** Subject for language change events */
   private languageChangedSource = new Subject<string>();
+  
+  /** Observable stream of language change events */
   languageChanged$ = this.languageChangedSource.asObservable();
 
-  // Alle Übersetzungen des Projekts
+  /** Complete translation data for all supported languages */
   private translations: { [key in SupportedLanguage]: TranslationSet } = {
     en: {
       // Header
