@@ -34,19 +34,32 @@ export class ProjectService {
       this.translationService.currentLang$.subscribe(() => {
         this.initProjects();
       });
-    }
-  }
+    }  }
 
+  /**
+   * Retrieves all portfolio projects
+   * @returns {PortfolioItem[]} Array of all portfolio projects
+   */
   // Methode zum Abrufen aller Projekte
   getAllProjects(): PortfolioItem[] {
     return this.projects;
   }
 
+  /**
+   * Retrieves a specific project by its numeric ID
+   * @param {number} id - The unique identifier of the project
+   * @returns {PortfolioItem | undefined} The project if found, undefined otherwise
+   */
   // Methode zum Abrufen eines Projekts nach ID
   getProjectById(id: number): PortfolioItem | undefined {
     return this.projects.find(project => project.id === id);
   }
 
+  /**
+   * Retrieves a specific project by its component ID
+   * @param {string} compId - The component identifier for routing
+   * @returns {PortfolioItem | undefined} The project if found, undefined otherwise
+   */
   // Methode zum Abrufen eines Projekts nach compId
   getProjectByCompId(compId: string): PortfolioItem | undefined {
     
