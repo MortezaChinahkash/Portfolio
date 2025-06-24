@@ -56,12 +56,12 @@ export class CommentsComponent implements OnInit, AfterViewInit {
   }
   updateComments() {
     this.comments = [
-      this.createCommentData('Tobias Lange', 'role_frontend', 'comment1_text', 
-        'https://www.linkedin.com/in/johndoe', 'A.png'),
-      this.createCommentData('Michael Weber', 'role_backend', 'comment2_text', 
-        'https://www.linkedin.com/in/janesmith', 'b.png'),
-      this.createCommentData('Anna Schmidt', 'role_ux', 'comment3_text', 
-        'https://www.linkedin.com/in/alicejohnson', 'A.png')
+      this.createCommentData('Jane Domsgen', 'role_frontend', 'comment1_text', 
+        'https://www.linkedin.com/in/jenny-jane-domsgen-834a92369/', 'A.png'),
+      this.createCommentData('Joshua Plischek', 'role_frontend', 'comment2_text', 
+        'https://www.linkedin.com/in/joshuaplischek/', 'b.png'),
+      this.createCommentData('Markus Fischer', 'role_frontend', 'comment3_text', 
+        'https://www.linkedin.com/in/markus-fischer-25a5b68b/', 'A.png')
     ];
   }
   private createCommentData(name: string, roleKey: string, textKey: string, 
