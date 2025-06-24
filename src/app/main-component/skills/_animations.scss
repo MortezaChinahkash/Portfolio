@@ -1,4 +1,4 @@
-// Complex animations for skills section
+// Simple top-to-bottom reveal animation
 .skills-ring {
   width: calc(10px + 100% + 10px);
   background-image: url("/assets/png/Design material/00_Hand-drawn lines/02_Skills/Color option 3.png");
@@ -9,8 +9,8 @@
   justify-content: center;
   align-items: center;
   margin-left: -10px;
-  clip-path: polygon(50% 50%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 50% 50%);
-  animation: revealCycleFrom10 6s ease-in-out infinite;
+  clip-path: inset(100% 0% 0% 0%); // Start hidden (clipped from top)
+  animation: simpleReveal 7s ease-in-out infinite;
 
   &.german {
     height: 75px;
@@ -23,20 +23,14 @@
   }
 }
 
-@keyframes revealCycleFrom10 {
-  0% { clip-path: polygon(50% 50%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 50% 50%); }
-  1% { clip-path: polygon(50% 50%, 15% 7%, 20% 4%, 20% 4%, 20% 4%, 20% 4%, 20% 4%, 20% 4%, 50% 50%); }
-  2% { clip-path: polygon(50% 50%, 15% 7%, 25% 2%, 25% 2%, 25% 2%, 25% 2%, 25% 2%, 25% 2%, 50% 50%); }
-  3% { clip-path: polygon(50% 50%, 15% 7%, 30% 1%, 30% 1%, 30% 1%, 30% 1%, 30% 1%, 30% 1%, 50% 50%); }
-  4% { clip-path: polygon(50% 50%, 15% 7%, 35% 0%, 35% 0%, 35% 0%, 35% 0%, 35% 0%, 35% 0%, 50% 50%); }
-  5% { clip-path: polygon(50% 50%, 15% 7%, 40% 0%, 40% 0%, 40% 0%, 40% 0%, 40% 0%, 40% 0%, 50% 50%); }
-  6% { clip-path: polygon(50% 50%, 15% 7%, 45% 0%, 45% 0%, 45% 0%, 45% 0%, 45% 0%, 45% 0%, 50% 50%); }
-  7% { clip-path: polygon(50% 50%, 15% 7%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 50%); }
-  8% { clip-path: polygon(50% 50%, 15% 7%, 50% 0%, 60% 0%, 60% 0%, 60% 0%, 60% 0%, 60% 0%, 50% 50%); }
-  9% { clip-path: polygon(50% 50%, 15% 7%, 50% 0%, 70% 0%, 70% 0%, 70% 0%, 70% 0%, 70% 0%, 50% 50%); }
-  10% { clip-path: polygon(50% 50%, 15% 7%, 50% 0%, 80% 0%, 80% 0%, 80% 0%, 80% 0%, 80% 0%, 50% 50%); }
-  25% { clip-path: polygon(50% 50%, 15% 7%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0% 0%, 15% 7%); }
-  60% { clip-path: polygon(50% 50%, 15% 7%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0% 0%, 15% 7%); }
-  85% { clip-path: polygon(50% 50%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%); }
-  100% { clip-path: polygon(50% 50%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%, 15% 7%); }
+@keyframes simpleReveal {
+  // Hidden state (0-2s = 2 seconds to appear)
+  0% { clip-path: inset(100% 0% 0% 0%); }
+  28.6% { clip-path: inset(0% 0% 0% 0%); } // 2s out of 7s = 28.6%
+  
+  // Visible state (2s-5s = 3 seconds stay visible)  
+  71.4% { clip-path: inset(0% 0% 0% 0%); } // 5s out of 7s = 71.4%
+  
+  // Hidden state (5s-7s = 2 seconds to disappear)
+  100% { clip-path: inset(100% 0% 0% 0%); }
 }
