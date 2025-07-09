@@ -70,6 +70,7 @@ export interface TranslationSet {
   // Pokedex Projekt
   pokedex_title: string;
   pokedex_description: string;
+  pokedex_duration_value: string;
   
   // Comments Section
   in_their_words: string;
@@ -269,6 +270,7 @@ export class TranslationService {
       // Pokedex Projekt
       pokedex_title: "Pokedex",
       pokedex_description: "A comprehensive Pokemon information database built with vanilla JavaScript and REST API integration. Features include real-time search, detailed Pokemon stats, evolution chains, and type-based filtering for an immersive Pokemon exploration experience.",
+      pokedex_duration_value: "2 weeks",
       
       // Comments Section
       in_their_words: "IN THEIR WORDS",
@@ -441,6 +443,7 @@ imprint_privacy_text: "The use of our website is generally possible without prov
       // Pokedex Projekt
       pokedex_title: "Pokedex",
       pokedex_description: "Eine umfassende Pokemon-Informationsdatenbank, entwickelt mit Vanilla JavaScript und REST-API-Integration. Funktionen umfassen Echtzeit-Suche, detaillierte Pokemon-Statistiken, Evolutionsketten und typbasierte Filter für ein intensives Pokemon-Erkundungserlebnis.",
+      pokedex_duration_value: "2 Wochen",
       
       // Comments Section
       in_their_words: "IN IHREN WORTEN",

@@ -6,17 +6,17 @@
              src="/assets/png/Design material/00_Hand-drawn lines/04_Testimonials/Color option 3.png" 
              alt=""
              data-aos="zoom-in"
-             data-aos-delay="300">
-        <h3 data-aos="fade-right" data-aos-delay="600">{{ translationService.t('in_their_words') }}</h3>
+             data-aos-delay="150">
+        <h3 data-aos="fade-right" data-aos-delay="300">{{ translationService.t('in_their_words') }}</h3>
         </div>
-        <h1 data-aos="fade-up" data-aos-delay="900">{{ translationService.t('colleagues_thoughts') }}</h1>
+        <h1 data-aos="fade-up" data-aos-delay="450">{{ translationService.t('colleagues_thoughts') }}</h1>
       </div>
     </div>
     <div class="comment-window">
       @for(comment of comments; track comment.name; let i = $index){        <div class="comment-card card-{{i}}" 
              [ngStyle]="{'background-image': 'url(' + comment.backgroundImage + ')'}"
              data-aos="fade-up"
-             [attr.data-aos-delay]="i * 200">
+             [attr.data-aos-delay]="(i * 150) + 600">
           <div class="hover-line"></div>
           <div class="comment-content">
             <p class="comment-text">{{ comment.text }}</p>

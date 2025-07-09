@@ -53,6 +53,7 @@ export class SkillsComponent {
     { name:'CSS',        image:'assets/png/icons/Skill Icons/CSS.png' },
     { name:'JavaScript', image:'assets/png/icons/Skill Icons/JavaScript.png'  },
     { name:'Angular',    image:'assets/png/icons/Skill Icons/Angular.png' },
+    { name:'Vue.js',     image:'assets/png/icons/Skill Icons/Vue.Js.png' },
     { name:'Bootstrap',  image:'assets/png/icons/Skill Icons/Bootstrap.png' },
     { name:'Material',   image:'assets/png/icons/Skill Icons/Material Design.png' },
     { name:'Git',        image:'assets/png/icons/Skill Icons/Git.png' },
@@ -67,7 +68,7 @@ export class SkillsComponent {
   /** Array of skills currently being learned */
   learningSkills: Skill[] = [
     { name:'React',      image:'assets/png/icons/Skill Icons/React.png' },
-    { name:'Vue.js',     image:'assets/png/icons/Skill Icons/Vue.Js.png' }
+    { name:'Java',       image:'assets/png/icons/Skill Icons/java.svg' }
   ];
 
   private boundMove = (e: MouseEvent) => this.onMouseMove(e);

@@ -1,23 +1,23 @@
 <section id="skills" class="skills">
   <div class="skills-content">
-    <div class="skills-header" data-aos="fade-up" data-aos-duration="800">
-      <h3 data-aos="fade-right" data-aos-delay="200">{{ translationService.t('my_stack') }}</h3>
-      <div class="skills-title-container" data-aos="zoom-in" data-aos-delay="400">
+    <div class="skills-header" data-aos="fade-up" data-aos-duration="600">
+      <h3 data-aos="fade-right" data-aos-delay="100">{{ translationService.t('my_stack') }}</h3>
+      <div class="skills-title-container" data-aos="zoom-in" data-aos-delay="200">
         <h1>{{ translationService.t('skill_set') }}</h1>
         <div class="skills-ring" [class]="ringClass"></div>
       </div>
     </div>
     <div class="skills-description">
-      <div class="skill-paper" data-aos="fade-up" data-aos-delay="600">
+      <div class="skill-paper" data-aos="fade-up" data-aos-delay="300">
         <p>
           {{ translationService.t('skill_description') }}
         </p>
       </div>
-      <div class="different-skills" data-aos="fade-up" data-aos-delay="800">
+      <div class="different-skills" data-aos="fade-up" data-aos-delay="400">
         @for (skill of skills; track skill; let i = $index) {
           <div class="skill" 
                data-aos="flip-up" 
-               [attr.data-aos-delay]="(i * 100) + 1000">
+               [attr.data-aos-delay]="(i * 80) + 500">
             <img class="skill-icon" [src]="skill.image"><span>{{ skill.name }}</span>
           </div>
         }
