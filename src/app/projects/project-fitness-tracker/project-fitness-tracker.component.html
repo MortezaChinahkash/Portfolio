@@ -1,7 +1,8 @@
 <div class="black-bg">
   <section class="project-page">
     <div class="max-content">
-      @if (project) {      <div class="back-link">
+      @if (project) {      <!-- Back link at top of max-content -->
+      <div class="back-link">
         <a [routerLink]="['/']" fragment="atf">
           <img
             class="breadcrumb-arrow"
@@ -58,32 +59,28 @@
               class="project-image"
             />
             }
-          </div>          <div class="action-buttons">
-            @if (project.isInProgress) {
-              <div class="project-status-container">
-                <span class="status-badge-large">{{ translationService.t("project_in_progress") }}</span>
-                <p class="status-description">{{ translationService.t("project_links_disabled") }}</p>
-              </div>
-            } @else {
-              @if (project.gitHubUrl) {
-              <a
-                [href]="project.gitHubUrl"
-                target="_blank"
-                class="btn github-btn"
-                >{{ translationService.t("github") }}</a
-              >
-              } @if (project.projectUrl) {
-              <a
-                [href]="project.projectUrl"
-                target="_blank"
-                class="btn live-btn"
-                >{{ translationService.t("live_test") }}</a
-              >
-              }
+          </div>
+
+          <div class="action-buttons">
+            @if (project.gitHubUrl) {
+            <a
+              [href]="project.gitHubUrl"
+              target="_blank"
+              class="btn github-btn"
+              >{{ translationService.t("github") }}</a
+            >
+            } @if (project.projectUrl) {
+            <a
+              [href]="project.projectUrl"
+              target="_blank"
+              class="btn live-btn"
+              >{{ translationService.t("live_test") }}</a
+            >
             }
           </div>
 
-          <div class="back-next">            <div class="back-link-bottom">
+          <div class="back-next">
+            <div class="back-link-bottom">
               <a [routerLink]="['/']" fragment="atf">
                 <img
                   class="breadcrumb-arrow"
