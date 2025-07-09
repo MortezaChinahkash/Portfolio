@@ -7,7 +7,8 @@ export class ProjectNavigationService {
   private projects = [
     'project-dabubble',
     'project-join', 
-    'project-el-pollo-loco'
+    'project-el-pollo-loco',
+    'project-pokedex'
   ];
 
   getNextProject(currentProject: string): string {

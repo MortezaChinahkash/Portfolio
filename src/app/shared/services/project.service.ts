@@ -78,7 +78,8 @@ export class ProjectService {
     this.projects = [
       this.createDabubbleProject(),
       this.createJoinProject(),
-      this.createElPolloLocoProject()
+      this.createElPolloLocoProject(),
+      this.createPokedexProject()
     ];
   }
 
@@ -135,6 +136,22 @@ export class ProjectService {
     };
   }
 
+  private createPokedexProject(): PortfolioItem {
+    return {
+      id: 4,
+      compId: 'pokedex',
+      title: this.translationService.t('pokedex_title'),
+      description: this.translationService.t('pokedex_description'),
+      imageUrl: '/assets/png/Design material/screens/pokedex screen.png',
+      projectsImageUrl: '/assets/png/Design material/screens/pokedex.png',
+      projectUrl: 'https://m-chinahkash.de/pokedex/', // Hier können Sie Ihre echte URL eintragen
+      gitHubUrl: 'https://github.com/MortezaChinahkash/Pokedex', // Hier können Sie Ihre echte GitHub URL eintragen
+      technologies: this.getPokedexTechnologies(),
+      isFeatured: false,
+      isInProgress: false
+    };
+  }
+
   private getDabubbleTechnologies() {
     return [
       { name: 'Angular', imageUrl: '/assets/png/icons/Skill Icons/Angular.png' },
@@ -159,6 +176,15 @@ export class ProjectService {
       { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
       { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' },
       { name: 'JavaScript', imageUrl: '/assets/png/icons/Skill Icons/JavaScript.png' }
+    ];
+  }
+
+  private getPokedexTechnologies() {
+    return [
+      { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' },
+      { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
+      { name: 'JavaScript', imageUrl: '/assets/png/icons/Skill Icons/JavaScript.png' },
+      { name: 'REST API', imageUrl: '/assets/png/icons/Skill Icons/Rest-Api.png' }
     ];
   }
 

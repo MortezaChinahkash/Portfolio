@@ -67,6 +67,10 @@ export interface TranslationSet {
   dabubble_title: string;
   dabubble_description: string;
   
+  // Pokedex Projekt
+  pokedex_title: string;
+  pokedex_description: string;
+  
   // Comments Section
   in_their_words: string;
   colleagues_thoughts: string;
@@ -132,10 +136,12 @@ export interface TranslationSet {
   
   // Project Content
   description: string;
+  technologies: string;
   implementation_details: string;
   duration: string;
   tech_stack: string;
   loading_project: string;
+  loading: string;
   
   // Skills Section
   pull_to_peel: string;
@@ -260,6 +266,10 @@ export class TranslationService {
       dabubble_title: "DABubble",
       dabubble_description: "A lightweight, privacy-friendly discussion platform designed to replace scattered WhatsApp groups and long email chains in university courses and bootcamps. DABubble combines Slack-like channels with structured conversations, emoji reactions, and file sharing.",
       
+      // Pokedex Projekt
+      pokedex_title: "Pokedex",
+      pokedex_description: "A comprehensive Pokemon information database built with vanilla JavaScript and REST API integration. Features include real-time search, detailed Pokemon stats, evolution chains, and type-based filtering for an immersive Pokemon exploration experience.",
+      
       // Comments Section
       in_their_words: "IN THEIR WORDS",
       colleagues_thoughts: "Colleagues' Thoughts",
@@ -326,10 +336,12 @@ export class TranslationService {
       
       // Project Content
       description: "Description",
+      technologies: "Technologies",
       implementation_details: "Implementation Details",
       duration: "Duration",
       tech_stack: "Tech Stack",
       loading_project: "Loading project information...",
+      loading: "Loading...",
       
       // Skills Section
       pull_to_peel: "Pull to peel",
@@ -426,6 +438,10 @@ imprint_privacy_text: "The use of our website is generally possible without prov
       dabubble_title: "DABubble",
       dabubble_description: "Eine leichtgewichtige, datenschutzfreundliche Diskussionsplattform, die verstreute WhatsApp-Gruppen und lange E-Mail-Ketten in Universitätskursen und Bootcamps ersetzen soll. DABubble kombiniert Slack-ähnliche Kanäle mit strukturierten Unterhaltungen, Emoji-Reaktionen und Dateifreigaben.",
       
+      // Pokedex Projekt
+      pokedex_title: "Pokedex",
+      pokedex_description: "Eine umfassende Pokemon-Informationsdatenbank, entwickelt mit Vanilla JavaScript und REST-API-Integration. Funktionen umfassen Echtzeit-Suche, detaillierte Pokemon-Statistiken, Evolutionsketten und typbasierte Filter für ein intensives Pokemon-Erkundungserlebnis.",
+      
       // Comments Section
       in_their_words: "IN IHREN WORTEN",
       colleagues_thoughts: "Meinungen von Kollegen",
@@ -492,10 +508,12 @@ imprint_privacy_text: "The use of our website is generally possible without prov
       
       // Project Content
       description: "Beschreibung",
+      technologies: "Technologien",
       implementation_details: "Implementierungsdetails",
       duration: "Dauer",
       tech_stack: "Tech Stack",
       loading_project: "Projektinformationen werden geladen...",
+      loading: "Laden...",
       
       // Skills Section
       pull_to_peel: "Ziehen zum Abziehen",
