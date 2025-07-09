@@ -8,7 +8,8 @@ export class ProjectNavigationService {
     'project-dabubble',
     'project-join', 
     'project-el-pollo-loco',
-    'project-pokedex'
+    'project-pokedex',
+    'project-fitness-tracker'
   ];
 
   getNextProject(currentProject: string): string {

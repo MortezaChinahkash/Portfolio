@@ -79,7 +79,8 @@ export class ProjectService {
       this.createDabubbleProject(),
       this.createJoinProject(),
       this.createElPolloLocoProject(),
-      this.createPokedexProject()
+      this.createPokedexProject(),
+      this.createFitnessTrackerProject()
     ];
   }
 
@@ -152,6 +153,22 @@ export class ProjectService {
     };
   }
 
+  private createFitnessTrackerProject(): PortfolioItem {
+    return {
+      id: 5,
+      compId: 'fitness-tracker',
+      title: this.translationService.t('fitness_tracker_title'),
+      description: this.translationService.t('fitness_tracker_description'),
+      imageUrl: '/assets/png/Design material/screens/Fitness Tracker screen.png',
+      projectsImageUrl: '/assets/png/Design material/screens/Fitness Tracker.png',
+      projectUrl: 'https://m-chinahkash.de/fitness-tracker/',
+      gitHubUrl: 'https://github.com/MortezaChinahkash/Fitness-Tracker',
+      technologies: this.getFitnessTrackerTechnologies(),
+      isFeatured: false,
+      isInProgress: false
+    };
+  }
+
   private getDabubbleTechnologies() {
     return [
       { name: 'Angular', imageUrl: '/assets/png/icons/Skill Icons/Angular.png' },
@@ -185,6 +202,15 @@ export class ProjectService {
       { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
       { name: 'JavaScript', imageUrl: '/assets/png/icons/Skill Icons/JavaScript.png' },
       { name: 'REST API', imageUrl: '/assets/png/icons/Skill Icons/Rest-Api.png' }
+    ];
+  }
+
+  private getFitnessTrackerTechnologies() {
+    return [
+      { name: 'Vue.js', imageUrl: '/assets/png/icons/Skill Icons/Vue.Js.png' },
+      { name: 'TypeScript', imageUrl: '/assets/png/icons/Skill Icons/TypeScript.png' },
+      { name: 'SASS', imageUrl: '/assets/png/icons/Skill Icons/SASS.png' },
+      { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' }
     ];
   }
 

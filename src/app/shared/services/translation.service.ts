@@ -72,6 +72,11 @@ export interface TranslationSet {
   pokedex_description: string;
   pokedex_duration_value: string;
   
+  // Fitness-Tracker Projekt
+  fitness_tracker_title: string;
+  fitness_tracker_description: string;
+  fitness_tracker_duration_value: string;
+  
   // Comments Section
   in_their_words: string;
   colleagues_thoughts: string;
@@ -272,6 +277,11 @@ export class TranslationService {
       pokedex_description: "A comprehensive Pokemon information database built with vanilla JavaScript and REST API integration. Features include real-time search, detailed Pokemon stats, evolution chains, and type-based filtering for an immersive Pokemon exploration experience.",
       pokedex_duration_value: "2 weeks",
       
+      // Fitness-Tracker Projekt
+      fitness_tracker_title: "Fitness-Tracker",
+      fitness_tracker_description: "A comprehensive fitness tracking application built with Vue.js and TypeScript. Features workout planning, progress tracking, exercise library, and performance analytics with a modern, responsive design using SCSS.",
+      fitness_tracker_duration_value: "3 weeks",
+      
       // Comments Section
       in_their_words: "IN THEIR WORDS",
       colleagues_thoughts: "Colleagues' Thoughts",
@@ -444,6 +454,11 @@ imprint_privacy_text: "The use of our website is generally possible without prov
       pokedex_title: "Pokedex",
       pokedex_description: "Eine umfassende Pokemon-Informationsdatenbank, entwickelt mit Vanilla JavaScript und REST-API-Integration. Funktionen umfassen Echtzeit-Suche, detaillierte Pokemon-Statistiken, Evolutionsketten und typbasierte Filter für ein intensives Pokemon-Erkundungserlebnis.",
       pokedex_duration_value: "2 Wochen",
+      
+      // Fitness-Tracker Projekt
+      fitness_tracker_title: "Fitness-Tracker",
+      fitness_tracker_description: "Eine umfassende Fitness-Tracking-Anwendung, entwickelt mit Vue.js und TypeScript. Funktionen umfassen Trainingsplanung, Fortschrittsverfolgung, Übungsbibliothek und Leistungsanalysen mit einem modernen, responsiven Design mit SCSS.",
+      fitness_tracker_duration_value: "3 Wochen",
       
       // Comments Section
       in_their_words: "IN IHREN WORTEN",
