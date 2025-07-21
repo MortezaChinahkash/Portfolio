@@ -80,7 +80,11 @@ export class HeaderComponent implements OnInit {
     this.isImprint = url.includes('/imprint');
   }
   
-  // Methode zum Wechseln der Sprache
+  /**
+   * Toggles the application language
+   * @param {SupportedLanguage} code - The language code to switch to
+   * @returns {void}
+   */
   toggleLanguage(code: SupportedLanguage): void {
     if (this.currentLanguage !== code) {
       this.translationService.setLanguage(code);
