@@ -18,12 +18,23 @@ export class ContactComponent implements OnInit {
   submitSuccess = false;
   submitError = false;
 
+  /**
+   * Initializes the ContactComponent with translation and form services
+   * @param {TranslationService} translationService - Service for handling translations
+   * @param {FormBuilder} formBuilder - Angular service for building reactive forms
+   * @param {EmailService} emailService - Service for handling email submissions
+   */
   constructor(
     public translationService: TranslationService,
     private formBuilder: FormBuilder,
     private emailService: EmailService
   ) {}
 
+  /**
+   * Angular lifecycle hook - initializes the component after dependency injection
+   * Sets up the contact form with validation rules
+   * @returns {void}
+   */
   ngOnInit(): void {
     this.contactForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
@@ -39,11 +50,22 @@ export class ContactComponent implements OnInit {
   get message() { return this.contactForm.get('message'); }
   get privacyPolicy() { return this.contactForm.get('privacyPolicy'); }
 
+  /**
+   * Checks if a specific form field has validation errors
+   * @param {string} fieldName - The name of the form field to check
+   * @returns {boolean} True if the field has errors and has been touched/dirty, false otherwise
+   */
   // Überprüft ob ein Feld einen Fehler hat
   hasError(fieldName: string): boolean {
     const field = this.contactForm.get(fieldName);
     return field ? field.invalid && (field.dirty || field.touched) : false;
   }
+  
+  /**
+   * Gets the appropriate error message for a form field
+   * @param {string} fieldName - The name of the form field
+   * @returns {string} The localized error message or empty string if no errors
+   */
   // Gibt die entsprechende Fehlermeldung zurück
   getErrorMessage(fieldName: string): string {
     const field = this.contactForm.get(fieldName);
@@ -64,6 +86,12 @@ export class ContactComponent implements OnInit {
     return '';
   }
 
+  /**
+   * Gets the localized required field error message for a specific field
+   * @private
+   * @param {string} fieldName - The name of the form field
+   * @returns {string} The localized required field error message
+   */
   private getRequiredFieldError(fieldName: string): string {
     switch (fieldName) {
       case 'name': return this.translationService.t('name_required');
@@ -74,6 +102,13 @@ export class ContactComponent implements OnInit {
     }
   }
 
+  /**
+   * Gets the localized minimum length error message for a specific field
+   * @private
+   * @param {string} fieldName - The name of the form field
+   * @param {number} minLength - The minimum required length
+   * @returns {string} The localized minimum length error message
+   */
   private getMinLengthError(fieldName: string, minLength: number): string {
     switch (fieldName) {
       case 'name': return this.translationService.t('name_min_length');
@@ -81,6 +116,12 @@ export class ContactComponent implements OnInit {
       default: return `Mindestens ${minLength} Zeichen erforderlich`;
     }
   }
+  
+  /**
+   * Handles form submission when user clicks submit button
+   * Validates form and initiates submission process if valid
+   * @returns {void}
+   */
   // Form absenden
   onSubmit(): void {
     if (this.contactForm.valid && !this.isSubmitting) {
@@ -90,6 +131,11 @@ export class ContactComponent implements OnInit {
     }
   }
 
+  /**
+   * Handles the form submission process
+   * @private
+   * @returns {void}
+   */
   private handleFormSubmission(): void {
     this.prepareSubmission();
     const formData = this.extractFormData();
@@ -100,12 +146,22 @@ export class ContactComponent implements OnInit {
     });
   }
 
+  /**
+   * Prepares the component state for form submission
+   * @private
+   * @returns {void}
+   */
   private prepareSubmission(): void {
     this.isSubmitting = true;
     this.submitSuccess = false;
     this.submitError = false;
   }
 
+  /**
+   * Extracts form data into ContactFormData object
+   * @private
+   * @returns {ContactFormData} The form data object with name, email, and message
+   */
   private extractFormData(): ContactFormData {
     return {
       name: this.contactForm.value.name,
@@ -114,6 +170,12 @@ export class ContactComponent implements OnInit {
     };
   }
 
+  /**
+   * Handles successful form submission
+   * @private
+   * @param {any} response - The response from the email service
+   * @returns {void}
+   */
   private handleSubmissionSuccess(response: any): void {
     console.log('E-Mail erfolgreich gesendet', response);
     this.submitSuccess = true;
@@ -121,6 +183,12 @@ export class ContactComponent implements OnInit {
     this.hideMessageAfterDelay(() => this.submitSuccess = false);
   }
 
+  /**
+   * Handles form submission errors
+   * @private
+   * @param {any} error - The error from the email service
+   * @returns {void}
+   */
   private handleSubmissionError(error: any): void {
     console.error('Fehler beim Senden der E-Mail', error);
     this.submitError = true;
@@ -128,12 +196,23 @@ export class ContactComponent implements OnInit {
     this.hideMessageAfterDelay(() => this.submitError = false);
   }
 
+  /**
+   * Resets the form to its initial state
+   * @private
+   * @returns {void}
+   */
   private resetForm(): void {
     this.contactForm.reset();
     this.contactForm.patchValue({ privacyPolicy: false });
     this.isSubmitting = false;
   }
 
+  /**
+   * Hides success/error messages after a delay
+   * @private
+   * @param {() => void} callback - Function to execute after delay
+   * @returns {void}
+   */
   private hideMessageAfterDelay(callback: () => void): void {
     setTimeout(callback, 5000);
   }

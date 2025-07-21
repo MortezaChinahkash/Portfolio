@@ -1,0 +1,59 @@
+FILE LENGTH ANALYSIS REPORT
+Generated: 22.07.2025 01:46
+================================================================================
+Analyzing 102 files for length > 400 lines...
+Search directory: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio
+HTML files: 17
+SCSS files: 44
+TypeScript files: 41
+Excluded directories: node_modules, .git, dist, build, .angular, coverage, .vscode, .idea
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\atf\atf.component.scss
+--------------------------------------------------------------------------------
+  Type: SCSS | Total lines: 461
+  Non-empty: 404 | Comments: 30 | Code: 374
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\contact\contact.component.scss
+--------------------------------------------------------------------------------
+  Type: SCSS | Total lines: 461
+  Non-empty: 406 | Comments: 5 | Code: 401
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\services\translation.service.ts
+--------------------------------------------------------------------------------
+  Type: TypeScript | Total lines: 643
+  Non-empty: 550 | Comments: 149 | Code: 401
+
+================================================================================
+=== TOP 10 LARGEST FILES ===
+================================================================================
+ 1. translation.service.ts (643 lines)
+    Type: TypeScript
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\services\translation.service.ts
+
+ 2. atf.component.scss (461 lines)
+    Type: SCSS
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\atf\atf.component.scss
+
+ 3. contact.component.scss (461 lines)
+    Type: SCSS
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\contact\contact.component.scss
+
+=== SUMMARY BY FILE TYPE ===
+HTML: 0 files > 400 lines
+CSS: 0 files > 400 lines
+SCSS: 2 files > 400 lines (avg: 461.0, max: 461)
+SASS: 0 files > 400 lines
+JavaScript: 0 files > 400 lines
+TypeScript: 1 files > 400 lines (avg: 643.0, max: 643)
+
+=== OVERALL SUMMARY ===
+Files analyzed: 102
+Files over 400 lines: 3
+Average length of large files: 521.7 lines
+Largest file: translation.service.ts (643 lines)
+
+=== RECOMMENDATIONS ===
+• Files > 500 lines: Consider splitting into multiple files
+• HTML files > 400 lines: Break into components or templates
+• CSS/SCSS files > 600 lines: Use modular architecture (BEM, modules)
+• JS/TS files > 400 lines: Split into smaller modules or services

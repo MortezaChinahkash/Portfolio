@@ -69,7 +69,12 @@ export class HeaderComponent implements OnInit {
     });
   }
   
-  // Überprüft, ob wir auf einer Projektseite sind
+  /**
+   * Überprüft, ob die aktuelle Route eine Projektseite oder das Impressum ist
+   * @private
+   * @param {string} url - Die aktuelle URL
+   * @returns {void}
+   */
   private checkCurrentRoute(url: string): void {
     this.isProjectPage = url.includes('/projects/');
     this.isImprint = url.includes('/imprint');

@@ -1,0 +1,49 @@
+METHOD LENGTH ANALYSIS REPORT
+Generated: 22.07.2025 01:49
+================================================================================
+Analyzing 41 TypeScript/JavaScript files for methods > 14 lines...
+Search directory: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio
+TypeScript files: 41
+JavaScript files: 0
+Excluded directories: node_modules, .git, dist, build, .angular, coverage
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\test-aos.component.ts
+--------------------------------------------------------------------------------
+  Method: ngAfterViewInit (Line 46-71)
+     Code lines: 18 | Total lines: 26
+     Declaration: ngAfterViewInit() {...
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\comments\comments.component.ts
+--------------------------------------------------------------------------------
+  Method: ngAfterViewInit (Line 60-82)
+     Code lines: 17 | Total lines: 23
+     Declaration: ngAfterViewInit() {...
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-join\project-join.component.ts
+--------------------------------------------------------------------------------
+  Method: createFallbackProject (Line 41-61)
+     Code lines: 20 | Total lines: 21
+     Declaration: private createFallbackProject(): PortfolioItem {...
+
+================================================================================
+=== TOP 10 LONGEST METHODS ===
+================================================================================
+ 1. createFallbackProject (20 lines)
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-join\project-join.component.ts
+    Line: 41-61
+
+ 2. ngAfterViewInit (18 lines)
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\test-aos.component.ts
+    Line: 46-71
+
+ 3. ngAfterViewInit (17 lines)
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\comments\comments.component.ts
+    Line: 60-82
+
+=== SUMMARY ===
+Files analyzed: 41
+Files with long methods: 3
+Total methods > 14 lines: 3
+Average length: 18.3 lines
+Longest method: createFallbackProject (20 lines)
+Consider refactoring methods longer than 20-25 lines
