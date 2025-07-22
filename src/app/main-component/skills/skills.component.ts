@@ -143,7 +143,11 @@ export class SkillsComponent {
     }
   }
 
-  /** Handles the mouse move event during a drag action */
+  /**
+   * Handles the mouse move event during a drag action
+   * @param {MouseEvent} _ - The mouse event (unused)
+   * @returns {void}
+   */
   onMouseMove(_: MouseEvent) {
   }
 
