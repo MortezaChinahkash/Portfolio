@@ -167,6 +167,10 @@ export class SkillsComponent {
     window.removeEventListener('mouseup',   this.boundUp);
   }
 
-  /** Prevents default drag behavior for the component */
+  /**
+   * Prevents default drag behavior for the component
+   * @param {DragEvent} ev - The drag event
+   * @returns {void}
+   */
   onDragStart(ev: DragEvent) { ev.preventDefault(); }
 }
