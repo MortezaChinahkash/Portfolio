@@ -272,12 +272,20 @@ export class ProjectService {
     return this.projects[nextIndex];
   }
 
-  // Neue Methode zum Abrufen der Route für ein Projekt
+  /**
+   * Generates the route path for a given project component ID
+   * @param {string} compId - The component ID of the project
+   * @returns {string} The route path for the project
+   */
   getProjectRoute(compId: string): string {
     return `/projects/project-${compId}`;
   }
 
-  // Debugging-Methode
+  /**
+   * Debug method to check if projects are properly initialized
+   * @public
+   * @returns {boolean} True if projects are initialized, false otherwise
+   */
   public debugProjects() {
     if (this.projects.length === 0) {
       console.error('No projects initialized in service!');
