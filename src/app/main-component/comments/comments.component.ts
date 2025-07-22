@@ -50,6 +50,11 @@ export class CommentsComponent implements OnInit, AfterViewInit {
     private el: ElementRef
   ) {}
 
+  /**
+   * Component initialization lifecycle hook
+   * Sets up comments and language change subscription
+   * @returns {void}
+   */
   ngOnInit() {
     this.updateComments();
     
