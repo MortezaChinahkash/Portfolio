@@ -145,7 +145,12 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  // Scrolling zu einer Sektion
+  /**
+   * Scrolls to a specific section on the current page with smooth animation
+   * @private
+   * @param {string} sectionId - The ID of the section to scroll to
+   * @returns {void}
+   */
   private scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
