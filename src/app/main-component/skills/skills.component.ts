@@ -128,7 +128,8 @@ export class SkillsComponent {
 
   /**
    * Handles the mousedown event for starting a drag action
-   * @param event - The mouse event
+   * @param {MouseEvent} event - The mouse event
+   * @returns {void}
    */
   onMouseDown(event: MouseEvent) {
     if (!this.isMobile) {
