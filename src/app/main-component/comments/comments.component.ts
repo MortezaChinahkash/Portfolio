@@ -106,6 +106,17 @@ export class CommentsComponent implements OnInit, AfterViewInit {
         'https://www.linkedin.com/in/markus-fischer-25a5b68b/', 'A.png')
     ];
   }
+
+  /**
+   * Creates a comment data object with translated content
+   * @private
+   * @param {string} name - The name of the person giving the testimonial
+   * @param {string} roleKey - Translation key for the person's role
+   * @param {string} textKey - Translation key for the testimonial text
+   * @param {string} linkedIn - LinkedIn profile URL
+   * @param {string} imageName - Background image filename
+   * @returns {Comment} The created comment object
+   */
   private createCommentData(name: string, roleKey: string, textKey: string, 
     linkedIn: string, imageName: string): Comment {
     return {
