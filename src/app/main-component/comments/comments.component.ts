@@ -62,7 +62,13 @@ export class CommentsComponent implements OnInit, AfterViewInit {
       this.updateComments();
     });
   }
-    ngAfterViewInit() {
+
+  /**
+   * After view initialization lifecycle hook
+   * Sets up AOS animations and touch event handlers for mobile devices
+   * @returns {void}
+   */
+  ngAfterViewInit() {
     // AOS für diese Komponente initialisieren
     setTimeout(() => {
       AOS.refresh();
@@ -85,6 +91,11 @@ export class CommentsComponent implements OnInit, AfterViewInit {
       }
     });
   }
+
+  /**
+   * Updates the comments array with current language translations
+   * @returns {void}
+   */
   updateComments() {
     this.comments = [
       this.createCommentData('Jane Domsgen', 'role_frontend', 'comment1_text', 
