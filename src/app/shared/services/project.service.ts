@@ -189,6 +189,11 @@ export class ProjectService {
     };
   }
 
+  /**
+   * Returns the technology stack for the DABubble project
+   * @private
+   * @returns {Array} Array of technology objects with names and image URLs
+   */
   private getDabubbleTechnologies() {
     return [
       { name: 'Angular', imageUrl: '/assets/png/icons/Skill Icons/Angular.png' },
@@ -198,6 +203,11 @@ export class ProjectService {
     ];
   }
 
+  /**
+   * Returns the technology stack for the Join project
+   * @private
+   * @returns {Array} Array of technology objects with names and image URLs
+   */
   private getJoinTechnologies() {
     return [
       { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
