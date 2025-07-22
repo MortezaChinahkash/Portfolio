@@ -245,6 +245,11 @@ export class ProjectService {
     ];
   }
 
+  /**
+   * Returns the technology stack for the Fitness Tracker project
+   * @private
+   * @returns {Array} Array of technology objects with names and image URLs
+   */
   private getFitnessTrackerTechnologies() {
     return [
       { name: 'Vue.js', imageUrl: '/assets/png/icons/Skill Icons/Vue.Js.png' },
@@ -254,7 +259,11 @@ export class ProjectService {
     ];
   }
 
-  // Neue Methode zum Abrufen des nächsten Projekts
+  /**
+   * Gets the next project in the portfolio sequence
+   * @param {string} currentCompId - The component ID of the current project
+   * @returns {PortfolioItem | undefined} The next project if found, undefined otherwise
+   */
   getNextProject(currentCompId: string): PortfolioItem | undefined {
     const currentIndex = this.projects.findIndex(p => p.compId === currentCompId);
     if (currentIndex === -1) return undefined;
