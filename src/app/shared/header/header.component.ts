@@ -131,6 +131,12 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  /**
+   * Navigates to home page and then scrolls to the specified section
+   * @private
+   * @param {string} sectionId - The ID of the section to scroll to after navigation
+   * @returns {void}
+   */
   private navigateHomeAndScroll(sectionId: string): void {
     this.router.navigate(['/'], { fragment: sectionId }).then(() => {
       setTimeout(() => {
