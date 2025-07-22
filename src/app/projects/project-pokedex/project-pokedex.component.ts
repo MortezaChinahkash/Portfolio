@@ -23,10 +23,19 @@ export class ProjectPokedexComponent implements OnInit {
     private router: Router
   ) {}
 
+  /**
+   * Component initialization lifecycle hook
+   * Loads the Pokedex project data from the service
+   * @returns {void}
+   */
   ngOnInit() {
     this.project = this.projectService.getProjectByCompId('pokedex');
   }
 
+  /**
+   * Navigates to the next project in the portfolio
+   * @returns {void}
+   */
   navigateToNextProject() {
     const nextProject = this.projectService.getNextProject('pokedex');
     if (nextProject) {
@@ -35,11 +44,20 @@ export class ProjectPokedexComponent implements OnInit {
     }
   }
 
+  /**
+   * Navigates to the previous project in the portfolio
+   * Currently navigates to home page as placeholder
+   * @returns {void}
+   */
   navigateToPreviousProject() {
     // Navigation zu vorherigem Projekt - kann später implementiert werden
     this.router.navigate(['/']);
   }
 
+  /**
+   * Navigates back to the home page
+   * @returns {void}
+   */
   navigateBack() {
     this.router.navigate(['/']);
   }
