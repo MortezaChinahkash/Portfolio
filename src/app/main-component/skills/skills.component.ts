@@ -153,7 +153,8 @@ export class SkillsComponent {
 
   /**
    * Handles the mouseup event to end a drag action
-   * @param ev - The mouse event
+   * @param {MouseEvent} ev - The mouse event
+   * @returns {void}
    */
   onMouseUp(ev: MouseEvent) {
     if (!this.isDragging) return;
