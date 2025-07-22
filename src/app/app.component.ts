@@ -72,6 +72,12 @@ export class AppComponent implements OnInit {
     });
   }
 
+  /**
+   * Checks if the current URL is a project page and updates body classes accordingly
+   * @private
+   * @param {string} url - The current URL to check
+   * @returns {void}
+   */
   private checkIfProjectPage(url: string) {
     const isProjectPage = url.includes('/projects/');
     
