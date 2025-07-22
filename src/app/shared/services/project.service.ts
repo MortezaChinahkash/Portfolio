@@ -168,6 +168,11 @@ export class ProjectService {
     };
   }
 
+  /**
+   * Creates the Fitness Tracker project data object
+   * @private
+   * @returns {PortfolioItem} The Fitness Tracker project configuration
+   */
   private createFitnessTrackerProject(): PortfolioItem {
     return {
       id: 5,
