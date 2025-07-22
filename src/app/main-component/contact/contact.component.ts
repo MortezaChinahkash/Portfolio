@@ -44,10 +44,28 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  // Getter für einfachen Zugriff auf Form-Controls
+  /**
+   * Getter for the name form control
+   * @returns {AbstractControl | null} The name form control
+   */
   get name() { return this.contactForm.get('name'); }
+  
+  /**
+   * Getter for the email form control
+   * @returns {AbstractControl | null} The email form control
+   */
   get email() { return this.contactForm.get('email'); }
+  
+  /**
+   * Getter for the message form control
+   * @returns {AbstractControl | null} The message form control
+   */
   get message() { return this.contactForm.get('message'); }
+  
+  /**
+   * Getter for the privacy policy form control
+   * @returns {AbstractControl | null} The privacy policy form control
+   */
   get privacyPolicy() { return this.contactForm.get('privacyPolicy'); }
 
   /**
