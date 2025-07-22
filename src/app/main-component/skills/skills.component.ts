@@ -109,7 +109,8 @@ export class SkillsComponent {
 
   /**
    * Handles click events on mobile devices
-   * @param event - The mouse event
+   * @param {MouseEvent} event - The mouse event
+   * @returns {void}
    */
   onMobileClick(event: MouseEvent) {
     if (this.isMobile) {
