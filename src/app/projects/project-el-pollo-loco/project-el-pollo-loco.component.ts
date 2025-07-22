@@ -52,6 +52,12 @@ export class ProjectElPolloLocoComponent implements OnInit {
       this.router.navigate([route]);
     }
   }
+
+  /**
+   * Creates fallback project data when service data is unavailable
+   * @private
+   * @returns {PortfolioItem} The fallback project data for El Pollo Loco
+   */
   private createFallbackProject(): PortfolioItem {
     return {
       id: 998,
@@ -68,6 +74,11 @@ export class ProjectElPolloLocoComponent implements OnInit {
     };
   }
 
+  /**
+   * Returns the technology stack used for the El Pollo Loco project
+   * @private
+   * @returns {Array} Array of technology objects with names and image URLs
+   */
   private getPolloTechnologies() {
     return [
       { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
