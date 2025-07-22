@@ -52,8 +52,14 @@ import * as AOS from 'aos';
   `
 })
 export class TestAosComponent implements AfterViewInit {
+  /** AOS library version information */
   aosVersion = 'unknown';
   
+  /**
+   * After view initialization lifecycle hook
+   * Sets up and configures AOS animations
+   * @returns {void}
+   */
   ngAfterViewInit() {
     console.log('TestAosComponent: Initialisiere AOS...');
     console.log('AOS object:', AOS);
