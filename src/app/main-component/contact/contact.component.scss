@@ -139,7 +139,6 @@ $accent: #1073EA;
       resize: none;
     }
 
-    // Form validation styles
     input,
     textarea {
       &.error {
@@ -178,7 +177,6 @@ $accent: #1073EA;
       cursor: url("/assets/hand-pointer.png"), auto;
     }
 
-    // Custom checkbox container
     .custom-checkbox {
       width: 20px;
       height: 20px;
@@ -197,7 +195,6 @@ $accent: #1073EA;
       }
     }
 
-    // Checkmark when checked
     input[type="checkbox"]:checked + .custom-checkbox {
       background-image: url("/assets/png/Design material/00_Hand-drawn lines/00_Header/Color option 3/Check.png");
     }
@@ -257,7 +254,6 @@ $accent: #1073EA;
   }
 }
 
-// Success and Error Messages
 .success-message,
 .error-message {
   margin-bottom: 20px;
@@ -434,7 +430,6 @@ $accent: #1073EA;
   }
 }
 
-// Touch device improvements for mobile
 @media (max-width: 768px) {
   .form-group {
     input,

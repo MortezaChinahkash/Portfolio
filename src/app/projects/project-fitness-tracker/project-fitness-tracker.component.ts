@@ -50,7 +50,6 @@ export class ProjectFitnessTrackerComponent implements OnInit {
    * @returns {void}
    */
   navigateToPreviousProject() {
-    // Navigation zu vorherigem Projekt - kann später implementiert werden
     this.router.navigate(['/']);
   }
 

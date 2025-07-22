@@ -75,14 +75,12 @@ export class PortfolioComponent implements OnInit, OnDestroy {
    * @returns {void}
    */
   private loadProjects(): void {
-    // Ensure translation service is ready
     if (this.translationService) {
       this.isTranslationReady = true;
     } else {
       console.error('Translation service is not available');
     }
 
-    // Hole alle Projekte aus dem Service
     this.projects = this.projectService.getAllProjects();
   }
 
@@ -91,7 +89,6 @@ export class PortfolioComponent implements OnInit, OnDestroy {
    * @param {string} key - The translation key to translate
    * @returns {string} - The translated string or the key itself if translation is not ready
    */
-  // Safe translation helper method with proper type casting
   translate(key: string): string {
     if (this.isTranslationReady && this.translationService && this.translationService.t) {
       return this.translationService.t(key as keyof TranslationSet);

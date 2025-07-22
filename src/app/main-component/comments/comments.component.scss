@@ -237,14 +237,12 @@
 
 }
 
-// New breakpoint for medium screens (1025px-1200px)
 @media (max-width: 1200px) and (min-width: 1025px) {
   .comment-card {
     width: clamp(280px, 28vw, 350px); // Etwas schmaler
   }
 }
 
-// Tablet screens
 @media (max-width: 1024px) and (min-width: 769px) {
   .comment-card {
     width: clamp(280px, 25vw, 330px); // Noch schmaler
@@ -259,7 +257,6 @@
   }
 }
 
-// Mobile devices
 @media (max-width: 768px) {
   .comments-section {
     margin-top: 60px;
@@ -341,7 +338,6 @@
   }
 }
 
-// Animation keyframes for hover line effect only
 @keyframes hoverLineEffect {
   0%, 16.67%, 83.33%, 100% {
     opacity: 0;
@@ -351,7 +347,6 @@
   }
 }
 
-// Clean up the duplicate media query
 @media (max-width: 1250px) and (min-width: 951px) {
   .comment-card {
     width: clamp(400px, 31vw, 450px);

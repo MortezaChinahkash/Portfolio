@@ -1,4 +1,3 @@
-// Note container and peel effects
 .note-container,
 .note-pull {
   width: 25%;
@@ -106,7 +105,6 @@
   text-align: center;
 }
 
-// Learning skills in final note
 .learning-skills {
   display: flex;
   gap: clamp(10px, 2vw, 15px);

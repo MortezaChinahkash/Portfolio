@@ -73,7 +73,6 @@ export class ContactComponent implements OnInit {
    * @param {string} fieldName - The name of the form field to check
    * @returns {boolean} True if the field has errors and has been touched/dirty, false otherwise
    */
-  // Überprüft ob ein Feld einen Fehler hat
   hasError(fieldName: string): boolean {
     const field = this.contactForm.get(fieldName);
     return field ? field.invalid && (field.dirty || field.touched) : false;
@@ -84,7 +83,6 @@ export class ContactComponent implements OnInit {
    * @param {string} fieldName - The name of the form field
    * @returns {string} The localized error message or empty string if no errors
    */
-  // Gibt die entsprechende Fehlermeldung zurück
   getErrorMessage(fieldName: string): string {
     const field = this.contactForm.get(fieldName);
     if (!field || !field.errors) return '';
@@ -140,7 +138,6 @@ export class ContactComponent implements OnInit {
    * Validates form and initiates submission process if valid
    * @returns {void}
    */
-  // Form absenden
   onSubmit(): void {
     if (this.contactForm.valid && !this.isSubmitting) {
       this.handleFormSubmission();

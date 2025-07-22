@@ -1,4 +1,3 @@
-// Mobile and responsive breakpoints
 @media (max-width: 1480px) {
   .project-page {
     background-size: 100% 100%;
@@ -180,7 +179,6 @@
   }
 }
 
-// Tablet responsive styles
 @media (max-width: 1024px) and (min-width: 769px) {
   .action-buttons {
     justify-content: space-between;
@@ -214,7 +212,6 @@
   }
 }
 
-// Additional breakpoint for very small screens
 @media (max-width: 480px) {
   .project-headline {
     width: fit-content;

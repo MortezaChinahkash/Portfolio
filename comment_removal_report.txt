@@ -1,0 +1,413 @@
+COMMENT REMOVAL ANALYSIS REPORT
+Generated: 2025-07-22 02:20:46
+================================================================================
+Processing 102 files...
+Search directory: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio
+Excluded directories: node_modules, .git, dist, build, .angular, coverage, .vscode, .idea
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\index.html
+  Original: 26 lines → Cleaned: 24 lines
+  Removed: 2 comment lines
+  Removed content:
+    Line 5:   <!-- Open Graph -->
+    Line 12: <!-- Twitter Card -->
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\atf\atf.component.html
+  Original: 71 lines → Cleaned: 70 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 17:           <!-- Frontend letters -->
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\contact\contact.component.html
+  Original: 105 lines → Cleaned: 103 lines
+  Removed: 2 comment lines
+  Removed content:
+    Line 27:           <!-- Success Message -->
+    Line 32:           <!-- Error Message -->
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\portfolio\portfolio.component.html
+  Original: 60 lines → Cleaned: 58 lines
+  Removed: 2 comment lines
+  Removed content:
+    Line 29:         <!-- Image Container mit Overlay und Button -->
+    Line 36:           <!-- Overlay, das beim Hover erscheint -->
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\styles.scss
+  Original: 169 lines → Cleaned: 66 lines
+  Removed: 103 comment lines
+  Removed content:
+    Line 1: * {
+    Line 68: /* Bold */
+    Line 69: @font-face {
+    Line 70:   font-family: "BricolageGrotesque";
+    Line 71:   src: url("/assets/fonts/BricolageGrotesque-Bold.ttf") format("truetype");
+    ... and 98 more lines
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\imprint\imprint.component.scss
+  Original: 103 lines → Cleaned: 102 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 93: // Spezieller Footer-Hintergrund nur auf der Imprint-Seite
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\atf\atf.component.scss
+  Original: 461 lines → Cleaned: 431 lines
+  Removed: 30 comment lines
+  Removed content:
+    Line 1: // ===========================================
+    Line 2: // MAIN HERO SECTION
+    Line 3: // ===========================================
+    Line 42: // ===========================================
+    Line 43: // HERO ROWS LAYOUT
+    ... and 25 more lines
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\comments\comments.component.scss
+  Original: 380 lines → Cleaned: 375 lines
+  Removed: 5 comment lines
+  Removed content:
+    Line 240: // New breakpoint for medium screens (1025px-1200px)
+    Line 247: // Tablet screens
+    Line 262: // Mobile devices
+    Line 344: // Animation keyframes for hover line effect only
+    Line 354: // Clean up the duplicate media query
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\contact\contact.component.scss
+  Original: 461 lines → Cleaned: 456 lines
+  Removed: 5 comment lines
+  Removed content:
+    Line 142:     // Form validation styles
+    Line 181:     // Custom checkbox container
+    Line 200:     // Checkmark when checked
+    Line 260: // Success and Error Messages
+    Line 437: // Touch device improvements for mobile
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\portfolio\portfolio.component.scss
+  Original: 249 lines → Cleaned: 248 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 203: // Status Badge für "In Arbeit"-Projekte
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\skills-new.component.scss
+  Original: 10 lines → Cleaned: 9 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Use modern @use syntax for better performance
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\skills.component.scss
+  Original: 9 lines → Cleaned: 8 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Use modern @use syntax for better performance
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\_animations.scss
+  Original: 37 lines → Cleaned: 33 lines
+  Removed: 4 comment lines
+  Removed content:
+    Line 1: // Simple top-to-bottom reveal animation
+    Line 28:   // Hidden state (0-2s = 2 seconds to appear)
+    Line 32:   // Visible state (2s-5s = 3 seconds stay visible)
+    Line 35:   // Hidden state (5s-7s = 2 seconds to disappear)
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\_base.scss
+  Original: 62 lines → Cleaned: 61 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Base layout for skills section
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\_description.scss
+  Original: 51 lines → Cleaned: 50 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Skills description section
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\_icons.scss
+  Original: 36 lines → Cleaned: 35 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Skill icons and grid styles
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\_layout.scss
+  Original: 1 lines → Cleaned: 0 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Additional layout utilities (if needed in future)
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\_mobile.scss
+  Original: 120 lines → Cleaned: 119 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Mobile responsive styles for skills
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\_responsive-large.scss
+  Original: 87 lines → Cleaned: 86 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Large screen responsive styles (tablets and larger)
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\_ring.scss
+  Original: 139 lines → Cleaned: 137 lines
+  Removed: 2 comment lines
+  Removed content:
+    Line 1: // Note container and peel effects
+    Line 109: // Learning skills in final note
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\_skill-items.scss
+  Original: 28 lines → Cleaned: 27 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Individual skill item styles
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\projects-new.component.scss
+  Original: 8 lines → Cleaned: 7 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Use modern @use syntax for better performance
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\projects.component.scss
+  Original: 8 lines → Cleaned: 7 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Use modern @use syntax for better performance
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\_animations.scss
+  Original: 36 lines → Cleaned: 35 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Animation definitions for project components
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\_buttons.scss
+  Original: 88 lines → Cleaned: 87 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Button styles and action components
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\_content.scss
+  Original: 103 lines → Cleaned: 102 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Project content styles (headlines, sections, tech stack, images)
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\_layout.scss
+  Original: 64 lines → Cleaned: 63 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Layout styles for project pages
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\_navigation.scss
+  Original: 106 lines → Cleaned: 105 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Navigation components (back links, next project links)
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\_project-styles.scss
+  Original: 124 lines → Cleaned: 123 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Project-specific components and utilities
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\_responsive.scss
+  Original: 268 lines → Cleaned: 265 lines
+  Removed: 3 comment lines
+  Removed content:
+    Line 1: // Mobile and responsive breakpoints
+    Line 183: // Tablet responsive styles
+    Line 217: // Additional breakpoint for very small screens
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-fitness-tracker\project-fitness-tracker.component.scss
+  Original: 2 lines → Cleaned: 0 lines
+  Removed: 2 comment lines
+  Removed content:
+    Line 1: // Styles werden aus ../projects.component.scss geladen
+    Line 2: // Falls spezifische Styles für fitness-tracker benötigt werden, hier einfügen
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-pokedex\project-pokedex.component.scss
+  Original: 1 lines → Cleaned: 0 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Dieses File ist leer, da die Styles aus ../projects.component.scss verwendet werden
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\header\header.component.scss
+  Original: 9 lines → Cleaned: 8 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Use modern @use syntax for better performance
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\header\_animations.scss
+  Original: 38 lines → Cleaned: 37 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Animation keyframes and effects
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\header\_base.scss
+  Original: 44 lines → Cleaned: 43 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Base header layout styles
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\header\_hover-effects.scss
+  Original: 73 lines → Cleaned: 72 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Hover effects for navigation items
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\header\_language-toggle.scss
+  Original: 128 lines → Cleaned: 127 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Language toggle component styles
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\header\_logo.scss
+  Original: 41 lines → Cleaned: 40 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Logo/initials component styles
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\header\_navigation.scss
+  Original: 53 lines → Cleaned: 52 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Navigation menu styles
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\header\_overlay-menu.scss
+  Original: 130 lines → Cleaned: 129 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Social media and overlay menu styles
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\header\_responsive.scss
+  Original: 84 lines → Cleaned: 83 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 1: // Responsive design media queries
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\app.component.ts
+  Original: 91 lines → Cleaned: 84 lines
+  Removed: 7 comment lines
+  Removed content:
+    Line 42:     // Initialize AOS animations with simpler config
+    Line 52:     // Initialisiere Sprache beim App-Start
+    Line 56:     // Reagiere auf Routenwechsel
+    Line 62:       // Automatisch nach oben scrollen bei Routenänderungen
+    Line 63:       // aber nicht bei Fragment-Navigation (Links wie #about-me)
+    ... and 2 more lines
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\test-aos.component.ts
+  Original: 114 lines → Cleaned: 110 lines
+  Removed: 4 comment lines
+  Removed content:
+    Line 67:     // Prüfe, ob AOS korrekt geladen wurde
+    Line 70:     // AOS komplett neu initialisieren
+    Line 82:     // Nach kurzer Verzögerung nochmal refreshen
+    Line 102:     // Prüfe, ob AOS CSS geladen ist
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\comments\comments.component.ts
+  Original: 131 lines → Cleaned: 130 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 72:     // AOS für diese Komponente initialisieren
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\contact\contact.component.ts
+  Original: 237 lines → Cleaned: 234 lines
+  Removed: 3 comment lines
+  Removed content:
+    Line 76:   // Überprüft ob ein Feld einen Fehler hat
+    Line 87:   // Gibt die entsprechende Fehlermeldung zurück
+    Line 143:   // Form absenden
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\portfolio\portfolio.component.ts
+  Original: 101 lines → Cleaned: 98 lines
+  Removed: 3 comment lines
+  Removed content:
+    Line 78:     // Ensure translation service is ready
+    Line 85:     // Hole alle Projekte aus dem Service
+    Line 94:   // Safe translation helper method with proper type casting
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-el-pollo-loco\project-el-pollo-loco.component.ts
+  Original: 89 lines → Cleaned: 86 lines
+  Removed: 3 comment lines
+  Removed content:
+    Line 30:     // Debug ProjectService
+    Line 33:     // Explizit nach 'el-pollo-loco' suchen (nicht 'el-pollo')
+    Line 36:     // Debugging
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-fitness-tracker\project-fitness-tracker.component.ts
+  Original: 64 lines → Cleaned: 63 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 53:     // Navigation zu vorherigem Projekt - kann später implementiert werden
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-pokedex\project-pokedex.component.ts
+  Original: 64 lines → Cleaned: 63 lines
+  Removed: 1 comment lines
+  Removed content:
+    Line 53:     // Navigation zu vorherigem Projekt - kann später implementiert werden
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\footer\footer.component.ts
+  Original: 137 lines → Cleaned: 126 lines
+  Removed: 11 comment lines
+  Removed content:
+    Line 36:     // Sprache aus dem Service übernehmen
+    Line 41:     // Überprüfen der aktuellen Route
+    Line 44:     // Auf Routenänderungen hören
+    Line 58:   // Überprüft, ob wir auf einer Projektseite sind
+    Line 68:   // Methode zum Wechseln der Sprache
+    ... and 6 more lines
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\header\header.component.ts
+  Original: 163 lines → Cleaned: 160 lines
+  Removed: 3 comment lines
+  Removed content:
+    Line 56:     // Sprache aus dem Service übernehmen
+    Line 61:     // Überprüfen der aktuellen Route
+    Line 64:     // Auf Routenänderungen hören
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\services\project.service.ts
+  Original: 296 lines → Cleaned: 289 lines
+  Removed: 7 comment lines
+  Removed content:
+    Line 29:     // Projekte initialisieren
+    Line 32:     // Aktualisiere Projekte, wenn sich die Sprache ändert
+    Line 43:   // Methode zum Abrufen aller Projekte
+    Line 53:   // Methode zum Abrufen eines Projekts nach ID
+    Line 63:   // Methode zum Abrufen eines Projekts nach compId
+    ... and 2 more lines
+
+File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\services\translation.service.ts
+  Original: 643 lines → Cleaned: 606 lines
+  Removed: 37 comment lines
+  Removed content:
+    Line 21:   // Header
+    Line 27:   // ATF (Hero)
+    Line 32:   // About
+    Line 41:   // Skills
+    Line 46:   // Portfolio
+    ... and 32 more lines
+
+================================================================================
+SUMMARY BY FILE TYPE
+================================================================================
+TypeScript: 12/41 files changed, 81 lines removed
+JavaScript: No files processed
+HTML: 4/17 files changed, 7 lines removed
+SCSS: 37/44 files changed, 183 lines removed
+CSS: No files processed
+SASS: No files processed
+
+================================================================================
+OVERALL SUMMARY
+================================================================================
+Files processed: 102
+Files with changes: 53
+Total comment lines removed: 271
+JSDoc comments preserved: YES
+Backup files created: NO
+
+PRESERVED COMMENT TYPES:
+• JSDoc comments (/** ... */)
+• @param, @returns, @fileoverview, etc.
+• Component and method documentation
+
+REMOVED COMMENT TYPES:
+• Single-line comments (//)
+• Multi-line comments (/* ... */) - non-JSDoc
+• HTML comments (<!-- ... -->)
+• SCSS/SASS comments (#)

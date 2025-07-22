@@ -26,10 +26,8 @@ export class ProjectService {
    * @constructor
    */
   constructor(private translationService: TranslationService) {
-    // Projekte initialisieren
     this.initProjects();
     
-    // Aktualisiere Projekte, wenn sich die Sprache ändert
     if (this.translationService && this.translationService.currentLang$) {
       this.translationService.currentLang$.subscribe(() => {
         this.initProjects();
@@ -40,7 +38,6 @@ export class ProjectService {
    * Retrieves all portfolio projects
    * @returns {PortfolioItem[]} Array of all portfolio projects
    */
-  // Methode zum Abrufen aller Projekte
   getAllProjects(): PortfolioItem[] {
     return this.projects;
   }
@@ -50,7 +47,6 @@ export class ProjectService {
    * @param {number} id - The unique identifier of the project
    * @returns {PortfolioItem | undefined} The project if found, undefined otherwise
    */
-  // Methode zum Abrufen eines Projekts nach ID
   getProjectById(id: number): PortfolioItem | undefined {
     return this.projects.find(project => project.id === id);
   }
@@ -60,10 +56,8 @@ export class ProjectService {
    * @param {string} compId - The component identifier for routing
    * @returns {PortfolioItem | undefined} The project if found, undefined otherwise
    */
-  // Methode zum Abrufen eines Projekts nach compId
   getProjectByCompId(compId: string): PortfolioItem | undefined {
     
-    // Das Problem könnte beim Vergleich liegen - stellen wir sicher, dass wir korrekt vergleichen
     const project = this.projects.find(p => p.compId.toLowerCase() === compId.toLowerCase());
       return project;
   }
@@ -73,7 +67,6 @@ export class ProjectService {
    * @private
    * @returns {void}
    */
-  // Projekte initialisieren
   private initProjects(): void {
     this.projects = [
       this.createDabubbleProject(),

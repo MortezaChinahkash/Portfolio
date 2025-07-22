@@ -1,6 +1,3 @@
-// ===========================================
-// MAIN HERO SECTION
-// ===========================================
 .hero {
   min-height: 100vh;
   width: 100%;
@@ -39,9 +36,6 @@
   margin-top: 175px;
 }
 
-// ===========================================
-// HERO ROWS LAYOUT
-// ===========================================
 .hero-row {
   display: flex;
   align-items: center;
@@ -67,9 +61,6 @@
   flex: 1;
 }
 
-// ===========================================
-// HELLO BUTTON & HAND ANIMATION
-// ===========================================
 .hand-hello {
   display: flex;
   flex-direction: column;
@@ -140,9 +131,6 @@
   left: 0;
 }
 
-// ===========================================
-// RESPONSIVE TITLE & LETTERS
-// ===========================================
 .responsive-title {
   font-size: clamp(2rem, 8vw, 6rem);
   margin: 0;
@@ -167,9 +155,6 @@
   }
 }
 
-// ===========================================
-// HERO IMAGES
-// ===========================================
 .hero-pic {
   position: relative;
   max-width: 300px;
@@ -208,7 +193,6 @@
   }
 }
 
-// Flash Animation für die Farbe
 @keyframes colorFlash {
   0% {
     filter: grayscale(1);
@@ -233,7 +217,6 @@
   width: 150px; // Auch hier feste Breite
   height: 300px; // Und feste Höhe
   transform: rotate(10deg);
-  // Hinzugefügt für das span Element:
   position: relative;
   justify-content: center;
   align-items: flex-end;
@@ -261,9 +244,6 @@
   }
 }
 
-// ===========================================
-// CTA BUTTON
-// ===========================================
 .atf-btn {
   margin-top: 35px;
   display: inline-block;
@@ -288,9 +268,6 @@
   }
 }
 
-// ===========================================
-// SOCIAL MEDIA LINKS
-// ===========================================
 .hero-socials {
   display: flex;
   flex-direction: column;
@@ -324,11 +301,7 @@
   cursor: url("/assets/hand-pointer.png"), auto;
 }
 
-// ===========================================
-// RESPONSIVE BREAKPOINTS
-// ===========================================
 
-// Large screens (1800px+)
 @media (min-width: 1800px) {
   .atf-content {
     margin-bottom: 2rem;
@@ -339,7 +312,6 @@
   }
 }
 
-// Mobile (767px and below)
 @media (max-width: 767px) {
   .hero {
     align-items: flex-start;
@@ -355,7 +327,6 @@
     width: 250px;
     margin-top: 25px;
     height: 250px; // Fixed height for background div
-    // Die anderen Styles von oben werden automatisch übernommen
   }
 
   .hero-socials {
@@ -430,7 +401,6 @@
   }
 }
 
-// Small mobile (400px and below)
 @media (max-width: 400px) {
   .max-content {
     margin: 0;

@@ -33,15 +33,12 @@ constructor(
    * @returns {void}
    */
   ngOnInit(): void {
-    // Sprache aus dem Service übernehmen
     this.translationService.currentLang$.subscribe(lang => {
       this.currentLanguage = lang;
     });
     
-    // Überprüfen der aktuellen Route
     this.checkCurrentRoute(this.router.url);
     
-    // Auf Routenänderungen hören
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
@@ -55,7 +52,6 @@ constructor(
    * @param {string} url - The current URL
    * @returns {void}
    */
-  // Überprüft, ob wir auf einer Projektseite sind
   private checkCurrentRoute(url: string): void {
     this.isImprint = url.includes('/imprint');
   }
@@ -65,7 +61,6 @@ constructor(
    * @param {SupportedLanguage} code - The language code to switch to
    * @returns {void}
    */
-  // Methode zum Wechseln der Sprache
   toggleLanguage(code: SupportedLanguage): void {
     if (this.currentLanguage !== code) {
       this.translationService.setLanguage(code);
@@ -76,7 +71,6 @@ constructor(
    * Switches between English and German languages
    * @returns {void}
    */
-  // Toggle-Methode für den Switch
   switchLanguage(): void {
     const newLang = this.currentLanguage === 'en' ? 'de' : 'en';
     this.toggleLanguage(newLang);
@@ -87,7 +81,6 @@ constructor(
    * @param {keyof TranslationService['translations']['en']} key - The translation key
    * @returns {string} The translated text
    */
-  // Hilfsmethode für das Template
   getText(key: keyof TranslationService['translations']['en']): string {
     return this.translationService.t(key);
   }
@@ -96,7 +89,6 @@ constructor(
    * Closes the mobile menu after a short delay
    * @returns {void}
    */
-  // Menü mit Verzögerung schließen
   closeMenuWithDelay(): void {
     setTimeout(() => {
       this.isMenuOpen = false;
@@ -108,9 +100,7 @@ constructor(
    * @param {string} sectionId - The ID of the section to navigate to
    * @returns {void}
    */
-  // Navigation zu Sektionen
   navigateToSection(sectionId: string): void {
-    // Immer zur Startseite navigieren, da das Footer auf allen Seiten ist
     this.router.navigate(['/'], { fragment: sectionId }).then(() => {
       setTimeout(() => {
         this.scrollToSection(sectionId);
@@ -124,7 +114,6 @@ constructor(
    * @param {string} sectionId - The ID of the section to scroll to
    * @returns {void}
    */
-  // Scrolling zu einer Sektion
   private scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {

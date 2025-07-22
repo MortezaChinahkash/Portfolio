@@ -69,7 +69,6 @@ export class CommentsComponent implements OnInit, AfterViewInit {
    * @returns {void}
    */
   ngAfterViewInit() {
-    // AOS für diese Komponente initialisieren
     setTimeout(() => {
       AOS.refresh();
     }, 100);

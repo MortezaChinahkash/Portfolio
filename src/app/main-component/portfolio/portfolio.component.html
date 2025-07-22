@@ -26,14 +26,12 @@
          data-aos="fade-up" 
          [attr.data-aos-delay]="(i * 150) + 500">
       <div class="project-details">
-        <!-- Image Container mit Overlay und Button -->
         <div class="image-container">
           <img
             class="screen"
             [src]="project.projectsImageUrl"
             alt="Project Screenshot"
           />
-          <!-- Overlay, das beim Hover erscheint -->
           <div class="overlay"></div>          <!-- Button, der beim Hover erscheint -->
           <div class="project-details-btn">
             <a [routerLink]="['/projects/project-' + project.compId]">

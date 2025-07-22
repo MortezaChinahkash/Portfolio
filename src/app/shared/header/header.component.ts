@@ -53,15 +53,12 @@ export class HeaderComponent implements OnInit {
    * @returns {void}
    */
   ngOnInit(): void {
-    // Sprache aus dem Service übernehmen
     this.translationService.currentLang$.subscribe(lang => {
       this.currentLanguage = lang;
     });
     
-    // Überprüfen der aktuellen Route
     this.checkCurrentRoute(this.router.url);
     
-    // Auf Routenänderungen hören
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {

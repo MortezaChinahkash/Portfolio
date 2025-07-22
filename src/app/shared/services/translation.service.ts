@@ -18,18 +18,15 @@ export type SupportedLanguage = 'en' | 'de';
  * @interface TranslationSet
  */
 export interface TranslationSet {
-  // Header
   about_me: string;
   skills: string;
   projects: string;
   contact: string;
   
-  // ATF (Hero)
   hero_title: string;
   hero_subtitle: string;
   lets_talk: string;
   
-  // About
   who_am_i: string;
   about_me_title: string;
   about_me_text1: string;
@@ -38,61 +35,48 @@ export interface TranslationSet {
   remote_work: string;
   learning: string;
   
-  // Skills
   my_stack: string;
   skill_set: string;
   skill_description: string;
   
-  // Portfolio
   my_craft: string;
   projects_title: string;
   projects_description: string;
   
-  // Portfolio Projekte
-  // Allgemeine Portfolio-Texte
   my_projects: string;
   view_project: string;
   github_repo: string;
   in_progress: string;
   
-  // Join Projekt
   join_title: string;
   join_description: string;
   
-  // El Pollo Loco Projekt
   pollo_title: string;
   pollo_description: string;
   
-  // DABubble Projekt
   dabubble_title: string;
   dabubble_description: string;
   
-  // Pokedex Projekt
   pokedex_title: string;
   pokedex_description: string;
   pokedex_duration_value: string;
   
-  // Fitness-Tracker Projekt
   fitness_tracker_title: string;
   fitness_tracker_description: string;
   fitness_tracker_duration_value: string;
   
-  // Comments Section
   in_their_words: string;
   colleagues_thoughts: string;
   profile: string;
   
-  // Kommentar-Rollen
   role_frontend: string;
   role_backend: string;
   role_ux: string;
   
-  // Kommentar-Texte
   comment1_text: string;
   comment2_text: string;
   comment3_text: string;
   
-  // Contact Section
   contact_me: string;
   ready_to_work: string;
   contact_text1: string;
@@ -101,11 +85,9 @@ export interface TranslationSet {
   email: string;
   message: string;
   send: string;
-    // Form Placeholders
   name_placeholder: string;
   email_placeholder: string;
   message_placeholder: string;
-    // Form Validation Messages
   name_required: string;
   email_required: string;
   message_required: string;
@@ -115,32 +97,26 @@ export interface TranslationSet {
   name_min_length: string;
   message_min_length: string;
   
-  // Form Submit Messages
   sending_message: string;
   message_sent_success: string;
   message_sent_error: string;
   
-  // Privacy Policy
   agree_privacy_start: string;
   privacy_policy: string;
   agree_privacy_end: string;
-  // Projekt Details
   project_details: string;
   project_in_progress: string;
   project_coming_soon: string;
   project_links_disabled: string;
 
-  // Legal/Footer
   legal_notice: string;
   copyright: string;
   
-  // Project Navigation
   go_back: string;
   next_project: string;
   github: string;
   live_test: string;
   
-  // Project Content
   description: string;
   technologies: string;
   implementation_details: string;
@@ -149,26 +125,21 @@ export interface TranslationSet {
   loading_project: string;
   loading: string;
   
-  // Skills Section
   pull_to_peel: string;
   click_to_peel: string;
   currently_learning: string;
   
-  // Form Labels
   enter_your_name: string;
   enter_your_email: string;
   enter_your_message: string;
   
-  // Social Media
   linkedin: string;
   github_social: string;
   mail: string;
   
-  // Menu/Navigation
   menu_open: string;
   menu_close: string;
   
-  // Imprint - ALLE Imprint-Eigenschaften hinzufügen
   imprint_content: string;
   imprint_title: string;
   imprint_details_title: string;
@@ -186,12 +157,10 @@ export interface TranslationSet {
   imprint_privacy: string;
   imprint_privacy_text: string;
 
-  // Project specific content
   project_implementation_text: string;
   project_duration_weeks: string;
   tech_stack_label: string;
 
-  // Project specific details
   project_duration_value: string;
   project_role_workflow: string;
 }
@@ -583,7 +552,6 @@ imprint_privacy_text: "Die Nutzung unserer Webseite ist in der Regel ohne Angabe
    * @constructor
    */
   constructor() {
-    // Beim Start gespeicherte Sprache laden
     this.initLanguage();
   }
 
@@ -592,12 +560,10 @@ imprint_privacy_text: "Die Nutzung unserer Webseite ist in der Regel ohne Angabe
    * @param {SupportedLanguage} lang - The language to switch to ('en' or 'de')
    * @returns {void}
    */
-  // Sprache ändern
   setLanguage(lang: SupportedLanguage): void {
     this.currentLanguage = lang; // Synchrone Property aktualisieren
     this.currentLangSubject.next(lang);
     this.languageChangedSource.next(lang);
-    // Speichern der Sprachpräferenz im localStorage
     localStorage.setItem('language', lang);
   }
   /**
@@ -613,7 +579,6 @@ imprint_privacy_text: "Die Nutzung unserer Webseite ist in der Regel ohne Angabe
    * @param {keyof TranslationSet} key - The translation key
    * @returns {string} The translated text
    */
-  // Liefert Übersetzung für einen Schlüssel
   getTranslation(key: keyof TranslationSet): string {
     const currentLang = this.currentLangSubject.value;
     return this.translations[currentLang][key];
@@ -623,7 +588,6 @@ imprint_privacy_text: "Die Nutzung unserer Webseite ist in der Regel ohne Angabe
    * @param {keyof TranslationSet} key - The translation key
    * @returns {string} The translated text
    */
-  // Kurzform für Templates
   t(key: keyof TranslationSet): string {
     return this.getTranslation(key);
   }
@@ -633,7 +597,6 @@ imprint_privacy_text: "Die Nutzung unserer Webseite ist in der Regel ohne Angabe
    * @private
    * @returns {void}
    */
-  // Initialisierung der Sprache aus dem localStorage
   initLanguage(): void {
     const savedLang = localStorage.getItem('language') as SupportedLanguage;
     if (savedLang && (savedLang === 'en' || savedLang === 'de')) {

@@ -64,10 +64,8 @@ export class TestAosComponent implements AfterViewInit {
     console.log('TestAosComponent: Initialisiere AOS...');
     console.log('AOS object:', AOS);
     
-    // Prüfe, ob AOS korrekt geladen wurde
     this.aosVersion = (AOS as any).version || 'unknown';
     
-    // AOS komplett neu initialisieren
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
@@ -79,7 +77,6 @@ export class TestAosComponent implements AfterViewInit {
     
     console.log('AOS initialisiert');
     
-    // Nach kurzer Verzögerung nochmal refreshen
     setTimeout(() => {
       AOS.refresh();
       console.log('AOS refreshed');
@@ -99,7 +96,6 @@ export class TestAosComponent implements AfterViewInit {
     console.log('Window scroll Y:', window.scrollY);
     console.log('Window inner height:', window.innerHeight);
     
-    // Prüfe, ob AOS CSS geladen ist
     const aosElements = document.querySelectorAll('[data-aos]');
     aosElements.forEach((el, index) => {
       const computedStyle = window.getComputedStyle(el as Element);

@@ -39,7 +39,6 @@ export class AppComponent implements OnInit {
    * Sets up language initialization and route monitoring
    * @returns {void}
    */  ngOnInit(): void {
-    // Initialize AOS animations with simpler config
     AOS.init({
       duration: 800,
       easing: 'ease-in-out',
@@ -49,23 +48,18 @@ export class AppComponent implements OnInit {
       disable: false
     });
     
-    // Initialisiere Sprache beim App-Start
     this.translationService.initLanguage();// Überprüfe beim Start
     this.checkIfProjectPage(this.router.url);
     
-    // Reagiere auf Routenwechsel
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       this.checkIfProjectPage(event.url);
       
-      // Automatisch nach oben scrollen bei Routenänderungen
-      // aber nicht bei Fragment-Navigation (Links wie #about-me)
       if (!event.url.includes('#')) {
         window.scrollTo(0, 0);
       }
       
-      // AOS nach Routenänderung neu initialisieren
       setTimeout(() => {
         AOS.refresh();
       }, 100);
@@ -81,7 +75,6 @@ export class AppComponent implements OnInit {
   private checkIfProjectPage(url: string) {
     const isProjectPage = url.includes('/projects/');
     
-    // Body-Klasse setzen oder entfernen
     if (isProjectPage) {
       document.body.classList.add('project-page');
     } else {
