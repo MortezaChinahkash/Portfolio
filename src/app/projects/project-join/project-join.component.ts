@@ -21,6 +21,11 @@ export class ProjectJoinComponent implements OnInit {
     private router: Router
   ) {}
 
+  /**
+   * Component initialization lifecycle hook
+   * Loads the Join project data from the service
+   * @returns {void}
+   */
   ngOnInit() {
     this.project = this.projectService.getProjectByCompId('join');
     
@@ -30,6 +35,10 @@ export class ProjectJoinComponent implements OnInit {
     }
   }
 
+  /**
+   * Navigates to the next project in the portfolio
+   * @returns {void}
+   */
   navigateToNextProject() {
     const nextProject = this.projectService.getNextProject('join');
     if (nextProject) {
@@ -38,6 +47,11 @@ export class ProjectJoinComponent implements OnInit {
     }
   }
 
+  /**
+   * Creates fallback project data when service data is unavailable
+   * @private
+   * @returns {PortfolioItem} The fallback project data for Join
+   */
   private createFallbackProject(): PortfolioItem {
     return {
       id: 999,
