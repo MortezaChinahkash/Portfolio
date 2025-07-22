@@ -88,6 +88,11 @@ export class SkillsComponent {
   /** Indicates if the view is on a mobile device */
   isMobile: boolean = false;
 
+  /**
+   * Component initialization lifecycle hook
+   * Sets up mobile detection and window resize listener
+   * @returns {void}
+   */
   ngOnInit() {
     this.checkIfMobile();
     window.addEventListener('resize', () => this.checkIfMobile());
