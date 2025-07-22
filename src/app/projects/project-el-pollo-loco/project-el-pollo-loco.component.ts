@@ -21,6 +21,11 @@ export class ProjectElPolloLocoComponent implements OnInit {
     private router: Router
   ) {}
 
+  /**
+   * Component initialization lifecycle hook
+   * Loads the El Pollo Loco project data from the service
+   * @returns {void}
+   */
   ngOnInit() {
     // Debug ProjectService
     this.projectService.debugProjects();
@@ -36,6 +41,10 @@ export class ProjectElPolloLocoComponent implements OnInit {
     }
   }
 
+  /**
+   * Navigates to the next project in the portfolio
+   * @returns {void}
+   */
   navigateToNextProject() {
     const nextProject = this.projectService.getNextProject('el-pollo-loco');
     if (nextProject) {
