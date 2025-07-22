@@ -23,10 +23,19 @@ export class ProjectDabubbleComponent implements OnInit {
     private router: Router
   ) {}
 
+  /**
+   * Component initialization lifecycle hook
+   * Loads the Dabubble project data from the service
+   * @returns {void}
+   */
   ngOnInit() {
     this.project = this.projectService.getProjectByCompId('dabubble');
   }
 
+  /**
+   * Navigates to the next project in the portfolio
+   * @returns {void}
+   */
   navigateToNextProject() {
     const nextProject = this.projectService.getNextProject('dabubble');
     if (nextProject) {
