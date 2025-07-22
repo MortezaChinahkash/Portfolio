@@ -91,13 +91,20 @@ export class HeaderComponent implements OnInit {
     }
   }
   
-  // Toggle-Methode für den Switch
+  /**
+   * Switches between German and English languages
+   * @returns {void}
+   */
   switchLanguage(): void {
     const newLang = this.currentLanguage === 'en' ? 'de' : 'en';
     this.toggleLanguage(newLang);
   }
   
-  // Hilfsmethode für das Template
+  /**
+   * Helper method to get translated text for templates
+   * @param {keyof TranslationService['translations']['en']} key - The translation key
+   * @returns {string} The translated text
+   */
   getText(key: keyof TranslationService['translations']['en']): string {
     return this.translationService.t(key);
   }
