@@ -105,6 +105,11 @@ export class ProjectService {
     };
   }
 
+  /**
+   * Creates the Join project data object
+   * @private
+   * @returns {PortfolioItem} The Join project configuration
+   */
   private createJoinProject(): PortfolioItem {
     return {
       id: 2,
@@ -121,6 +126,11 @@ export class ProjectService {
     };
   }
 
+  /**
+   * Creates the El Pollo Loco project data object
+   * @private
+   * @returns {PortfolioItem} The El Pollo Loco project configuration
+   */
   private createElPolloLocoProject(): PortfolioItem {
     return {
       id: 3,
@@ -137,6 +147,11 @@ export class ProjectService {
     };
   }
 
+  /**
+   * Creates the Pokedex project data object
+   * @private
+   * @returns {PortfolioItem} The Pokedex project configuration
+   */
   private createPokedexProject(): PortfolioItem {
     return {
       id: 4,
