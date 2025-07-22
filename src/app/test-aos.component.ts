@@ -87,6 +87,11 @@ export class TestAosComponent implements AfterViewInit {
     }, 500);
   }
 
+  /**
+   * Debug method to analyze AOS functionality and element states
+   * Logs detailed information about AOS elements and their computed styles
+   * @returns {void}
+   */
   debugAOS() {
     console.log('=== AOS DEBUG ===');
     console.log('AOS object:', AOS);
