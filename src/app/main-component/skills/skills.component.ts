@@ -101,6 +101,7 @@ export class SkillsComponent {
   /**
    * Checks the window size and determines if the view is on a mobile device
    * Updates the isMobile property accordingly
+   * @returns {void}
    */
   checkIfMobile() {
     this.isMobile = window.innerWidth <= 1366;
