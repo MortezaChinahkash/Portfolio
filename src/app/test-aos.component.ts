@@ -1,7 +1,18 @@
+/**
+ * @fileoverview Test component for AOS (Animate On Scroll) library functionality
+ * @author Morteza Chinahkash
+ * @version 1.0.0
+ */
+
 import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as AOS from 'aos';
 
+/**
+ * Component for testing AOS animations and debugging functionality
+ * @class TestAosComponent
+ * @implements {AfterViewInit}
+ */
 @Component({
   selector: 'app-test-aos',
   standalone: true,
