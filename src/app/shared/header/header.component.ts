@@ -109,7 +109,10 @@ export class HeaderComponent implements OnInit {
     return this.translationService.t(key);
   }
 
-  // Menü mit Verzögerung schließen
+  /**
+   * Closes the mobile menu with a slight delay for smooth animation
+   * @returns {void}
+   */
   closeMenuWithDelay(): void {
     setTimeout(() => {
       this.isMenuOpen = false;
