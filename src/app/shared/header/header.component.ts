@@ -118,7 +118,11 @@ export class HeaderComponent implements OnInit {
       this.isMenuOpen = false;
     }, 100);
   }
-  // Navigation zu Sektionen
+  /**
+   * Navigates to a specific section, handling both home page and external pages
+   * @param {string} sectionId - The ID of the section to navigate to
+   * @returns {void}
+   */
   navigateToSection(sectionId: string): void {
     if (this.isProjectPage || this.isImprint) {
       this.navigateHomeAndScroll(sectionId);
