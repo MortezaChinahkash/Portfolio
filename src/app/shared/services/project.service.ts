@@ -218,6 +218,11 @@ export class ProjectService {
     ];
   }
 
+  /**
+   * Returns the technology stack for the El Pollo Loco project
+   * @private
+   * @returns {Array} Array of technology objects with names and image URLs
+   */
   private getElPolloLocoTechnologies() {
     return [
       { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
@@ -226,6 +231,11 @@ export class ProjectService {
     ];
   }
 
+  /**
+   * Returns the technology stack for the Pokedex project
+   * @private
+   * @returns {Array} Array of technology objects with names and image URLs
+   */
   private getPokedexTechnologies() {
     return [
       { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' },
