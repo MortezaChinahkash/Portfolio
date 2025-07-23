@@ -59,7 +59,7 @@ export class ProjectJoinComponent implements OnInit {
       description: this.translationService.t('join_description'),
       imageUrl: '/assets/png/Design material/screens/Join.png',
       projectsImageUrl: '/assets/png/Design material/screens/join-project.png',
-      projectUrl: 'https://m-chinahkash.de/join/',
+      projectUrl: 'https://m-chinahkash.de/projects/join/',
       gitHubUrl: 'https://github.com/MortezaChinahkash/Join-Project',
       technologies: [
         { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
