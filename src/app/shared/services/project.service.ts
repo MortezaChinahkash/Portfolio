@@ -111,7 +111,7 @@ export class ProjectService {
       description: this.translationService.t('join_description'),
       imageUrl: '/assets/png/Design material/screens/Join.png',
       projectsImageUrl: '/assets/png/Design material/screens/join-project.png',
-      projectUrl: 'https://m-chinahkash.de/projects/join',
+      projectUrl: 'https://m-chinahkash.de/join/',
       gitHubUrl: 'https://github.com/MortezaChinahkash/Join-Project',
       technologies: this.getJoinTechnologies(),
       isFeatured: true,
