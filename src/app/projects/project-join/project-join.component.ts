@@ -15,6 +15,13 @@ import { PortfolioItem } from '../../shared/models/portfolio-item.model';
 export class ProjectJoinComponent implements OnInit {
   project: PortfolioItem | undefined;
 
+  /**
+   * Initializes the Join project component
+   * @param {ProjectService} projectService - Service for managing project data
+   * @param {TranslationService} translationService - Service for handling translations
+   * @param {Router} router - Angular router for navigation
+   * @constructor
+   */
   constructor(
     private projectService: ProjectService,
     public translationService: TranslationService,
