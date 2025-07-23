@@ -1,8 +1,19 @@
 /**
  * @fileoverview Header navigation component with language switching and mobile menu
  * @author Morteza Chinahkash
- * @version 1.0.0
- */
+ * @vers  /**
+   * Navigates to home page and then scrolls to the specified section
+   * @private
+   * @param {string} sectionId - The ID of the section to scroll to after navigation
+   * @returns {void}
+   */
+  private navigateHomeAndScroll(sectionId: string): void {
+    this.router.navigate(['/'], { fragment: sectionId }).then(() => {
+      setTimeout(() => {
+        this.scrollToSection(sectionId);
+      }, 100);
+    });
+  }/
 
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';

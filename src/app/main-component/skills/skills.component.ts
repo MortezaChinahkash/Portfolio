@@ -69,19 +69,14 @@ export class SkillsComponent {
     const patterns = this.animationPatterns;
     const totalSkills = this.skills.length;
     
-    // Create elegant distribution pattern
     if (index < 4) {
-      // First 4 skills: Special diagonal animations for visual impact
       return patterns.special[index % patterns.special.length];
     } else if (index < 8) {
-      // Next 4 skills: Directional fades for smooth flow
       return patterns.directions[(index - 4) % patterns.directions.length];
     } else if (index < 12) {
-      // Next 4 skills: Zoom effects for variety
       const zoomIndex = (index - 8) % 2;
       return patterns.zooms[zoomIndex];
     } else {
-      // Remaining skills: Flip animations for dynamic finish
       return patterns.flips[(index - 12) % patterns.flips.length];
     }
   }

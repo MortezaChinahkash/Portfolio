@@ -44,6 +44,13 @@ export class CommentsComponent implements OnInit, AfterViewInit {
   hoverLineImage: string = 'assets/png/Design%20material/03_Stickers/02_Testimonials/Color%20option%203/Line.png';
   comments: Comment[] = [];
 
+  /**
+   * Initializes the comments component
+   * @param {TranslationService} translationService - Service for handling translations
+   * @param {Renderer2} renderer - Angular renderer for DOM manipulation
+   * @param {ElementRef} el - Reference to the component's DOM element
+   * @constructor
+   */
   constructor(
     public translationService: TranslationService,
     private renderer: Renderer2,
