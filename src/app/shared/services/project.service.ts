@@ -111,11 +111,11 @@ export class ProjectService {
       description: this.translationService.t('join_description'),
       imageUrl: '/assets/png/Design material/screens/Join.png',
       projectsImageUrl: '/assets/png/Design material/screens/join-project.png',
-      projectUrl: 'https://example.com/join-live',
-      gitHubUrl: 'https://github.com/yourusername/join',
+      projectUrl: 'https://m-chinahkash.de/projects/join',
+      gitHubUrl: 'https://github.com/MortezaChinahkash/Join-Project',
       technologies: this.getJoinTechnologies(),
       isFeatured: true,
-      isInProgress: true
+      isInProgress: false
     };
   }
 

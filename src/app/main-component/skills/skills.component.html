@@ -13,11 +13,13 @@
           {{ translationService.t('skill_description') }}
         </p>
       </div>
-      <div class="different-skills" data-aos="fade-up" data-aos-delay="400">
+      <div class="different-skills">
         @for (skill of skills; track skill; let i = $index) {
           <div class="skill" 
-               data-aos="flip-up" 
-               [attr.data-aos-delay]="(i * 80) + 500">
+               [attr.data-aos]="getSkillAnimation(i)"
+               [attr.data-aos-delay]="getSkillDelay(i)"
+               data-aos-duration="600"
+               data-aos-easing="ease-out-back">
             <img class="skill-icon" [src]="skill.image"><span>{{ skill.name }}</span>
           </div>
         }

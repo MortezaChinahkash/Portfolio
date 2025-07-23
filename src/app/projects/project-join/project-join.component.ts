@@ -60,7 +60,7 @@ export class ProjectJoinComponent implements OnInit {
       imageUrl: '/assets/png/Design material/screens/Join.png',
       projectsImageUrl: '/assets/png/Design material/screens/join-project.png',
       projectUrl: 'https://join.example.com',
-      gitHubUrl: 'https://github.com/yourusername/join',
+      gitHubUrl: 'https://github.com/MortezaChinahkash/Join-Project',
       technologies: [
         { name: 'CSS', imageUrl: '/assets/png/icons/Skill Icons/CSS.png' },
         { name: 'HTML', imageUrl: '/assets/png/icons/Skill Icons/HTML.png' },

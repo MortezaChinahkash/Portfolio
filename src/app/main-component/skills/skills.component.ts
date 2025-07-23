@@ -47,6 +47,41 @@ export class SkillsComponent {
     return this.translationService.currentLang === 'de' ? 'german' : 'english';
   }
 
+  /**
+   * Returns a specific animation type for each skill
+   * @param {number} index - The index of the skill in the array
+   * @returns {string} AOS animation type
+   */
+  getSkillAnimation(index: number): string {
+    // Jeder Skill kommt "kreuz und quer" von verschiedenen Richtungen
+    const skillAnimations = [
+      'fade-up-right',    // HTML - von unten-rechts
+      'fade-down-left',   // CSS - von oben-links  
+      'fade-up-left',     // JavaScript - von unten-links
+      'fade-down-right',  // Angular - von oben-rechts
+      'slide-right',      // Vue.js - von links
+      'slide-left',       // Bootstrap - von rechts
+      'zoom-in-up',       // Material - zoom von unten
+      'zoom-in-down',     // Git - zoom von oben
+      'fade-left',        // GitHub - von rechts
+      'fade-right',       // SASS - von links
+      'flip-up',          // TypeScript - flip von unten
+      'flip-down',        // Firebase - flip von oben
+      'zoom-out-right',   // REST API - zoom aus nach rechts
+      'zoom-out-left'     // Scrum - zoom aus nach links
+    ];
+    return skillAnimations[index] || 'fade-up';
+  }
+
+  /**
+   * Calculates staggered delay for each skill animation
+   * @param {number} index - The index of the skill in the array
+   * @returns {number} Delay in milliseconds
+   */
+  getSkillDelay(index: number): number {
+    return (index * 70) + 250;
+  }
+
   /** Array of main technical skills */
   skills: Skill[] = [
     { name:'HTML',       image:'assets/png/icons/Skill Icons/HTML.png' },
