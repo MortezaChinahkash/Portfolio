@@ -18,7 +18,6 @@
     height: clamp(50px, 6vw, 70px);
     object-fit: contain;
     transition: transform 0.3s ease;
-    cursor: url("/assets/hand-pointer.png"), auto;
 
     &:hover {
       transform: scale(1.1);

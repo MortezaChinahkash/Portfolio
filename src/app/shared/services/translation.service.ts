@@ -496,7 +496,7 @@ imprint_privacy_text: "The use of our website is generally possible without prov
       // Project Content
       description: "Beschreibung",
       technologies: "Technologien",
-      implementation_details: "Implementierungsdetails",
+      implementation_details: "Implementierungs Details",
       duration: "Dauer",
       tech_stack: "Tech Stack",
       loading_project: "Projektinformationen werden geladen...",
