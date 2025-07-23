@@ -10,5 +10,10 @@ import { TranslationService } from '../../shared/services/translation.service';
   styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
+  /**
+   * Initializes the about me component
+   * @param {TranslationService} translationService - Service for handling translations
+   * @constructor
+   */
   constructor(public translationService: TranslationService) {}
 }

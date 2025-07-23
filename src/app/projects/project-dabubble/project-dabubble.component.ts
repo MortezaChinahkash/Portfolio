@@ -16,6 +16,14 @@ import { PortfolioItem } from '../../shared/models/portfolio-item.model';
 export class ProjectDabubbleComponent implements OnInit {
   project: PortfolioItem | undefined;
 
+  /**
+   * Initializes the DABubble project component
+   * @param {TranslationService} translationService - Service for handling translations
+   * @param {ProjectService} projectService - Service for managing project data
+   * @param {ProjectNavigationService} projectNavigation - Service for project navigation
+   * @param {Router} router - Angular router for navigation
+   * @constructor
+   */
   constructor(
     public translationService: TranslationService,
     private projectService: ProjectService,

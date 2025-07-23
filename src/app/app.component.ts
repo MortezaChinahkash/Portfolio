@@ -52,6 +52,11 @@ export class AppComponent implements OnInit {
     this.checkIfProjectPage(this.router.url);
     
     this.router.events.pipe(
+      /**
+       * Filters router events to only process NavigationEnd events
+       * @param {Event} event - The router event
+       * @returns {boolean} True if event is NavigationEnd
+       */
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       this.checkIfProjectPage(event.url);

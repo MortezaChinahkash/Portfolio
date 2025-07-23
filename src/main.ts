@@ -13,4 +13,8 @@ import { AppComponent } from './app/app.component';
  * Starts the portfolio application and handles any bootstrap errors
  */
 bootstrapApplication(AppComponent, appConfig)
+  /**
+   * Handles bootstrap errors during application startup
+   * @param {any} err - The error object
+   */
   .catch((err) => console.error(err));

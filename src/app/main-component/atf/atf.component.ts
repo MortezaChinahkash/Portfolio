@@ -11,6 +11,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './atf.component.scss'
 })
 export class ATFComponent {
+  /**
+   * Initializes the ATF (Above The Fold) component
+   * @param {TranslationService} translationService - Service for handling translations
+   * @constructor
+   */
   constructor(public translationService: TranslationService) {}
 
   /**

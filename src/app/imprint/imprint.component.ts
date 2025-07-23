@@ -11,5 +11,10 @@ import { FooterComponent } from '../shared/footer/footer.component';
   styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent {
+  /**
+   * Initializes the imprint component
+   * @param {TranslationService} translationService - Service for handling translations
+   * @constructor
+   */
   constructor(public translationService: TranslationService) {}
 }
