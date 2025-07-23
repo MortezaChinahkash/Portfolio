@@ -124,7 +124,16 @@ export class SkillsComponent {
     { name:'Java',       image:'assets/png/icons/Skill Icons/java.svg' }
   ];
 
+  /**
+   * Bound method reference for mouse move events during drag operations
+   * @private
+   */
   private boundMove = (e: MouseEvent) => this.onMouseMove(e);
+  
+  /**
+   * Bound method reference for mouse up events to end drag operations
+   * @private
+   */
   private boundUp   = (e: MouseEvent) => this.onMouseUp(e);
 
   /** Indicates if the component is being dragged */
