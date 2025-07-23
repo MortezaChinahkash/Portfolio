@@ -178,7 +178,7 @@ export class ProjectService {
       gitHubUrl: 'https://github.com/MortezaChinahkash/Fitness-Tracker',
       technologies: this.getFitnessTrackerTechnologies(),
       isFeatured: false,
-      isInProgress: false
+      isInProgress: true
     };
   }
 

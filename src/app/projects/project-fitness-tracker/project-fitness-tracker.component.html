@@ -62,20 +62,27 @@
           </div>
 
           <div class="action-buttons">
-            @if (project.gitHubUrl) {
-            <a
-              [href]="project.gitHubUrl"
-              target="_blank"
-              class="btn github-btn"
-              >{{ translationService.t("github") }}</a
-            >
-            } @if (project.projectUrl) {
-            <a
-              [href]="project.projectUrl"
-              target="_blank"
-              class="btn live-btn"
-              >{{ translationService.t("live_test") }}</a
-            >
+            @if (project.isInProgress) {
+              <div class="project-status-container">
+                <span class="status-badge-large">{{ translationService.t("project_in_progress") }}</span>
+                <p class="status-description">{{ translationService.t("project_links_disabled") }}</p>
+              </div>
+            } @else {
+              @if (project.gitHubUrl) {
+              <a
+                [href]="project.gitHubUrl"
+                target="_blank"
+                class="btn github-btn"
+                >{{ translationService.t("github") }}</a
+              >
+              } @if (project.projectUrl) {
+              <a
+                [href]="project.projectUrl"
+                target="_blank"
+                class="btn live-btn"
+                >{{ translationService.t("live_test") }}</a
+              >
+              }
             }
           </div>
 
