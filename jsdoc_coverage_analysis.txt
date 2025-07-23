@@ -1,5 +1,5 @@
 JSDOC COVERAGE ANALYSIS REPORT
-Generated: 22.07.2025 01:48
+Generated: 23.07.2025 19:44
 ================================================================================
 Analyzing 41 TypeScript/JavaScript files for missing JSDoc...
 Search directory: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio
@@ -10,64 +10,14 @@ Excluded directories: node_modules, .git, dist, build, .angular, coverage, .vsco
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\main.ts
 --------------------------------------------------------------------------------
   Method: catch (Line 16)
-     Type: Arrow Function
+     Type: Method
      Declaration: .catch((err) => console.error(err));...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\app.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 4)
-     Type: Arrow Function
-     Declaration: describe('AppComponent', () => {...
-
-  Method: it (Line 11)
-     Type: Arrow Function
-     Declaration: it('should create the app', () => {...
-
-  Method: it (Line 17)
-     Type: Arrow Function
-     Declaration: it(`should have the 'Portfolio' title`, () => {...
-
-  Method: it (Line 23)
-     Type: Arrow Function
-     Declaration: it('should render title', () => {...
 
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\app.component.ts
 --------------------------------------------------------------------------------
-  Method: filter (Line 58)
-     Type: Arrow Function
-     Declaration: filter(event => event instanceof NavigationEnd)...
-
-  Method: setTimeout (Line 69)
-     Type: Arrow Function
-     Declaration: setTimeout(() => {...
-
-  Method: checkIfProjectPage (Line 75)
-     Type: Private Method
-     Declaration: private checkIfProjectPage(url: string) {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\test-aos.component.ts
---------------------------------------------------------------------------------
-  Method: ngAfterViewInit (Line 46)
-     Type: Lifecycle Hook
-     Declaration: ngAfterViewInit() {...
-
-  Method: querySelectorAll (Line 81)
+  Method: filter (Line 55)
      Type: Method
-     Declaration: const aosElements = document.querySelectorAll('[data-aos]');...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\imprint\imprint.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('ImprintComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
+     Declaration: filter(event => event instanceof NavigationEnd)...
 
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\imprint\imprint.component.ts
 --------------------------------------------------------------------------------
@@ -75,53 +25,11 @@ File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src
      Type: Constructor
      Declaration: constructor(public translationService: TranslationService) {}...
 
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\main-component.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('MainComponentComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\about-me\about-me.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('AboutMeComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
-
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\about-me\about-me.component.ts
 --------------------------------------------------------------------------------
   Method: constructor (Line 13)
      Type: Constructor
      Declaration: constructor(public translationService: TranslationService) {}...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\atf\atf.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('ATFComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
 
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\atf\atf.component.ts
 --------------------------------------------------------------------------------
@@ -129,175 +37,35 @@ File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src
      Type: Constructor
      Declaration: constructor(public translationService: TranslationService) {}...
 
-  Method: onLetterHover (Line 16)
-     Type: Method
-     Declaration: onLetterHover(event: MouseEvent): void {...
-
-  Method: onLetterExit (Line 28)
-     Type: Method
-     Declaration: onLetterExit(event: MouseEvent): void {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\comments\comments.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('CommentsComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
-
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\comments\comments.component.ts
 --------------------------------------------------------------------------------
   Method: constructor (Line 47)
      Type: Constructor
      Declaration: constructor(...
 
-  Method: ngOnInit (Line 53)
-     Type: Lifecycle Hook
-     Declaration: ngOnInit() {...
-
-  Method: ngAfterViewInit (Line 60)
-     Type: Lifecycle Hook
-     Declaration: ngAfterViewInit() {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\contact\contact.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('ContactComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
-
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\contact\contact.component.ts
 --------------------------------------------------------------------------------
-  Method: constructor (Line 21)
-     Type: Constructor
-     Declaration: constructor(...
-
-  Method: ngOnInit (Line 27)
-     Type: Lifecycle Hook
-     Declaration: ngOnInit(): void {...
-
-  Method: hasError (Line 43)
+  Method: handleSubmissionSuccess (Line 159)
      Type: Method
-     Declaration: hasError(fieldName: string): boolean {...
+     Declaration: next: (response) => this.handleSubmissionSuccess(response),...
 
-  Method: getErrorMessage (Line 48)
+  Method: hideMessageAfterDelay (Line 198)
      Type: Method
-     Declaration: getErrorMessage(fieldName: string): string {...
+     Declaration: this.hideMessageAfterDelay(() => this.submitSuccess = false);...
 
-  Method: getRequiredFieldError (Line 67)
-     Type: Private Method
-     Declaration: private getRequiredFieldError(fieldName: string): string {...
-
-  Method: getMinLengthError (Line 77)
-     Type: Private Method
-     Declaration: private getMinLengthError(fieldName: string, minLength: number): strin...
-
-  Method: onSubmit (Line 85)
+  Method: hideMessageAfterDelay (Line 211)
      Type: Method
-     Declaration: onSubmit(): void {...
-
-  Method: handleFormSubmission (Line 93)
-     Type: Private Method
-     Declaration: private handleFormSubmission(): void {...
-
-  Method: prepareSubmission (Line 103)
-     Type: Private Method
-     Declaration: private prepareSubmission(): void {...
-
-  Method: extractFormData (Line 109)
-     Type: Private Method
-     Declaration: private extractFormData(): ContactFormData {...
-
-  Method: handleSubmissionSuccess (Line 117)
-     Type: Private Method
-     Declaration: private handleSubmissionSuccess(response: any): void {...
-
-  Method: handleSubmissionError (Line 124)
-     Type: Private Method
-     Declaration: private handleSubmissionError(error: any): void {...
-
-  Method: resetForm (Line 131)
-     Type: Private Method
-     Declaration: private resetForm(): void {...
-
-  Method: callback (Line 137)
-     Type: Private Method
-     Declaration: private hideMessageAfterDelay(callback: () => void): void {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\portfolio\portfolio.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('PortfolioComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\portfolio\portfolio.component.ts
---------------------------------------------------------------------------------
-  Method: translate (Line 95)
-     Type: Method
-     Declaration: translate(key: string): string {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\skills.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('SkillsComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
+     Declaration: this.hideMessageAfterDelay(() => this.submitError = false);...
 
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\skills.component.ts
 --------------------------------------------------------------------------------
-  Method: boundMove (Line 74)
+  Method: onMouseMove (Line 127)
      Type: Private Method
      Declaration: private boundMove = (e: MouseEvent) => this.onMouseMove(e);...
 
-  Method: boundUp (Line 75)
+  Method: onMouseUp (Line 128)
      Type: Private Method
      Declaration: private boundUp   = (e: MouseEvent) => this.onMouseUp(e);...
-
-  Method: ngOnInit (Line 91)
-     Type: Lifecycle Hook
-     Declaration: ngOnInit() {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-dabubble\project-dabubble.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('ProjectDabubbleComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
 
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-dabubble\project-dabubble.component.ts
 --------------------------------------------------------------------------------
@@ -305,59 +73,11 @@ File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src
      Type: Constructor
      Declaration: constructor(...
 
-  Method: ngOnInit (Line 26)
-     Type: Lifecycle Hook
-     Declaration: ngOnInit() {...
-
-  Method: getNextProject (Line 31)
-     Type: Method
-     Declaration: const nextProject = this.projectService.getNextProject('dabubble');...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-el-pollo-loco\project-el-pollo-loco.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('ProjectElPolloLocoComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
-
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-el-pollo-loco\project-el-pollo-loco.component.ts
 --------------------------------------------------------------------------------
   Method: constructor (Line 18)
      Type: Constructor
      Declaration: constructor(...
-
-  Method: ngOnInit (Line 24)
-     Type: Lifecycle Hook
-     Declaration: ngOnInit() {...
-
-  Method: getNextProject (Line 40)
-     Type: Method
-     Declaration: const nextProject = this.projectService.getNextProject('el-pollo-loco'...
-
-  Method: createFallbackProject (Line 46)
-     Type: Private Method
-     Declaration: private createFallbackProject(): PortfolioItem {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-fitness-tracker\project-fitness-tracker.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('ProjectFitnessTrackerComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
 
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-fitness-tracker\project-fitness-tracker.component.ts
 --------------------------------------------------------------------------------
@@ -365,59 +85,11 @@ File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src
      Type: Constructor
      Declaration: constructor(...
 
-  Method: ngOnInit (Line 26)
-     Type: Lifecycle Hook
-     Declaration: ngOnInit() {...
-
-  Method: getNextProject (Line 31)
-     Type: Method
-     Declaration: const nextProject = this.projectService.getNextProject('fitness-tracke...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-join\project-join.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('ProjectJoinComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
-
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-join\project-join.component.ts
 --------------------------------------------------------------------------------
   Method: constructor (Line 18)
      Type: Constructor
      Declaration: constructor(...
-
-  Method: ngOnInit (Line 24)
-     Type: Lifecycle Hook
-     Declaration: ngOnInit() {...
-
-  Method: getNextProject (Line 34)
-     Type: Method
-     Declaration: const nextProject = this.projectService.getNextProject('join');...
-
-  Method: createFallbackProject (Line 41)
-     Type: Private Method
-     Declaration: private createFallbackProject(): PortfolioItem {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-pokedex\project-pokedex.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('ProjectPokedexComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
 
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-pokedex\project-pokedex.component.ts
 --------------------------------------------------------------------------------
@@ -425,261 +97,79 @@ File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src
      Type: Constructor
      Declaration: constructor(...
 
-  Method: ngOnInit (Line 26)
-     Type: Lifecycle Hook
-     Declaration: ngOnInit() {...
-
-  Method: getNextProject (Line 31)
-     Type: Method
-     Declaration: const nextProject = this.projectService.getNextProject('pokedex');...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\footer\footer.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('FooterComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\footer\footer.component.ts
---------------------------------------------------------------------------------
-  Method: constructor (Line 20)
-     Type: Constructor
-     Declaration: constructor(...
-
-  Method: ngOnInit (Line 25)
-     Type: Lifecycle Hook
-     Declaration: ngOnInit(): void {...
-
-  Method: checkCurrentRoute (Line 43)
-     Type: Private Method
-     Declaration: private checkCurrentRoute(url: string): void {...
-
-  Method: toggleLanguage (Line 48)
-     Type: Method
-     Declaration: toggleLanguage(code: SupportedLanguage): void {...
-
-  Method: switchLanguage (Line 55)
-     Type: Method
-     Declaration: switchLanguage(): void {...
-
-  Method: getText (Line 61)
-     Type: Method
-     Declaration: getText(key: keyof TranslationService['translations']['en']): string {...
-
-  Method: closeMenuWithDelay (Line 66)
-     Type: Method
-     Declaration: closeMenuWithDelay(): void {...
-
-  Method: navigateToSection (Line 73)
-     Type: Method
-     Declaration: navigateToSection(sectionId: string): void {...
-
-  Method: scrollToSection (Line 83)
-     Type: Private Method
-     Declaration: private scrollToSection(sectionId: string): void {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\header\header.component.spec.ts
---------------------------------------------------------------------------------
-  Method: describe (Line 5)
-     Type: Arrow Function
-     Declaration: describe('HeaderComponent', () => {...
-
-  Method: beforeEach (Line 9)
-     Type: Arrow Function
-     Declaration: beforeEach(async () => {...
-
-  Method: it (Line 20)
-     Type: Arrow Function
-     Declaration: it('should create', () => {...
-
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\header\header.component.ts
 --------------------------------------------------------------------------------
-  Method: checkCurrentRoute (Line 73)
-     Type: Private Method
-     Declaration: private checkCurrentRoute(url: string): void {...
-
-  Method: toggleLanguage (Line 79)
+  Method: navigate (Line 138)
      Type: Method
-     Declaration: toggleLanguage(code: SupportedLanguage): void {...
-
-  Method: switchLanguage (Line 86)
-     Type: Method
-     Declaration: switchLanguage(): void {...
-
-  Method: getText (Line 92)
-     Type: Method
-     Declaration: getText(key: keyof TranslationService['translations']['en']): string {...
-
-  Method: closeMenuWithDelay (Line 97)
-     Type: Method
-     Declaration: closeMenuWithDelay(): void {...
-
-  Method: navigateToSection (Line 103)
-     Type: Method
-     Declaration: navigateToSection(sectionId: string): void {...
-
-  Method: navigateHomeAndScroll (Line 111)
-     Type: Private Method
-     Declaration: private navigateHomeAndScroll(sectionId: string): void {...
-
-  Method: scrollToSection (Line 120)
-     Type: Private Method
-     Declaration: private scrollToSection(sectionId: string): void {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\services\project-navigation.service.ts
---------------------------------------------------------------------------------
-  Method: getNextProject (Line 15)
-     Type: Method
-     Declaration: getNextProject(currentProject: string): string {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\services\project.service.ts
---------------------------------------------------------------------------------
-  Method: getAllProjects (Line 44)
-     Type: Method
-     Declaration: getAllProjects(): PortfolioItem[] {...
-
-  Method: getProjectById (Line 54)
-     Type: Method
-     Declaration: getProjectById(id: number): PortfolioItem | undefined {...
-
-  Method: getProjectByCompId (Line 64)
-     Type: Method
-     Declaration: getProjectByCompId(compId: string): PortfolioItem | undefined {...
-
-  Method: initProjects (Line 77)
-     Type: Private Method
-     Declaration: private initProjects(): void {...
-
-  Method: createJoinProject (Line 108)
-     Type: Private Method
-     Declaration: private createJoinProject(): PortfolioItem {...
-
-  Method: createElPolloLocoProject (Line 124)
-     Type: Private Method
-     Declaration: private createElPolloLocoProject(): PortfolioItem {...
-
-  Method: createPokedexProject (Line 140)
-     Type: Private Method
-     Declaration: private createPokedexProject(): PortfolioItem {...
-
-  Method: createFitnessTrackerProject (Line 156)
-     Type: Private Method
-     Declaration: private createFitnessTrackerProject(): PortfolioItem {...
-
-  Method: getNextProject (Line 218)
-     Type: Method
-     Declaration: getNextProject(currentCompId: string): PortfolioItem | undefined {...
-
-  Method: getProjectRoute (Line 227)
-     Type: Method
-     Declaration: getProjectRoute(compId: string): string {...
-
-File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\services\translation.service.ts
---------------------------------------------------------------------------------
-  Method: setLanguage (Line 596)
-     Type: Method
-     Declaration: setLanguage(lang: SupportedLanguage): void {...
-
-  Method: getTranslation (Line 617)
-     Type: Method
-     Declaration: getTranslation(key: keyof TranslationSet): string {...
-
-  Method: t (Line 627)
-     Type: Method
-     Declaration: t(key: keyof TranslationSet): string {...
-
-  Method: initLanguage (Line 637)
-     Type: Method
-     Declaration: initLanguage(): void {...
+     Declaration: this.router.navigate(['/'], { fragment: sectionId }).then(() => {...
 
 ================================================================================
 === MISSING JSDOC BY METHOD TYPE ===
 ================================================================================
-Arrow Function: 52 methods missing JSDoc
-  - catch in main.ts
-  - describe in app.component.spec.ts
-  - it in app.component.spec.ts
-  ... and 49 more
-
-Constructor: 11 methods missing JSDoc
+Constructor: 9 methods missing JSDoc
   - constructor in imprint.component.ts
   - constructor in about-me.component.ts
   - constructor in atf.component.ts
-  ... and 8 more
+  ... and 6 more
 
-Lifecycle Hook: 11 methods missing JSDoc
-  - ngAfterViewInit in test-aos.component.ts
-  - ngOnInit in comments.component.ts
-  - ngAfterViewInit in comments.component.ts
-  ... and 8 more
+Method: 6 methods missing JSDoc
+  - catch in main.ts
+  - filter in app.component.ts
+  - handleSubmissionSuccess in contact.component.ts
+  ... and 3 more
 
-Method: 32 methods missing JSDoc
-  - querySelectorAll in test-aos.component.ts
-  - onLetterHover in atf.component.ts
-  - onLetterExit in atf.component.ts
-  ... and 29 more
-
-Private Method: 24 methods missing JSDoc
-  - checkIfProjectPage in app.component.ts
-  - getRequiredFieldError in contact.component.ts
-  - getMinLengthError in contact.component.ts
-  ... and 21 more
+Private Method: 2 methods missing JSDoc
+  - onMouseMove in skills.component.ts
+  - onMouseUp in skills.component.ts
 
 ================================================================================
 === TOP 10 FILES WITH MOST MISSING JSDOC ===
 ================================================================================
- 1. contact.component.ts (14 missing)
+ 1. contact.component.ts (3 missing)
     File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\contact\contact.component.ts
-    Methods: constructor, ngOnInit, hasError, getErrorMessage, getRequiredFieldError ... and 9 more
+    Methods: handleSubmissionSuccess, hideMessageAfterDelay, hideMessageAfterDelay
 
- 2. project.service.ts (10 missing)
-    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\services\project.service.ts
-    Methods: getAllProjects, getProjectById, getProjectByCompId, initProjects, createJoinProject ... and 5 more
+ 2. skills.component.ts (2 missing)
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\skills\skills.component.ts
+    Methods: onMouseMove, onMouseUp
 
- 3. footer.component.ts (9 missing)
-    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\footer\footer.component.ts
-    Methods: constructor, ngOnInit, checkCurrentRoute, toggleLanguage, switchLanguage ... and 4 more
+ 3. main.ts (1 missing)
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\main.ts
+    Methods: catch
 
- 4. header.component.ts (8 missing)
-    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\header\header.component.ts
-    Methods: checkCurrentRoute, toggleLanguage, switchLanguage, getText, closeMenuWithDelay ... and 3 more
-
- 5. app.component.spec.ts (4 missing)
-    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\app.component.spec.ts
-    Methods: describe, it, it, it
-
- 6. project-el-pollo-loco.component.ts (4 missing)
-    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-el-pollo-loco\project-el-pollo-loco.component.ts
-    Methods: constructor, ngOnInit, getNextProject, createFallbackProject
-
- 7. project-join.component.ts (4 missing)
-    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-join\project-join.component.ts
-    Methods: constructor, ngOnInit, getNextProject, createFallbackProject
-
- 8. translation.service.ts (4 missing)
-    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\services\translation.service.ts
-    Methods: setLanguage, getTranslation, t, initLanguage
-
- 9. app.component.ts (3 missing)
+ 4. app.component.ts (1 missing)
     File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\app.component.ts
-    Methods: filter, setTimeout, checkIfProjectPage
+    Methods: filter
 
-10. imprint.component.spec.ts (3 missing)
-    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\imprint\imprint.component.spec.ts
-    Methods: describe, beforeEach, it
+ 5. imprint.component.ts (1 missing)
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\imprint\imprint.component.ts
+    Methods: constructor
+
+ 6. about-me.component.ts (1 missing)
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\about-me\about-me.component.ts
+    Methods: constructor
+
+ 7. atf.component.ts (1 missing)
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\atf\atf.component.ts
+    Methods: constructor
+
+ 8. comments.component.ts (1 missing)
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\comments\comments.component.ts
+    Methods: constructor
+
+ 9. project-dabubble.component.ts (1 missing)
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-dabubble\project-dabubble.component.ts
+    Methods: constructor
+
+10. project-el-pollo-loco.component.ts (1 missing)
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\projects\project-el-pollo-loco\project-el-pollo-loco.component.ts
+    Methods: constructor
 
 === OVERALL SUMMARY ===
 Files analyzed: 41
-Files with missing JSDoc: 36
-Total methods missing JSDoc: 130
-Estimated JSDoc coverage: 68.3%
+Files with missing JSDoc: 14
+Total methods missing JSDoc: 17
+Estimated JSDoc coverage: 95.9%
 
 === RECOMMENDATIONS ===
 • Add JSDoc comments to all public methods and functions

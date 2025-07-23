@@ -1,6 +1,22 @@
 import os
 import glob
 
+# ANSI Color Codes für farbige Ausgabe
+class Colors:
+    RED = '\033[91m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    BLUE = '\033[94m'
+    MAGENTA = '\033[95m'
+    CYAN = '\033[96m'
+    WHITE = '\033[97m'
+    BOLD = '\033[1m'
+    RESET = '\033[0m'
+    
+    @staticmethod
+    def colorize(text: str, color: str) -> str:
+        return f"{color}{text}{Colors.RESET}"
+
 def analyze_file_length(file_path):
     """
     Analyze file lengths for HTML, CSS, SCSS, SASS, JS, TS files
@@ -14,26 +30,61 @@ def analyze_file_length(file_path):
         # Count non-empty lines
         non_empty_lines = sum(1 for line in lines if line.strip())
         
-        # Count comment lines (basic detection)
+        # Count comment lines and JSDoc separately
         comment_lines = 0
+        jsdoc_lines = 0
+        in_multiline_comment = False
+        in_jsdoc_block = False
+        
         for line in lines:
             stripped = line.strip()
-            if (stripped.startswith('//') or  # JS/TS comments
-                stripped.startswith('/*') or 
-                stripped.startswith('*') or
-                stripped.startswith('<!--') or  # HTML comments
-                stripped.startswith('#') or    # SCSS/SASS comments
-                (stripped.startswith('/') and '*' in stripped)):
+            
+            # Check for JSDoc start
+            if stripped.startswith('/**'):
+                in_jsdoc_block = True
+                jsdoc_lines += 1
+                continue
+            
+            # Check for multiline comment start (but not JSDoc)
+            elif stripped.startswith('/*') and not stripped.startswith('/**'):
+                in_multiline_comment = True
+                comment_lines += 1
+                continue
+            
+            # Check for comment/JSDoc end
+            elif stripped.endswith('*/'):
+                if in_jsdoc_block:
+                    jsdoc_lines += 1
+                    in_jsdoc_block = False
+                elif in_multiline_comment:
+                    comment_lines += 1
+                    in_multiline_comment = False
+                continue
+            
+            # Lines inside JSDoc block
+            elif in_jsdoc_block:
+                jsdoc_lines += 1
+            
+            # Lines inside multiline comment block
+            elif in_multiline_comment:
+                comment_lines += 1
+            
+            # Single line comments and other comment types
+            elif (stripped.startswith('//') or  # JS/TS single line comments
+                  stripped.startswith('*') or   # continuation of multiline comments
+                  stripped.startswith('<!--') or  # HTML comments
+                  stripped.startswith('#')):    # SCSS/SASS comments
                 comment_lines += 1
         
-        # Calculate code lines (non-empty, non-comment)
-        code_lines = non_empty_lines - comment_lines
+        # Calculate code lines (non-empty, non-comment, non-jsdoc)
+        code_lines = non_empty_lines - comment_lines - jsdoc_lines
         
         return {
             'file': file_path,
             'total_lines': total_lines,
             'non_empty_lines': non_empty_lines,
             'comment_lines': comment_lines,
+            'jsdoc_lines': jsdoc_lines,
             'code_lines': code_lines,
             'file_type': get_file_type(file_path)
         }
@@ -135,7 +186,7 @@ def scan_all_files():
             output_lines.append(separator)
             
             details = f"  Type: {file_info['file_type']} | Total lines: {file_info['total_lines']}"
-            breakdown = f"  Non-empty: {file_info['non_empty_lines']} | Comments: {file_info['comment_lines']} | Code: {file_info['code_lines']}"
+            breakdown = f"  Non-empty: {file_info['non_empty_lines']} | Comments: {file_info['comment_lines']} | JSDoc: {file_info['jsdoc_lines']} | Code: {file_info['code_lines']}"
             
             print(details)
             print(breakdown)

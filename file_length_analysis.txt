@@ -1,56 +1,56 @@
 FILE LENGTH ANALYSIS REPORT
-Generated: 22.07.2025 01:46
+Generated: 23.07.2025 19:43
 ================================================================================
-Analyzing 102 files for length > 400 lines...
+Analyzing 101 files for length > 400 lines...
 Search directory: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio
 HTML files: 17
-SCSS files: 44
+SCSS files: 43
 TypeScript files: 41
 Excluded directories: node_modules, .git, dist, build, .angular, coverage, .vscode, .idea
 
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\atf\atf.component.scss
 --------------------------------------------------------------------------------
-  Type: SCSS | Total lines: 461
-  Non-empty: 404 | Comments: 30 | Code: 374
+  Type: SCSS | Total lines: 431
+  Non-empty: 374 | Comments: 0 | JSDoc: 0 | Code: 374
 
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\contact\contact.component.scss
 --------------------------------------------------------------------------------
-  Type: SCSS | Total lines: 461
-  Non-empty: 406 | Comments: 5 | Code: 401
+  Type: SCSS | Total lines: 456
+  Non-empty: 401 | Comments: 0 | JSDoc: 0 | Code: 401
 
 File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\services\translation.service.ts
 --------------------------------------------------------------------------------
-  Type: TypeScript | Total lines: 643
-  Non-empty: 550 | Comments: 149 | Code: 401
+  Type: TypeScript | Total lines: 606
+  Non-empty: 513 | Comments: 0 | JSDoc: 419 | Code: 94
 
 ================================================================================
 === TOP 10 LARGEST FILES ===
 ================================================================================
- 1. translation.service.ts (643 lines)
+ 1. translation.service.ts (606 lines)
     Type: TypeScript
     File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\shared\services\translation.service.ts
 
- 2. atf.component.scss (461 lines)
-    Type: SCSS
-    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\atf\atf.component.scss
-
- 3. contact.component.scss (461 lines)
+ 2. contact.component.scss (456 lines)
     Type: SCSS
     File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\contact\contact.component.scss
+
+ 3. atf.component.scss (431 lines)
+    Type: SCSS
+    File: C:\Users\china\OneDrive\Desktop\Developer Akademie\Portfolio\Portfolio\src\app\main-component\atf\atf.component.scss
 
 === SUMMARY BY FILE TYPE ===
 HTML: 0 files > 400 lines
 CSS: 0 files > 400 lines
-SCSS: 2 files > 400 lines (avg: 461.0, max: 461)
+SCSS: 2 files > 400 lines (avg: 443.5, max: 456)
 SASS: 0 files > 400 lines
 JavaScript: 0 files > 400 lines
-TypeScript: 1 files > 400 lines (avg: 643.0, max: 643)
+TypeScript: 1 files > 400 lines (avg: 606.0, max: 606)
 
 === OVERALL SUMMARY ===
-Files analyzed: 102
+Files analyzed: 101
 Files over 400 lines: 3
-Average length of large files: 521.7 lines
-Largest file: translation.service.ts (643 lines)
+Average length of large files: 497.7 lines
+Largest file: translation.service.ts (606 lines)
 
 === RECOMMENDATIONS ===
 • Files > 500 lines: Consider splitting into multiple files
