@@ -61,9 +61,8 @@ export class TestAosComponent implements AfterViewInit {
    * @returns {void}
    */
   ngAfterViewInit() {
-    console.log('TestAosComponent: Initialisiere AOS...');
-    console.log('AOS object:', AOS);
-    
+
+
     this.aosVersion = (AOS as any).version || 'unknown';
     
     AOS.init({
@@ -74,12 +73,10 @@ export class TestAosComponent implements AfterViewInit {
       offset: 100,
       disable: false
     });
-    
-    console.log('AOS initialisiert');
-    
+
     setTimeout(() => {
       AOS.refresh();
-      console.log('AOS refreshed');
+
       this.debugAOS();
     }, 500);
   }
@@ -90,21 +87,12 @@ export class TestAosComponent implements AfterViewInit {
    * @returns {void}
    */
   debugAOS() {
-    console.log('=== AOS DEBUG ===');
-    console.log('AOS object:', AOS);
-    console.log('AOS elements found:', document.querySelectorAll('[data-aos]'));
-    console.log('Window scroll Y:', window.scrollY);
-    console.log('Window inner height:', window.innerHeight);
-    
+
+
     const aosElements = document.querySelectorAll('[data-aos]');
     aosElements.forEach((el, index) => {
       const computedStyle = window.getComputedStyle(el as Element);
-      console.log(`Element ${index}:`, {
-        element: el,
-        opacity: computedStyle.opacity,
-        transform: computedStyle.transform,
-        transition: computedStyle.transition
-      });
+
     });
   }
 }

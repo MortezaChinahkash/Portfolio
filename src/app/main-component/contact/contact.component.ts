@@ -192,7 +192,7 @@ export class ContactComponent implements OnInit {
    * @returns {void}
    */
   private handleSubmissionSuccess(response: any): void {
-    console.log('E-Mail erfolgreich gesendet', response);
+
     this.submitSuccess = true;
     this.resetForm();
     this.hideMessageAfterDelay(() => this.submitSuccess = false);
