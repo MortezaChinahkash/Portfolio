@@ -48,38 +48,56 @@ export class SkillsComponent {
   }
 
   /**
-   * Returns a specific animation type for each skill
+   * Animation patterns for skills - creates dynamic, varied animations
+   * @private
+   */
+  private readonly animationPatterns = {
+    directions: ['fade-up', 'fade-down', 'fade-left', 'fade-right'],
+    zooms: ['zoom-in', 'zoom-out'],
+    slides: ['slide-up', 'slide-down', 'slide-left', 'slide-right'],
+    flips: ['flip-up', 'flip-down', 'flip-left', 'flip-right'],
+    special: ['fade-up-right', 'fade-up-left', 'fade-down-right', 'fade-down-left']
+  };
+
+  /**
+   * Returns an elegant, dynamically calculated animation for each skill
+   * Creates a balanced mix of animation types with intelligent distribution
    * @param {number} index - The index of the skill in the array
    * @returns {string} AOS animation type
    */
   getSkillAnimation(index: number): string {
-    // Jeder Skill kommt "kreuz und quer" von verschiedenen Richtungen
-    const skillAnimations = [
-      'fade-up-right',    // HTML - von unten-rechts
-      'fade-down-left',   // CSS - von oben-links  
-      'fade-up-left',     // JavaScript - von unten-links
-      'fade-down-right',  // Angular - von oben-rechts
-      'slide-right',      // Vue.js - von links
-      'slide-left',       // Bootstrap - von rechts
-      'zoom-in-up',       // Material - zoom von unten
-      'zoom-in-down',     // Git - zoom von oben
-      'fade-left',        // GitHub - von rechts
-      'fade-right',       // SASS - von links
-      'flip-up',          // TypeScript - flip von unten
-      'flip-down',        // Firebase - flip von oben
-      'zoom-out-right',   // REST API - zoom aus nach rechts
-      'zoom-out-left'     // Scrum - zoom aus nach links
-    ];
-    return skillAnimations[index] || 'fade-up';
+    const patterns = this.animationPatterns;
+    const totalSkills = this.skills.length;
+    
+    // Create elegant distribution pattern
+    if (index < 4) {
+      // First 4 skills: Special diagonal animations for visual impact
+      return patterns.special[index % patterns.special.length];
+    } else if (index < 8) {
+      // Next 4 skills: Directional fades for smooth flow
+      return patterns.directions[(index - 4) % patterns.directions.length];
+    } else if (index < 12) {
+      // Next 4 skills: Zoom effects for variety
+      const zoomIndex = (index - 8) % 2;
+      return patterns.zooms[zoomIndex];
+    } else {
+      // Remaining skills: Flip animations for dynamic finish
+      return patterns.flips[(index - 12) % patterns.flips.length];
+    }
   }
 
   /**
-   * Calculates staggered delay for each skill animation
+   * Calculates elegant staggered delay with progressive timing
+   * Creates a wave-like appearance effect
    * @param {number} index - The index of the skill in the array
    * @returns {number} Delay in milliseconds
    */
   getSkillDelay(index: number): number {
-    return (index * 70) + 250;
+    const baseDelay = 400;
+    const staggerInterval = 150;
+    const waveEffect = Math.sin(index * 0.3) * 50; // Creates subtle wave pattern
+    
+    return baseDelay + (index * staggerInterval) + waveEffect;
   }
 
   /** Array of main technical skills */
