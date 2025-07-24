@@ -429,3 +429,10 @@
     line-height: 0.85;
   }
 }
+@media (max-height: 815px){
+  .hero-pic{
+    margin-top: -75px;
+    width: 200px; // Feste Breite für Desktop
+    height: 200px;
+  }
+}
